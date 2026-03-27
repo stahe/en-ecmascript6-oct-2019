@@ -1,0 +1,1284 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An Introduction to ECMAScript 6 through Examples">
+      
+      
+        <meta name="author" content="Serge Tahé">
+      
+      
+        <link rel="canonical" href="https://stahe.github.io/ecmascript6-oct-2019/setting-up-a-development-environment.html">
+      
+      
+        <link rel="prev" href="introduction-to-the-ecmascript-6-language.html">
+      
+      
+        <link rel="next" href="the-basics-of-javascript.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>2. Setting up a development environment - An Introduction to ECMAScript 6 through Examples</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/focus.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBZC3JVJNR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    var siteName = "An Introduction to ECMAScript 6 through Examples";
+    gtag('config', 'G-EBZC3JVJNR', {
+        'page_title': siteName
+    });
+  </script>
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#2-setting-up-a-development-environment" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="An Introduction to ECMAScript 6 through Examples" class="md-header__button md-logo" aria-label="An Introduction to ECMAScript 6 through Examples" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            An Introduction to ECMAScript 6 through Examples
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2. Setting up a development environment
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Passer au mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Passer au mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Passer au mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Passer au mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/stahe/ecmascript6-oct-2019" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="An Introduction to ECMAScript 6 through Examples" class="md-nav__button md-logo" aria-label="An Introduction to ECMAScript 6 through Examples" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    An Introduction to ECMAScript 6 through Examples
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/stahe/ecmascript6-oct-2019" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="introduction-to-the-ecmascript-6-language.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introduction to the ECMASCRIPT 6 language
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Setting up a development environment
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="setting-up-a-development-environment.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Setting up a development environment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#21-web-server-development-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Web server development environment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1. Web server development environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211-installing-laragon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.1. Installing Laragon
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-installing-the-netbeans-100-ide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.2. Installing the NetBeans 10.0 IDE
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-development-environment-for-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Development Environment for JavaScript
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2. Development Environment for JavaScript">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221-configuring-visual-studio-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.1. Configuring Visual Studio Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222-adding-extensions-to-visual-studio-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.2. Adding extensions to Visual Studio Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#223-some-useful-vscode-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.3. Some useful &#91;VSCode&#93; commands
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="the-basics-of-javascript.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. The Basics of JavaScript
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tables.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Tables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="literal-objects.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Literal objects
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="strings.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Strings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="regular-expressions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Regular Expressions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="the-functions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. The functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="errors-and-exceptions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Errors and exceptions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="es6-modules.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. ES6 Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="event-driven-programming-and-asynchronous-functions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Event-driven programming and asynchronous functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="javascript-http-functions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. JavaScript HTTP functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="classes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Classes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="javascript-http-clients-of-the-tax-calculation-service.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. Javascript HTTP clients of the tax calculation service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="2-setting-up-a-development-environment">2. <span>Setting up a development environment</span></h1>
+<p><span>We will use the following tools (on Windows 10 x64):</span></p>
+<ul>
+<li><span>&#91;Laragon&#93; to run the PHP web server;</span></li>
+<li><span>&#91;NetBeans&#93; to edit the PHP code;</span></li>
+<li><span>&#91;Visual Studio Code&#93; to write JavaScript code;</span></li>
+<li><b>&#91;Node.js&#93; </b><span>to run it;</span></li>
+<li><b>&#91;npm&#93; </b><span>to download and install the JavaScript libraries we will need;</span></li>
+</ul>
+
+<h2 id="21-web-server-development-environment">2.1. <a id="toc42690193"></a><a id="toc42690579"></a><span>Web server development environment</span></h2>
+<p><span>The PHP scripts were written and tested in the following environment:</span></p>
+<ul>
+<li><span>an Apache web server / MySQL DBMS / PHP 7.3 environment called </span><b>Laragon;</b></li>
+<li><span>the </span><b>NetBeans 10.0 </b><span>development IDE</span><b>;</b></li>
+</ul>
+
+<h3 id="211-installing-laragon">2.1.1. <a id="installationdelaragon"></a><a id="laragon"></a><a id="toc42690580"></a><a id="toc42690194"></a><a id="refheadingtoc45843531951845"></a><span>Installing Laragon</span></h3>
+<p><span>Laragon is a package that combines several software components:</span></p>
+<ul>
+<li><span>an Apache web server. We will use it to write web scripts in PHP;</span></li>
+<li><span>the MySQL database management system;</span></li>
+<li><span>the PHP scripting language;</span></li>
+<li><span>a Redis server that provides caching for web applications:</span></li>
+</ul>
+
+<p><span>Laragon can be downloaded (March 2019) at the following address:</span></p>
+<p><a href="https://laragon.org/download/"><span style="color:#0563C1"><u>https://laragon.org/download/</u></span></a></p>
+<p><img src="images/image5.png" class="docx-zoomable" style="width:363px;height:198px;" alt="Image" /></p>
+<p><img src="images/image6.png" class="docx-zoomable" style="width:536px;height:206px;" alt="Image" /></p>
+<p><img src="images/image7.png" class="docx-zoomable" style="width:547px;height:205px;" alt="Image" /></p>
+<ul>
+<li><span>The installation </span><b>&#91;1-5&#93; </b><span>results in the following directory structure:</span></li>
+</ul>
+
+<p><img src="images/image8.png" class="docx-zoomable" style="width:633px;height:276px;" alt="Image" /></p>
+<ul>
+<li><b>&#91;6&#93;</b><span> contains the PHP installation directory;</span></li>
+</ul>
+
+<p><span>Launching </span><b>&#91;Laragon&#93; </b><span>displays the following window:</span></p>
+<p><img src="images/image9.png" class="docx-zoomable" style="width:382px;height:252px;" alt="Image" /></p>
+<ul>
+<li><b>&#91;1&#93;</b><span>: the Laragon main menu;</span></li>
+<li><b>&#91;2&#93;</b><span>: the </span><b>&#91;Start All&#93; </b><span>button launches the Apache web server and the MySQL database;</span></li>
+<li><b>&#91;3&#93;</b><span>: The </span><b>&#91;WEB&#93; </b><span>button displays the web page </span><b>&#91;http://localhost&#93;, </b><span>which corresponds to the PHP file </span><b>&#91;&lt;laragon&gt;/www/index.php&#93;, </b><span>where &lt;laragon&gt; is the Laragon installation folder;</span></li>
+<li><b>&#91;4&#93;</b><span>: the </span><b>&#91;Database&#93; </b><span>button allows you to manage the MySQL database using the </span><b>&#91;phpMyAdmin&#93; </b><span>tool. You must install this tool beforehand;</span></li>
+<li><b>&#91;5&#93;</b><span>: The </span><b>&#91;Terminal&#93; </b><span>button opens a command terminal;</span></li>
+<li><b>&#91;6&#93;</b><span>: The </span><b>&#91;Root&#93; </b><span>button opens a Windows Explorer window positioned on the </span><b>&#91;&lt;laragon&gt;/www&#93; </b><span>folder, which is the root directory of the </span><b>&#91;http://localhost&#93; </b><span>website. This is where you should place all web applications managed by Laragon’s Apache server;</span></li>
+</ul>
+
+<p><span>Let’s open a Laragon terminal </span><b>&#91;5&#93;</b><span>:</span></p>
+<p><img src="images/image10.png" class="docx-zoomable" style="width:558px;height:205px;" alt="Image" /></p>
+<ul>
+<li><span>in </span><b>&#91;1&#93;</b><span>, the terminal type. Three types of terminals are available in </span><b>&#91;6&#93;</b><span>;</span></li>
+<li><span>in </span><b>&#91;2, 3&#93;</b><span>: the current folder;</span></li>
+<li><span>In </span><b>&#91;4&#93;</b><span>, type the command </span><b>&#91;echo %PATH%&#93;, </b><span>which displays the list of folders searched when looking for an executable. All of Laragon’s main folders are included in this executable path, which would not be the case if you opened a command prompt </span><b>&#91;cmd&#93; </b><span>in Windows. In this document, when you need to type commands to install a particular piece of software, these commands are generally typed in a Laragon terminal;</span></li>
+</ul>
+
+<h3 id="212-installing-the-netbeans-100-ide">2.1.2. <a id="installationdelide"></a><a id="toc42690581"></a><a id="toc42690195"></a><a id="refheadingtoc45845531951845"></a><span>Installing the NetBeans 10.0 IDE</span></h3>
+<p><span>The NetBeans 10.0 IDE can be downloaded from the following address (March 2019):</span></p>
+<p><a href="https://netbeans.apache.org/download/index.html"><span style="color:#0563C1"><u>https://netbeans.apache.org/download/index.HTML</u></span></a></p>
+<p><img src="images/image11.png" class="docx-zoomable" style="width:495px;height:223px;" alt="Image" /></p>
+<p><span>The downloaded file is a ZIP file that simply needs to be unzipped. Once NetBeans is installed and launched, you can create your first PHP project.</span></p>
+<p><img src="images/image12.png" class="docx-zoomable" style="width:443px;height:127px;" alt="Image" /></p>
+<ul>
+<li><span>In </span><b>&#91;1&#93;</b><span>, select the File / New Project option;</span></li>
+<li><span>In </span><b>&#91;2&#93;</b><span>, select the </span><b>&#91;PHP&#93; </b><span>category;</span></li>
+<li><span>in </span><b>&#91;3&#93;</b><span>, select the project type </span><b>&#91;PHP Application&#93;</b><span>;</span></li>
+</ul>
+
+<p><img src="images/image13.png" class="docx-zoomable" style="width:641px;height:139px;" alt="Image" /></p>
+<ul>
+<li><span>In </span><b>&#91;4&#93;</b><span>, give the project a name;</span></li>
+<li><span>In </span><b>&#91;5&#93;</b><span>, choose a folder for the project;</span></li>
+<li><span>In </span><b>&#91;6&#93;</b><span>, select the downloaded PHP version;</span></li>
+<li><span>in </span><b>&#91;7&#93;</b><span>, select UTF-8 encoding for PHP files;</span></li>
+<li><span>In </span><b>&#91;8&#93;</b><span>, select the </span><b>&#91;Script&#93; </b><span>mode to run PHP scripts in command-line mode. Select </span><b>&#91;Local WEB Server&#93; </b><span>to run a PHP script in a web environment;</span></li>
+<li><span>In </span><b>&#91;9,10&#93;</b><span>, specify the installation directory for the Laragon package&#x27;s PHP interpreter:</span></li>
+</ul>
+
+<p><img src="images/image14.png" class="docx-zoomable" style="width:450px;height:181px;" alt="Image" /></p>
+<ul>
+<li><span>select </span><b>&#91;Finish&#93; </b><span>to complete the PHP project creation wizard;</span></li>
+</ul>
+
+<p><img src="images/image15.png" class="docx-zoomable" style="width:541px;height:157px;" alt="Image" /></p>
+<ul>
+<li><span>In </span><b>&#91;11&#93;</b><span>, the project is created using a script </span><b>&#91;index.php&#93;</b><span>;</span></li>
+<li><span>In </span><b>&#91;12&#93;</b><span>, we write a minimal PHP script;</span></li>
+<li><span>in </span><b>&#91;13&#93;</b><span>, we run </span><b>&#91;index.php&#93;</b><span>;</span></li>
+</ul>
+
+<p><img src="images/image16.png" class="docx-zoomable" style="width:561px;height:98px;" alt="Image" /></p>
+<ul>
+<li><span>in </span><b>&#91;14&#93;</b><span>, the results in the NetBeans </span><b>&#91;output&#93; </b><span>window;</span></li>
+<li><span>in </span><b>&#91;15&#93;</b><span>, create a new script;</span></li>
+<li><span>in </span><b>&#91;16&#93;</b><span>, the new script;</span></li>
+</ul>
+
+<p><span>The reader can create all the scripts that follow in different folders within the same PHP project. The source code for the scripts in this document is available in the following NetBeans directory structure:</span></p>
+<p><img src="images/image17.png" class="docx-zoomable" style="width:561px;height:259px;" alt="Image" /></p>
+<p><span>The scripts in this document are located in the </span><b>&#91;scripts-console&#93; </b><span>project directory </span><b>&#91;1&#93;</b><span>. We will also use PHP libraries that will be placed in the </span><b>&#91;&lt;laragon-lite&gt;/www/vendor&#93; </b><span>folder </span><b>&#91;2&#93;, </b><span>where &lt;laragon-lite&gt; is the installation directory for the Laragon software. In order for NetBeans to recognize the libraries in </span><b>&#91;2&#93; </b><span>as part of the </span><b>&#91;scripts-console&#93; </b><span>project, we need to include the </span><b>&#91;vendor&#93; </b><span>folder </span><b>&#91;2&#93; </b><span>in the project’s </span><b>&#91;Include Path&#93; &#91;3&#93;</b><span>. We will configure NetBeans so that the </span><b>&#91;&lt;laragon-lite&gt;/www/vendor&#93; &#91;2&#93; </b><span>folder is included in every new PHP project, not just the </span><b>&#91;scripts-console&#93; </b><span>project:</span></p>
+<p><img src="images/image18.png" class="docx-zoomable" style="width:696px;height:247px;" alt="Image" /></p>
+<ul>
+<li><span>In </span><b>&#91;1-2&#93;</b><span>, go to the NetBeans options;</span></li>
+<li><span>in </span><b>&#91;3-4&#93;</b><span>, configure the PHP options;</span></li>
+<li><span>in </span><b>&#91;5-7&#93;</b><span>, configure PHP’s </span><b>&#91;Global Include Path&#93;</b><span>: the folders listed in </span><b>&#91;7&#93; </b><span>are automatically included in the </span><b>&#91;Include Path&#93; </b><span>of every PHP project;</span></li>
+</ul>
+
+<p><img src="images/image19.png" class="docx-zoomable" style="width:207px;height:196px;" alt="Image" /></p>
+<ul>
+<li><span>in </span><b>&#91;9&#93;</b><span>, access the properties of the </span><b>&#91;Include Path&#93; </b><span>branch;</span></li>
+<li><span>in </span><b>&#91;10-11&#93;</b><span>, the new libraries explored by NetBeans. NetBeans explores the PHP code in these libraries and stores their classes, interfaces, functions, etc., in order to provide assistance to the developer;</span></li>
+</ul>
+
+<p><img src="images/image20.png" class="docx-zoomable" style="width:360px;height:447px;" alt="Image" /></p>
+<ul>
+<li><span>in </span><b>&#91;12&#93;</b><span>, a code snippet uses the </span><b>&#91;PhpMimeMailParser\Parser&#93; </b><span>class from the </span><b>&#91;vendor/php-mime-mail-parser&#93; </b><span>library;</span></li>
+<li><span>in </span><b>&#91;13&#93;</b><span>, NetBeans suggests the methods of this class;</span></li>
+<li><span>In </span><b>&#91;14-15&#93;</b><span>, NetBeans displays the documentation for the selected method;</span></li>
+</ul>
+
+<p><span>The concept of </span><b>&#91;Include Path&#93; </b><span>is specific to NetBeans. PHP also has this concept, but they are, in principle, two different concepts.</span></p>
+<p><span>Now that the development environment has been set up, we can cover the basics of PHP.</span></p>
+<h2 id="22-development-environment-for-javascript">2.2. <span>Development Environment for JavaScript</span></h2>
+<p><span>These tools can be installed using Laragon (see </span><a href="../../../../../st-2020/cours/ecmascript6/masters/02/chap-02.docx"><span style="color:#0563C1"><u>link</u></span></a><span> section):</span></p>
+<p><img src="images/image21.png" class="docx-zoomable" style="width:485px;height:396px;" alt="Image" /></p>
+<p><span>In </span><b>&#91;4&#93;</b><span>, install </span><b>&#91;node.js&#93;</b><span>. Once the installation is complete, open a Laragon terminal (see </span><a href="../../../../../st-2020/cours/ecmascript6/masters/02/chap-02.docx"><span style="color:#0563C1"><u>link</u></span></a><span> section) and check the version of </span><b>&#91;node.js&#93; </b><span>installed (1) as well as that of </span><b>&#91;npm&#93; </b><span>(2):</span></p>
+<p><img src="images/image22.png" class="docx-zoomable" style="width:628px;height:289px;" alt="Image" /></p>
+<p><span>Next, we install Visual Studio Code, often referred to as </span><b>&#91;code&#93; </b><span>or </span><b>&#91;VSCode&#93; &#91;3-6&#93;</b><span>. Once that’s done, we can launch this development tool:</span></p>
+<p><img src="images/image23.png" class="docx-zoomable" style="width:366px;height:171px;" alt="Image" /></p>
+<p><img src="images/image24.png" class="docx-zoomable" style="width:346px;height:212px;" alt="Image" /></p>
+<h3 id="221-configuring-visual-studio-code">2.2.1. <span>Configuring Visual Studio Code</span></h3>
+<p><span>We will now show how we configured </span><b>&#91;VSCode&#93; </b><span>so that the reader can understand the screenshots that will appear from time to time. The reader is free to configure </span><b>&#91;VSCode&#93; </b><span>as they see fit. They can even set up their preferred workspace. This is not important for what we will be doing next.</span></p>
+<p><span>First, we’ll change the appearance of the </span><b>&#91;VSCode&#93; </b><span>window to have a light background instead of a black one:</span></p>
+<p><img src="images/image25.png" class="docx-zoomable" style="width:386px;height:344px;" alt="Image" /></p>
+<p><span>Then we hide the left sidebar </span><b>&#91;1-2&#93;</b><span>, whose items are also available in the menu. In </span><b>&#91;3-6&#93;</b><span>, we set the code to format itself every time the file is saved and every time we copy and paste.</span></p>
+<p><img src="images/image26.png" class="docx-zoomable" style="width:504px;height:220px;" alt="Image" /></p>
+<p><span>After saving the configuration </span><b>&#91;Ctrl-S&#93;</b><span>, you can close the </span><b>&#91;Settings&#93; </b><span>window </span><b>&#91;7&#93;</b><span>. You can return to the </span><b>&#91;VSCode&#93; </b><span>configuration at any time </span><b>&#91;8-10&#93;</b><span>:</span></p>
+<p><img src="images/image27.png" class="docx-zoomable" style="width:490px;height:208px;" alt="Image" /></p>
+<p><span>These settings are saved in a </span><b>&#91;settings.json&#93; </b><span>file that you can edit directly. Let’s open the </span><b>&#91;Settings&#93; </b><span>window as shown:</span></p>
+<p><img src="images/image28.png" class="docx-zoomable" style="width:280px;height:234px;" alt="Image" /></p>
+<p><span>In </span><b>&#91;4&#93;</b><span>, you can edit the </span><b>&#91;settings.json&#93; </b><span>file directly:</span></p>
+<p><img src="images/image29.png" class="docx-zoomable" style="width:400px;height:161px;" alt="Image" /></p>
+<ul>
+<li><span>in </span><b>&#91;1&#93;</b><span>, the path to the </span><b>&#91;settings.json&#93; </b><span>file. One way to revert to the default settings is to delete this file;</span></li>
+<li><span>in </span><b>&#91;2&#93;</b><span>, the settings we just configured;</span></li>
+</ul>
+
+<p><span>Now, let’s open a terminal within </span><b>&#91;VSCode&#93; &#91;1-2&#93;</b><span>:</span></p>
+<p><img src="images/image30.png" class="docx-zoomable" style="width:553px;height:89px;" alt="Image" /></p>
+<ul>
+<li><span>in </span><b>&#91;3&#93;</b><span>, the type of terminal opened, here PowerShell;</span></li>
+<li><span>in </span><b>&#91;4&#93;</b><span>, you can type Windows commands;</span></li>
+<li><span>in </span><b>&#91;6&#93;</b><span>, you can open additional terminals;</span></li>
+<li><span>in </span><b>&#91;5&#93;</b><span>, the list of open terminals;</span></li>
+<li><span>in </span><b>&#91;7&#93;</b><span>, closes the active terminal;</span></li>
+</ul>
+
+<p><span>We will use the </span><b>&#91;VSCode&#93; </b><span>terminal to install JavaScript packages (libraries) using the </span><b>&#91;npm&#93; </b><span>(Node Package Manager) tool. Let’s check, as we did previously in a Laragon terminal, which version of </span><b>&#91;npm&#93; </b><span>is installed:</span></p>
+<p><img src="images/image31.png" class="docx-zoomable" style="width:609px;height:156px;" alt="Image" /></p>
+<p><span>We see that the </span><b>&#91;npm&#93; </b><span>command was not recognized. This means it is not part of the terminal’s PATH (the list of folders to search for an executable, in this case </span><b>&#91;npm&#93;</b><span>). We can find out the PATH used by the terminal:</span></p>
+<p><img src="images/image32.png" class="docx-zoomable" style="width:614px;height:100px;" alt="Image" /></p>
+<p><span>The </span><b>&#91;npm&#93; </b><span>executable is not found in these folders. Like the other tools installed by Laragon, it is located in the </span><b>&#91;&lt;laragon&gt;\bin&#93; </b><span>folder of Laragon, specifically in the </span><b>&#91;nodejs&#93; </b><span>folder </span><b>&#91;4-6&#93;</b><span>.</span></p>
+<p><img src="images/image33.png" class="docx-zoomable" style="width:500px;height:281px;" alt="Image" /></p>
+<p><span>To launch </span><b>&#91;VSCode&#93; </b><span>and access </span><b>&#91;npm&#93;</b><span>, we’ll launch </span><b>&#91;VSCode&#93; </b><span>from a Laragon terminal. When launched this way, </span><b>&#91;VSCode&#93; </b><span>will inherit the Laragon terminal’s PATH, which contains the </span><b>&#91;node&#93; </b><span>and </span><b>&#91;npm&#93; </b><span>executable folders:</span></p>
+<p><img src="images/image34.png" class="docx-zoomable" style="width:562px;height:215px;" alt="Image" /></p>
+<ul>
+<li><span>in </span><b>&#91;1&#93;</b><span>: type the </span><b>&#91;path&#93; </b><span>command;</span></li>
+<li><span>in </span><b>&#91;2&#93;</b><span>: the list of folders in the PATH. We see the </span><b>&#91;node-v10&#93; </b><span>folder </span><b>&#91;2&#93;</b><span>, which ensures that the </span><b>&#91;node&#93; </b><span>and </span><b>&#91;npm&#93; </b><span>executables will be found;</span></li>
+</ul>
+
+<p><b>&#91;VSCode&#93; </b><span>is launched from a Laragon terminal using the </span><b>&#91;code&#93; </b><span>command:</span></p>
+<p><img src="images/image35.png" class="docx-zoomable" style="width:550px;height:122px;" alt="Image" /></p>
+<ul>
+<li><span>in </span><b>&#91;2&#93;</b><span>, open a PowerShell terminal in </span><b>&#91;VSCode&#93;</b><span>;</span></li>
+<li><span>in </span><b>&#91;3-4&#93;</b><span>, you can see that the </span><b>&#91;node&#93; </b><span>and </span><b>&#91;npm&#93; </b><span>executables are accessible;</span></li>
+</ul>
+
+<p><b>Note</b><span>: Do not close the Laragon terminal that launched the </span><b>&#91;VSCode&#93; </b><span>development environment, otherwise VSCode itself will close.</span></p>
+<p><span>We’ll make one final configuration: we’ll change the default terminal for </span><b>&#91;VSCode&#93;</b><span>:</span></p>
+<p><img src="images/image36.png" class="docx-zoomable" style="width:601px;height:99px;" alt="Image" /></p>
+<p><img src="images/image37.png" class="docx-zoomable" style="width:371px;height:114px;" alt="Image" /></p>
+<p><span>The </span><b>&#91;settings.json&#93; </b><span>file updates immediately:</span></p>
+<p><img src="images/image38.png" class="docx-zoomable" style="width:552px;height:150px;" alt="Image" /></p>
+<p><span>Now, let’s open a new </span><b>&#91;VSCode&#93; </b><span>terminal </span><b>&#91;1&#93;</b><span>:</span></p>
+<p><img src="images/image39.png" class="docx-zoomable" style="width:579px;height:168px;" alt="Image" /></p>
+<ul>
+<li><span>in </span><b>&#91;2&#93;</b><span>, a </span><b>&#91;cmd&#93; </b><span>terminal (not PowerShell);</span></li>
+<li><span>in </span><b>&#91;3&#93;</b><span>, the </span><b>&#91;path&#93; </b><span>command displays the terminal’s PATH;</span></li>
+<li><span>in </span><b>&#91;4&#93;</b><span>, you can clearly see the </span><b>&#91;node&#93; </b><span>and </span><b>&#91;npm&#93; </b><span>executable folders</span></li>
+</ul>
+
+<h3 id="222-adding-extensions-to-visual-studio-code">2.2.2. <span>Adding extensions to Visual Studio Code</span></h3>
+<p><span>Let’s create a JavaScript file with </span><b>&#91;VSCode&#93;</b><span>:</span></p>
+<p><img src="images/image40.png" class="docx-zoomable" style="width:522px;height:107px;" alt="Image" /></p>
+<p><img src="images/image41.png" class="docx-zoomable" style="width:599px;height:241px;" alt="Image" /></p>
+<ul>
+<li><span>in </span><b>&#91;3-4&#93;</b><span>, we create a folder;</span></li>
+<li><span>in </span><b>&#91;5&#93;</b><span>, we set it as the current folder in </span><b>&#91;VSCode&#93;</b><span>;</span></li>
+<li><span>In </span><b>&#91;6&#93;</b><span>, open a terminal;</span></li>
+<li><span>in </span><b>&#91;7&#93;</b><span>, you can see that you are now in the selected folder. The following steps will take place in this folder;</span></li>
+</ul>
+
+<p><img src="images/image42.png" class="docx-zoomable" style="width:640px;height:107px;" alt="Image" /></p>
+<ul>
+<li><span>In </span><b>&#91;1-3&#93;</b><span>: create a new folder;</span></li>
+<li><span>In </span><b>&#91;4&#93;</b><span>: Add a file to this folder;</span></li>
+</ul>
+
+<p><img src="images/image43.png" class="docx-zoomable" style="width:584px;height:116px;" alt="Image" /></p>
+<ul>
+<li><span>in </span><b>&#91;5-7&#93;</b><span>: create your first JavaScript program;</span></li>
+</ul>
+
+<p><img src="images/image44.png" class="docx-zoomable" style="width:686px;height:113px;" alt="Image" /></p>
+<ul>
+<li><span>In </span><b>&#91;8-9&#93;</b><span>: Run the JavaScript program;</span></li>
+<li><span>The result appears in the execution console </span><b>&#91;10&#93;</b><span>. In </span><b>&#91;11&#93;, </b><span>we see the command that was executed: the </span><b>&#91;node&#93; </b><span>application executed the </span><b>&#91;test-01.js&#93; </b><span>script. This was possible because this executable is in the </span><b>&#91;VSCode&#93; </b><span>PATH; otherwise, we would have received an error indicating that the </span><b>&#91;node&#93; </b><span>command was unknown;</span></li>
+</ul>
+
+<p><span>Let’s proceed in the same way to run a second script </span><b>&#91;test-02.js&#93;</b><span>:</span></p>
+<p><img src="images/image45.png" class="docx-zoomable" style="width:517px;height:300px;" alt="Image" /></p>
+<ul>
+<li><span>In </span><b>&#91;1-3&#93;</b><span>, the new script is defined. The </span><b>&#91;use strict&#93; </b><span>statement on line 1 requires strict syntax checking. In this context, every variable must be declared using one of the keywords </span><b>&#91;let, const, var&#93;</b><span>. This is not the case for the variable </span><b>&#91;x&#93; </b><span>on line 2;</span></li>
+<li><span>when we run this code using </span><b>&#91;Ctrl-F5&#93;</b><span>, we get error </span><b>&#91;5&#93;</b><span>. It is possible to be warned of this type of error before execution. This is preferable. We are going to do two things:</span><ul>
+<li><span>install a library called </span><b>&#91;eslint&#93; </b><span>using </span><b>&#91;npm&#93; </b><span>that checks whether the script’s syntax complies with the ECMAScript 6 standard;</span></li>
+<li><span>install a Visual Studio Code extension, also called ESLINT, which makes it easier to use the </span><b>&#91;eslint&#93; </b><span>library within </span><b>&#91;VSCode&#93;</b><span>;</span></li>
+</ul>
+</li>
+</ul>
+
+<p><span>First, let’s install the </span><b>&#91;eslint&#93; </b><span>JavaScript library using the </span><b>&#91;npm&#93; </b><span>tool. To install an </span><b>&#91;npm&#93; </b><span>library (known as a package), you need to know its exact name. If you don’t know it, you can go to the </span><b>&#91;npm&#93; </b><span>website at the URL (2019) </span><b>&#91;https://www.npmjs.com/&#93;</b><span>:</span></p>
+<p><img src="images/image46.png" class="docx-zoomable" style="width:607px;height:218px;" alt="Image" /></p>
+<ul>
+<li><span>in </span><b>&#91;3&#93;</b><span>, the packages starting with </span><b>&#91;esl&#93;</b><span>;</span></li>
+<li><span>in </span><b>&#91;4-6&#93;</b><span>, you’ll find the </span><b>&#91;eslint&#93; </b><span>package;</span></li>
+</ul>
+
+<p><img src="images/image47.png" class="docx-zoomable" style="width:451px;height:361px;" alt="Image" /></p>
+<ul>
+<li><span>in </span><b>&#91;7&#93;</b><span>, the </span><b>&#91;npm&#93; </b><span>command to install the </span><b>&#91;eslint&#93; </b><span>package;</span></li>
+<li><span>in </span><b>&#91;8&#93;</b><span>, the package configuration;</span></li>
+<li><span>in </span><b>&#91;9&#93;</b><span>, how to use it to check the syntax of a JavaScript script;</span></li>
+</ul>
+
+<p><span>We install the </span><b>&#91;eslint&#93; </b><span>package in a </span><b>&#91;Terminal&#93; </b><span>window in </span><b>&#91;VSCode&#93;</b><span>. First, we need to create a </span><b>&#91;package.json&#93; </b><span>file at the root of the </span><b>&#91;VSCode&#93; </b><span>working directory. This file will contain the list of JavaScript packages used by the </span><b>&#91;VSCode&#93; </b><span>project:</span></p>
+<p><img src="images/image48.png" class="docx-zoomable" style="width:640px;height:144px;" alt="Image" /></p>
+<ul>
+<li><span>in </span><b>&#91;1&#93;</b><span>, right-click in the project explorer (not on the tests folder);</span></li>
+<li><span>in </span><b>&#91;3-4&#93;</b><span>, create the </span><b>&#91;package.json&#93; </b><span>file at the root of the </span><b>&#91;javascript&#93; </b><span>project, at the same level as the </span><b>&#91;tests&#93; </b><span>folder (but not inside </span><b>&#91;tests&#93;</b><span>);</span></li>
+<li><span>in </span><b>&#91;4-6&#93;</b><span>, add an empty JSON object to the </span><b>&#91;package.json&#93; </b><span>file;</span></li>
+</ul>
+
+<p><span>Then open a </span><b>&#91;VSCode&#93; </b><span>terminal to install </span><b>&#91;eslint&#93;</b><span>:</span></p>
+<p><img src="images/image49.png" class="docx-zoomable" style="width:631px;height:109px;" alt="Image" /></p>
+<ul>
+<li><span>In </span><b>&#91;2&#93;</b><span>, you are at the root of the </span><b>&#91;javascript&#93; </b><span>project;</span></li>
+<li><span>In </span><b>&#91;3&#93;</b><span>, the command that installs the </span><b>&#91;eslint&#93; </b><span>package;</span></li>
+<li><span>after execution,</span><ul>
+<li><span>In </span><b>&#91;4-5&#93;</b><span>, the </span><b>&#91;package.json&#93; </b><span>file has been modified. Line 3 shows the version of </span><b>&#91;eslint&#93; </b><span>that is installed. Line 2, </span><b>&#91;devDependencies&#93;</b><span>, corresponds to the </span><b>&#91;--save-dev&#93; </b><span>option used during installation. This argument means that the installed dependency must be listed in the </span><b>&#91;package.json&#93; </b><span>file as part of the </span><b>&#91;devDependencies&#93; </b><span>property. This property lists the project dependencies needed in development mode but not in production mode. In fact, the </span><b>&#91;eslint&#93; </b><span>dependency is only needed during development to verify that the written code complies with the ECMAScript standard;</span></li>
+<li><span>in </span><b>&#91;6&#93;</b><span>, a </span><b>&#91;node&#95;modules&#93; </b><span>folder has appeared in the project. This is the folder where the project’s dependencies are installed;</span></li>
+</ul>
+</li>
+</ul>
+
+<p><img src="images/image50.png" class="docx-zoomable" style="width:148px;height:320px;" alt="Image" /></p>
+<ul>
+<li><span>In </span><b>&#91;7&#93;</b><span>, some of the installed packages. There are quite a few of them. In fact, not only has the </span><b>&#91;eslint&#93; </b><span>package been installed, but also all the packages on which it relies;</span></li>
+</ul>
+
+<p><img src="images/image51.png" class="docx-zoomable" style="width:623px;height:227px;" alt="Image" /></p>
+<ul>
+<li><b>&#91;1-2&#93;</b><span>, in a </span><b>&#91;VSCode&#93; </b><span>terminal, run the command to configure the </span><b>&#91;eslint&#93; </b><span>package. This will ask several questions </span><b>&#91;3&#93; </b><span>to determine how you want to use </span><b>&#91;eslint&#93;</b><span>. If in doubt, leave the default options as they are. To select an option, use the up and down arrow keys on your keyboard to choose the option and then confirm it;</span></li>
+<li><span>in </span><b>&#91;4&#93;</b><span>, a </span><b>&#91;.eslintrc.js&#93; </b><span>file has been created at the root of the project;</span></li>
+<li><span>in </span><b>&#91;6&#93;</b><span>, the file’s contents. You can copy the contents into your own file;</span>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-vbscript">
+<span class="docx-code-line">module.exports = {</span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#A31515">&quot;env&quot;</span><span style="color:#000000">: {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#A31515">&quot;browser&quot;</span><span style="color:#000000">: </span><span style="color:#0000FF">true</span><span style="color:#000000">,</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#A31515">&quot;es6&quot;</span><span style="color:#000000">: </span><span style="color:#0000FF">true</span></span>
+<span class="docx-code-line">  },</span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#A31515">&quot;extends&quot;</span><span style="color:#000000">: </span><span style="color:#A31515">&quot;eslint:recommended&quot;</span><span style="color:#000000">,</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#A31515">&quot;globals&quot;</span><span style="color:#000000">: {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#A31515">&quot;Atomics&quot;</span><span style="color:#000000">: </span><span style="color:#A31515">&quot;readonly&quot;</span><span style="color:#000000">,</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#A31515">&quot;SharedArrayBuffer&quot;</span><span style="color:#000000">: </span><span style="color:#A31515">&quot;readonly&quot;</span></span>
+<span class="docx-code-line">  },</span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#A31515">&quot;parserOptions&quot;</span><span style="color:#000000">: {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#A31515">&quot;ecmaVersion&quot;</span><span style="color:#000000">: 2018,</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#A31515">&quot;sourceType&quot;</span><span style="color:#000000">: </span><span style="color:#A31515">&quot;module&quot;</span></span>
+<span class="docx-code-line">  },</span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#A31515">&quot;rules&quot;</span><span style="color:#000000">: {</span></span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line">};</span>
+</code></pre></div>
+
+</li>
+</ul>
+
+<p><span>This is not enough to report errors in the </span><b>&#91;test-02.js&#93; </b><span>file:</span></p>
+<p><img src="images/image52.png" class="docx-zoomable" style="width:596px;height:126px;" alt="Image" /></p>
+<ul>
+<li><span>you must type the command </span><b>&#91;2-3&#93; </b><span>for the file </span><b>&#91;tests/test-02.js&#93; </b><span>to be analyzed;</span></li>
+<li><span>in </span><b>&#91;4&#93;</b><span>, the error regarding the undeclared variable is detected;</span></li>
+</ul>
+
+<p><span>We will add an extension to </span><b>&#91;VSCode&#93; </b><span>that will allow us to see JavaScript errors in real time. This extension relies on the </span><b>&#91;eslint&#93; </b><span>package that we installed:</span></p>
+<p><img src="images/image53.png" class="docx-zoomable" style="width:505px;height:185px;" alt="Image" /></p>
+<ul>
+<li><span>in </span><b>&#91;3-5&#93;</b><span>, we install the extension called </span><b>&#91;ESLint&#93;</b><span>;</span></li>
+</ul>
+
+<p><img src="images/image54.png" class="docx-zoomable" style="width:405px;height:303px;" alt="Image" /></p>
+<ul>
+<li><span>In </span><b>&#91;1&#93;</b><span>, an information page about the newly installed extension;</span></li>
+<li><span>in </span><b>&#91;2&#93;</b><span>, we can see that the </span><b>&#91;ESLint&#93; </b><span>validation mode is </span><b>&#91;type&#93;</b><span>, which means that the syntax of JavaScript scripts will be validated as the text is typed;</span></li>
+</ul>
+
+<p><span>ESLint can be configured via the general </span><b>&#91;VSCode&#93; </b><span>configuration file:</span></p>
+<p><img src="images/image55.png" class="docx-zoomable" style="width:602px;height:263px;" alt="Image" /></p>
+<ul>
+<li><span>in </span><b>&#91;6-7&#93;</b><span>, the </span><b>&#91;ESLint&#93; </b><span>configuration. This is where you can modify it;</span></li>
+</ul>
+
+<p><span>Now let’s return to the </span><b>&#91;test-02.js&#93; </b><span>file:</span></p>
+<p><img src="images/image56.png" class="docx-zoomable" style="width:523px;height:146px;" alt="Image" /></p>
+<ul>
+<li><span>In </span><b>&#91;3-4&#93;</b><span>, errors related to the </span><b>&#91;x&#93; </b><span>variable are now flagged;</span></li>
+<li><span>in </span><b>&#91;5&#93;</b><span>: the number of ESLint errors in the file;</span></li>
+<li><span>in </span><b>&#91;6&#93;</b><span>, indicates that there are files with errors in the </span><b>&#91;tests&#93; </b><span>folder;</span></li>
+</ul>
+
+<p><span>If we fix the error, the ESLint warnings disappear:</span></p>
+<p><img src="images/image57.png" class="docx-zoomable" style="width:386px;height:222px;" alt="Image" /></p>
+<p><span>Now let’s install an extension called </span><b>&#91;Code Runner&#93;</b><span>:</span></p>
+<p><img src="images/image58.png" class="docx-zoomable" style="width:636px;height:202px;" alt="Image" /></p>
+<ul>
+<li><span>Once the </span><b>&#91;Code-Runner&#93; </b><span>extension is installed </span><b>&#91;1-5&#93;</b><span>, you can configure it using </span><b>&#91;6-7&#93; </b><span>(above);</span></li>
+</ul>
+
+<p><img src="images/image59.png" class="docx-zoomable" style="width:576px;height:285px;" alt="Image" /></p>
+<ul>
+<li><span>in </span><b>&#91;1-2&#93;</b><span>, the configuration options for </span><b>&#91;Code-Runner&#93;</b><span>;</span></li>
+<li><span>In </span><b>&#91;3&#93;</b><span>, we specify that the output terminal should be cleared before each execution;</span></li>
+<li><span>in </span><b>&#91;4&#93;</b><span>, locate the </span><b>&#91;Executor Map&#93; </b><span>element, which lists the execution tools for different languages;</span></li>
+<li><span>in </span><b>&#91;5-6&#93;</b><span>, copy the configuration to the clipboard;</span></li>
+<li><span>in </span><b>&#91;7-8&#93;</b><span>, we modify the </span><b>&#91;settings.json&#93; </b><span>file;</span></li>
+</ul>
+
+<p><img src="images/image60.png" class="docx-zoomable" style="width:626px;height:251px;" alt="Image" /></p>
+<ul>
+<li><span>in </span><b>&#91;2&#93;</b><span>, add a comma after the last element in the </span><b>&#91;settings.json&#93; </b><span>file </span><b>&#91;1&#93;</b><span>;</span></li>
+<li><span>in </span><b>&#91;3&#93;</b><span>, paste what was previously copied in </span><b>&#91;5-6&#93;</b><span>: this is the list of commands for executing the various languages supported by </span><b>&#91;VSCode&#93;</b><span>;</span></li>
+<li><span>in </span><b>&#91;4&#93;</b><span>, the command to run JavaScript files. This only works if </span><b>&#91;node&#93; </b><span>is in the </span><b>&#91;VSCode&#93; </b><span>PATH. If not, you can enter the full path to the executable </span><b>&#91;5&#93;</b><span>;</span></li>
+</ul>
+
+<p><span>Now let’s save the configuration (Ctrl-S). With the </span><b>&#91;Code Runner&#93; </b><span>extension, JavaScript files can be executed by right-clicking on the code </span><b>&#91;6&#93; </b><span>(above):</span></p>
+<p><img src="images/image61.png" class="docx-zoomable" style="width:530px;height:172px;" alt="Image" /></p>
+<h3 id="223-some-useful-vscode-commands">2.2.3. <span>Some useful &#91;VSCode&#93; commands</span></h3>
+<ul>
+<li><span>To format your code, right-click on it </span><b>&#91;1&#93;</b><span>;</span></li>
+<li><span>To close open windows, right-click on their titles </span><b>&#91;2-3&#93;</b><span>;</span></li>
+</ul>
+
+<p><img src="images/image62.png" class="docx-zoomable" style="width:527px;height:201px;" alt="Image" /></p>
+<ul>
+<li><span>To display a specific window </span><b>&#91;4-5&#93;</b><span>;</span></li>
+<li><span>To save your project (Workspace) </span><b>&#91;6-9&#93;</b><span>;</span></li>
+<li><span>to save a project </span><b>&#91;10-11&#93;</b><span>;</span></li>
+</ul>
+
+<p><img src="images/image63.png" class="docx-zoomable" style="width:504px;height:233px;" alt="Image" /></p>
+<p><img src="images/image64.png" class="docx-zoomable" style="width:518px;height:297px;" alt="Image" /></p>
+<ul>
+<li><span>To open a project </span><b>&#91;11-16&#93;</b><span>:</span></li>
+</ul>
+
+<p><img src="images/image65.png" class="docx-zoomable" style="width:552px;height:268px;" alt="Image" /></p>
+<ul>
+<li><span>View installed extensions </span><b>&#91;19-20&#93;</b><span>:</span></li>
+</ul>
+
+<p><img src="images/image66.png" class="docx-zoomable" style="width:504px;height:205px;" alt="Image" /></p>
+<p><span>We now have good tools for developing in JavaScript. We will now introduce this language using short code snippets. Since this introduction follows a PHP course, we will occasionally compare the two languages to highlight their differences.</span></p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner">
+
+      <div>
+        <a href="https://tahe.developpez.com" target="_blank">
+          https://tahe.developpez.com
+        </a>
+        <br>
+        Ce cours-tutoriel écrit par <strong>Serge Tahé</strong> est mis à disposition du public selon les termes de la
+        <em>Licence Creative Commons Attribution – Pas d’Utilisation Commerciale –
+        Partage dans les Mêmes Conditions 3.0 non transposé</em>.
+      </div>
+
+    </div>
+  </div>
+
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="javascripts/focus.js"></script>
+      
+    
+  </body>
+</html>

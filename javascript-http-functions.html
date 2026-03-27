@@ -1,0 +1,2325 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An Introduction to ECMAScript 6 through Examples">
+      
+      
+        <meta name="author" content="Serge Tahé">
+      
+      
+        <link rel="canonical" href="https://stahe.github.io/ecmascript6-oct-2019/javascript-http-functions.html">
+      
+      
+        <link rel="prev" href="event-driven-programming-and-asynchronous-functions.html">
+      
+      
+        <link rel="next" href="classes.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>12. JavaScript HTTP functions - An Introduction to ECMAScript 6 through Examples</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/focus.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBZC3JVJNR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    var siteName = "An Introduction to ECMAScript 6 through Examples";
+    gtag('config', 'G-EBZC3JVJNR', {
+        'page_title': siteName
+    });
+  </script>
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#12-javascript-http-functions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="An Introduction to ECMAScript 6 through Examples" class="md-header__button md-logo" aria-label="An Introduction to ECMAScript 6 through Examples" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            An Introduction to ECMAScript 6 through Examples
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              12. JavaScript HTTP functions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Passer au mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Passer au mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Passer au mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Passer au mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/stahe/ecmascript6-oct-2019" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="An Introduction to ECMAScript 6 through Examples" class="md-nav__button md-logo" aria-label="An Introduction to ECMAScript 6 through Examples" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    An Introduction to ECMAScript 6 through Examples
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/stahe/ecmascript6-oct-2019" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="introduction-to-the-ecmascript-6-language.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introduction to the ECMASCRIPT 6 language
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="setting-up-a-development-environment.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Setting up a development environment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="the-basics-of-javascript.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. The Basics of JavaScript
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tables.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Tables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="literal-objects.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Literal objects
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="strings.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Strings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="regular-expressions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Regular Expressions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="the-functions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. The functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="errors-and-exceptions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Errors and exceptions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="es6-modules.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. ES6 Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="event-driven-programming-and-asynchronous-functions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Event-driven programming and asynchronous functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. JavaScript HTTP functions
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="javascript-http-functions.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. JavaScript HTTP functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#121-choosing-an-http-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.1. Choosing an HTTP library
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#122-setting-up-a-development-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.2. Setting up a development environment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.2. Setting up a development environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1221-installing-the-tax-calculation-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.2.1. Installing the tax calculation server
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1222-installation-of-the-javascript-client-http-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.2.2. Installation of the JavaScript client HTTP libraries
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#123-script-fetch-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.3. script &#91;fetch-01&#93;
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#124-script-fetch-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.4. script &#91;fetch-02&#93;
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#125-script-axios-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.5. script &#91;axios-01&#93;
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#126-script-axios-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.6. script &#91;axios-02&#93;
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#127-script-axios-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.7. script &#91;axios-03&#93;
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#128-script-axios-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.8. script &#91;axios-04&#93;
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="classes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Classes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="javascript-http-clients-of-the-tax-calculation-service.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. Javascript HTTP clients of the tax calculation service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="12-javascript-http-functions">12. <a id="refheadingtoc2152541731793072"></a><a id="fontionshttp"></a><span>JavaScript HTTP functions</span></h1>
+<p><img src="images/image96.png" class="docx-zoomable" style="width:100px;height:130px;" alt="Image" /></p>
+<h2 id="121-choosing-an-http-library">12.1. <a id="refheadingtoc225388640539168"></a><span>Choosing an HTTP library</span></h2>
+<p><span>We have chosen two libraries here:</span></p>
+<p><span>ECMAScript 6 natively has an HTTP function called </span><b>&#91;fetch&#93; </b><span>that is not implemented by </span><b>&#91;node.js&#93; </b><span>(as of September 2019). There is a library called </span><b>&#91;node-fetch&#93; </b><span>that allows you to use the </span><b>&#91;fetch&#93; </b><span>function in Node. This library uses certain APIs specific to </span><b>&#91;node.js&#93;</b><span>. </span><b>&#91;node-fetch&#93; </b><span>code may therefore not be 100% portable to a non-</span><b>&#91;node&#93; </b><span>environment, such as a browser;</span></p>
+<p><span>There is also a library called </span><b>&#91;axios&#93; </b><span>dedicated to HTTP requests that is compatible with both </span><b>&#91;node.js&#93; </b><span>and browsers. This is the library we will ultimately use.</span></p>
+<p><span>We will present the same script written using both libraries to demonstrate that the coding approach is similar.</span></p>
+<h2 id="122-setting-up-a-development-environment">12.2. <a id="refheadingtoc225390640539168"></a><span>Setting up a development environment</span></h2>
+<h3 id="1221-installing-the-tax-calculation-server">12.2.1. <a id="refheadingtoc225392640539168"></a><span>Installing the tax calculation server</span></h3>
+<p><span>Ultimately, we will write a web application with the following architecture:</span></p>
+<p><img src="images/image97.png" class="docx-zoomable" style="width:548px;height:172px;" alt="Image" /></p>
+<p><b>JS</b><span>: JavaScript</span></p>
+<p><span>The JavaScript code is client-side:</span></p>
+<ul>
+<li><span>from a service providing static pages or fragments;</span></li>
+<li><span>a JSON service;</span></li>
+</ul>
+
+<p><span>The JavaScript code is therefore a JSON client and, as such, can be organized into layers </span><b>&#91;UI, business logic, DAO&#93; </b><span>(UI: User Interface) just like our JSON clients written in PHP.</span></p>
+<p><span>The server will be the tax calculation server for which we have already written 13 versions. We are going to write a 14th one. We therefore begin by duplicating, in NetBeans, the version 13 folder into the version 14 folder:</span></p>
+<p><img src="images/image98.png" class="docx-zoomable" style="width:410px;height:442px;" alt="Image" /></p>
+<ul>
+<li><span>in </span><b>&#91;6&#93;</b><span>, we modify the </span><b>&#91;config.json&#93; </b><span>file of version 14 as follows:</span>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-text">
+<span class="docx-code-line">{</span>
+<span class="docx-code-line">    <span style="color:#7F007F">&quot;databaseFilename&quot;</span><span style="color:#000000">: </span><span style="font-style:italic;color:#2A00FF">&quot;Config/database.json&quot;</span><span style="color:#000000">,</span></span>
+<span class="docx-code-line">    <span style="color:#7F007F">&quot;rootDirectory&quot;</span><span style="color:#000000">: </span><span style="font-style:italic;color:#2A00FF">&quot;C:/myprograms/laragon-lite/www/php7/scripts-web/impots/version-14&quot;</span><span style="color:#000000">,</span></span>
+<span class="docx-code-line">    <span style="color:#7F007F">&quot;relativeDependencies&quot;</span><span style="color:#000000">: [</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">        <span style="font-style:italic;color:#2A00FF">&quot;/Entities/BaseEntity.php&quot;</span><span style="color:#000000">,</span></span>
+<span class="docx-code-line">        <span style="font-style:italic;color:#2A00FF">&quot;/Entities/Simulation.php&quot;</span><span style="color:#000000">,</span></span>
+<span class="docx-code-line">        <span style="color:#000000">...</span></span>
+<span class="docx-code-line">    <span style="color:#7F007F">&quot;views&quot;</span><span style="color:#000000">: {</span></span>
+<span class="docx-code-line">        <span style="color:#7F007F">&quot;authentication-view.php&quot;</span><span style="color:#000000">: </span><span style="font-weight:bold;color:#000000">[700, 221, 400]</span><span style="color:#000000">,</span></span>
+<span class="docx-code-line">        <span style="color:#7F007F">&quot;tax-calculation-view.php&quot;</span><span style="color:#000000">: </span><span style="font-weight:bold;color:#000000">[200, 300, 341, 350, 800]</span><span style="color:#000000">,</span></span>
+<span class="docx-code-line">        <span style="color:#7F007F">&quot;simulation-list-view.php&quot;</span><span style="color:#000000">: </span><span style="font-weight:bold;color:#000000">[500, 600]</span></span>
+<span class="docx-code-line">    <span style="color:#000000">},</span></span>
+<span class="docx-code-line">    <span style="color:#7F007F">&quot;error-views&quot;</span><span style="color:#000000">: </span><span style="font-style:italic;color:#2A00FF">&quot;error-views.php&quot;</span></span>
+<span class="docx-code-line">}</span>
+</code></pre></div>
+
+</li>
+<li><span>On line 3, we change the application&#x27;s root directory;</span></li>
+</ul>
+
+<p><span>To access this server, you must start the </span><b>&#91;Laragon&#93; </b><span>services.</span></p>
+<p><span>Once this is done, we can test this new version of the server—which is currently identical to version 13—using </span><b>&#91;Postman&#93; </b><span>(see </span><a href="https://tahe.developpez.com/tutoriels-cours/php7/"><span style="color:#0563C1"><u>linked</u></span></a><span> article). We can use the collection of requests used to test version 12 of the tax calculation server:</span></p>
+<p><img src="images/image99.png" class="docx-zoomable" style="width:613px;height:378px;" alt="Image" /></p>
+<ul>
+<li><span>in </span><b>&#91;1-4&#93;</b><span>, use the </span><b>&#91;init-session-700&#93; </b><span>request to initialize a JSON session;</span></li>
+<li><span>in </span><b>&#91;4-5&#93;</b><span>, replace </span><b>&#91;version-12&#93; </b><span>with </span><b>&#91;version-14&#93; </b><span>to test version 14 of the project;</span></li>
+<li><span>upon execution, we should receive the JSON response </span><b>&#91;6&#93; </b><span>from the server;</span></li>
+</ul>
+
+<p><span>Version 14 of the server is now operational. We will need to modify it slightly. Let’s review this server’s API:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><b>Action</b></p>
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><b>Role</b></p>
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><b>Execution Context</b></p>
+</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><b>init-session</b></p>
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><span>Used to set the type (json, xml, html) of the desired responses</span></p>
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><b>GET</b><span> request </span><b>main.php?action=init-session&amp;type=x</b></p><p style='margin:0;'><span>can be sent at any time</span></p>
+</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><b>authenticate-user</b></p>
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><span>Authorizes or denies a user&#x27;s login</span></p>
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><b>POST</b><span> request </span><b>main.php?action=authenticate-</b><b>user</b></p><p style='margin:0;'><span>The request must have two posted parameters </span><b>&#91;user, password&#93;</b></p><p style='margin:0;'><span>Can only be issued if the session type (json, xml, html) is known</span></p>
+</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><b>calculate-tax</b></p>
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><span>Performs a tax calculation simulation</span></p>
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><b>POST</b><span> request to </span><b>main.php?action=calculate-tax</b></p><p style='margin:0;'><span>The request must have three posted parameters </span><b>&#91;married, children, salary&#93;</b></p><p style='margin:0;'><span>Can only be issued if the session type (json, xml, html) is known and the user is authenticated</span></p>
+</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><b>list-simulations</b></p>
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><span>Request to view the list of simulations performed since the start of the session</span></p>
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><b>GET</b><span> request </span><b>main.php?action=list-simulations</b></p><p style='margin:0;'><span>The request does not accept any other parameters</span></p><p style='margin:0;'><span>Can only be issued if the session type (json, xml, html) is known and the user is authenticated</span></p>
+</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><b>delete-simulation</b></p>
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><span>Deletes a simulation from the list of simulations</span></p>
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><b>GET</b><span> request </span><b>main.php?action=list-simulations&amp;number=x</b></p><p style='margin:0;'><span>The request does not accept any other parameters</span></p><p style='margin:0;'><span>Can only be issued if the session type (json, xml, html) is known and the user is authenticated</span></p>
+</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><b>end-session</b></p>
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><span>Ends the simulation session.</span></p>
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><span>Technically, the old web session is deleted and a new session is created</span></p><p style='margin:0;'><span>Can only be issued if the session type (json, xml, html) is known and the user is authenticated</span></p>
+</td>
+</tr>
+</table>
+
+<h3 id="1222-installation-of-the-javascript-client-http-libraries">12.2.2. <a id="refheadingtoc225394640539168"></a><span>Installation of the JavaScript client HTTP libraries</span></h3>
+<p><span>Initially, we will work with the following architecture:</span></p>
+<p><img src="images/image100.png" class="docx-zoomable" style="width:541px;height:171px;" alt="Image" /></p>
+<ul>
+<li><span>In </span><b>&#91;1&#93;</b><span>, a console script </span><b>&#91;node.js&#93; </b><span>makes an HTTP request to the tax calculation JSON server;</span></li>
+<li><span>In </span><b>&#91;4&#93;</b><span>, it receives this response and displays it in the console;</span></li>
+</ul>
+
+<p><span>In Example 1, we will use the </span><b>&#91;node-fetch&#93; </b><span>and </span><b>&#91;axios&#93; </b><span>libraries, and then we will only keep </span><b>&#91;axios&#93; </b><span>for the following examples. We will now install these two JavaScript libraries from the </span><b>&#91;VSCode&#93; </b><span>terminal:</span></p>
+<p><img src="images/image101.png" class="docx-zoomable" style="width:576px;height:248px;" alt="Image" /></p>
+<p><span>We will also use the </span><b>&#91;qs&#93; </b><span>library, which allows for URL encoding of a string. Recall that this encoding is used to encode the parameters of an HTTP GET or POST request.</span></p>
+<p><img src="images/image102.png" class="docx-zoomable" style="width:587px;height:221px;" alt="Image" /></p>
+<h2 id="123-script-fetch-01">12.3. <a id="refheadingtoc225396640539168"></a><span>script &#91;fetch-01&#93;</span></h2>
+<p><span>The </span><b>&#91;fetch-01&#93; </b><span>script uses the </span><b>&#91;node-fetch&#93; </b><span>library to initialize a JSON session with the tax calculation server. Its code is as follows:</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-python">
+<span class="docx-code-line"><span style="color:#A31515">&#x27;use strict&#x27;</span>;</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// imports</span>
+<span class="docx-code-line"><span style="color:#0000FF">import </span><span style="color:#000000">fetch </span><span style="color:#0000FF">from </span><span style="color:#A31515">&#x27;node-fetch&#x27;</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"><span style="color:#0000FF">import </span><span style="color:#000000">qs </span><span style="color:#0000FF">from </span><span style="color:#A31515">&#x27;qs&#x27;</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"><span style="color:#0000FF">import </span><span style="color:#000000">{ sprintf } </span><span style="color:#0000FF">from </span><span style="color:#A31515">&#x27;sprintf-js&#x27;</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"><span style="color:#0000FF">import </span><span style="color:#000000">moment </span><span style="color:#0000FF">from </span><span style="color:#A31515">&#x27;moment&#x27;</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// Base URL of the tax calculation server</span>
+<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">baseUrl = </span><span style="color:#A31515">&#x27;http://localhost/php7/scripts-web/impots/version-14/main.php?&#x27;</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line">// Initialize session</span>
+<span class="docx-code-line"><span style="color:#0000FF">async function </span><span style="color:#000000">initSession() {</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// HTTP request options </span><span style="font-weight:bold;color:#008000">[get /main.php?action=init-session&amp;type=json]</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">const </span><span style="color:#000000">options = {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    method: </span><span style="color:#A31515">&quot;GET&quot;</span><span style="color:#000000">,</span></span>
+<span class="docx-code-line">    timeout: 2000</span>
+<span class="docx-code-line">  };</span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// Execute the HTTP request </span><span style="font-weight:bold;color:#008000">[get /main.php?action=init-session&amp;type=json]</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">let </span><span style="color:#000000">startFetch;</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">try </span><span style="color:#000000">{</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// asynchronous request - </span><span style="font-weight:bold;color:#008000">[fetch] </span><span style="color:#008000">returns a promise</span></span>
+<span class="docx-code-line">    startFetch = moment(Date.now());</span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">const </span><span style="color:#000000">response = </span><span style="color:#0000FF">await </span><span style="color:#000000">fetch(baseUrl + qs.stringify({</span></span>
+<span class="docx-code-line"><span style="color:#000000">      action: </span><span style="color:#A31515">&#x27;init-session&#x27;</span><span style="color:#000000">,</span></span>
+<span class="docx-code-line"><span style="color:#000000">      type: </span><span style="color:#A31515">&#x27;json&#x27;</span></span>
+<span class="docx-code-line">    }), options);</span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// </span><span style="font-weight:bold;color:#008000">[response] </span><span style="color:#008000">is the entire HTTP response from the server (HTTP headers + the response itself)</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// we display this response to see its structure</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(sprintf(</span><span style="color:#A31515">&quot;Fetch response formatted as JSON,=%j, %s&quot;</span><span style="color:#000000">, response, time(startFetch)));</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;Fetch response in JavaScript =&quot;</span><span style="color:#000000">, response);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// we can access the HTTP headers</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;response headers=&quot;</span><span style="color:#000000">, response.headers);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// If the response type is application/json, the JSON response from the server is retrieved using the asynchronous function </span><span style="font-weight:bold;color:#008000">[response.json()]</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// In this case, the calling code receives a </span><span style="font-weight:bold;color:#008000">[Promise] </span><span style="color:#008000">object</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// </span><span style="font-weight:bold;color:#008000">[await] </span><span style="color:#008000">allows you to retrieve the server&#x27;s </span><span style="font-weight:bold;color:#008000">[json] </span><span style="color:#008000">response rather than its promise</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">const </span><span style="color:#000000">startJson = moment(Date.now());</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">const </span><span style="color:#000000">object = </span><span style="color:#0000FF">await </span><span style="color:#000000">response.json();</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(sprintf(</span><span style="color:#A31515">&quot;json response=%j, type=%s, %s&quot;</span><span style="color:#000000">, object, </span><span style="color:#0000FF">typeof</span><span style="color:#000000">(object), time(startJson)));</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">return </span><span style="color:#000000">object;</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// if the response is of type text / plain, the server&#x27;s text response is obtained with </span><span style="font-weight:bold;color:#008000">[response.text()]</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// in this case, the calling code receives a </span><span style="font-weight:bold;color:#008000">[Promise] </span><span style="color:#008000">object</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// </span><span style="font-weight:bold;color:#008000">[await] </span><span style="color:#008000">allows you to get the server&#x27;s </span><span style="font-weight:bold;color:#008000">[text] </span><span style="color:#008000">response rather than its promise</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// const text = await response.text();</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// console.log(&quot;text response=&quot;, text);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// return text;</span></span>
+<span class="docx-code-line"><span style="color:#000000">  } </span><span style="color:#0000FF">catch </span><span style="color:#000000">(error) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// We&#x27;re here because the server sent an error code </span><span style="font-weight:bold;color:#008000">[404 Not Found, ...] </span><span style="color:#008000">with an empty body—we log the error to see its structure</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// or because the client </span><span style="font-weight:bold;color:#008000">[fetch] </span><span style="color:#008000">threw an exception (network unreachable, ...)</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// we display the error structure</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(sprintf(</span><span style="color:#A31515">&quot;error fetch in json=%j, %s&quot;</span><span style="color:#000000">, error, time(startFetch)));</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;fetch error in JavaScript=&quot;</span><span style="color:#000000">, </span><span style="color:#0000FF">typeof</span><span style="color:#000000">(error), error);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// we log the received error message</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">throw </span><span style="color:#000000">error.message;</span></span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line">}</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// The main function executes the asynchronous function <span style="font-weight:bold">[initSession]</span></span>
+<span class="docx-code-line"><span style="color:#0000FF">async function </span><span style="color:#000000">main() {</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">try </span><span style="color:#000000">{</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;HTTP request to the server in progress ---------------------------------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">const </span><span style="color:#000000">response = </span><span style="color:#0000FF">await </span><span style="color:#000000">initSession();</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;success ---------------------------------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;response=&quot;</span><span style="color:#000000">, response, </span><span style="color:#0000FF">typeof </span><span style="color:#000000">(response))</span></span>
+<span class="docx-code-line"><span style="color:#000000">  } </span><span style="color:#0000FF">catch </span><span style="color:#000000">(error) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;error ---------------------------------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;error=&quot;</span><span style="color:#000000">, error, </span><span style="color:#0000FF">typeof</span><span style="color:#000000">(error));</span></span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line">}</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// test</span>
+<span class="docx-code-line">main();</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// utility for displaying time and duration</span>
+<span class="docx-code-line"><span style="color:#0000FF">function </span><span style="color:#000000">getTime(start) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// current time</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">const </span><span style="color:#000000">now = moment(Date.now());</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// time formatting</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">let </span><span style="color:#000000">result = </span><span style="color:#A31515">&quot;time=&quot; </span><span style="color:#000000">+ now.format(</span><span style="color:#A31515">&quot;HH:mm:ss:SSS&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// Do we need to calculate a duration?</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">if </span><span style="color:#000000">(start) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">const </span><span style="color:#000000">duration = now - start;</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">const </span><span style="color:#000000">milliseconds = duration % 1000;</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">const </span><span style="color:#000000">seconds = Math.floor(duration / 1000);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Format time + duration</span></span>
+<span class="docx-code-line"><span style="color:#000000">    result = result + sprintf(</span><span style="color:#A31515">&quot;, duration= %s seconds and %s milliseconds&quot;</span><span style="color:#000000">, seconds, milliseconds);</span></span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// result</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">return </span><span style="color:#000000">result;</span></span>
+<span class="docx-code-line">}</span>
+</code></pre></div>
+
+<p><b>Comments</b></p>
+<ul>
+<li><span>JavaScript HTTP functions are asynchronous functions. Here, we’re applying what we learned in the previous section (see </span><a href="../../../../../st-2020/cours/ecmascript6/masters/02/chap-11.docx"><span style="color:#0563C1"><u>link</u></span></a><span>);</span></li>
+<li><span>line 24: to wait for the response from the asynchronous function </span><b>&#91;fetch&#93; </b><span>to be published on the </span><b>&#91;node.js&#93; </b><span>event loop, we use the keyword </span><b>&#91;await&#93;</b><span>. We know that this statement must be within code prefixed by the keyword </span><b>&#91;async&#93; </b><span>(line 13);</span></li>
+<li><span>lines 13–56: we encapsulate the HTTP code within the asynchronous function </span><b>&#91;initSession&#93;</b><span>;</span></li>
+<li><span>lines 59–69: a second asynchronous function </span><b>&#91;main&#93; </b><span>is used to call the asynchronous function </span><b>&#91;initSession&#93; </b><span>in a blocking manner (async/await);</span></li>
+<li><span>line 72: the asynchronous function </span><b>&#91;main&#93; </b><span>is called;</span></li>
+<li><span>although the entire code resembles synchronous code, these are indeed asynchronous functions that are executed, but in a blocking manner;</span></li>
+<li><span>line 19: to initialize a JSON session with the tax calculation server, you must send it the HTTP request </span><b>&#91;get /main.php?action=init-session&amp;type=json&#93;</b><span>. This is what the code in lines 24–27 does. The syntax for </span><b>&#91;fetch&#93; </b><span>is as follows</span><b>: &#91;fetch(URL, options)&#93; </b><span>with:</span><ul>
+<li><b>&#91;URL&#93;</b><span>: the URL being queried;</span></li>
+<li><b>&#91;options&#93;</b><span>: an object defining the request options. This is where we define the HTTP headers we want to send to the target server;</span></li>
+</ul>
+</li>
+<li><span>lines 15–18: we define the options for the request we want to make:</span><ul>
+<li><b>&#91;method&#93;</b><span>: we want to perform a GET;</span></li>
+<li><b>&#91;timeout&#93;</b><span>: we want the </span><b>&#91;fetch&#93; </b><span>client to wait no more than 2 seconds for the server’s response. If this timeout is exceeded, </span><b>&#91;fetch&#93; </b><span>will throw an exception;</span></li>
+</ul>
+</li>
+<li><span>line 24: to obtain the URL </span><b>&#91;/main.php?action=init-session&amp;type=json&#93;</b><span>, we use the </span><b>&#91;qs&#93; </b><span>library to get the URL-encoded parameters </span><b>&#91;action,type&#93; </b><span>of the GET request. The resulting string is </span><b>&#91;init-session&amp;type=json&#93;, </b><span>which we could have constructed ourselves. We simply wanted to demonstrate how to obtain a URL-encoded string;</span></li>
+<li><span>line 24: the keyword </span><b>&#91;await&#93; </b><span>indicates that an asynchronous task is being launched here and that we are waiting for it to publish its response to the </span><b>&#91;node.js&#93; </b><span>event loop;</span></li>
+<li><span>line 24: in </span><b>&#91;response&#93;</b><span>, we get a complex object that describes the entire received HTTP response (headers and body);</span></li>
+<li><span>lines 30–31: We print the </span><b>&#91;response&#93; </b><span>object to see its structure, first as a string and then as a JavaScript object;</span></li>
+<li><span>line 33: we display the HTTP headers sent by the server;</span></li>
+<li><span>Line 38: We know that the tax calculation server will send a JSON string. This string is encapsulated in the </span><b>&#91;response&#93; </b><span>object. We can retrieve it using the </span><b>&#91;response.json()&#93; </b><span>method. However, this method is asynchronous. We therefore write </span><b>&#91;await response.json()&#93; </b><span>to retrieve the JSON string that will be published on the </span><b>&#91;node.js&#93; </b><span>event loop. In fact, it is not the JSON string itself that we obtain, but the JavaScript object represented by it;</span></li>
+<li><span>line 39: display of the received JSON string;</span></li>
+<li><span>line 40: returns the received JavaScript object;</span></li>
+<li><span>line 47: we catch any potential errors from the </span><b>&#91;fetch&#93; </b><span>statement. This only throws an exception if the HTTP operation failed and no response was received from the server. If a response was received, even with an HTTP status code other than </span><b>&#91;200 OK&#93;</b><span>, </span><b>&#91;fetch&#93; </b><span>does not throw an exception, and the server response will be available on line 38;</span></li>
+<li><span>lines 51–52: the </span><b>&#91;error&#93; </b><span>object received by the </span><b>&#91;catch&#93; </b><span>clause is displayed, first as a JSON string and then as a JavaScript object;</span></li>
+<li><span>line 54: the error message from </span><b>&#91;fetch&#93; </b><span>is stored in </span><b>&#91;error.message&#93;</b><span>;</span></li>
+<li><span>lines 59–69: the asynchronous function </span><b>&#91;main&#93; </b><span>calls the asynchronous function </span><b>&#91;initSession&#93; </b><span>in a blocking manner (await on line 62);</span></li>
+<li><span>line 72: the asynchronous function </span><b>&#91;main&#93; </b><span>is launched, and the main script code is then complete. The overall script will finish when the launched asynchronous tasks have published their results to the event loop;</span></li>
+</ul>
+
+<p><span>The results of the execution are as follows:</span></p>
+<p><b>Case 1</b><span>: the Laragon server is not running</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-text">
+<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Running] </span><span style="color:#A31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\http\fetch-01.js&quot;</span></span>
+<span class="docx-code-line">HTTP request to the server in progress ---------------------------------------------</span>
+<span class="docx-code-line">Fetch error in JSON: {&quot;message&quot;:&quot;network timeout at: http://localhost/php7/scripts-web/impots/version-14/main.php?action=init-session&amp;type=json&quot;,&quot;type&quot;:&quot;request-timeout&quot;}, time=10:08:48:180, duration= 2 seconds and 62 milliseconds</span>
+<span class="docx-code-line">fetch error in JavaScript = object { FetchError: network timeout at: http://localhost/php7/scripts-web/impots/version-14/main.php?action=init-session&amp;type=json</span>
+<span class="docx-code-line">    at Timeout.&lt;anonymous&gt; (c:\Data\st-2019\dev\es6\javascript\node_modules\node-fetch\lib\index.js:1448:13)</span>
+<span class="docx-code-line">    at ontimeout (timers.js:436:11)</span>
+<span class="docx-code-line">    at tryOnTimeout (timers.js:300:5)</span>
+<span class="docx-code-line">    at listOnTimeout (timers.js:263:5)</span>
+<span class="docx-code-line">    at Timer.processTimers (timers.js:223:10)</span>
+<span class="docx-code-line">  message:</span>
+<span class="docx-code-line">   &#x27;network timeout at: http://localhost/php7/scripts-web/impots/version-14/main.php?action=init-session&amp;type=json&#x27;,</span>
+<span class="docx-code-line">  type: &#x27;request-timeout&#x27; }</span>
+<span class="docx-code-line">error ---------------------------------------------</span>
+<span class="docx-code-line">error= network timeout at: http://localhost/php7/scripts-web/impots/version-14/main.php?action=init-session&amp;type=json string</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Done] </span><span style="color:#A31515">exited with </span><span style="color:#800080">code=0 </span><span style="color:#A31515">in</span><span style="color:#09885A"> 2.804 </span><span style="color:#A31515">seconds</span></span>
+</code></pre></div>
+
+<p><b>Comments</b></p>
+<ul>
+<li><span>line 3: the HTTP request fails after 2 seconds and 62 milliseconds due to the 2-second timeout imposed on the HTTP request;</span></li>
+<li><span>lines 4–9: the JavaScript </span><b>&#91;error&#93; </b><span>object intercepted by the </span><b>&#91;catch(error)&#93; </b><span>clause. This object has two properties:</span><ul>
+<li><b>&#91;FetchError&#93;</b><span>: line 4;</span></li>
+<li><b>&#91;message&#93;</b><span>: lines 10–12;</span></li>
+</ul>
+</li>
+<li><span>line 14: the error message received by the asynchronous function </span><b>&#91;main&#93;</b><span>;</span></li>
+</ul>
+
+<p><b>Case 2</b><span>: The Laragon server is running</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-python">
+<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Running] </span><span style="color:#A31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\http\fetch-01.js&quot;</span></span>
+<span class="docx-code-line">HTTP request to the server in progress ---------------------------------------------</span>
+<span class="docx-code-line">Fetch response formatted in JSON,={&quot;size&quot;:0,&quot;timeout&quot;:2000}, time=10:13:50:814, duration= 0 seconds and 375 milliseconds</span>
+<span class="docx-code-line">Fetch response in JavaScript = Response {</span>
+<span class="docx-code-line">  size: 0,</span>
+<span class="docx-code-line">  timeout: 2000,</span>
+<span class="docx-code-line">  <span style="font-weight:bold">[Symbol(Body internals)]</span>:</span>
+<span class="docx-code-line">   { body:</span>
+<span class="docx-code-line">      PassThrough {</span>
+<span class="docx-code-line">        _readableState: <span style="font-weight:bold">[ReadableState]</span>,</span>
+<span class="docx-code-line">        readable: true,</span>
+<span class="docx-code-line">        domain: null,</span>
+<span class="docx-code-line">        _events: <span style="font-weight:bold">[Object]</span>,</span>
+<span class="docx-code-line">        _eventsCount: 2,</span>
+<span class="docx-code-line">        _maxListeners: undefined,</span>
+<span class="docx-code-line">        _writableState: <span style="font-weight:bold">[WritableState]</span>,</span>
+<span class="docx-code-line">        writable: false,</span>
+<span class="docx-code-line">        allowHalfOpen: true,</span>
+<span class="docx-code-line">        _transformState: <span style="font-weight:bold">[Object] </span>},</span>
+<span class="docx-code-line">     disturbed: false,</span>
+<span class="docx-code-line">     error: null },</span>
+<span class="docx-code-line">  <span style="font-weight:bold">[Symbol(Response internals)]</span>:</span>
+<span class="docx-code-line">   { url:</span>
+<span class="docx-code-line">      &#x27;http://localhost/php7/scripts-web/impots/version-14/main.php?action=init-session&amp;type=json&#x27;,</span>
+<span class="docx-code-line">     status: 200,</span>
+<span class="docx-code-line">     statusText: &#x27;OK&#x27;,</span>
+<span class="docx-code-line">     headers: Headers { <span style="font-weight:bold">[Symbol(map)]</span>: <span style="font-weight:bold">[Object] </span>},</span>
+<span class="docx-code-line">     counter: 0 } }</span>
+<span class="docx-code-line">response headers = Headers {</span>
+<span class="docx-code-line">  <span style="font-weight:bold">[Symbol(map)]</span>:</span>
+<span class="docx-code-line">   <span style="font-weight:bold">[Object: null prototype] </span>{</span>
+<span class="docx-code-line">     date: <span style="font-weight:bold">[ &#x27;Sat, 14 Sep 2019 08:13:50 GMT&#x27; ]</span>,</span>
+<span class="docx-code-line">     server: <span style="font-weight:bold">[ &#x27;Apache/2.4.35 (Win64) OpenSSL/1.1.0i PHP/7.2.11&#x27; ]</span>,</span>
+<span class="docx-code-line">     &#x27;x-powered-by&#x27;: <span style="font-weight:bold">[ &#x27;PHP/7.2.11&#x27; ]</span>,</span>
+<span class="docx-code-line">     &#x27;cache-control&#x27;: <span style="font-weight:bold">[ &#x27;max-age=0, private, must-revalidate, no-cache, private&#x27; ]</span>,</span>
+<span class="docx-code-line">     &#x27;set-cookie&#x27;: <span style="font-weight:bold">[ &#x27;PHPSESSID=99q2iinusmhl55fa600aie2mmu; path=/&#x27; ]</span>,</span>
+<span class="docx-code-line">     &#x27;content-length&#x27;: <span style="font-weight:bold">[ &#x27;86&#x27; ]</span>,</span>
+<span class="docx-code-line">     connection: <span style="font-weight:bold">[ &#x27;close&#x27; ]</span>,</span>
+<span class="docx-code-line">     &#x27;content-type&#x27;: <span style="font-weight:bold">[ &#x27;application/json&#x27; ] </span>} }</span>
+<span class="docx-code-line">response json={&quot;action&quot;:&quot;init-session&quot;,&quot;status&quot;:700,&quot;response&quot;:&quot;session started with type <span style="font-weight:bold">[json]</span>&quot;}, type=object, time=10:13:50:825, duration= 0 seconds and 1 milliseconds</span>
+<span class="docx-code-line">success ---------------------------------------------</span>
+<span class="docx-code-line">response = { action: &#x27;init-session&#x27;,</span>
+<span class="docx-code-line">  &#x27;status&#x27;: 700,</span>
+<span class="docx-code-line">  &#x27;response&#x27;: &#x27;session started with type <span style="font-weight:bold">[json]</span>&#x27; } object</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Done] </span><span style="color:#A31515">exited with </span><span style="color:#800080">code=0 </span><span style="color:#A31515">in</span><span style="color:#09885A"> 1.022 </span><span style="color:#A31515">seconds</span></span>
+</code></pre></div>
+
+<p><b>Comments</b></p>
+<ul>
+<li><span>line 3: </span><b>&#91;fetch&#93; </b><span>receives the server response after 375 ms;</span></li>
+<li><span>lines 4–39: the structure of the JavaScript object </span><b>&#91;response&#93; </b><span>encapsulating the server’s response. Among its properties, some may be of interest to us:</span><ul>
+<li><b>&#91;status&#93; </b><span>(line 25): HTTP status code of the server&#x27;s response;</span></li>
+<li><b>&#91;statusText&#93; </b><span>(line 26): text associated with this code;</span></li>
+<li><b>&#91;headers&#93; </b><span>(line 27): the HTTP headers of the server’s response;</span></li>
+<li><b>&#91;body&#93; </b><span>(line 8): represents the document sent by the server. The </span><b>&#91;fetch&#93; </b><span>statement provides methods to work with it;</span></li>
+</ul>
+</li>
+<li><span>lines 29–39: the HTTP headers of the server’s response;</span></li>
+<li><span>line 40: the asynchronous function </span><b>&#91;response.json()&#93; </b><span>returned its response after 1 millisecond;</span></li>
+<li><span>lines 42–44: the JavaScript object received by the asynchronous function </span><b>&#91;main&#93;</b><span>;</span></li>
+</ul>
+
+<p><b>Case 3</b><span>: The Laragon server is running, but an incorrect command is sent to it:</span></p>
+<p><img src="images/image103.png" class="docx-zoomable" style="width:384px;height:96px;" alt="Image" /></p>
+<ul>
+<li><span>above, line 26, an incorrect session type is passed to the server;</span></li>
+</ul>
+
+<p><span>The execution results are as follows:</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-python">
+<span class="docx-code-line">HTTP request to the server in progress ---------------------------------------------</span>
+<span class="docx-code-line">Fetch response formatted as JSON,={&quot;size&quot;:0,&quot;timeout&quot;:2000}, time=10:27:54:114, duration= 0 seconds and 136 milliseconds</span>
+<span class="docx-code-line">Fetch response in JavaScript = Response {</span>
+<span class="docx-code-line">  size: 0,</span>
+<span class="docx-code-line">  timeout: 2000,</span>
+<span class="docx-code-line">  <span style="font-weight:bold">[Symbol(Body internals)]</span>:</span>
+<span class="docx-code-line">   { body:</span>
+<span class="docx-code-line">      PassThrough {</span>
+<span class="docx-code-line">        _readableState: <span style="font-weight:bold">[ReadableState]</span>,</span>
+<span class="docx-code-line">        readable: true,</span>
+<span class="docx-code-line">        domain: null,</span>
+<span class="docx-code-line">        _events: <span style="font-weight:bold">[Object]</span>,</span>
+<span class="docx-code-line">        _eventsCount: 2,</span>
+<span class="docx-code-line">        _maxListeners: undefined,</span>
+<span class="docx-code-line">        _writableState: <span style="font-weight:bold">[WritableState]</span>,</span>
+<span class="docx-code-line">        writable: false,</span>
+<span class="docx-code-line">        allowHalfOpen: true,</span>
+<span class="docx-code-line">        _transformState: <span style="font-weight:bold">[Object] </span>},</span>
+<span class="docx-code-line">     disturbed: false,</span>
+<span class="docx-code-line">     error: null },</span>
+<span class="docx-code-line">  <span style="font-weight:bold">[Symbol(Response internals)]</span>:</span>
+<span class="docx-code-line">   { url:</span>
+<span class="docx-code-line">      &#x27;http://localhost/php7/scripts-web/impots/version-14/main.php?action=init-session&amp;type=x&#x27;,</span>
+<span class="docx-code-line">     status: 400,</span>
+<span class="docx-code-line">     statusText: &#x27;Bad Request&#x27;,</span>
+<span class="docx-code-line">     headers: Headers { <span style="font-weight:bold">[Symbol(map)]</span>: <span style="font-weight:bold">[Object] </span>},</span>
+<span class="docx-code-line">     counter: 0 } }</span>
+<span class="docx-code-line">response headers = Headers {</span>
+<span class="docx-code-line">  <span style="font-weight:bold">[Symbol(map)]</span>:</span>
+<span class="docx-code-line">   <span style="font-weight:bold">[Object: null prototype] </span>{</span>
+<span class="docx-code-line">     date: <span style="font-weight:bold">[ &#x27;Sat, 14 Sep 2019 08:27:54 GMT&#x27; ]</span>,</span>
+<span class="docx-code-line">     server: <span style="font-weight:bold">[ &#x27;Apache/2.4.35 (Win64) OpenSSL/1.1.0i PHP/7.2.11&#x27; ]</span>,</span>
+<span class="docx-code-line">     &#x27;x-powered-by&#x27;: <span style="font-weight:bold">[ &#x27;PHP/7.2.11&#x27; ]</span>,</span>
+<span class="docx-code-line">     &#x27;cache-control&#x27;: <span style="font-weight:bold">[ &#x27;max-age=0, private, must-revalidate, no-cache, private&#x27; ]</span>,</span>
+<span class="docx-code-line">     &#x27;set-cookie&#x27;: <span style="font-weight:bold">[ &#x27;PHPSESSID=5ku9gfok81ikj98hia0meeum57; path=/&#x27; ]</span>,</span>
+<span class="docx-code-line">     &#x27;content-length&#x27;: <span style="font-weight:bold">[ &#x27;79&#x27; ]</span>,</span>
+<span class="docx-code-line">     connection: <span style="font-weight:bold">[ &#x27;close&#x27; ]</span>,</span>
+<span class="docx-code-line">     &#x27;content-type&#x27;: <span style="font-weight:bold">[ &#x27;application/json&#x27; ] </span>} }</span>
+<span class="docx-code-line">response json={&quot;action&quot;:&quot;init-session&quot;,&quot;status&quot;:703,&quot;response&quot;:&quot;invalid type=<span style="font-weight:bold">[x] </span>parameter&quot;}, type=object, time=10:27:54:127, duration= 0 seconds and 2 milliseconds</span>
+<span class="docx-code-line">success ---------------------------------------------</span>
+<span class="docx-code-line">response = { action: &#x27;init-session&#x27;,</span>
+<span class="docx-code-line">  &#x27;status&#x27;: 703,</span>
+<span class="docx-code-line">  &#x27;response&#x27;: &#x27;invalid type=<span style="font-weight:bold">[x] </span>parameter&#x27; } object</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Done] </span><span style="color:#A31515">exited with </span><span style="color:#800080">code=0 </span><span style="color:#A31515">in</span><span style="color:#09885A"> 0.712 </span><span style="color:#A31515">seconds</span></span>
+</code></pre></div>
+
+<ul>
+<li><span>The server response is received on line 2;</span></li>
+<li><span>line 24: we can see that the HTTP status code of the server response is 400, an error code. However, </span><b>&#91;fetch&#93; </b><span>did not throw an exception. As long as </span><b>&#91;fetch&#93; </b><span>receives a response from the server, it processes it and does not throw an exception;</span></li>
+<li><span>lines 41–43: the response obtained by the asynchronous function </span><b>&#91;main&#93;</b><span>;</span></li>
+</ul>
+
+<h2 id="124-script-fetch-02">12.4. <a id="refheadingtoc225398640539168"></a><span>script &#91;fetch-02&#93;</span></h2>
+<p><span>The following script reuses the </span><b>&#91;fetch-01&#93; </b><span>script while removing all unnecessary details:</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-python">
+<span class="docx-code-line"><span style="color:#A31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// imports</span>
+<span class="docx-code-line"><span style="color:#0000FF">import </span><span style="color:#000000">fetch </span><span style="color:#0000FF">from </span><span style="color:#A31515">&#x27;node-fetch&#x27;</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"><span style="color:#0000FF">import </span><span style="color:#000000">qs </span><span style="color:#0000FF">from </span><span style="color:#A31515">&#x27;qs&#x27;</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// Base URL of the tax calculation server</span>
+<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">baseUrl = </span><span style="color:#A31515">&#x27;http://localhost/php7/scripts-web/impots/version-14/main.php?&#x27;</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line">// Initialize session</span>
+<span class="docx-code-line"><span style="color:#0000FF">async function </span><span style="color:#000000">initSession() {</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// HTTP request options </span><span style="font-weight:bold;color:#008000">[get /main.php?action=init-session&amp;type=json]</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">const </span><span style="color:#000000">options = {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    method: </span><span style="color:#A31515">&quot;GET&quot;</span><span style="color:#000000">,</span></span>
+<span class="docx-code-line">    timeout: 2000</span>
+<span class="docx-code-line">  };</span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// Execute the HTTP request </span><span style="font-weight:bold;color:#008000">[get /main.php?action=init-session&amp;type=json]</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">const </span><span style="color:#000000">response = </span><span style="color:#0000FF">await </span><span style="color:#000000">fetch(baseUrl + qs.stringify({</span></span>
+<span class="docx-code-line"><span style="color:#000000">    action: </span><span style="color:#A31515">&#x27;init-session&#x27;</span><span style="color:#000000">,</span></span>
+<span class="docx-code-line"><span style="color:#000000">    type: </span><span style="color:#A31515">&#x27;json&#x27;</span></span>
+<span class="docx-code-line">  }), options);</span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// Result received in JSON</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">return await </span><span style="color:#000000">response.json();</span></span>
+<span class="docx-code-line">}</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// The main function executes the asynchronous function <span style="font-weight:bold">[initSession]</span></span>
+<span class="docx-code-line"><span style="color:#0000FF">async function </span><span style="color:#000000">main() {</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">try </span><span style="color:#000000">{</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;HTTP request to the server in progress ---------------------------------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">const </span><span style="color:#000000">response = </span><span style="color:#0000FF">await </span><span style="color:#000000">initSession();</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;success ---------------------------------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;response=&quot;</span><span style="color:#000000">, response)</span></span>
+<span class="docx-code-line"><span style="color:#000000">  } </span><span style="color:#0000FF">catch </span><span style="color:#000000">(error) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;error ---------------------------------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;error=&quot;</span><span style="color:#000000">, error.message);</span></span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line">}</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// test</span>
+<span class="docx-code-line">main();</span>
+</code></pre></div>
+
+<p><span>Results of a normal execution:</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-text">
+<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Running] </span><span style="color:#A31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\http\fetch-02.js&quot;</span></span>
+<span class="docx-code-line">HTTP request to the server in progress ---------------------------------------------</span>
+<span class="docx-code-line">success ---------------------------------------------</span>
+<span class="docx-code-line">response= { action: &#x27;init-session&#x27;,</span>
+<span class="docx-code-line">  &#x27;status&#x27;: 700,</span>
+<span class="docx-code-line">  &#x27;response&#x27;: &#x27;session started with type <span style="font-weight:bold">[json]</span>&#x27; }</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Done] </span><span style="color:#A31515">exited with </span><span style="color:#800080">code=0 </span><span style="color:#A31515">in</span><span style="color:#09885A"> 0.56 </span><span style="color:#A31515">seconds</span></span>
+</code></pre></div>
+
+<p><span>Results of an execution with an exception (stopping the Laragon server):</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-text">
+<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Running] </span><span style="color:#A31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\http\fetch-02.js&quot;</span></span>
+<span class="docx-code-line">HTTP request to the server in progress ---------------------------------------------</span>
+<span class="docx-code-line">error ---------------------------------------------</span>
+<span class="docx-code-line">error= network timeout at: http://localhost/php7/scripts-web/impots/version-14/main.php?action=init-session&amp;type=json</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Done] </span><span style="color:#A31515">exited with </span><span style="color:#800080">code=0 </span><span style="color:#A31515">in</span><span style="color:#09885A"> 2.701 </span><span style="color:#A31515">seconds</span></span>
+</code></pre></div>
+
+<h2 id="125-script-axios-01">12.5. <a id="refheadingtoc225400640539168"></a><span>script &#91;axios-01&#93;</span></h2>
+<p><span>Here we revisit the </span><b>&#91;fetch-01&#93; </b><span>script, which we rewrite using the </span><b>&#91;axios&#93; </b><span>library. As a reminder, our interest in this library lies in its portability between the </span><b>&#91;node.js&#93; </b><span>environment and common browsers. This allows:</span></p>
+<ul>
+<li><span>In Phase 1, test our scripts in a </span><b>&#91;Node.js&#93; </b><span>environment;</span></li>
+<li><span>in phase 2, to port them to a browser;</span></li>
+</ul>
+
+<p><span>The </span><b>&#91;axios-01&#93; </b><span>script follows the structure of the </span><b>&#91;fetch-01&#93; </b><span>script:</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-python">
+<span class="docx-code-line"><span style="color:#A31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"><span style="color:#0000FF">import </span><span style="color:#000000">axios </span><span style="color:#0000FF">from </span><span style="color:#A31515">&#x27;axios&#x27;</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// default axios configuration</span>
+<span class="docx-code-line">axios.defaults.timeout = 2000;</span>
+<span class="docx-code-line"><span style="color:#000000">axios.defaults.baseURL = </span><span style="color:#A31515">&#x27;http://localhost/php7/scripts-web/impots/version-14&#x27;</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// initialize session</span>
+<span class="docx-code-line"><span style="color:#0000FF">async function </span><span style="color:#000000">initSession(axios) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// HTTP request options </span><span style="font-weight:bold;color:#008000">[get /main.php?action=init-session&amp;type=json]</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">const </span><span style="color:#000000">options = {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    method: </span><span style="color:#A31515">&quot;GET&quot;</span><span style="color:#000000">,</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// URL parameters</span></span>
+<span class="docx-code-line">    params: {</span>
+<span class="docx-code-line"><span style="color:#000000">      action: </span><span style="color:#A31515">&#x27;init-session&#x27;</span><span style="color:#000000">,</span></span>
+<span class="docx-code-line"><span style="color:#000000">      type: </span><span style="color:#A31515">&#x27;json&#x27;</span></span>
+<span class="docx-code-line">    }</span>
+<span class="docx-code-line">  };</span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// Execute the HTTP request </span><span style="font-weight:bold;color:#008000">[get /main.php?action=init-session&amp;type=json]</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">try </span><span style="color:#000000">{</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// asynchronous request</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">const </span><span style="color:#000000">response = </span><span style="color:#0000FF">await </span><span style="color:#000000">axios.request(</span><span style="color:#A31515">&#x27;main.php&#x27;</span><span style="color:#000000">, options);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// response is the entire HTTP response from the server (HTTP headers + the response body)</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// display this response to see its structure</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;axios response=&quot;</span><span style="color:#000000">, response);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// The server&#x27;s response is in </span><span style="font-weight:bold;color:#008000">[response.data]</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">return </span><span style="color:#000000">response.data;</span></span>
+<span class="docx-code-line"><span style="color:#000000">  } </span><span style="color:#0000FF">catch </span><span style="color:#000000">(error) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// we&#x27;re here because the server sent an error code </span><span style="font-weight:bold;color:#008000">[404 Not Found, 500 Internal Server Error, ...]</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// the </span><span style="font-weight:bold;color:#008000">[error] </span><span style="color:#008000">parameter is an exception instance—it can take various forms</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// we log it to see its structure</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;axios error=&quot;</span><span style="color:#000000">, </span><span style="color:#0000FF">typeof </span><span style="color:#000000">(error), error);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">if </span><span style="color:#000000">(error.response) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">      </span><span style="color:#008000">// The server reported an error in the HTTP status, but it also sent a response</span></span>
+<span class="docx-code-line"><span style="color:#000000">      </span><span style="color:#008000">// so this is found in </span><span style="font-weight:bold;color:#008000">[error.response.data]</span></span>
+<span class="docx-code-line"><span style="color:#000000">      </span><span style="color:#008000">// we know that the server sends JSON responses with the structure {action, status, response}</span></span>
+<span class="docx-code-line"><span style="color:#000000">      </span><span style="color:#008000">// and that in case of an error, the error message is in </span><span style="font-weight:bold;color:#008000">[response]</span></span>
+<span class="docx-code-line"><span style="color:#000000">      </span><span style="color:#0000FF">return </span><span style="color:#000000">error.response.data;</span></span>
+<span class="docx-code-line"><span style="color:#000000">    } </span><span style="color:#0000FF">else </span><span style="color:#000000">{</span></span>
+<span class="docx-code-line"><span style="color:#000000">      </span><span style="color:#008000">// we throw the error</span></span>
+<span class="docx-code-line"><span style="color:#000000">      </span><span style="color:#0000FF">throw </span><span style="color:#000000">error;</span></span>
+<span class="docx-code-line">    }</span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line">}</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// The main function executes the asynchronous function <span style="font-weight:bold">[initSession]</span></span>
+<span class="docx-code-line"><span style="color:#0000FF">async function </span><span style="color:#000000">main() {</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">try </span><span style="color:#000000">{</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;HTTP request to the server in progress ---------------------------------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">const </span><span style="color:#000000">response = </span><span style="color:#0000FF">await </span><span style="color:#000000">initSession(axios);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;success ---------------------------------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;response=&quot;</span><span style="color:#000000">, response, </span><span style="color:#0000FF">typeof </span><span style="color:#000000">(response))</span></span>
+<span class="docx-code-line"><span style="color:#000000">  } </span><span style="color:#0000FF">catch </span><span style="color:#000000">(error) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;error ---------------------------------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;error=&quot;</span><span style="color:#000000">, error.message);</span></span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line">}</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// test</span>
+<span class="docx-code-line">main();</span>
+</code></pre></div>
+
+<p><b>Comments</b></p>
+<ul>
+<li><span>line 2: we import the </span><b>&#91;axios&#93; </b><span>library;</span></li>
+<li><span>lines 5-6: default configuration for HTTP requests. The </span><b>&#91;axios.defaults&#93; </b><span>options apply to all HTTP requests sent by the </span><b>&#91;axios&#93; </b><span>object without needing to be specified for each new request;</span></li>
+<li><span>line 5: 2-second timeout for all requests;</span></li>
+<li><span>line 6: all URLs will be relative to the base URL;</span></li>
+<li><span>line 9: the asynchronous </span><b>&#91;initSession&#93; </b><span>function;</span></li>
+<li><span>lines 11–18: the options for the HTTP request to be sent (in addition to the default options already defined in lines 5–6);</span></li>
+<li><span>lines 14–17: the URL parameters </span><b>&#91;action=init-session&amp;type=json&#93;</b><span>. The </span><b>&#91;params&#93; </b><span>object will be automatically converted to a URL-encoded string;</span></li>
+<li><span>line 22: blocking call to the asynchronous function </span><b>&#91;axios.request&#93;</b><span>. The first parameter is the target URL constructed as </span><b>&#91;main.php&#93; </b><span>appended to the base URL defined on line 6. The second parameter is the </span><b>&#91;options&#93; </b><span>object from lines 11–18;</span></li>
+<li><span>line 25: </span><b>&#91;response&#93; </b><span>is a JavaScript object encapsulating the entire HTTP response from the server (HTTP headers + response body). We display it to see its JavaScript structure;</span></li>
+<li><span>line 27: if the server sent a document, then it is found in </span><b>&#91;response.data&#93;</b><span>. Here we know that the server sends a JSON response accompanied by the HTTP header </span><b>&#91;Content-type: application/json&#93;</b><span>. The presence of this header causes </span><b>&#91;axios&#93; </b><span>to automatically deserialize </span><b>&#91;response.data&#93; </b><span>into a JavaScript object;</span></li>
+<li><span>line 28: the </span><b>&#91;axios&#93; </b><span>function can throw an exception. This is where </span><b>&#91;axios&#93; </b><span>differs from </span><b>&#91;fetch&#93;</b><span>. An exception is thrown in the following cases:</span><ul>
+<li><span>the HTTP request could not be sent (client-side error);</span></li>
+<li><span>the server sent an HTTP error code (400, 404, 500, etc.) (this behavior is actually configurable). Note that if this HTTP status code is accompanied by a response, </span><b>&#91;fetch&#93; </b><span>did not throw an exception, whereas </span><b>&#91;axios&#93; </b><span>does. However, if the HTTP error code is accompanied by a document, it is placed in </span><b>&#91;error.response&#93;</b><span>;</span></li>
+</ul>
+</li>
+<li><span>line 32: we display the JavaScript structure of the </span><b>&#91;error&#93; </b><span>object;</span></li>
+<li><span>lines 33–38: if the </span><b>&#91;error&#93; </b><span>object contains a </span><b>&#91;response&#93; </b><span>object, then this response is returned to the calling code;</span></li>
+<li><span>lines 39–42: in all other cases, the </span><b>&#91;error&#93; </b><span>object is passed back to the calling code;</span></li>
+<li><span>lines 47–57: the asynchronous function </span><b>&#91;main&#93;</b><span>;</span></li>
+<li><span>line 50: blocking call to the asynchronous function </span><b>&#91;initSession&#93;</b><span>. The JSON response from the server is retrieved as a JavaScript object;</span></li>
+<li><span>lines 53–56: handling any errors. The error message is in </span><b>&#91;error.message&#93;</b><span>;</span></li>
+</ul>
+
+<p><span>The results of the execution are as follows:</span></p>
+<p><b>Case 1</b><span>: The Laragon server is not running</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-python">
+<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Running] </span><span style="color:#A31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\http\axios-01.js&quot;</span></span>
+<span class="docx-code-line">HTTP request to the server in progress ---------------------------------------------</span>
+<span class="docx-code-line">axios error= object { Error: timeout of 2000ms exceeded</span>
+<span class="docx-code-line">    at createError (c:\Data\st-2019\dev\es6\javascript\node_modules\axios\lib\core\createError.js:16:15)</span>
+<span class="docx-code-line">    at Timeout.handleRequestTimeout (c:\Data\st-2019\dev\es6\javascript\node_modules\axios\lib\adapters\http.js:252:16)</span>
+<span class="docx-code-line">    at ontimeout (timers.js:436:11)</span>
+<span class="docx-code-line">    at tryOnTimeout (timers.js:300:5)</span>
+<span class="docx-code-line">    at listOnTimeout (timers.js:263:5)</span>
+<span class="docx-code-line">    at Timer.processTimers (timers.js:223:10)</span>
+<span class="docx-code-line">  config:</span>
+<span class="docx-code-line">   { url:</span>
+<span class="docx-code-line">      &#x27;http://localhost/php7/scripts-web/impots/version-14/main.php&#x27;,</span>
+<span class="docx-code-line">     method: &#x27;get&#x27;,</span>
+<span class="docx-code-line">     params: { action: &#x27;init-session&#x27;, type: &#x27;json&#x27; },</span>
+<span class="docx-code-line">     headers:</span>
+<span class="docx-code-line">      { Accept: &#x27;application/json, text/plain, */*&#x27;,</span>
+<span class="docx-code-line">        &#x27;User-Agent&#x27;: &#x27;axios/0.19.0&#x27; },</span>
+<span class="docx-code-line">     baseURL: &#x27;http://localhost/php7/scripts-web/impots/version-14&#x27;,</span>
+<span class="docx-code-line">     transformRequest: <span style="font-weight:bold">[ [Function: transformRequest] </span>],</span>
+<span class="docx-code-line">     transformResponse: <span style="font-weight:bold">[ [Function: transformResponse] </span>],</span>
+<span class="docx-code-line">     timeout: 2000,</span>
+<span class="docx-code-line">     adapter: <span style="font-weight:bold">[Function: httpAdapter]</span>,</span>
+<span class="docx-code-line">     xsrfCookieName: &#x27;XSRF-TOKEN&#x27;,</span>
+<span class="docx-code-line">     xsrfHeaderName: &#x27;X-XSRF-TOKEN&#x27;,</span>
+<span class="docx-code-line">     maxContentLength: -1,</span>
+<span class="docx-code-line">     validateStatus: <span style="font-weight:bold">[Function: validateStatus]</span>,</span>
+<span class="docx-code-line">     data: undefined },</span>
+<span class="docx-code-line">  code: &#x27;ECONNABORTED&#x27;,</span>
+<span class="docx-code-line">  request:</span>
+<span class="docx-code-line">   Writable {</span>
+<span class="docx-code-line">     _writableState:</span>
+<span class="docx-code-line">      WritableState {</span>
+<span class="docx-code-line">        objectMode: false,</span>
+<span class="docx-code-line">        highWaterMark: 16384,</span>
+<span class="docx-code-line">        finalCalled: false,</span>
+<span class="docx-code-line">        needDrain: false,</span>
+<span class="docx-code-line">        ending: false,</span>
+<span class="docx-code-line">        ended: false,</span>
+<span class="docx-code-line">        finished: false,</span>
+<span class="docx-code-line">        destroyed: false,</span>
+<span class="docx-code-line">        decodeStrings: true,</span>
+<span class="docx-code-line">        defaultEncoding: &#x27;utf8&#x27;,</span>
+<span class="docx-code-line">        length: 0,</span>
+<span class="docx-code-line">        writing: false,</span>
+<span class="docx-code-line">        corked: 0,</span>
+<span class="docx-code-line">        sync: true,</span>
+<span class="docx-code-line">        bufferProcessing: false,</span>
+<span class="docx-code-line">        onwrite: <span style="font-weight:bold">[Function: bound onwrite]</span>,</span>
+<span class="docx-code-line">        writecb: null,</span>
+<span class="docx-code-line">        writelen: 0,</span>
+<span class="docx-code-line">        bufferedRequest: null,</span>
+<span class="docx-code-line">        lastBufferedRequest: null,</span>
+<span class="docx-code-line">        pendingcb: 0,</span>
+<span class="docx-code-line">        prefinished: false,</span>
+<span class="docx-code-line">        errorEmitted: false,</span>
+<span class="docx-code-line">        emitClose: true,</span>
+<span class="docx-code-line">        bufferedRequestCount: 0,</span>
+<span class="docx-code-line">        corkedRequestsFree: <span style="font-weight:bold">[Object] </span>},</span>
+<span class="docx-code-line">     writable: true,</span>
+<span class="docx-code-line">     domain: null,</span>
+<span class="docx-code-line">     _events:</span>
+<span class="docx-code-line">      <span style="font-weight:bold">[Object: null prototype] </span>{</span>
+<span class="docx-code-line">        response: <span style="font-weight:bold">[Function: handleResponse]</span>,</span>
+<span class="docx-code-line">        error: <span style="font-weight:bold">[Function: handleRequestError] </span>},</span>
+<span class="docx-code-line">     _eventsCount: 2,</span>
+<span class="docx-code-line">     _maxListeners: undefined,</span>
+<span class="docx-code-line">     _options:</span>
+<span class="docx-code-line">      { protocol: &#x27;http:&#x27;,</span>
+<span class="docx-code-line">        maxRedirects: 21,</span>
+<span class="docx-code-line">        maxBodyLength: 10485760,</span>
+<span class="docx-code-line">        path:</span>
+<span class="docx-code-line">         &#x27;/php7/scripts-web/impots/version-14/main.php?action=init-session&amp;type=json&#x27;,</span>
+<span class="docx-code-line">        method: &#x27;GET&#x27;,</span>
+<span class="docx-code-line">        headers: <span style="font-weight:bold">[Object]</span>,</span>
+<span class="docx-code-line">        agent: undefined,</span>
+<span class="docx-code-line">        auth: undefined,</span>
+<span class="docx-code-line">        hostname: &#x27;localhost&#x27;,</span>
+<span class="docx-code-line">        port: null,</span>
+<span class="docx-code-line">        nativeProtocols: <span style="font-weight:bold">[Object]</span>,</span>
+<span class="docx-code-line">        pathname: &#x27;/php7/scripts-web/impots/version-14/main.php&#x27;,</span>
+<span class="docx-code-line">        search: &#x27;?action=init-session&amp;type=json&#x27; },</span>
+<span class="docx-code-line">     _redirectCount: 0,</span>
+<span class="docx-code-line">     _redirects: [],</span>
+<span class="docx-code-line">     _requestBodyLength: 0,</span>
+<span class="docx-code-line">     _requestBodyBuffers: [],</span>
+<span class="docx-code-line">     _onNativeResponse: <span style="font-weight:bold">[Function]</span>,</span>
+<span class="docx-code-line">     _currentRequest:</span>
+<span class="docx-code-line">      ClientRequest {</span>
+<span class="docx-code-line">        domain: null,</span>
+<span class="docx-code-line">        _events: <span style="font-weight:bold">[Object]</span>,</span>
+<span class="docx-code-line">        _eventsCount: 6,</span>
+<span class="docx-code-line">        _maxListeners: undefined,</span>
+<span class="docx-code-line">        output: [],</span>
+<span class="docx-code-line">        outputEncodings: [],</span>
+<span class="docx-code-line">        outputCallbacks: [],</span>
+<span class="docx-code-line">        outputSize: 0,</span>
+<span class="docx-code-line">        writable: true,</span>
+<span class="docx-code-line">        _last: true,</span>
+<span class="docx-code-line">        chunkedEncoding: false,</span>
+<span class="docx-code-line">        shouldKeepAlive: false,</span>
+<span class="docx-code-line">        useChunkedEncodingByDefault: false,</span>
+<span class="docx-code-line">        sendDate: false,</span>
+<span class="docx-code-line">        _removedConnection: false,</span>
+<span class="docx-code-line">        _removedContLen: false,</span>
+<span class="docx-code-line">        _removedTE: false,</span>
+<span class="docx-code-line">        _contentLength: 0,</span>
+<span class="docx-code-line">        _hasBody: true,</span>
+<span class="docx-code-line">        _trailer: &#x27;&#x27;,</span>
+<span class="docx-code-line">        finished: true,</span>
+<span class="docx-code-line">        _headerSent: true,</span>
+<span class="docx-code-line">        socket: <span style="font-weight:bold">[Socket]</span>,</span>
+<span class="docx-code-line">        connection: <span style="font-weight:bold">[Socket]</span>,</span>
+<span class="docx-code-line">        _header:</span>
+<span class="docx-code-line">         &#x27;GET /php7/scripts-web/impots/version-14/main.php?action=init-session&amp;type=json HTTP/1.1\r\nAccept: application/json, text/plain, */*\r\nUser-Agent: axios/0.19.0\r\nHost: localhost\r\nConnection: close\r\n\r\n&#x27;,</span>
+<span class="docx-code-line">        _onPendingData: <span style="font-weight:bold">[Function: noopPendingOutput]</span>,</span>
+<span class="docx-code-line">        agent: <span style="font-weight:bold">[Agent]</span>,</span>
+<span class="docx-code-line">        socketPath: undefined,</span>
+<span class="docx-code-line">        timeout: undefined,</span>
+<span class="docx-code-line">        method: &#x27;GET&#x27;,</span>
+<span class="docx-code-line">        path:</span>
+<span class="docx-code-line">         &#x27;/php7/scripts-web/impots/version-14/main.php?action=init-session&amp;type=json&#x27;,</span>
+<span class="docx-code-line">        _ended: false,</span>
+<span class="docx-code-line">        res: null,</span>
+<span class="docx-code-line">        aborted: 1568528450762,</span>
+<span class="docx-code-line">        timeoutCb: null,</span>
+<span class="docx-code-line">        upgradeOrConnect: false,</span>
+<span class="docx-code-line">        parser: <span style="font-weight:bold">[HTTPParser]</span>,</span>
+<span class="docx-code-line">        maxHeadersCount: null,</span>
+<span class="docx-code-line">        _redirectable: <span style="font-weight:bold">[Circular]</span>,</span>
+<span class="docx-code-line">        <span style="font-weight:bold">[Symbol(isCorked)]</span>: false,</span>
+<span class="docx-code-line">        <span style="font-weight:bold">[Symbol(outHeadersKey)]</span>: <span style="font-weight:bold">[Object] </span>},</span>
+<span class="docx-code-line">     _currentUrl:</span>
+<span class="docx-code-line">      &#x27;http://localhost/php7/scripts-web/impots/version-14/main.php?action=init-session&amp;type=json&#x27; },</span>
+<span class="docx-code-line">  response: undefined,</span>
+<span class="docx-code-line">  isAxiosError: true,</span>
+<span class="docx-code-line">  toJSON: <span style="font-weight:bold">[Function] </span>}</span>
+<span class="docx-code-line">error ---------------------------------------------</span>
+<span class="docx-code-line">error= 2000ms timeout exceeded</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Done] </span><span style="color:#A31515">exited with </span><span style="color:#800080">code=0 </span><span style="color:#A31515">in</span><span style="color:#09885A"> 2.784 </span><span style="color:#A31515">seconds</span></span>
+</code></pre></div>
+
+<p><b>Comments</b></p>
+<ul>
+<li><span>lines 33-136: the </span><b>&#91;error&#93; </b><span>object contains a lot of information;</span><ul>
+<li><b>&#91;Error&#93;</b><span>, lines 3-9: a description of the error that occurred;</span></li>
+<li><b>&#91;config&#93;</b><span>, lines 10–27: the configuration of the HTTP request that led to this error;</span></li>
+<li><b>&#91;config.url&#93;</b><span>, lines 11–12: the target URL;</span></li>
+<li><b>&#91;config.method&#93;</b><span>, line 13: request method;</span></li>
+<li><b>&#91;config.params&#93;</b><span>, line 14: the URL parameters;</span></li>
+<li><b>&#91;config.headers&#93;</b><span>, lines 16–17: the HTTP headers of the request;</span></li>
+<li><b>&#91;config.baseURL&#93;</b><span>, line 18: the base URL of the target URL;</span></li>
+<li><b>&#91;config.timeout&#93;</b><span>, line 21: the request timeout;</span></li>
+<li><b>&#91;code&#93;</b><span>, line 28: an error code;</span></li>
+<li><b>&#91;request&#93;</b><span>, lines 29–133: a detailed description of the HTTP request. Note that most properties are prefixed with an underscore (&#95;), indicating that they are internal properties of the </span><b>&#91;request&#93; </b><span>object not intended to be used directly by the developer;</span></li>
+<li><b>&#91;response&#93;</b><span>, line 134: the server response, which is empty here;</span></li>
+</ul>
+</li>
+<li><span>line 138: the error message displayed by the </span><b>&#91;main&#93; </b><span>function;</span></li>
+</ul>
+
+<p><b>Case 2</b><span>: The Laragon server is running</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-python">
+<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Running] </span><span style="color:#A31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\http\axios-01.js&quot;</span></span>
+<span class="docx-code-line">HTTP request to the server in progress ---------------------------------------------</span>
+<span class="docx-code-line">Axios response: { status: 200,</span>
+<span class="docx-code-line">  statusText: &#x27;OK&#x27;,</span>
+<span class="docx-code-line">  headers:</span>
+<span class="docx-code-line">   { date: &#x27;Sun, 15 Sep 2019 07:09:26 GMT&#x27;,</span>
+<span class="docx-code-line">     server: &#x27;Apache/2.4.35 (Win64) OpenSSL/1.1.0i PHP/7.2.11&#x27;,</span>
+<span class="docx-code-line">     &#x27;x-powered-by&#x27;: &#x27;PHP/7.2.11&#x27;,</span>
+<span class="docx-code-line">     &#x27;cache-control&#x27;: &#x27;max-age=0, private, must-revalidate, no-cache, private&#x27;,</span>
+<span class="docx-code-line">     &#x27;set-cookie&#x27;: <span style="font-weight:bold">[ &#x27;PHPSESSID=uas6lugtblstktcifpd8e5irm6; path=/&#x27; ]</span>,</span>
+<span class="docx-code-line">     &#x27;content-length&#x27;: &#x27;86&#x27;,</span>
+<span class="docx-code-line">     connection: &#x27;close&#x27;,</span>
+<span class="docx-code-line">     &#x27;content-type&#x27;: &#x27;application/json&#x27; },</span>
+<span class="docx-code-line">  config:</span>
+<span class="docx-code-line">   { url:</span>
+<span class="docx-code-line">      &#x27;http://localhost/php7/scripts-web/impots/version-14/main.php&#x27;,</span>
+<span class="docx-code-line">     method: &#x27;get&#x27;,</span>
+<span class="docx-code-line">     params: { action: &#x27;init-session&#x27;, type: &#x27;json&#x27; },</span>
+<span class="docx-code-line">     headers:</span>
+<span class="docx-code-line">      { Accept: &#x27;application/json, text/plain, */*&#x27;,</span>
+<span class="docx-code-line">        &#x27;User-Agent&#x27;: &#x27;axios/0.19.0&#x27; },</span>
+<span class="docx-code-line">     baseURL: &#x27;http://localhost/php7/scripts-web/impots/version-14&#x27;,</span>
+<span class="docx-code-line">     transformRequest: <span style="font-weight:bold">[ [Function: transformRequest] </span>],</span>
+<span class="docx-code-line">     transformResponse: <span style="font-weight:bold">[ [Function: transformResponse] </span>],</span>
+<span class="docx-code-line">     timeout: 2000,</span>
+<span class="docx-code-line">     adapter: <span style="font-weight:bold">[Function: httpAdapter]</span>,</span>
+<span class="docx-code-line">     xsrfCookieName: &#x27;XSRF-TOKEN&#x27;,</span>
+<span class="docx-code-line">     xsrfHeaderName: &#x27;X-XSRF-TOKEN&#x27;,</span>
+<span class="docx-code-line">     maxContentLength: -1,</span>
+<span class="docx-code-line">     validateStatus: <span style="font-weight:bold">[Function: validateStatus]</span>,</span>
+<span class="docx-code-line">     data: undefined },</span>
+<span class="docx-code-line">  request:</span>
+<span class="docx-code-line">   ClientRequest {</span>
+<span class="docx-code-line">     domain: null,</span>
+<span class="docx-code-line">     _events:</span>
+<span class="docx-code-line">      <span style="font-weight:bold">[Object: null prototype] </span>{</span>
+<span class="docx-code-line">        socket: <span style="font-weight:bold">[Function]</span>,</span>
+<span class="docx-code-line">        abort: <span style="font-weight:bold">[Function]</span>,</span>
+<span class="docx-code-line">        aborted: <span style="font-weight:bold">[Function]</span>,</span>
+<span class="docx-code-line">        error: <span style="font-weight:bold">[Function]</span>,</span>
+<span class="docx-code-line">        timeout: <span style="font-weight:bold">[Function]</span>,</span>
+<span class="docx-code-line">        prefinish: <span style="font-weight:bold">[Function: requestOnPrefinish] </span>},</span>
+<span class="docx-code-line">     _eventsCount: 6,</span>
+<span class="docx-code-line">     _maxListeners: undefined,</span>
+<span class="docx-code-line">     output: [],</span>
+<span class="docx-code-line">     outputEncodings: [],</span>
+<span class="docx-code-line">     outputCallbacks: [],</span>
+<span class="docx-code-line">     outputSize: 0,</span>
+<span class="docx-code-line">     writable: true,</span>
+<span class="docx-code-line">     _last: true,</span>
+<span class="docx-code-line">     chunkedEncoding: false,</span>
+<span class="docx-code-line">     shouldKeepAlive: false,</span>
+<span class="docx-code-line">     useChunkedEncodingByDefault: false,</span>
+<span class="docx-code-line">     sendDate: false,</span>
+<span class="docx-code-line">     _removedConnection: false,</span>
+<span class="docx-code-line">     _removedContLen: false,</span>
+<span class="docx-code-line">     _removedTE: false,</span>
+<span class="docx-code-line">     _contentLength: 0,</span>
+<span class="docx-code-line">     _hasBody: true,</span>
+<span class="docx-code-line">     _trailer: &#x27;&#x27;,</span>
+<span class="docx-code-line">     finished: true,</span>
+<span class="docx-code-line">     _headerSent: true,</span>
+<span class="docx-code-line">     socket:</span>
+<span class="docx-code-line">      Socket {</span>
+<span class="docx-code-line">        connecting: false,</span>
+<span class="docx-code-line">        _hadError: false,</span>
+<span class="docx-code-line">        _handle: <span style="font-weight:bold">[TCP]</span>,</span>
+<span class="docx-code-line">        _parent: null,</span>
+<span class="docx-code-line">        _host: &#x27;localhost&#x27;,</span>
+<span class="docx-code-line">        _readableState: <span style="font-weight:bold">[ReadableState]</span>,</span>
+<span class="docx-code-line">        readable: true,</span>
+<span class="docx-code-line">        domain: null,</span>
+<span class="docx-code-line">        _events: <span style="font-weight:bold">[Object]</span>,</span>
+<span class="docx-code-line">        _eventsCount: 7,</span>
+<span class="docx-code-line">        _maxListeners: undefined,</span>
+<span class="docx-code-line">        _writableState: <span style="font-weight:bold">[WritableState]</span>,</span>
+<span class="docx-code-line">        writable: false,</span>
+<span class="docx-code-line">        allowHalfOpen: false,</span>
+<span class="docx-code-line">        _sockname: null,</span>
+<span class="docx-code-line">        _pendingData: null,</span>
+<span class="docx-code-line">        _pendingEncoding: &#x27;&#x27;,</span>
+<span class="docx-code-line">        server: null,</span>
+<span class="docx-code-line">        _server: null,</span>
+<span class="docx-code-line">        parser: null,</span>
+<span class="docx-code-line">        _httpMessage: <span style="font-weight:bold">[Circular]</span>,</span>
+<span class="docx-code-line">        <span style="font-weight:bold">[Symbol(asyncId)]</span>: 6,</span>
+<span class="docx-code-line">        <span style="font-weight:bold">[Symbol(lastWriteQueueSize)]</span>: 0,</span>
+<span class="docx-code-line">        <span style="font-weight:bold">[Symbol(timeout)]</span>: null,</span>
+<span class="docx-code-line">        <span style="font-weight:bold">[Symbol(kBytesRead)]</span>: 0,</span>
+<span class="docx-code-line">        <span style="font-weight:bold">[Symbol(kBytesWritten)]</span>: 0 },</span>
+<span class="docx-code-line">     connection:</span>
+<span class="docx-code-line">      Socket {</span>
+<span class="docx-code-line">        connecting: false,</span>
+<span class="docx-code-line">        _hadError: false,</span>
+<span class="docx-code-line">        _handle: <span style="font-weight:bold">[TCP]</span>,</span>
+<span class="docx-code-line">        _parent: null,</span>
+<span class="docx-code-line">        _host: &#x27;localhost&#x27;,</span>
+<span class="docx-code-line">        _readableState: <span style="font-weight:bold">[ReadableState]</span>,</span>
+<span class="docx-code-line">        readable: true,</span>
+<span class="docx-code-line">        domain: null,</span>
+<span class="docx-code-line">        _events: <span style="font-weight:bold">[Object]</span>,</span>
+<span class="docx-code-line">        _eventsCount: 7,</span>
+<span class="docx-code-line">        _maxListeners: undefined,</span>
+<span class="docx-code-line">        _writableState: <span style="font-weight:bold">[WritableState]</span>,</span>
+<span class="docx-code-line">        writable: false,</span>
+<span class="docx-code-line">        allowHalfOpen: false,</span>
+<span class="docx-code-line">        _sockname: null,</span>
+<span class="docx-code-line">        _pendingData: null,</span>
+<span class="docx-code-line">        _pendingEncoding: &#x27;&#x27;,</span>
+<span class="docx-code-line">        server: null,</span>
+<span class="docx-code-line">        _server: null,</span>
+<span class="docx-code-line">        parser: null,</span>
+<span class="docx-code-line">        _httpMessage: <span style="font-weight:bold">[Circular]</span>,</span>
+<span class="docx-code-line">        <span style="font-weight:bold">[Symbol(asyncId)]</span>: 6,</span>
+<span class="docx-code-line">        <span style="font-weight:bold">[Symbol(lastWriteQueueSize)]</span>: 0,</span>
+<span class="docx-code-line">        <span style="font-weight:bold">[Symbol(timeout)]</span>: null,</span>
+<span class="docx-code-line">        <span style="font-weight:bold">[Symbol(kBytesRead)]</span>: 0,</span>
+<span class="docx-code-line">        <span style="font-weight:bold">[Symbol(kBytesWritten)]</span>: 0 },</span>
+<span class="docx-code-line">     _header:</span>
+<span class="docx-code-line">      &#x27;GET /php7/scripts-web/impots/version-14/main.php?action=init-session&amp;type=json HTTP/1.1\r\nAccept: application/json, text/plain, */*\r\nUser-Agent: axios/0.19.0\r\nHost: localhost\r\nConnection: close\r\n\r\n&#x27;,</span>
+<span class="docx-code-line">     _onPendingData: <span style="font-weight:bold">[Function: noopPendingOutput]</span>,</span>
+<span class="docx-code-line">     agent:</span>
+<span class="docx-code-line">      Agent {</span>
+<span class="docx-code-line">        domain: null,</span>
+<span class="docx-code-line">        _events: <span style="font-weight:bold">[Object]</span>,</span>
+<span class="docx-code-line">        _eventsCount: 1,</span>
+<span class="docx-code-line">        _maxListeners: undefined,</span>
+<span class="docx-code-line">        defaultPort: 80,</span>
+<span class="docx-code-line">        protocol: &#x27;http:&#x27;,</span>
+<span class="docx-code-line">        options: <span style="font-weight:bold">[Object]</span>,</span>
+<span class="docx-code-line">        requests: {},</span>
+<span class="docx-code-line">        sockets: <span style="font-weight:bold">[Object]</span>,</span>
+<span class="docx-code-line">        freeSockets: {},</span>
+<span class="docx-code-line">        keepAliveMsecs: 1000,</span>
+<span class="docx-code-line">        keepAlive: false,</span>
+<span class="docx-code-line">        maxSockets: Infinity,</span>
+<span class="docx-code-line">        maxFreeSockets: 256 },</span>
+<span class="docx-code-line">     socketPath: undefined,</span>
+<span class="docx-code-line">     timeout: undefined,</span>
+<span class="docx-code-line">     method: &#x27;GET&#x27;,</span>
+<span class="docx-code-line">     path:</span>
+<span class="docx-code-line">      &#x27;/php7/scripts-web/impots/version-14/main.php?action=init-session&amp;type=json&#x27;,</span>
+<span class="docx-code-line">     _ended: true,</span>
+<span class="docx-code-line">     res:</span>
+<span class="docx-code-line">      IncomingMessage {</span>
+<span class="docx-code-line">        _readableState: <span style="font-weight:bold">[ReadableState]</span>,</span>
+<span class="docx-code-line">        readable: false,</span>
+<span class="docx-code-line">        domain: null,</span>
+<span class="docx-code-line">        _events: <span style="font-weight:bold">[Object]</span>,</span>
+<span class="docx-code-line">        _eventsCount: 3,</span>
+<span class="docx-code-line">        _maxListeners: undefined,</span>
+<span class="docx-code-line">        socket: <span style="font-weight:bold">[Socket]</span>,</span>
+<span class="docx-code-line">        connection: <span style="font-weight:bold">[Socket]</span>,</span>
+<span class="docx-code-line">        httpVersionMajor: 1,</span>
+<span class="docx-code-line">        httpVersionMinor: 0,</span>
+<span class="docx-code-line">        httpVersion: &#x27;1.0&#x27;,</span>
+<span class="docx-code-line">        complete: true,</span>
+<span class="docx-code-line">        headers: <span style="font-weight:bold">[Object]</span>,</span>
+<span class="docx-code-line">        rawHeaders: <span style="font-weight:bold">[Array]</span>,</span>
+<span class="docx-code-line">        trailers: {},</span>
+<span class="docx-code-line">        rawTrailers: [],</span>
+<span class="docx-code-line">        aborted: false,</span>
+<span class="docx-code-line">        upgrade: false,</span>
+<span class="docx-code-line">        url: &#x27;&#x27;,</span>
+<span class="docx-code-line">        method: null,</span>
+<span class="docx-code-line">        statusCode: 200,</span>
+<span class="docx-code-line">        statusMessage: &#x27;OK&#x27;,</span>
+<span class="docx-code-line">        client: <span style="font-weight:bold">[Socket]</span>,</span>
+<span class="docx-code-line">        _consuming: false,</span>
+<span class="docx-code-line">        _dumped: false,</span>
+<span class="docx-code-line">        req: <span style="font-weight:bold">[Circular]</span>,</span>
+<span class="docx-code-line">        responseUrl:</span>
+<span class="docx-code-line">         &#x27;http://localhost/php7/scripts-web/impots/version-14/main.php?action=init-session&amp;type=json&#x27;,</span>
+<span class="docx-code-line">        redirects: [] },</span>
+<span class="docx-code-line">     aborted: undefined,</span>
+<span class="docx-code-line">     timeoutCb: null,</span>
+<span class="docx-code-line">     upgradeOrConnect: false,</span>
+<span class="docx-code-line">     parser: null,</span>
+<span class="docx-code-line">     maxHeadersCount: null,</span>
+<span class="docx-code-line">     _redirectable:</span>
+<span class="docx-code-line">      Writable {</span>
+<span class="docx-code-line">        _writableState: <span style="font-weight:bold">[WritableState]</span>,</span>
+<span class="docx-code-line">        writable: true,</span>
+<span class="docx-code-line">        domain: null,</span>
+<span class="docx-code-line">        _events: <span style="font-weight:bold">[Object]</span>,</span>
+<span class="docx-code-line">        _eventsCount: 2,</span>
+<span class="docx-code-line">        _maxListeners: undefined,</span>
+<span class="docx-code-line">        _options: <span style="font-weight:bold">[Object]</span>,</span>
+<span class="docx-code-line">        _redirectCount: 0,</span>
+<span class="docx-code-line">        _redirects: [],</span>
+<span class="docx-code-line">        _requestBodyLength: 0,</span>
+<span class="docx-code-line">        _requestBodyBuffers: [],</span>
+<span class="docx-code-line">        _onNativeResponse: <span style="font-weight:bold">[Function]</span>,</span>
+<span class="docx-code-line">        _currentRequest: <span style="font-weight:bold">[Circular]</span>,</span>
+<span class="docx-code-line">        _currentUrl:</span>
+<span class="docx-code-line">         &#x27;http://localhost/php7/scripts-web/impots/version-14/main.php?action=init-session&amp;type=json&#x27; },</span>
+<span class="docx-code-line">     <span style="font-weight:bold">[Symbol(isCorked)]</span>: false,</span>
+<span class="docx-code-line">     <span style="font-weight:bold">[Symbol(outHeadersKey)]</span>:</span>
+<span class="docx-code-line">      <span style="font-weight:bold">[Object: null prototype] </span>{ accept: <span style="font-weight:bold">[Array]</span>, &#x27;user-agent&#x27;: <span style="font-weight:bold">[Array]</span>, host: <span style="font-weight:bold">[Array] </span>} },</span>
+<span class="docx-code-line">  data:</span>
+<span class="docx-code-line">   { action: &#x27;init-session&#x27;,</span>
+<span class="docx-code-line">     &#x27;status&#x27;: 700,</span>
+<span class="docx-code-line">     &#x27;response&#x27;: &#x27;session started with type <span style="font-weight:bold">[json]</span>&#x27; } }</span>
+<span class="docx-code-line">success ---------------------------------------------</span>
+<span class="docx-code-line">response = { action: &#x27;init-session&#x27;,</span>
+<span class="docx-code-line">  &#x27;status&#x27;: 700,</span>
+<span class="docx-code-line">  &#x27;response&#x27;: &#x27;session started with type <span style="font-weight:bold">[json]</span>&#x27; } object</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Done] </span><span style="color:#A31515">exited with </span><span style="color:#800080">code=0 </span><span style="color:#A31515">in</span><span style="color:#09885A"> 1.115 </span><span style="color:#A31515">seconds</span></span>
+</code></pre></div>
+
+<p><b>Comments</b></p>
+<ul>
+<li><span>lines 3–203: the JavaScript object </span><b>&#91;response&#93; </b><span>that encapsulates the server’s HTTP response;</span></li>
+<li><span>line 3, </span><b>&#91;status&#93;</b><span>: the HTTP status code of the response;</span></li>
+<li><span>line 4, </span><b>&#91;statusText&#93;</b><span>: the text associated with the previous HTTP status code;</span></li>
+<li><span>lines 5-13, </span><b>&#91;headers&#93;</b><span>: the HTTP headers of the response:</span><ul>
+<li><span>line 10, </span><b>&#91;Set-Cookie&#93;</b><span>: the session cookie;</span></li>
+<li><span>line 13, </span><b>&#91;Content-Type&#93;</b><span>: the type of document sent by the server;</span></li>
+</ul>
+</li>
+<li><span>lines 14–31, </span><b>&#91;config&#93;</b><span>: the configuration of the HTTP request sent;</span></li>
+<li><span>lines 32–199, </span><b>&#91;request&#93;</b><span>: the JavaScript object detailing the HTTP request sent;</span></li>
+<li><span>lines 200–203, </span><b>&#91;request.data&#93;</b><span>: the JavaScript object encapsulating the server’s JSON response;</span></li>
+<li><span>lines 205–207: the response retrieved by the asynchronous </span><b>&#91;main&#93; </b><span>function;</span></li>
+</ul>
+
+<p><b>Case 3</b><span>: An incorrect </span><b>&#91;init-session&#93; </b><span>request is sent to the Laragon server;</span></p>
+<p><img src="images/image104.png" class="docx-zoomable" style="width:242px;height:146px;" alt="Image" /></p>
+<p><span>The execution results are as follows:</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-python">
+<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Running] </span><span style="color:#A31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\http\axios-01.js&quot;</span></span>
+<span class="docx-code-line">HTTP request to the server in progress ---------------------------------------------</span>
+<span class="docx-code-line">axios error= object { Error: Request failed with status code 400</span>
+<span class="docx-code-line">   ...</span>
+<span class="docx-code-line">  config:</span>
+<span class="docx-code-line">   { url:</span>
+<span class="docx-code-line">      &#x27;http://localhost/php7/scripts-web/impots/version-14/main.php&#x27;,</span>
+<span class="docx-code-line">     ...</span>
+<span class="docx-code-line">     data: undefined },</span>
+<span class="docx-code-line">  request:</span>
+<span class="docx-code-line">   ...</span>
+<span class="docx-code-line">     <span style="font-weight:bold">[Symbol(outHeadersKey)]</span>:</span>
+<span class="docx-code-line">      <span style="font-weight:bold">[Object: null prototype] </span>{ accept: <span style="font-weight:bold">[Array]</span>, &#x27;user-agent&#x27;: <span style="font-weight:bold">[Array]</span>, host: <span style="font-weight:bold">[Array] </span>} },</span>
+<span class="docx-code-line">  response:</span>
+<span class="docx-code-line">   { status: 400,</span>
+<span class="docx-code-line">     statusText: &#x27;Bad Request&#x27;,</span>
+<span class="docx-code-line">     headers:</span>
+<span class="docx-code-line">      { date: &#x27;Sun, 15 Sep 2019 07:25:58 GMT&#x27;,</span>
+<span class="docx-code-line">        server: &#x27;Apache/2.4.35 (Win64) OpenSSL/1.1.0i PHP/7.2.11&#x27;,</span>
+<span class="docx-code-line">        &#x27;x-powered-by&#x27;: &#x27;PHP/7.2.11&#x27;,</span>
+<span class="docx-code-line">        &#x27;cache-control&#x27;: &#x27;max-age=0, private, must-revalidate, no-cache, private&#x27;,</span>
+<span class="docx-code-line">        &#x27;set-cookie&#x27;: <span style="font-weight:bold">[Array]</span>,</span>
+<span class="docx-code-line">        &#x27;content-length&#x27;: &#x27;79&#x27;,</span>
+<span class="docx-code-line">        connection: &#x27;close&#x27;,</span>
+<span class="docx-code-line">        &#x27;content-type&#x27;: &#x27;application/json&#x27; },</span>
+<span class="docx-code-line">     config:</span>
+<span class="docx-code-line">      { url:</span>
+<span class="docx-code-line">         &#x27;http://localhost/php7/scripts-web/impots/version-14/main.php&#x27;,</span>
+<span class="docx-code-line">        ...</span>
+<span class="docx-code-line">        data: undefined },</span>
+<span class="docx-code-line">     request:</span>
+<span class="docx-code-line">      ...</span>
+<span class="docx-code-line">        <span style="font-weight:bold">[Symbol(outHeadersKey)]</span>: <span style="font-weight:bold">[Object] </span>},</span>
+<span class="docx-code-line">     data:</span>
+<span class="docx-code-line">      { action: &#x27;init-session&#x27;,</span>
+<span class="docx-code-line">        &#x27;status&#x27;: 703,</span>
+<span class="docx-code-line">        &#x27;response&#x27;: &#x27;invalid type=<span style="font-weight:bold">[x] </span>parameter&#x27; } },</span>
+<span class="docx-code-line">  isAxiosError: true,</span>
+<span class="docx-code-line">  toJSON: <span style="font-weight:bold">[Function] </span>}</span>
+<span class="docx-code-line">success ---------------------------------------------</span>
+<span class="docx-code-line">response = { action: &#x27;init-session&#x27;,</span>
+<span class="docx-code-line">  &#x27;status&#x27;: 703,</span>
+<span class="docx-code-line">  &#x27;response&#x27;: &#x27;invalid type=<span style="font-weight:bold">[x] </span>parameter&#x27; } object</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Done] </span><span style="color:#A31515">exited with </span><span style="color:#800080">code=0 </span><span style="color:#A31515">in</span><span style="color:#09885A"> 0.69 </span><span style="color:#A31515">seconds</span></span>
+</code></pre></div>
+
+<p><span>Because the server responded with an HTTP 400 code (line 15), </span><b>&#91;axios&#93; </b><span>threw an exception (again, this behavior is configurable). Although </span><b>&#91;axios&#93; </b><span>threw an exception, we still get the HTTP response from the </span><span>server in </span><b>&#91;error.response&#93; </b><span>(line 14) and the sent JSON document </span><b>in &#91;error.response.data&#93; </b><span>(line 34). Lines 41–43: the </span><b>&#91;main&#93; </b><span>function correctly retrieves the JSON response from the server.</span></p>
+<h2 id="126-script-axios-02">12.6. <a id="refheadingtoc225402640539168"></a><span>script &#91;axios-02&#93;</span></h2>
+<p><span>Now that we have detailed the objects handled by the </span><b>&#91;axios&#93; </b><span>library during an HTTP request, we can rewrite the </span><b>&#91;axios-01&#93; </b><span>script as follows:</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-python">
+<span class="docx-code-line"><span style="color:#A31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"><span style="color:#0000FF">import </span><span style="color:#000000">axios </span><span style="color:#0000FF">from </span><span style="color:#A31515">&#x27;axios&#x27;</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// default axios configuration</span>
+<span class="docx-code-line">axios.defaults.timeout = 2000;</span>
+<span class="docx-code-line"><span style="color:#000000">axios.defaults.baseURL = </span><span style="color:#A31515">&#x27;http://localhost/php7/scripts-web/impots/version-14&#x27;</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// initialize session</span>
+<span class="docx-code-line"><span style="color:#0000FF">async function </span><span style="color:#000000">initSession(axios) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// HTTP request options </span><span style="font-weight:bold;color:#008000">[get /main.php?action=init-session&amp;type=json]</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">const </span><span style="color:#000000">options = {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    method: </span><span style="color:#A31515">&quot;GET&quot;</span><span style="color:#000000">,</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// URL parameters</span></span>
+<span class="docx-code-line">    params: {</span>
+<span class="docx-code-line"><span style="color:#000000">      action: </span><span style="color:#A31515">&#x27;init-session&#x27;</span><span style="color:#000000">,</span></span>
+<span class="docx-code-line"><span style="color:#000000">      type: </span><span style="color:#A31515">&#x27;json&#x27;</span></span>
+<span class="docx-code-line">    }</span>
+<span class="docx-code-line">  };</span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">try </span><span style="color:#000000">{</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Execute the HTTP request </span><span style="font-weight:bold;color:#008000">[get /main.php?action=init-session&amp;type=json]</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">const </span><span style="color:#000000">response = </span><span style="color:#0000FF">await </span><span style="color:#000000">axios.request(</span><span style="color:#A31515">&#x27;main.php&#x27;</span><span style="color:#000000">, options);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// the server response is in </span><span style="font-weight:bold;color:#008000">[response.data]</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">return </span><span style="color:#000000">response.data;</span></span>
+<span class="docx-code-line"><span style="color:#000000">  } </span><span style="color:#0000FF">catch </span><span style="color:#000000">(error) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// server response</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">if </span><span style="color:#000000">(error.response) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">      </span><span style="color:#008000">// The JSON response is in </span><span style="font-weight:bold;color:#008000">[error.response.data]</span></span>
+<span class="docx-code-line"><span style="color:#000000">      </span><span style="color:#0000FF">return </span><span style="color:#000000">error.response.data;</span></span>
+<span class="docx-code-line"><span style="color:#000000">    } </span><span style="color:#0000FF">else </span><span style="color:#000000">{</span></span>
+<span class="docx-code-line"><span style="color:#000000">      </span><span style="color:#008000">// throw the error</span></span>
+<span class="docx-code-line"><span style="color:#000000">      </span><span style="color:#0000FF">throw </span><span style="color:#000000">error;</span></span>
+<span class="docx-code-line">    }</span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line">}</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// The main function executes the asynchronous function <span style="font-weight:bold">[initSession]</span></span>
+<span class="docx-code-line"><span style="color:#0000FF">async function </span><span style="color:#000000">main() {</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">try </span><span style="color:#000000">{</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;HTTP request to the server in progress ---------------------------------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">const </span><span style="color:#000000">response = </span><span style="color:#0000FF">await </span><span style="color:#000000">initSession(axios);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;success ---------------------------------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;response=&quot;</span><span style="color:#000000">, response, </span><span style="color:#0000FF">typeof </span><span style="color:#000000">(response))</span></span>
+<span class="docx-code-line"><span style="color:#000000">  } </span><span style="color:#0000FF">catch </span><span style="color:#000000">(error) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;error ---------------------------------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;error=&quot;</span><span style="color:#000000">, error.message);</span></span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line">}</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// test</span>
+<span class="docx-code-line">main();</span>
+</code></pre></div>
+
+<h2 id="127-script-axios-03">12.7. <a id="refheadingtoc225404640539168"></a><span>script &#91;axios-03&#93;</span></h2>
+<p><span>The </span><b>&#91;axios-03&#93; </b><span>script follows the same methodology as the </span><b>&#91;axios-02&#93; </b><span>script. This time, we add the </span><b>&#91;authenticate-user&#93; </b><span>HTTP request to the server, which is sent using a POST request:</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-python">
+<span class="docx-code-line"><span style="color:#A31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"><span style="color:#0000FF">import </span><span style="color:#000000">axios </span><span style="color:#0000FF">from </span><span style="color:#A31515">&#x27;axios&#x27;</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"><span style="color:#0000FF">import </span><span style="color:#000000">qs </span><span style="color:#0000FF">from </span><span style="color:#A31515">&#x27;qs&#x27;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// axios configuration</span>
+<span class="docx-code-line">axios.defaults.timeout = 2000;</span>
+<span class="docx-code-line"><span style="color:#000000">axios.defaults.baseURL = </span><span style="color:#A31515">&#x27;http://localhost/php7/scripts-web/impots/version-14&#x27;</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// initialize session</span>
+<span class="docx-code-line"><span style="color:#0000FF">async function </span><span style="color:#000000">initSession(axios) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// HTTP request options </span><span style="font-weight:bold;color:#008000">[get /main.php?action=init-session&amp;type=json]</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">const </span><span style="color:#000000">options = {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    method: </span><span style="color:#A31515">&quot;GET&quot;</span><span style="color:#000000">,</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// URL parameters</span></span>
+<span class="docx-code-line">    params: {</span>
+<span class="docx-code-line"><span style="color:#000000">      action: </span><span style="color:#A31515">&#x27;init-session&#x27;</span><span style="color:#000000">,</span></span>
+<span class="docx-code-line"><span style="color:#000000">      type: </span><span style="color:#A31515">&#x27;json&#x27;</span></span>
+<span class="docx-code-line">    }</span>
+<span class="docx-code-line">  };</span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">try </span><span style="color:#000000">{</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Execute the HTTP request </span><span style="font-weight:bold;color:#008000">[get /main.php?action=init-session&amp;type=json]</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">const </span><span style="color:#000000">response = </span><span style="color:#0000FF">await </span><span style="color:#000000">axios.request(</span><span style="color:#A31515">&#x27;main.php&#x27;</span><span style="color:#000000">, options);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// the server response is in </span><span style="font-weight:bold;color:#008000">[response.data]</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">return </span><span style="color:#000000">response.data;</span></span>
+<span class="docx-code-line"><span style="color:#000000">  } </span><span style="color:#0000FF">catch </span><span style="color:#000000">(error) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// server response</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">if </span><span style="color:#000000">(error.response) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">      </span><span style="color:#008000">// The JSON response is in </span><span style="font-weight:bold;color:#008000">[error.response.data]</span></span>
+<span class="docx-code-line"><span style="color:#000000">      </span><span style="color:#0000FF">return </span><span style="color:#000000">error.response.data;</span></span>
+<span class="docx-code-line"><span style="color:#000000">    } </span><span style="color:#0000FF">else </span><span style="color:#000000">{</span></span>
+<span class="docx-code-line"><span style="color:#000000">      </span><span style="color:#008000">// Re-throw the error</span></span>
+<span class="docx-code-line"><span style="color:#000000">      </span><span style="color:#0000FF">throw </span><span style="color:#000000">error;</span></span>
+<span class="docx-code-line">    }</span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line">}</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#0000FF">async function </span><span style="color:#000000">authenticateUser(axios, user, password) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// HTTP request options </span><span style="font-weight:bold;color:#008000">[POST /main.php?action=authenticate-user]</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">const </span><span style="color:#000000">options = {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    method: </span><span style="color:#A31515">&quot;POST&quot;</span><span style="color:#000000">,</span></span>
+<span class="docx-code-line">    headers: {</span>
+<span class="docx-code-line"><span style="color:#000000">      </span><span style="color:#A31515">&#x27;Content-type</span><span style="color:#000000">&#x27;: </span><span style="color:#A31515">&#x27;application/x-www-form-urlencoded&#x27;</span><span style="color:#000000">,</span></span>
+<span class="docx-code-line">    },</span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// POST body</span></span>
+<span class="docx-code-line">    data: qs.stringify({</span>
+<span class="docx-code-line">      user: user,</span>
+<span class="docx-code-line">      password: password</span>
+<span class="docx-code-line">    }),</span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// URL parameters</span></span>
+<span class="docx-code-line">    params: {</span>
+<span class="docx-code-line"><span style="color:#000000">      action: </span><span style="color:#A31515">&#x27;authenticate-user&#x27;</span></span>
+<span class="docx-code-line">    }</span>
+<span class="docx-code-line">  };</span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">try </span><span style="color:#000000">{</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Execute the HTTP request </span><span style="font-weight:bold;color:#008000">[post /main.php?action=authenticate-user]</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">const </span><span style="color:#000000">response = </span><span style="color:#0000FF">await </span><span style="color:#000000">axios.request(</span><span style="color:#A31515">&#x27;main.php&#x27;</span><span style="color:#000000">, options);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// the server response is in </span><span style="font-weight:bold;color:#008000">[response.data]</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">return </span><span style="color:#000000">response.data;</span></span>
+<span class="docx-code-line"><span style="color:#000000">  } </span><span style="color:#0000FF">catch </span><span style="color:#000000">(error) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// server response</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">if </span><span style="color:#000000">(error.response) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">      </span><span style="color:#008000">// The JSON response is in </span><span style="font-weight:bold;color:#008000">[error.response.data]</span></span>
+<span class="docx-code-line"><span style="color:#000000">      </span><span style="color:#0000FF">return </span><span style="color:#000000">error.response.data;</span></span>
+<span class="docx-code-line"><span style="color:#000000">    } </span><span style="color:#0000FF">else </span><span style="color:#000000">{</span></span>
+<span class="docx-code-line"><span style="color:#000000">      </span><span style="color:#008000">// throw the error</span></span>
+<span class="docx-code-line"><span style="color:#000000">      </span><span style="color:#0000FF">throw </span><span style="color:#000000">error;</span></span>
+<span class="docx-code-line">    }</span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line">}</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// The main function executes the asynchronous functions one by one</span>
+<span class="docx-code-line"><span style="color:#0000FF">async function </span><span style="color:#000000">main() {</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">try </span><span style="color:#000000">{</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// init-session</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;init-session action in progress ---------------------------------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">const </span><span style="color:#000000">response1 = </span><span style="color:#0000FF">await </span><span style="color:#000000">initSession(axios);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;success ---------------------------------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;response=&quot;</span><span style="color:#000000">, response1);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// authenticate-user</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;authenticate-user action in progress ---------------------------------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">const </span><span style="color:#000000">response2 = </span><span style="color:#0000FF">await </span><span style="color:#000000">authenticateUser(axios, </span><span style="color:#A31515">&#x27;admin&#x27;</span><span style="color:#000000">, </span><span style="color:#A31515">&#x27;admin&#x27;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;success ---------------------------------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;response=&quot;</span><span style="color:#000000">, response2)</span></span>
+<span class="docx-code-line"><span style="color:#000000">  } </span><span style="color:#0000FF">catch </span><span style="color:#000000">(error) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;error ---------------------------------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;error=&quot;</span><span style="color:#000000">, error);</span></span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line">}</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// test</span>
+<span class="docx-code-line">main();</span>
+</code></pre></div>
+
+<p><b>Comments</b></p>
+<ul>
+<li><span>lines 38-70: the asynchronous function </span><b>&#91;authenticateUser&#93;</b><span>;</span></li>
+<li><span>line 39: the request must be made </span><b>&#91;POST /main.php?action=authenticate-user&#93;</b><span>;</span></li>
+<li><span>lines 40–54: the HTTP request options;</span></li>
+<li><span>line 41: this is a POST request;</span></li>
+<li><span>lines 42–44: the POST parameters will be URL-encoded in a document that the client sends with its request;</span></li>
+<li><span>lines 46–49: the </span><b>&#91;data&#93; </b><span>property must contain the URL-encoded POST string. To do this, we use the </span><b>&#91;qs&#93; </b><span>library imported on line 3;</span></li>
+<li><span>lines 55–69: to execute the request, we use the same code as in the </span><b>&#91;initSession&#93; </b><span>method;</span></li>
+<li><span>lines 73–89: the </span><b>&#91;asynchrone&#93; </b><span>method successively calls the </span><b>&#91;initSession&#93; </b><span>and</span><b> &#91;authentifierUtilisateur&#93; </b><span>methods in a blocking manner, lines 77 and 82;</span></li>
+<li><span>line 82: the pair (admin, admin) is used as the login credentials. We know that they are recognized by the server;</span></li>
+</ul>
+
+<p><span>The execution results are as follows:</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-text">
+<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Running] </span><span style="color:#A31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\http\axios-03.js&quot;</span></span>
+<span class="docx-code-line">init-session action in progress ---------------------------------------------</span>
+<span class="docx-code-line">success ---------------------------------------------</span>
+<span class="docx-code-line">response= { action: &#x27;init-session&#x27;,</span>
+<span class="docx-code-line">  &#x27;status&#x27;: 700,</span>
+<span class="docx-code-line">  &#x27;response&#x27;: &#x27;session started with type <span style="font-weight:bold">[json]</span>&#x27; }</span>
+<span class="docx-code-line">authenticate-user action in progress ---------------------------------------------</span>
+<span class="docx-code-line">success ---------------------------------------------</span>
+<span class="docx-code-line">response = { action: &#x27;authenticate-user&#x27;,</span>
+<span class="docx-code-line">  &#x27;status&#x27;: 103,</span>
+<span class="docx-code-line">  &#x27;response&#x27;:</span>
+<span class="docx-code-line">   <span style="font-weight:bold">[ &#x27;No session currently active. Start with action [init-session]</span>&#x27; ] }</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Done] </span><span style="color:#A31515">exited with </span><span style="color:#800080">code=0 </span><span style="color:#A31515">in</span><span style="color:#09885A"> 0.834 </span><span style="color:#A31515">seconds</span></span>
+</code></pre></div>
+
+<ul>
+<li><span>lines 9-12: user authentication fails: the server did not retain the fact that a JSON session had been initiated. This is because the session cookie sent in response to the first </span><b>&#91;init-session&#93; </b><span>request was not sent back;</span></li>
+</ul>
+
+<h2 id="128-script-axios-04">12.8. <a id="refheadingtoc2152561731793072"></a><a id="axios04"></a><span>script &#91;axios-04&#93;</span></h2>
+<p><span>The </span><b>&#91;axios-04&#93; </b><span>script introduces two improvements to the </span><b>&#91;axios-03&#93; </b><span>script:</span></p>
+<ul>
+<li><span>it handles the session cookie;</span></li>
+<li><span>it factors into a </span><b>&#91;getRemoteData&#93; </b><span>function what is common to the </span><b>&#91;initSession&#93; </b><span>and </span><b>&#91;authenticateUser&#93; </b><span>functions;</span>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-python">
+<span class="docx-code-line"><span style="color:#A31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"><span style="color:#0000FF">import </span><span style="color:#000000">axios </span><span style="color:#0000FF">from </span><span style="color:#A31515">&#x27;axios&#x27;</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"><span style="color:#0000FF">import </span><span style="color:#000000">qs </span><span style="color:#0000FF">from </span><span style="color:#A31515">&#x27;qs&#x27;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// Axios configuration</span>
+<span class="docx-code-line">axios.defaults.timeout = 2000;</span>
+<span class="docx-code-line"><span style="color:#000000">axios.defaults.baseURL = </span><span style="color:#A31515">&#x27;http://localhost/php7/scripts-web/impots/version-14&#x27;</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// session cookie</span>
+<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">sessionCookieName = </span><span style="color:#A31515">&quot;PHPSESSID&quot;</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"><span style="color:#0000FF">let </span><span style="color:#000000">sessionCookie = </span><span style="color:#A31515">&#x27;&#x27;</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// initialize session</span>
+<span class="docx-code-line"><span style="color:#0000FF">async function </span><span style="color:#000000">initSession(axios) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// HTTP request options </span><span style="font-weight:bold;color:#008000">[get /main.php?action=init-session&amp;type=json]</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">const </span><span style="color:#000000">options = {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    method: </span><span style="color:#A31515">&quot;GET&quot;</span><span style="color:#000000">,</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// URL parameters</span></span>
+<span class="docx-code-line">    params: {</span>
+<span class="docx-code-line"><span style="color:#000000">      action: </span><span style="color:#A31515">&#x27;init-session&#x27;</span><span style="color:#000000">,</span></span>
+<span class="docx-code-line"><span style="color:#000000">      type: </span><span style="color:#A31515">&#x27;json&#x27;</span></span>
+<span class="docx-code-line">    }</span>
+<span class="docx-code-line">  };</span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// Execute the HTTP request</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">return await </span><span style="color:#000000">getRemoteData(axios, options);</span></span>
+<span class="docx-code-line">}</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#0000FF">async function </span><span style="color:#000000">authenticateUser(axios, user, password) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// HTTP request options </span><span style="font-weight:bold;color:#008000">[post /main.php?action=authenticate-user]</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">const </span><span style="color:#000000">options = {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    method: </span><span style="color:#A31515">&quot;POST&quot;</span><span style="color:#000000">,</span></span>
+<span class="docx-code-line">    headers: {</span>
+<span class="docx-code-line"><span style="color:#000000">      </span><span style="color:#A31515">&#x27;Content-type</span><span style="color:#000000">&#x27;: </span><span style="color:#A31515">&#x27;application/x-www-form-urlencoded&#x27;</span><span style="color:#000000">,</span></span>
+<span class="docx-code-line">    },</span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// POST body</span></span>
+<span class="docx-code-line">    data: qs.stringify({</span>
+<span class="docx-code-line">      user: user,</span>
+<span class="docx-code-line">      password: password</span>
+<span class="docx-code-line">    }),</span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// URL parameters</span></span>
+<span class="docx-code-line">    params: {</span>
+<span class="docx-code-line"><span style="color:#000000">      action: </span><span style="color:#A31515">&#x27;authenticate-user&#x27;</span></span>
+<span class="docx-code-line">    }</span>
+<span class="docx-code-line">  };</span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// execute the HTTP request</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">return await </span><span style="color:#000000">getRemoteData(axios, options);</span></span>
+<span class="docx-code-line">}</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#0000FF">async function </span><span style="color:#000000">getRemoteData(axios, options) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// for the session cookie</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">if </span><span style="color:#000000">(!options.headers) {</span></span>
+<span class="docx-code-line">    options.headers = {};</span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line">  options.headers.Cookie = sessionCookie;</span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// Execute the HTTP request</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">let </span><span style="color:#000000">response;</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">try </span><span style="color:#000000">{</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// asynchronous request</span></span>
+<span class="docx-code-line"><span style="color:#000000">    response = </span><span style="color:#0000FF">await </span><span style="color:#000000">axios.request(</span><span style="color:#A31515">&#x27;main.php&#x27;</span><span style="color:#000000">, options);</span></span>
+<span class="docx-code-line"><span style="color:#000000">  } </span><span style="color:#0000FF">catch </span><span style="color:#000000">(error) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// The </span><span style="font-weight:bold;color:#008000">[error] </span><span style="color:#008000">parameter is an exception instance—it can take various forms</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">if </span><span style="color:#000000">(error.response) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">      </span><span style="color:#008000">// the server&#x27;s response is in </span><span style="font-weight:bold;color:#008000">[error.response]</span></span>
+<span class="docx-code-line">      response = error.response;</span>
+<span class="docx-code-line"><span style="color:#000000">    } </span><span style="color:#0000FF">else </span><span style="color:#000000">{</span></span>
+<span class="docx-code-line"><span style="color:#000000">      </span><span style="color:#008000">// we re-throw the error</span></span>
+<span class="docx-code-line"><span style="color:#000000">      </span><span style="color:#0000FF">throw </span><span style="color:#000000">error;</span></span>
+<span class="docx-code-line">    }</span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// response is the entire HTTP response from the server (HTTP headers + the response itself)</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// retrieve the session cookie if it exists</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">const </span><span style="color:#000000">setCookie = response.headers</span><span style="font-weight:bold;color:#000000">[&#x27;set-cookie&#x27;]</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">if </span><span style="color:#000000">(setCookie) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// setCookie is an array</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// we search for the session cookie in this array</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">let </span><span style="color:#000000">found = </span><span style="color:#0000FF">false</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">let </span><span style="color:#000000">i = 0;</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">while </span><span style="color:#000000">(!found &amp;&amp; i &lt; setCookie.length) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">      </span><span style="color:#008000">// search for the session cookie</span></span>
+<span class="docx-code-line"><span style="color:#000000">      </span><span style="color:#0000FF">const </span><span style="color:#000000">results = RegExp(</span><span style="color:#A31515">&#x27;^(&#x27; </span><span style="color:#000000">+ sessionCookieName + </span><span style="color:#A31515">&#x27;.+?);&#x27;</span><span style="color:#000000">).exec(setCookie</span><span style="font-weight:bold;color:#000000">[i]</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">      </span><span style="color:#0000FF">if </span><span style="color:#000000">(results) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">        </span><span style="color:#008000">// store the session cookie</span></span>
+<span class="docx-code-line"><span style="color:#000000">        </span><span style="color:#008000">// eslint-disable-next-line require-atomic-updates</span></span>
+<span class="docx-code-line">        sessionCookie = results<span style="font-weight:bold">[i]</span>;</span>
+<span class="docx-code-line"><span style="color:#000000">        </span><span style="color:#008000">// found</span></span>
+<span class="docx-code-line"><span style="color:#000000">        found = </span><span style="color:#0000FF">true</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"><span style="color:#000000">      } </span><span style="color:#0000FF">else </span><span style="color:#000000">{</span></span>
+<span class="docx-code-line"><span style="color:#000000">        </span><span style="color:#008000">// next element</span></span>
+<span class="docx-code-line">        i++;</span>
+<span class="docx-code-line">      }</span>
+<span class="docx-code-line">    }</span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// The server&#x27;s response is in </span><span style="font-weight:bold;color:#008000">[response.data]</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">return </span><span style="color:#000000">response.data;</span></span>
+<span class="docx-code-line">}</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// The main function executes the asynchronous functions one by one</span>
+<span class="docx-code-line"><span style="color:#0000FF">async function </span><span style="color:#000000">main() {</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">try </span><span style="color:#000000">{</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// init-session</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;init-session action in progress ---------------------------------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">const </span><span style="color:#000000">response1 = </span><span style="color:#0000FF">await </span><span style="color:#000000">initSession(axios);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;success ---------------------------------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;response=&quot;</span><span style="color:#000000">, response1);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008000">// authenticate-user</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;authenticate-user action in progress ---------------------------------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">const </span><span style="color:#000000">response2 = </span><span style="color:#0000FF">await </span><span style="color:#000000">authenticateUser(axios, </span><span style="color:#A31515">&#x27;admin&#x27;</span><span style="color:#000000">, </span><span style="color:#A31515">&#x27;admin&#x27;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;success ---------------------------------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;response=&quot;</span><span style="color:#000000">, response2)</span></span>
+<span class="docx-code-line"><span style="color:#000000">  } </span><span style="color:#0000FF">catch </span><span style="color:#000000">(error) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;error ---------------------------------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;error=&quot;</span><span style="color:#000000">, error.message);</span></span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line">}</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// test</span>
+<span class="docx-code-line">main();</span>
+</code></pre></div>
+
+</li>
+</ul>
+
+<p><b>Comments</b></p>
+<ul>
+<li><span>lines 14–26: the </span><b>&#91;initSession&#93; </b><span>function. It now simply prepares the HTTP request to be sent to the server but does not execute it. It delegates this task to the </span><b>&#91;getRemoteDate&#93; </b><span>method in lines 49–95;</span></li>
+<li><span>lines 28–47: the </span><b>&#91;authentifierUtilisateur&#93; </b><span>function follows the same procedure;</span></li>
+<li><span>line 49: the </span><b>&#91;getRemoteData&#93; </b><span>function receives the two pieces of information it needs to execute an HTTP request:</span><ul>
+<li><b>&#91;axios&#93;</b><span>, the object responsible for sending the request and receiving the response;</span></li>
+<li><b>&#91;options&#93;</b><span>, the configuration options for the request to be sent to the server;</span></li>
+</ul>
+</li>
+<li><span>line 59: executing the request and waiting for its JSON response;</span></li>
+<li><span>lines 60–68: handling any exceptions;</span></li>
+<li><span>line 64: retrieve the response, which may be encapsulated in the error object;</span></li>
+<li><span>line 67: if the server threw an exception without including the server response, then the received error is propagated to the calling code;</span></li>
+<li><span>The </span><b>&#91;getRemoteData&#93; </b><span>function manages the session cookie:</span><ul>
+<li><span>it stores it in the </span><b>&#91;sessionCookie&#93; </b><span>variable (line 11) when it receives it for the first time;</span></li>
+<li><span>it then returns it with each new HTTP request;</span></li>
+</ul>
+</li>
+<li><span>lines 72–92: </span><b>&#91;getRemoteData&#93; </b><span>analyzes each server response to determine if it sent the </span><b>&#91;Set-Cookie&#93; </b><span>HTTP header. We know that the server sends a session cookie named </span><b>&#91;PHPSESSID&#93; </b><span>(line 10). This is therefore the cookie we are looking for (line 10);</span></li>
+<li><span>line 72: we retrieve the </span><b>&#91;Set-Cookie&#93; </b><span>HTTP headers if they exist (case is not sensitive). There may in fact be multiple </span><b>&#91;Set-Cookie&#93; </b><span>headers, so we retrieve an array;</span></li>
+<li><span>line 73: if an array of cookies has been retrieved;</span></li>
+<li><span>lines 78–90: we search for the session cookie among all the cookies in the array;</span></li>
+<li><span>line 80: the relational expression used to search for the session cookie in cookie #i;</span></li>
+<li><span>line 81: if the comparison returned results;</span></li>
+<li><span>line 84: we have in results</span><b>&#91;1&#93;</b><span>, the first parenthesis of the relational expression pattern, i.e., (PHPSESSID=xxxx) up to the closing parenthesis (not included) that ends the session cookie;</span></li>
+<li><span>lines 50–54: with each request, the session cookie is included in the request’s HTTP headers. The first time, this cookie is empty and will therefore be ignored by the server;</span></li>
+</ul>
+
+<p><span>The execution results are as follows:</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-text">
+<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Running] </span><span style="color:#A31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\http\axios-04.js&quot;</span></span>
+<span class="docx-code-line">init-session action in progress ---------------------------------------------</span>
+<span class="docx-code-line">success ---------------------------------------------</span>
+<span class="docx-code-line">response= { action: &#x27;init-session&#x27;,</span>
+<span class="docx-code-line">  &#x27;status&#x27;: 700,</span>
+<span class="docx-code-line">  &#x27;response&#x27;: &#x27;session started with type <span style="font-weight:bold">[json]</span>&#x27; }</span>
+<span class="docx-code-line">User authentication in progress ---------------------------------------------</span>
+<span class="docx-code-line">success ---------------------------------------------</span>
+<span class="docx-code-line">response = { action: &#x27;authenticate-user&#x27;,</span>
+<span class="docx-code-line">  &#x27;status&#x27;: 200,</span>
+<span class="docx-code-line">  &#x27;response&#x27;: &#x27;Authentication successful <span style="font-weight:bold">[admin, admin]</span>&#x27; }</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Done] </span><span style="color:#A31515">exited with </span><span style="color:#800080">code=0 </span><span style="color:#A31515">in</span><span style="color:#09885A"> 0.982 </span><span style="color:#A31515">seconds</span></span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner">
+
+      <div>
+        <a href="https://tahe.developpez.com" target="_blank">
+          https://tahe.developpez.com
+        </a>
+        <br>
+        Ce cours-tutoriel écrit par <strong>Serge Tahé</strong> est mis à disposition du public selon les termes de la
+        <em>Licence Creative Commons Attribution – Pas d’Utilisation Commerciale –
+        Partage dans les Mêmes Conditions 3.0 non transposé</em>.
+      </div>
+
+    </div>
+  </div>
+
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="javascripts/focus.js"></script>
+      
+    
+  </body>
+</html>

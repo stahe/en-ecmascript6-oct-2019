@@ -1,0 +1,840 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An Introduction to ECMAScript 6 through Examples">
+      
+      
+        <meta name="author" content="Serge Tahé">
+      
+      
+        <link rel="canonical" href="https://stahe.github.io/ecmascript6-oct-2019/introduction-to-the-ecmascript-6-language.html">
+      
+      
+        <link rel="prev" href="index.html">
+      
+      
+        <link rel="next" href="setting-up-a-development-environment.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>1. Introduction to the ECMASCRIPT 6 language - An Introduction to ECMAScript 6 through Examples</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/focus.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBZC3JVJNR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    var siteName = "An Introduction to ECMAScript 6 through Examples";
+    gtag('config', 'G-EBZC3JVJNR', {
+        'page_title': siteName
+    });
+  </script>
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-introduction-to-the-ecmascript-6-language" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="An Introduction to ECMAScript 6 through Examples" class="md-header__button md-logo" aria-label="An Introduction to ECMAScript 6 through Examples" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            An Introduction to ECMAScript 6 through Examples
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              1. Introduction to the ECMASCRIPT 6 language
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Passer au mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Passer au mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Passer au mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Passer au mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/stahe/ecmascript6-oct-2019" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="An Introduction to ECMAScript 6 through Examples" class="md-nav__button md-logo" aria-label="An Introduction to ECMAScript 6 through Examples" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    An Introduction to ECMAScript 6 through Examples
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/stahe/ecmascript6-oct-2019" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="introduction-to-the-ecmascript-6-language.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introduction to the ECMASCRIPT 6 language
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="setting-up-a-development-environment.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Setting up a development environment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="the-basics-of-javascript.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. The Basics of JavaScript
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tables.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Tables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="literal-objects.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Literal objects
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="strings.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Strings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="regular-expressions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Regular Expressions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="the-functions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. The functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="errors-and-exceptions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Errors and exceptions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="es6-modules.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. ES6 Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="event-driven-programming-and-asynchronous-functions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Event-driven programming and asynchronous functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="javascript-http-functions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. JavaScript HTTP functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="classes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Classes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="javascript-http-clients-of-the-tax-calculation-service.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. Javascript HTTP clients of the tax calculation service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="1-introduction-to-the-ecmascript-6-language">1. <span>Introduction to the ECMASCRIPT 6 language</span></h1>
+<p><span>The PDF of this article is available |</span><a href="https://1drv.ms/b/c/f53a919f43d27eb5/IQDo9dig5luBSoRf8WZoOTt9AaVOpZ0jArZJaof_79tFSNQ?e=6S7Ce0"><span>HERE</span></a><span>|.</span></p>
+<p><span>The examples in this article are available |</span><a href="https://1drv.ms/u/c/f53a919f43d27eb5/IQAMy_zKvA8FSpjOjfzO60MYAe8B30jTpKWQJIt853Aq3ok?e=MVNfj1"><span>HERE</span></a><span>|.</span></p>
+<p><span>This document is part of a series of four articles:</span></p>
+<ol start="1">
+<li><span>&#91;</span><a href="https://tahe.developpez.com/tutoriels-cours/php7"><span style="color:#0563C1"><u>Introduction to the </u></span></a><a href="https://tahe.developpez.com/tutoriels-cours/php7"><span style="color:#0563C1"><u>PHP7</u></span></a><a href="https://tahe.developpez.com/tutoriels-cours/php7"><span style="color:#0563C1"><u> Language </u></span></a><a href="https://tahe.developpez.com/tutoriels-cours/php7"><span style="color:#0563C1"><u>Through Examples</u></span></a><span>&#93;;</span></li>
+<li><span>&#91;</span><a href="https://tahe.developpez.com/tutoriels-cours/ecmascript6"><span style="color:#0563C1"><u>Introduction to </u></span></a><a href="https://tahe.developpez.com/tutoriels-cours/ecmascript6"><span style="color:#0563C1"><u>ECMASCRIPT 6 </u></span></a><a href="https://tahe.developpez.com/tutoriels-cours/ecmascript6"><span style="color:#0563C1"><u>through examples</u></span></a><span>&#93;. </span><b>This is the current document</b><span>;</span></li>
+<li><span>&#91;</span><a href="https://tahe.developpez.com/tutoriels-cours/vuejs"><span style="color:#0563C1"><u>Introduction to the </u></span></a><a href="https://tahe.developpez.com/tutoriels-cours/vuejs"><span style="color:#0563C1"><u>VUE.JS </u></span></a><a href="https://tahe.developpez.com/tutoriels-cours/vuejs"><span style="color:#0563C1"><u>framework </u></span></a><a href="https://tahe.developpez.com/tutoriels-cours/vuejs"><span style="color:#0563C1"><u>through examples</u></span></a><span>&#93;;</span></li>
+<li><span>&#91;</span><a href="https://tahe.developpez.com/tutoriels-cours/nuxtjs"><span style="color:#0563C1"><u>Introduction to the </u></span></a><a href="https://tahe.developpez.com/tutoriels-cours/nuxtjs"><span style="color:#0563C1"><u>NUXT.JS </u></span></a><a href="https://tahe.developpez.com/tutoriels-cours/nuxtjs"><span style="color:#0563C1"><u>framework </u></span></a><a href="https://tahe.developpez.com/tutoriels-cours/nuxtjs"><span style="color:#0563C1"><u>through examples</u></span></a><span>&#93;;</span></li>
+</ol>
+
+<p><span>These are all documents for </span><b>beginners</b><span>. The articles follow a logical sequence but </span><b>are loosely connected</b><span>:</span></p>
+<ul>
+<li><span>document &#91;1&#93; introduces the PHP 7 language. Readers interested only in PHP and not in the JavaScript covered in the following articles should stop here;</span></li>
+<li><span>Documents &#91;2–4&#93; aim to build a JavaScript client for the tax calculation server developed in document &#91;1&#93;;</span></li>
+<li><span>The JavaScript frameworks &#91;Vue.js&#93; and &#91;Nuxt.js&#93; in Articles 3 and 4 require knowledge of the latest versions of ECMAScript, specifically version 6. Document &#91;2&#93; is therefore intended for those unfamiliar with this version of JavaScript. It refers to the tax calculation server built in document &#91;1&#93;. Readers of &#91;2&#93; will therefore sometimes need to refer back to document &#91;1&#93;;</span></li>
+<li><span>once ECMASCRIPT 6 has been mastered, we can move on to the VUE.JS framework, which allows for the creation of JavaScript clients running in a browser in SPA (Single Page Application) mode. This is document &#91;3&#93;. It refers to both the tax calculation server built in document &#91;1&#93; and the standalone JavaScript client code built in &#91;2&#93;. Readers of &#91;3&#93; will therefore sometimes need to refer to documents &#91;1&#93; and &#91;2&#93;;</span></li>
+<li><span>Once you have mastered VUE.JS, you can move on to the NUXT.JS framework, which allows you to build JavaScript clients that run in a browser in SSR (Server Side Rendered) mode. It refers to the tax calculation server built in document &#91;1&#93;, the standalone JavaScript client code built in &#91;2&#93;, and the &#91;vue.js&#93; application developed in document &#91;3&#93;. Readers of &#91;4&#93; will therefore occasionally need to refer to documents &#91;1&#93;, &#91;2&#93;, and &#91;3&#93;;</span></li>
+</ul>
+
+<p><span>The latest version of the tax calculation server developed in document &#91;1&#93; can be improved in various ways:</span></p>
+<ul>
+<li><span>The current version is server-centric. The trend now (July 2019) is toward client-server architecture:</span><ul>
+<li><span>the server operates as a JSON service;</span></li>
+<li><span>A static or dynamic page serves as the entry point for the web application. This page contains HTML/CSS as well as JavaScript;</span></li>
+<li><span>the other pages of the web application are generated dynamically by JavaScript:</span><ul>
+<li><span>the HTML page can be generated by assembling static fragments, provided by the same server that served the home page, or built entirely by JavaScript;</span></li>
+<li><span>these different pages display data requested from the JSON service;</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<p><span>Thus, the work is distributed between the client and the server. The server, having its load reduced, can serve more users.</span></p>
+<p><span>The architecture corresponding to this model is as follows:</span></p>
+<p><img src="images/image3.png" class="docx-zoomable" style="width:560px;height:174px;" alt="Image" /></p>
+<p><b>JS</b><span>: JavaScript</span></p>
+<p><span>The JavaScript code is client-side:</span></p>
+<ul>
+<li><span>from a service providing static or non-static pages or fragments;</span></li>
+<li><span>a JSON service;</span></li>
+</ul>
+
+<p><span>JavaScript code is therefore a JSON client and, as such, can be organized into layers </span><b>&#91;UI, business logic, DAO&#93; </b><span>(UI: User Interface), just like our JSON clients written in PHP. Ultimately, the browser loads only a single page—the home page. All other pages are fetched and rendered by JavaScript. This type of application is called </span><b>an SPA </b><span>(Single Page Application) or </span><b>APU </b><span>(Single Page Application).</span></p>
+<p><span>This type of application is also part of what are known as </span><b>AJAX</b><span> applications: Asynchronous JavaScript and XML</span></p>
+<ul>
+<li><b>Asynchronous</b><span>: because the JavaScript client’s calls to the JSON server are asynchronous;</span></li>
+<li><b>XML</b><span>: because XML was the technology used before the advent of JSON. However, the acronym AJAX has been retained;</span></li>
+</ul>
+
+<p><span>We will explore this architecture in the coming chapters. On the client side, we will use the JavaScript framework </span><b>&#91;Vue.js&#93; &#91;https://vuejs.org/&#93; </b><span>to write the JavaScript client for the PHP JSON server we described in document &#91;1&#93;.</span></p>
+<p><b>&#91;Vue.js&#93; </b><span>is a JavaScript framework. To understand it, you must be proficient in this language. In this document, we present the ECMAScript 6 standard, which is the most recent (as of 2019) standardization of this language. The history and role of ECMAScript can be found on Wikipedia </span><b>&#91;https://fr.wikipedia.org/wiki/ECMAScript&#93;</b><span>.</span></p>
+<p><span>This document provides a list of JavaScript </span><b>console scripts </b><span>in various areas (language structures, database access, internet access, layered programming, and programming via interfaces). The document concludes with two applications:</span></p>
+<p><b>A console application </b><span>that will act as a client for the tax calculation server built in document &#91;1&#93;. This client will have the same architecture as the PHP console client built in document &#91;1&#93;:</span></p>
+<p><img src="images/image4.png" class="docx-zoomable" style="width:507px;height:196px;" alt="Image" /></p>
+<ul>
+<li><span>layers &#91;7–9&#93; will be those of the JavaScript client running in a console;</span></li>
+<li><span>layers &#91;1–4&#93; are those of the PHP 7 server built in document &#91;1&#93;;</span></li>
+<li><span>unlike the PHP console client built in document &#91;1&#93;, there will be no interactions with the local file system &#91;6&#93;;</span></li>
+</ul>
+
+<p><span>Here we have a client/server application where the client is a console application. A second application will be written where the code for layers &#91;7–9&#93; </span><b>will be ported to a browser</b><span>. We will then be ready to tackle the browser JavaScript frameworks in documents &#91;3&#93; and &#91;4&#93;.</span></p>
+<p><span>The scripts in this document are commented, and their console output is reproduced. Additional explanations are sometimes provided. The document requires active reading: to understand a script, you must read its code, its comments, and its execution results.</span></p>
+<p><span>The examples in this document are available </span><b>|here|</b><span>.</span></p>
+<p><span>The PHP 7 server application can be tested </span><b>|here|</b><span>.</span></p>
+<p><span>Serge Tahé, October 2019</span></p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner">
+
+      <div>
+        <a href="https://tahe.developpez.com" target="_blank">
+          https://tahe.developpez.com
+        </a>
+        <br>
+        Ce cours-tutoriel écrit par <strong>Serge Tahé</strong> est mis à disposition du public selon les termes de la
+        <em>Licence Creative Commons Attribution – Pas d’Utilisation Commerciale –
+        Partage dans les Mêmes Conditions 3.0 non transposé</em>.
+      </div>
+
+    </div>
+  </div>
+
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="javascripts/focus.js"></script>
+      
+    
+  </body>
+</html>
