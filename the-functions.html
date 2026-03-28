@@ -555,7 +555,7 @@
   <a href="#81-script-func-01" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8.1. script &#91;func-01&#93;
+        8.1. script [func-01]
       
     </span>
   </a>
@@ -566,7 +566,7 @@
   <a href="#82-script-func-02" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8.2. script &#91;func-02&#93;
+        8.2. script [func-02]
       
     </span>
   </a>
@@ -577,7 +577,7 @@
   <a href="#83-script-func-03" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8.3. script &#91;func-03&#93;
+        8.3. script [func-03]
       
     </span>
   </a>
@@ -588,7 +588,7 @@
   <a href="#84-script-func-04" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8.4. script &#91;func-04&#93;
+        8.4. script [func-04]
       
     </span>
   </a>
@@ -599,7 +599,7 @@
   <a href="#85-script-func-05" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8.5. script &#91;func-05&#93;
+        8.5. script [func-05]
       
     </span>
   </a>
@@ -796,250 +796,266 @@
   
 
 
-<h1 id="8-the-functions">8. <a id="refheadingtoc2042413980233556"></a><span>The functions</span></h1>
-<p><img src="images/image90.png" class="docx-zoomable" style="width:90px;height:91px;" alt="Image" /></p>
-<h2 id="81-script-func-01">8.1. <a id="refheadingtoc2042433980233556"></a><span>script &#91;func-01&#93;</span></h2>
-<p><span>The script examines how parameters are passed to a function:</span></p>
+<p><a id="refheadingtoc2042413980233556"></a></p>
+<h1 id="8-the-functions">8. <span style="color: #365f91">The functions</span></h1>
+<p><img src="images/10000000000000E0000000E3B1A0C324.png" style="width:2.371cm;height:2.402cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000E0000000E3B1A0C324.png" /></p>
+<p><a id="refheadingtoc2042433980233556"></a></p>
+<h2 id="81-script-func-01">8.1. <span style="color: #4f81bd">script [func-01]</span></h2>
+<p>The script examines how parameters are passed to a function:</p>
 <ul>
-<li><span>pass-by-value for numbers, strings, and booleans;</span></li>
-<li><span>pass-by-reference for arrays, literal objects, and functions;</span>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-javascript">
-<span class="docx-code-line"><span style="color:#A31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">// function parameter passing modes</span>
-<span class="docx-code-line">// -----------------------number - passed by value</span>
-<span class="docx-code-line"><span style="color:#0000FF">function </span><span style="color:#000000">doSomethingWithNumber(param) {</span></span>
-<span class="docx-code-line">  param++;</span>
-<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">&quot;</span><span style="font-weight:bold;color:#A31515">[param inside function]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, param, </span><span style="color:#A31515">&quot;</span><span style="font-weight:bold;color:#A31515">[type]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000FF">typeof</span><span style="color:#000000">(param), </span><span style="color:#A31515">&quot;</span><span style="font-weight:bold;color:#A31515">[passed by reference]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, param === count);</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line">// call code</span>
-<span class="docx-code-line"><span style="color:#0000FF">let </span><span style="color:#000000">count = 10;</span></span>
-<span class="docx-code-line">doSomethingWithNumber(count);</span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;</span><span style="font-weight:bold;color:#A31515">[count outside function]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, count);</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line">// --------------------- string - passed by value</span>
-<span class="docx-code-line"><span style="color:#0000FF">function </span><span style="color:#000000">doSomethingWithString(param) {</span></span>
-<span class="docx-code-line"><span style="color:#000000">  param += </span><span style="color:#A31515">&quot; xyz&quot;</span></span>
-<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">&quot;</span><span style="font-weight:bold;color:#A31515">[param inside function]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, param, </span><span style="color:#A31515">&quot;</span><span style="font-weight:bold;color:#A31515">[type]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000FF">typeof </span><span style="color:#000000">(param), </span><span style="color:#A31515">&quot;</span><span style="font-weight:bold;color:#A31515">[pass-by-reference]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, param === text);</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line">// call code</span>
-<span class="docx-code-line"><span style="color:#0000FF">let </span><span style="color:#000000">text = </span><span style="color:#A31515">&quot;abcd&quot;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">doSomethingWithString(text);</span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;</span><span style="font-weight:bold;color:#A31515">[text outside function]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, text);</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line">// --------------------- boolean - passed by value</span>
-<span class="docx-code-line"><span style="color:#0000FF">function </span><span style="color:#000000">doSomethingWithBoolean(param) {</span></span>
-<span class="docx-code-line">  param = !param;</span>
-<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">&quot;</span><span style="font-weight:bold;color:#A31515">[param inside function]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, param, </span><span style="color:#A31515">&quot;</span><span style="font-weight:bold;color:#A31515">[type]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000FF">typeof </span><span style="color:#000000">(param), </span><span style="color:#A31515">&quot;</span><span style="font-weight:bold;color:#A31515">[pass-by-reference]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, param === bool);</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line">// call code</span>
-<span class="docx-code-line"><span style="color:#0000FF">let </span><span style="color:#000000">bool = </span><span style="color:#0000FF">true</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">doSomethingWithBoolean(bool);</span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;bool </span><span style="font-weight:bold;color:#A31515">[outside function]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, bool);</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line">// --------------------- array - passed by reference</span>
-<span class="docx-code-line"><span style="color:#0000FF">function </span><span style="color:#000000">doSomethingWithArray(param) {</span></span>
-<span class="docx-code-line">  param.push(1000);</span>
-<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">&quot;</span><span style="font-weight:bold;color:#A31515">[param inside function]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, param, </span><span style="color:#A31515">&quot;</span><span style="font-weight:bold;color:#A31515">[type]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000FF">typeof </span><span style="color:#000000">(param), </span><span style="color:#A31515">&quot;</span><span style="font-weight:bold;color:#A31515">[pass-by-reference]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, param === tab);</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line">// calling code</span>
-<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">tab = </span><span style="font-weight:bold;color:#000000">[10, 20, 30]</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">doSomethingWithArray(tab);</span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;</span><span style="font-weight:bold;color:#A31515">[tab outside function]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, tab);</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line">// --------------------- object - passed by reference</span>
-<span class="docx-code-line"><span style="color:#0000FF">function </span><span style="color:#000000">doSomethingWithObject(param) {</span></span>
-<span class="docx-code-line"><span style="color:#000000">  param.newProperty = </span><span style="color:#A31515">&quot;xyz&quot;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">&quot;</span><span style="font-weight:bold;color:#A31515">[param inside function]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, param, </span><span style="color:#A31515">&quot;</span><span style="font-weight:bold;color:#A31515">[type]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000FF">typeof </span><span style="color:#000000">(param), </span><span style="color:#A31515">&quot;</span><span style="font-weight:bold;color:#A31515">[pass-by-reference]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, param === obj);</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line">// calling code</span>
-<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">obj = </span><span style="font-weight:bold;color:#000000">[10, 20, 30]</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">doSomethingWithObject(obj);</span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;</span><span style="font-weight:bold;color:#A31515">[obj outside function]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, obj);</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line">// --------------------- function - passed by reference</span>
-<span class="docx-code-line"><span style="color:#0000FF">function </span><span style="color:#000000">doSomethingWithFunction(param) {</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// something rather odd, but it works</span></span>
-<span class="docx-code-line"><span style="color:#000000">  param.newProperty = </span><span style="color:#A31515">&quot;xyz&quot;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">&quot;</span><span style="font-weight:bold;color:#A31515">[param inside function]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, param, </span><span style="color:#A31515">&quot;</span><span style="font-weight:bold;color:#A31515">[type]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000FF">typeof </span><span style="color:#000000">(param), </span><span style="color:#A31515">&quot;</span><span style="font-weight:bold;color:#A31515">[pass-by-reference]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, param === f);</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line">// calling code</span>
-<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">f = x =&gt; x + 4;</span></span>
-<span class="docx-code-line">doSomethingWithFunction(f);</span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;</span><span style="font-weight:bold;color:#A31515">[f outside function]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, f, f.newProperty, </span><span style="color:#0000FF">typeof </span><span style="color:#000000">(f));</span></span>
-</code></pre></div>
-
-</li>
+  <li>pass-by-value for numbers, strings, and booleans;
+  </li>
+  <li>pass-by-reference for arrays, literal objects, and functions;
+  </li>
 </ul>
 
-<p><b>Execution</b></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-javascript">
-<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Running] </span><span style="color:#A31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\functions\func-01.js&quot;</span></span>
-<span class="docx-code-line"><span style="font-weight:bold">[param inside function]</span>= 11 <span style="font-weight:bold">[type]</span>= number <span style="font-weight:bold">[pass by reference]</span>= false</span>
-<span class="docx-code-line"><span style="font-weight:bold">[count outside function]</span>= 10</span>
-<span class="docx-code-line"><span style="font-weight:bold">[param inside function]</span>= abcd xyz <span style="font-weight:bold">[type]</span>= string <span style="font-weight:bold">[pass by reference]</span>= false</span>
-<span class="docx-code-line"><span style="font-weight:bold">[text outside function]</span>= abcd</span>
-<span class="docx-code-line"><span style="font-weight:bold">[param inside function]</span>= false <span style="font-weight:bold">[type]</span>= boolean <span style="font-weight:bold">[pass by reference]</span>= false</span>
-<span class="docx-code-line">bool <span style="font-weight:bold">[outside function]</span>= true</span>
-<span class="docx-code-line"><span style="font-weight:bold">[param inside function]</span>= <span style="font-weight:bold">[ 10, 20, 30, 1000 ] [type]</span>= object <span style="font-weight:bold">[pass by reference]</span>= true</span>
-<span class="docx-code-line"><span style="font-weight:bold">[tab outside function]</span>= <span style="font-weight:bold">[ 10, 20, 30, 1000 ]</span></span>
-<span class="docx-code-line"><span style="font-weight:bold">[param inside function]</span>= <span style="font-weight:bold">[ 10, 20, 30, &#x27;aNewProperty&#x27;: &#x27;xyz&#x27; ] [type]</span>= object <span style="font-weight:bold">[pass by reference]</span>= true</span>
-<span class="docx-code-line"><span style="font-weight:bold">[obj outside function]</span>= <span style="font-weight:bold">[ 10, 20, 30, &#x27;aNewProperty&#x27;: &#x27;xyz&#x27; ]</span></span>
-<span class="docx-code-line"><span style="font-weight:bold">[param inside function] </span>= x =&gt; x + 4 <span style="font-weight:bold">[type] </span>= function <span style="font-weight:bold">[pass by reference] </span>= true</span>
-<span class="docx-code-line"><span style="font-weight:bold">[f outside function] </span>= x =&gt; x + 4 xyz function</span>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// function parameter passing modes</span>
+<span class="odt-code-line">// -----------------------number - passed by value</span>
+<span class="odt-code-line"><span style="color:#0000ff">function </span><span style="color:#000000">doSomethingWithNumber(param) {</span></span>
+<span class="odt-code-line">  param++;</span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[param inside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param, </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[type]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000">(param), </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[passed by reference]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param === count);</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// call code</span>
+<span class="odt-code-line"><span style="color:#0000ff">let </span><span style="color:#000000">count = 10;</span></span>
+<span class="odt-code-line">doSomethingWithNumber(count);</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[count outside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, count);</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// --------------------- string - passed by value</span>
+<span class="odt-code-line"><span style="color:#0000ff">function </span><span style="color:#000000">doSomethingWithString(param) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  param += </span><span style="color:#a31515">&quot; xyz&quot;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[param inside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param, </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[type]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof </span><span style="color:#000000">(param), </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[pass-by-reference]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param === text);</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// call code</span>
+<span class="odt-code-line"><span style="color:#0000ff">let </span><span style="color:#000000">text = </span><span style="color:#a31515">&quot;abcd&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">doSomethingWithString(text);</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[text outside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, text);</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// --------------------- boolean - passed by value</span>
+<span class="odt-code-line"><span style="color:#0000ff">function </span><span style="color:#000000">doSomethingWithBoolean(param) {</span></span>
+<span class="odt-code-line">  param = !param;</span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[param inside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param, </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[type]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof </span><span style="color:#000000">(param), </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[pass-by-reference]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param === bool);</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// call code</span>
+<span class="odt-code-line"><span style="color:#0000ff">let </span><span style="color:#000000">bool = </span><span style="color:#0000ff">true</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">doSomethingWithBoolean(bool);</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;bool </span><span style="font-weight:bold;color:#a31515">[outside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, bool);</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// --------------------- array - passed by reference</span>
+<span class="odt-code-line"><span style="color:#0000ff">function </span><span style="color:#000000">doSomethingWithArray(param) {</span></span>
+<span class="odt-code-line">  param.push(1000);</span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[param inside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param, </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[type]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof </span><span style="color:#000000">(param), </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[pass-by-reference]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param === tab);</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// calling code</span>
+<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">tab = </span><span style="font-weight:bold;color:#000000">[10, 20, 30]</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">doSomethingWithArray(tab);</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[tab outside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, tab);</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// --------------------- object - passed by reference</span>
+<span class="odt-code-line"><span style="color:#0000ff">function </span><span style="color:#000000">doSomethingWithObject(param) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  param.newProperty = </span><span style="color:#a31515">&quot;xyz&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[param inside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param, </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[type]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof </span><span style="color:#000000">(param), </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[pass-by-reference]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param === obj);</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// calling code</span>
+<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">obj = </span><span style="font-weight:bold;color:#000000">[10, 20, 30]</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">doSomethingWithObject(obj);</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[obj outside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, obj);</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// --------------------- function - passed by reference</span>
+<span class="odt-code-line"><span style="color:#0000ff">function </span><span style="color:#000000">doSomethingWithFunction(param) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// something rather odd, but it works</span></span>
+<span class="odt-code-line"><span style="color:#000000">  param.newProperty = </span><span style="color:#a31515">&quot;xyz&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[param inside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param, </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[type]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof </span><span style="color:#000000">(param), </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[pass-by-reference]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param === f);</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// calling code</span>
+<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">f = x =&gt; x + 4;</span></span>
+<span class="odt-code-line">doSomethingWithFunction(f);</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[f outside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, f, f.newProperty, </span><span style="color:#0000ff">typeof </span><span style="color:#000000">(f));</span></span>
 </code></pre></div>
 
-<h2 id="82-script-func-02">8.2. <a id="refheadingtoc2042453980233556"></a><span>script &#91;func-02&#93;</span></h2>
-<p><span>The following script shows that the </span><b>&#91;function&#93; </b><span>type is a data type like any other and that a variable can have this type. It also shows two ways to define a function:</span></p>
+<p><strong>Execution</strong></p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-js">
+<span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running] </span><span style="color:#a31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\functions\func-01.js&quot;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold">[param inside function]</span>= 11 <span style="font-weight:bold">[type]</span>= number <span style="font-weight:bold">[pass by reference]</span>= false</span>
+<span class="odt-code-line"><span style="font-weight:bold">[count outside function]</span>= 10</span>
+<span class="odt-code-line"><span style="font-weight:bold">[param inside function]</span>= abcd xyz <span style="font-weight:bold">[type]</span>= string <span style="font-weight:bold">[pass by reference]</span>= false</span>
+<span class="odt-code-line"><span style="font-weight:bold">[text outside function]</span>= abcd</span>
+<span class="odt-code-line"><span style="font-weight:bold">[param inside function]</span>= false <span style="font-weight:bold">[type]</span>= boolean <span style="font-weight:bold">[pass by reference]</span>= false</span>
+<span class="odt-code-line">bool <span style="font-weight:bold">[outside function]</span>= true</span>
+<span class="odt-code-line"><span style="font-weight:bold">[param inside function]</span>= <span style="font-weight:bold">[ 10, 20, 30, 1000 ] [type]</span>= object <span style="font-weight:bold">[pass by reference]</span>= true</span>
+<span class="odt-code-line"><span style="font-weight:bold">[tab outside function]</span>= <span style="font-weight:bold">[ 10, 20, 30, 1000 ]</span></span>
+<span class="odt-code-line"><span style="font-weight:bold">[param inside function]</span>= <span style="font-weight:bold">[ 10, 20, 30, &#x27;aNewProperty&#x27;: &#x27;xyz&#x27; ] [type]</span>= object <span style="font-weight:bold">[pass by reference]</span>= true</span>
+<span class="odt-code-line"><span style="font-weight:bold">[obj outside function]</span>= <span style="font-weight:bold">[ 10, 20, 30, &#x27;aNewProperty&#x27;: &#x27;xyz&#x27; ]</span></span>
+<span class="odt-code-line"><span style="font-weight:bold">[param inside function] </span>= x =&gt; x + 4 <span style="font-weight:bold">[type] </span>= function <span style="font-weight:bold">[pass by reference] </span>= true</span>
+<span class="odt-code-line"><span style="font-weight:bold">[f outside function] </span>= x =&gt; x + 4 xyz function</span>
+</code></pre></div>
+
+<p><a id="refheadingtoc2042453980233556"></a></p>
+<h2 id="82-script-func-02">8.2. <span style="color: #4f81bd">script [func-02]</span></h2>
+<p>The following script shows that the <strong>[function]</strong> type is a data type like any other and that a variable can have this type. It also shows two ways to define a function:</p>
 <ul>
-<li><span>one using the </span><b>&#91;function&#93; </b><span>keyword;</span></li>
-<li><span>the other using the &quot;arrow&quot; notation =&gt;;</span>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-csharp">
-<span class="docx-code-line">&#x27;use strict&#x27;;</span>
-<span class="docx-code-line">// you can assign a function to a variable</span>
-<span class="docx-code-line"><span style="color:#0000FF">const </span>variable1 = <span style="color:#0000FF">function </span>(a, b) {</span>
-<span class="docx-code-line"><span style="color:#0000FF">  return </span>a + b;</span>
-<span class="docx-code-line">};</span>
-<span class="docx-code-line">console.log(&quot;typeof(variable1)=&quot;, <span style="color:#0000FF">typeof </span>(variable1));</span>
-<span class="docx-code-line">// The variable can then be used as a function</span>
-<span class="docx-code-line">console.log(&quot;variable1(10,12)=&quot;, variable1(10, 12));</span>
-<span class="docx-code-line">// the function can be defined using the =&gt; syntax</span>
-<span class="docx-code-line"><span style="color:#0000FF">const </span>variable2 = (a, b, c) =&gt; {</span>
-<span class="docx-code-line"><span style="color:#0000FF">  return </span>a - b + c;</span>
-<span class="docx-code-line">};</span>
-<span class="docx-code-line">console.log(&quot;variable2(10,12,14)=&quot;, variable2(10, 12, 14));</span>
-<span class="docx-code-line">// You can omit the curly braces if there is only one expression in the function body</span>
-<span class="docx-code-line">// this expression is then the function&#x27;s return value</span>
-<span class="docx-code-line"><span style="color:#0000FF">const </span>variable3 = (a, b, c) =&gt; a + b + c;</span>
-<span class="docx-code-line">console.log(&quot;variable3(10,12,14)=&quot;, variable3(10, 12, 14));</span>
-</code></pre></div>
-
-</li>
+  <li>one using the <b>[function] </b>keyword;
+  </li>
+  <li>the other using the &quot;arrow&quot; notation =&gt;;
+  </li>
 </ul>
 
-<p><b>Execution</b></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-javascript">
-<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Running] </span>C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\fonctions\func-02.js&quot;</span>
-<span class="docx-code-line">typeof(variable1) = function</span>
-<span class="docx-code-line">variable1(10,12) = 22</span>
-<span class="docx-code-line">variable2(10,12,14) = 12</span>
-<span class="docx-code-line">variable3(10,12,14) = 36</span>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<span class="odt-code-line">&#x27;use strict&#x27;;</span>
+<span class="odt-code-line">// you can assign a function to a variable</span>
+<span class="odt-code-line"><span style="color:#0000ff">const </span>variable1 = <span style="color:#0000ff">function </span>(a, b) {</span>
+<span class="odt-code-line"><span style="color:#0000ff">  return </span>a + b;</span>
+<span class="odt-code-line">};</span>
+<span class="odt-code-line">console.log(&quot;typeof(variable1)=&quot;, <span style="color:#0000ff">typeof </span>(variable1));</span>
+<span class="odt-code-line">// The variable can then be used as a function</span>
+<span class="odt-code-line">console.log(&quot;variable1(10,12)=&quot;, variable1(10, 12));</span>
+<span class="odt-code-line">// the function can be defined using the =&gt; syntax</span>
+<span class="odt-code-line"><span style="color:#0000ff">const </span>variable2 = (a, b, c) =&gt; {</span>
+<span class="odt-code-line"><span style="color:#0000ff">  return </span>a - b + c;</span>
+<span class="odt-code-line">};</span>
+<span class="odt-code-line">console.log(&quot;variable2(10,12,14)=&quot;, variable2(10, 12, 14));</span>
+<span class="odt-code-line">// You can omit the curly braces if there is only one expression in the function body</span>
+<span class="odt-code-line">// this expression is then the function&#x27;s return value</span>
+<span class="odt-code-line"><span style="color:#0000ff">const </span>variable3 = (a, b, c) =&gt; a + b + c;</span>
+<span class="odt-code-line">console.log(&quot;variable3(10,12,14)=&quot;, variable3(10, 12, 14));</span>
 </code></pre></div>
 
-<h2 id="83-script-func-03">8.3. <a id="refheadingtoc2042473980233556"></a><span>script &#91;func-03&#93;</span></h2>
-<p><span>This script demonstrates the ability to pass a function as a parameter to another function. This technique is widely used in JavaScript frameworks.</span></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-javascript">
-<span class="docx-code-line"><span style="color:#A31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">// a function&#x27;s parameters can be of type <span style="font-weight:bold">[function]</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line">// function f1</span>
-<span class="docx-code-line"><span style="color:#0000FF">function </span><span style="color:#000000">f1(param1, param2) {</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">return </span><span style="color:#000000">param1 + param2 + 10;</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line">// function f2</span>
-<span class="docx-code-line"><span style="color:#0000FF">function </span><span style="color:#000000">f2(param1, param2) {</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">return </span><span style="color:#000000">param1 + param2 + 20;</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line">// function g with function f as a parameter</span>
-<span class="docx-code-line"><span style="color:#0000FF">function </span><span style="color:#000000">g(param1, param2, f) {</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">return </span><span style="color:#000000">f(param1, param2) + 100;</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line">// uses of g</span>
-<span class="docx-code-line">console.log(g(0, 10, f1));</span>
-<span class="docx-code-line">console.log(g(0, 10, f2));</span>
-<span class="docx-code-line">// the actual function parameter can be passed directly - form 1</span>
-<span class="docx-code-line">console.log(g(0, 10, (param1, param2) =&gt; {</span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">return </span><span style="color:#000000">param1 + param2 + 30;</span></span>
-<span class="docx-code-line">}));</span>
-<span class="docx-code-line">// the actual function-type parameter can be passed directly - form 2</span>
-<span class="docx-code-line"><span style="color:#000000">console.log(g(0, 10, </span><span style="color:#0000FF">function </span><span style="color:#000000">(param1, param2) {</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">return </span><span style="color:#000000">param1 + param2 + 40;</span></span>
-<span class="docx-code-line">}));</span>
+<p><strong>Execution</strong></p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-js">
+<span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running] </span>C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\fonctions\func-02.js&quot;</span>
+<span class="odt-code-line">typeof(variable1) = function</span>
+<span class="odt-code-line">variable1(10,12) = 22</span>
+<span class="odt-code-line">variable2(10,12,14) = 12</span>
+<span class="odt-code-line">variable3(10,12,14) = 36</span>
 </code></pre></div>
 
-<p><b>Execution</b></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-javascript">
-<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Running] </span><span style="color:#A31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\functions\func-03.js&quot;</span></span>
-<span class="docx-code-line">120</span>
-<span class="docx-code-line">130</span>
-<span class="docx-code-line">140</span>
-<span class="docx-code-line">150</span>
+<p><a id="refheadingtoc2042473980233556"></a></p>
+<h2 id="83-script-func-03">8.3. <span style="color: #4f81bd">script [func-03]</span></h2>
+<p>This script demonstrates the ability to pass a function as a parameter to another function. This technique is widely used in JavaScript frameworks.</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// a function&#x27;s parameters can be of type <span style="font-weight:bold">[function]</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// function f1</span>
+<span class="odt-code-line"><span style="color:#0000ff">function </span><span style="color:#000000">f1(param1, param2) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">return </span><span style="color:#000000">param1 + param2 + 10;</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// function f2</span>
+<span class="odt-code-line"><span style="color:#0000ff">function </span><span style="color:#000000">f2(param1, param2) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">return </span><span style="color:#000000">param1 + param2 + 20;</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// function g with function f as a parameter</span>
+<span class="odt-code-line"><span style="color:#0000ff">function </span><span style="color:#000000">g(param1, param2, f) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">return </span><span style="color:#000000">f(param1, param2) + 100;</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// uses of g</span>
+<span class="odt-code-line">console.log(g(0, 10, f1));</span>
+<span class="odt-code-line">console.log(g(0, 10, f2));</span>
+<span class="odt-code-line">// the actual function parameter can be passed directly - form 1</span>
+<span class="odt-code-line">console.log(g(0, 10, (param1, param2) =&gt; {</span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">return </span><span style="color:#000000">param1 + param2 + 30;</span></span>
+<span class="odt-code-line">}));</span>
+<span class="odt-code-line">// the actual function-type parameter can be passed directly - form 2</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(g(0, 10, </span><span style="color:#0000ff">function </span><span style="color:#000000">(param1, param2) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">return </span><span style="color:#000000">param1 + param2 + 40;</span></span>
+<span class="odt-code-line">}));</span>
 </code></pre></div>
 
-<h2 id="84-script-func-04">8.4. <a id="refheadingtoc259303196815120"></a><span>script &#91;func-04&#93;</span></h2>
-<p><span>The following script demonstrates that a JavaScript function can behave like a class:</span></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-csharp">
-<span class="docx-code-line"><span style="color:#A31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">// A function can be used as an object</span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line">// an empty shell</span>
-<span class="docx-code-line"><span style="color:#0000FF">function </span><span style="color:#000000">f() {</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line">// to which properties are assigned from the outside</span>
-<span class="docx-code-line"><span style="color:#000000">f.prop1 = </span><span style="color:#A31515">&quot;val1&quot;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line"><span style="color:#000000">f.show = </span><span style="color:#0000FF">function </span><span style="color:#000000">() {</span></span>
-<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#0000FF">this</span><span style="color:#000000">.prop1);</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line">// using f</span>
-<span class="docx-code-line">f.show();</span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line">// a function g acting as a class</span>
-<span class="docx-code-line"><span style="color:#0000FF">function </span><span style="color:#000000">g() {</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">this</span><span style="color:#000000">.prop2 = </span><span style="color:#A31515">&quot;val2&quot;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">this</span><span style="color:#000000">.show = </span><span style="color:#0000FF">function </span><span style="color:#000000">() {</span></span>
-<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#0000FF">this</span><span style="color:#000000">.prop2);</span></span>
-<span class="docx-code-line">  }</span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line">// Instantiate the function with <span style="font-weight:bold">[new]</span></span>
-<span class="docx-code-line"><span style="color:#0000FF">new </span><span style="color:#000000">g().show();</span></span>
+<p><strong>Execution</strong></p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-js">
+<span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running] </span><span style="color:#a31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\functions\func-03.js&quot;</span></span>
+<span class="odt-code-line">120</span>
+<span class="odt-code-line">130</span>
+<span class="odt-code-line">140</span>
+<span class="odt-code-line">150</span>
 </code></pre></div>
 
-<p><b>Comments</b></p>
+<p><a id="refheadingtoc259303196815120"></a></p>
+<h2 id="84-script-func-04">8.4. <span style="color: #4f81bd">script [func-04]</span></h2>
+<p>The following script demonstrates that a JavaScript function can behave like a class:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// A function can be used as an object</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// an empty shell</span>
+<span class="odt-code-line"><span style="color:#0000ff">function </span><span style="color:#000000">f() {</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// to which properties are assigned from the outside</span>
+<span class="odt-code-line"><span style="color:#000000">f.prop1 = </span><span style="color:#a31515">&quot;val1&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#000000">f.show = </span><span style="color:#0000ff">function </span><span style="color:#000000">() {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#0000ff">this</span><span style="color:#000000">.prop1);</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// using f</span>
+<span class="odt-code-line">f.show();</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// a function g acting as a class</span>
+<span class="odt-code-line"><span style="color:#0000ff">function </span><span style="color:#000000">g() {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">this</span><span style="color:#000000">.prop2 = </span><span style="color:#a31515">&quot;val2&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">this</span><span style="color:#000000">.show = </span><span style="color:#0000ff">function </span><span style="color:#000000">() {</span></span>
+<span class="odt-code-line"><span style="color:#000000">    console.log(</span><span style="color:#0000ff">this</span><span style="color:#000000">.prop2);</span></span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// Instantiate the function with <span style="font-weight:bold">[new]</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">new </span><span style="color:#000000">g().show();</span></span>
+</code></pre></div>
+
+<p><strong>Comments</strong></p>
 <ul>
-<li><span>lines 5–7: the body of function f does not define any properties;</span></li>
-<li><span>lines 9–12: properties are assigned to the function f from outside;</span></li>
-<li><span>line 14: use of the function (object) f. Note that we do not write </span><b>&#91;f()&#93; </b><span>but simply </span><b>&#91;f&#93;</b><span>. This is the notation for an object;</span></li>
-<li><span>lines 17–22: we define a function </span><b>&#91;g&#93; </b><span>as if it were a class with properties and methods;</span></li>
-<li><span>line 24: the function </span><b>&#91;g&#93; </b><span>is instantiated by </span><b>&#91;new g()&#93;</b><span>;</span></li>
+  <li>lines 5–7: the body of function f does not define any properties;
+  </li>
+  <li>lines 9–12: properties are assigned to the function f from outside;
+  </li>
+  <li>line 14: use of the function (object) f. Note that we do not write <b>[f()] </b>but simply <b>[f]</b>. This is the notation for an object;
+  </li>
+  <li>lines 17–22: we define a function <b>[g] </b>as if it were a class with properties and methods;
+  </li>
+  <li>line 24: the function <b>[g] </b>is instantiated by <b>[new g()]</b>;
+  </li>
 </ul>
 
-<p><b>Execution results</b></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-text">
-<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Running] </span><span style="color:#A31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\classes\class-00.js&quot;</span></span>
-<span class="docx-code-line">val1</span>
-<span class="docx-code-line">val2</span>
+<p><strong>Execution results</strong></p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running] </span><span style="color:#a31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\classes\class-00.js&quot;</span></span>
+<span class="odt-code-line">val1</span>
+<span class="odt-code-line">val2</span>
 </code></pre></div>
 
-<p><span>ES6 introduced the concept of classes, which now allows us to avoid using functions to create classes.</span></p>
-<h2 id="85-script-func-05">8.5. <a id="refheadingtoc5458671626043720"></a><span>script &#91;func-05&#93;</span></h2>
-<p><span>The script &#91;func-05&#93; demonstrates the use of an operator called the &#91;rest operator&#93;:</span></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-javascript">
-<span class="docx-code-line"><span style="color:#A31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">// rest operator</span>
-<span class="docx-code-line"><span style="color:#0000FF">function </span><span style="color:#000000">f(arg1, ...otherArgs) {</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// 1st argument</span></span>
-<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">&quot;arg1=&quot;</span><span style="color:#000000">, arg1);</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// the other arguments</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">let </span><span style="color:#000000">i = 0;</span></span>
-<span class="docx-code-line">  otherArgs.forEach(element =&gt; {</span>
-<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;otherArguments[&quot;</span><span style="color:#000000">, i, </span><span style="color:#A31515">&quot;]=&quot;</span><span style="color:#000000">, element);</span></span>
-<span class="docx-code-line">    i++;</span>
-<span class="docx-code-line">  });</span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line">// call</span>
-<span class="docx-code-line"><span style="color:#000000">f(1, </span><span style="color:#A31515">&quot;two&quot;</span><span style="color:#000000">, </span><span style="color:#A31515">&quot;three&quot;</span><span style="color:#000000">, { x: 2, y: 3 })</span></span>
+<p>ES6 introduced the concept of classes, which now allows us to avoid using functions to create classes.</p>
+<p><a id="refheadingtoc5458671626043720"></a></p>
+<h2 id="85-script-func-05">8.5. <span style="color: #4f81bd">script [func-05]</span></h2>
+<p>The script [func-05] demonstrates the use of an operator called the [rest operator]:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// rest operator</span>
+<span class="odt-code-line"><span style="color:#0000ff">function </span><span style="color:#000000">f(arg1, ...otherArgs) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// 1st argument</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;arg1=&quot;</span><span style="color:#000000">, arg1);</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// the other arguments</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">let </span><span style="color:#000000">i = 0;</span></span>
+<span class="odt-code-line">  otherArgs.forEach(element =&gt; {</span>
+<span class="odt-code-line"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;otherArguments[&quot;</span><span style="color:#000000">, i, </span><span style="color:#a31515">&quot;]=&quot;</span><span style="color:#000000">, element);</span></span>
+<span class="odt-code-line">    i++;</span>
+<span class="odt-code-line">  });</span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// call</span>
+<span class="odt-code-line"><span style="color:#000000">f(1, </span><span style="color:#a31515">&quot;two&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;three&quot;</span><span style="color:#000000">, { x: 2, y: 3 })</span></span>
 </code></pre></div>
 
 <ul>
-<li><span>line 3: the &#91;...otherArgs&#93; notation means that with a call of the form f(param1, param2, param3), we will have line 3:</span><ul>
-<li><span>arg1=param1</span></li>
-<li><span>otherArgs = &#91;param2, param3&#93;. &#91;otherArgs&#93; is therefore an array that collects all the actual parameters passed after &#91;param1&#93;;</span></li>
-</ul>
-</li>
+  <li>line 3: the [...otherArgs] notation means that with a call of the form f(param1, param2, param3), we will have line 3:
+    <ul>
+      <li>arg1=param1
+      </li>
+      <li>otherArgs = [param2, param3]. [otherArgs] is therefore an array that collects all the actual parameters passed after [param1];
+      </li>
+    </ul>
+  </li>
 </ul>
 
-<p><span>The results of the application are as follows:</span></p>
+<p>The results of the application are as follows:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>

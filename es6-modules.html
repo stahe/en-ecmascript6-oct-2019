@@ -609,7 +609,7 @@
   <a href="#101-scripts-import-01-export-01" class="md-nav__link">
     <span class="md-ellipsis">
       
-        10.1. scripts &#91;import-01, export-01&#93;
+        10.1. scripts [import-01, export-01]
       
     </span>
   </a>
@@ -620,7 +620,7 @@
   <a href="#102-scripts-import-02-export-02" class="md-nav__link">
     <span class="md-ellipsis">
       
-        10.2. scripts &#91;import-02, export-02&#93;
+        10.2. scripts [import-02, export-02]
       
     </span>
   </a>
@@ -631,7 +631,7 @@
   <a href="#103-scripts-import-03-export-03" class="md-nav__link">
     <span class="md-ellipsis">
       
-        10.3. scripts &#91;import-03, export-03&#93;
+        10.3. scripts [import-03, export-03]
       
     </span>
   </a>
@@ -774,142 +774,154 @@
   
 
 
-<h1 id="10-es6-modules">10. <a id="refheadingtoc225368640539168"></a><span>ES6 Modules</span></h1>
-<p><img src="images/image93.png" class="docx-zoomable" style="width:101px;height:127px;" alt="Image" /></p>
-<p><span>ES6 modules allow you to build JavaScript applications structured into independent, reusable modules.</span></p>
-<h2 id="101-scripts-import-01-export-01">10.1. <a id="refheadingtoc225370640539168"></a><span>scripts &#91;import-01, export-01&#93;</span></h2>
-<p><span>The script </span><b>&#91;import-01&#93; </b><span>will use the module </span><b>&#91;export-01&#93;</b><span>. This is defined as follows:</span></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-python">
-<span class="docx-code-line">// Default export of an unnamed object</span>
-<span class="docx-code-line"><span style="color:#0000FF">export default </span><span style="color:#000000">{</span></span>
-<span class="docx-code-line">  data: 2,</span>
-<span class="docx-code-line">  do() {</span>
-<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#0000FF">this</span><span style="color:#000000">.data);</span></span>
-<span class="docx-code-line">  }</span>
-<span class="docx-code-line">};</span>
+<p><a id="refheadingtoc225368640539168"></a></p>
+<h1 id="10-es6-modules">10. <span style="color: #365f91">ES6 Modules</span></h1>
+<p><img src="images/10000000000000FC0000013E566BAA86.png" style="width:2.671cm;height:3.371cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000FC0000013E566BAA86.png" /></p>
+<p>ES6 modules allow you to build JavaScript applications structured into independent, reusable modules.</p>
+<p><a id="refheadingtoc225370640539168"></a></p>
+<h2 id="101-scripts-import-01-export-01">10.1. <span style="color: #4f81bd">scripts [import-01, export-01]</span></h2>
+<p>The script <strong>[import-01]</strong> will use the module <strong>[export-01]</strong>. This is defined as follows:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line">// Default export of an unnamed object</span>
+<span class="odt-code-line"><span style="color:#0000ff">export default </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line">  data: 2,</span>
+<span class="odt-code-line">  do() {</span>
+<span class="odt-code-line"><span style="color:#000000">    console.log(</span><span style="color:#0000ff">this</span><span style="color:#000000">.data);</span></span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line">};</span>
 </code></pre></div>
 
-<p><b>Comments</b></p>
+<p><strong>Comments</strong></p>
 <ul>
-<li><span>Lines </span><b>&#91;2–7&#93; </b><span>define an unnamed object with the properties </span><b>&#91;data, do&#93;</b><span>;</span></li>
-<li><span>Line 2: The </span><b>&#91;export default&#93; </b><span>statement exports this object. It can therefore be imported;</span></li>
+  <li>Lines <b>[2–7] </b>define an unnamed object with the properties <b>[data, do]</b>;
+  </li>
+  <li>Line 2: The <b>[export default] </b>statement exports this object. It can therefore be imported;
+  </li>
 </ul>
 
-<p><span>The </span><b>&#91;export-01&#93; </b><span>module is used by the </span><b>&#91;import-01&#93; </b><span>script as follows:</span></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-python">
-<span class="docx-code-line"><span style="color:#A31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line"><span style="color:#008000">// import an object exported by default</span></span>
-<span class="docx-code-line"><span style="color:#0000FF">import </span><span style="color:#000000">export01 </span><span style="color:#0000FF">from </span><span style="color:#A31515">&#x27;./export-01&#x27;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">// use of this object</span>
-<span class="docx-code-line">export01.do();</span>
-<span class="docx-code-line">// You can import a default export under any name</span>
-<span class="docx-code-line"><span style="color:#0000FF">import </span><span style="color:#000000">data </span><span style="color:#0000FF">from </span><span style="color:#A31515">&#x27;./export-01&#x27;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">console.log(data.data);</span>
+<p>The <strong>[export-01]</strong> module is used by the <strong>[import-01]</strong> script as follows:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008000">// import an object exported by default</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">import </span><span style="color:#000000">export01 </span><span style="color:#0000ff">from </span><span style="color:#a31515">&#x27;./export-01&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// use of this object</span>
+<span class="odt-code-line">export01.do();</span>
+<span class="odt-code-line">// You can import a default export under any name</span>
+<span class="odt-code-line"><span style="color:#0000ff">import </span><span style="color:#000000">data </span><span style="color:#0000ff">from </span><span style="color:#a31515">&#x27;./export-01&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">console.log(data.data);</span>
 </code></pre></div>
 
-<p><b>Comments</b></p>
+<p><strong>Comments</strong></p>
 <ul>
-<li><span>Lines 3 and 7 import the default exported object from the </span><b>&#91;export-01&#93; </b><span>module under two different names;</span></li>
-<li><span>Once an object is imported, it can be used as if it had been defined locally in the script;</span></li>
+  <li>Lines 3 and 7 import the default exported object from the <b>[export-01] </b>module under two different names;
+  </li>
+  <li>Once an object is imported, it can be used as if it had been defined locally in the script;
+  </li>
 </ul>
 
-<p><b>Execution</b></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-python">
-<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Running] </span><span style="color:#A31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\modules\import-01.js&quot;</span></span>
-<span class="docx-code-line">2</span>
-<span class="docx-code-line">2</span>
+<p><strong>Execution</strong></p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running] </span><span style="color:#a31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\modules\import-01.js&quot;</span></span>
+<span class="odt-code-line">2</span>
+<span class="odt-code-line">2</span>
 </code></pre></div>
 
-<h2 id="102-scripts-import-02-export-02">10.2. <a id="refheadingtoc225372640539168"></a><span>scripts &#91;import-02, export-02&#93;</span></h2>
-<p><span>These scripts demonstrate the export of a named object.</span></p>
-<p><span>The </span><b>&#91;export-02&#93; </b><span>script is as follows:</span></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-python">
-<span class="docx-code-line">// Default export of a named object</span>
-<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">data = {</span></span>
-<span class="docx-code-line">  data: 2,</span>
-<span class="docx-code-line">  do() {</span>
-<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#0000FF">this</span><span style="color:#000000">.data);</span></span>
-<span class="docx-code-line">  }</span>
-<span class="docx-code-line">};</span>
-<span class="docx-code-line">// export</span>
-<span class="docx-code-line"><span style="color:#0000FF">export default </span><span style="color:#000000">data;</span></span>
-</code></pre></div>
-
-<ul>
-<li><span>line 9: we export the </span><b>&#91;data&#93; </b><span>object;</span></li>
-</ul>
-
-<p><span>Whether the exported object is named or not does not affect the import operation. The </span><b>&#91;import-02&#93; </b><span>script is as follows:</span></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-python">
-<span class="docx-code-line"><span style="color:#A31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">// import an object exported by default</span>
-<span class="docx-code-line"><span style="color:#0000FF">import </span><span style="color:#000000">module1 </span><span style="color:#0000FF">from </span><span style="color:#A31515">&#x27;./export-02&#x27;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">// use this object</span>
-<span class="docx-code-line">module1.do();</span>
-<span class="docx-code-line">// You can import a default export under any name</span>
-<span class="docx-code-line"><span style="color:#0000FF">import </span><span style="color:#000000">module2 </span><span style="color:#0000FF">from </span><span style="color:#A31515">&#x27;./export-02&#x27;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">console.log(module2.data);</span>
-</code></pre></div>
-
-<p><b>Execution</b></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-python">
-<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Running] </span><span style="color:#A31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\modules\import-02.js&quot;</span></span>
-<span class="docx-code-line">2</span>
-<span class="docx-code-line">2</span>
-</code></pre></div>
-
-<h2 id="103-scripts-import-03-export-03">10.3. <a id="refheadingtoc225374640539168"></a><span>scripts &#91;import-03, export-03&#93;</span></h2>
-<p><span>A module can export multiple items.</span></p>
-<p><span>The </span><b>&#91;export-03&#93; </b><span>script is as follows:</span></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-javascript">
-<span class="docx-code-line">// multi-exports</span>
-<span class="docx-code-line">// export object</span>
-<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">data = {</span></span>
-<span class="docx-code-line">  data: 2,</span>
-<span class="docx-code-line">  do() {</span>
-<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#0000FF">this</span><span style="color:#000000">.data);</span></span>
-<span class="docx-code-line">  }</span>
-<span class="docx-code-line">};</span>
-<span class="docx-code-line">// export function</span>
-<span class="docx-code-line"><span style="color:#0000FF">export </span><span style="color:#000000">{ data };</span></span>
-<span class="docx-code-line"><span style="color:#0000FF">function </span><span style="color:#000000">doSomething() {</span></span>
-<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">&quot;doSomething&quot;</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line"><span style="color:#0000FF">export </span><span style="color:#000000">{ doSomething };</span></span>
-</code></pre></div>
-
-<p><b>Comments</b></p>
-<ul>
-<li><span>Lines 10 and 14: exporting two elements. An element is exported using the syntax </span><b>&#91;export {element}&#93;</b><span>;</span></li>
-</ul>
-
-<p><span>The </span><b>&#91;import-03&#93; </b><span>script uses the </span><b>&#91;export-03&#93; </b><span>module as follows:</span></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-python">
-<span class="docx-code-line"><span style="color:#A31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">// Importing a module <span style="font-weight:bold">[export03]</span></span>
-<span class="docx-code-line"><span style="color:#0000FF">import </span><span style="color:#000000">{data, doSomething} </span><span style="color:#0000FF">from </span><span style="color:#A31515">&#x27;./export-03&#x27;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">// using the imports</span>
-<span class="docx-code-line">data.do();</span>
-<span class="docx-code-line">doSomething();</span>
-<span class="docx-code-line">// alternative syntax</span>
-<span class="docx-code-line"><span style="color:#0000FF">import </span><span style="color:#000000">* </span><span style="color:#0000FF">as </span><span style="color:#000000">module </span><span style="color:#0000FF">from </span><span style="color:#A31515">&#x27;./export-03&#x27;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">// using the import</span>
-<span class="docx-code-line">console.log(module.data);</span>
-<span class="docx-code-line">module.doSomething();</span>
+<p><a id="refheadingtoc225372640539168"></a></p>
+<h2 id="102-scripts-import-02-export-02">10.2. <span style="color: #4f81bd">scripts [import-02, export-02]</span></h2>
+<p>These scripts demonstrate the export of a named object.</p>
+<p>The <strong>[export-02]</strong> script is as follows:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line">// Default export of a named object</span>
+<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">data = {</span></span>
+<span class="odt-code-line">  data: 2,</span>
+<span class="odt-code-line">  do() {</span>
+<span class="odt-code-line"><span style="color:#000000">    console.log(</span><span style="color:#0000ff">this</span><span style="color:#000000">.data);</span></span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line">};</span>
+<span class="odt-code-line">// export</span>
+<span class="odt-code-line"><span style="color:#0000ff">export default </span><span style="color:#000000">data;</span></span>
 </code></pre></div>
 
 <ul>
-<li><span>line 3: </span><b>&#91;imports&#93; </b><span>are done using the exact names of the exported objects;</span></li>
-<li><span>line 8: you can import all exported objects into a named object (here </span><b>&#91;module&#93;</b><span>);</span></li>
+  <li>line 9: we export the <b>[data] </b>object;
+  </li>
 </ul>
 
-<p><b>Execution</b></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-python">
-<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Running] </span><span style="color:#A31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\modules\import-03.js&quot;</span></span>
-<span class="docx-code-line">2</span>
-<span class="docx-code-line">doSomething</span>
-<span class="docx-code-line">{ data: 2, do: <span style="font-weight:bold">[Function: do] </span>}</span>
-<span class="docx-code-line">doSomething</span>
+<p>Whether the exported object is named or not does not affect the import operation. The <strong>[import-02]</strong> script is as follows:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// import an object exported by default</span>
+<span class="odt-code-line"><span style="color:#0000ff">import </span><span style="color:#000000">module1 </span><span style="color:#0000ff">from </span><span style="color:#a31515">&#x27;./export-02&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// use this object</span>
+<span class="odt-code-line">module1.do();</span>
+<span class="odt-code-line">// You can import a default export under any name</span>
+<span class="odt-code-line"><span style="color:#0000ff">import </span><span style="color:#000000">module2 </span><span style="color:#0000ff">from </span><span style="color:#a31515">&#x27;./export-02&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">console.log(module2.data);</span>
+</code></pre></div>
+
+<p><strong>Execution</strong></p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running] </span><span style="color:#a31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\modules\import-02.js&quot;</span></span>
+<span class="odt-code-line">2</span>
+<span class="odt-code-line">2</span>
+</code></pre></div>
+
+<p><a id="refheadingtoc225374640539168"></a></p>
+<h2 id="103-scripts-import-03-export-03">10.3. <span style="color: #4f81bd">scripts [import-03, export-03]</span></h2>
+<p>A module can export multiple items.</p>
+<p>The <strong>[export-03]</strong> script is as follows:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-js">
+<span class="odt-code-line">// multi-exports</span>
+<span class="odt-code-line">// export object</span>
+<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">data = {</span></span>
+<span class="odt-code-line">  data: 2,</span>
+<span class="odt-code-line">  do() {</span>
+<span class="odt-code-line"><span style="color:#000000">    console.log(</span><span style="color:#0000ff">this</span><span style="color:#000000">.data);</span></span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line">};</span>
+<span class="odt-code-line">// export function</span>
+<span class="odt-code-line"><span style="color:#0000ff">export </span><span style="color:#000000">{ data };</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">function </span><span style="color:#000000">doSomething() {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;doSomething&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line"><span style="color:#0000ff">export </span><span style="color:#000000">{ doSomething };</span></span>
+</code></pre></div>
+
+<p><strong>Comments</strong></p>
+<ul>
+  <li>Lines 10 and 14: exporting two elements. An element is exported using the syntax <b>[export {element}]</b>;
+  </li>
+</ul>
+
+<p>The <strong>[import-03]</strong> script uses the <strong>[export-03]</strong> module as follows:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// Importing a module <span style="font-weight:bold">[export03]</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">import </span><span style="color:#000000">{data, doSomething} </span><span style="color:#0000ff">from </span><span style="color:#a31515">&#x27;./export-03&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// using the imports</span>
+<span class="odt-code-line">data.do();</span>
+<span class="odt-code-line">doSomething();</span>
+<span class="odt-code-line">// alternative syntax</span>
+<span class="odt-code-line"><span style="color:#0000ff">import </span><span style="color:#000000">* </span><span style="color:#0000ff">as </span><span style="color:#000000">module </span><span style="color:#0000ff">from </span><span style="color:#a31515">&#x27;./export-03&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// using the import</span>
+<span class="odt-code-line">console.log(module.data);</span>
+<span class="odt-code-line">module.doSomething();</span>
+</code></pre></div>
+
+<ul>
+  <li>line 3: <b>[imports] </b>are done using the exact names of the exported objects;
+  </li>
+  <li>line 8: you can import all exported objects into a named object (here <b>[module]</b>);
+  </li>
+</ul>
+
+<p><strong>Execution</strong></p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running] </span><span style="color:#a31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\modules\import-03.js&quot;</span></span>
+<span class="odt-code-line">2</span>
+<span class="odt-code-line">doSomething</span>
+<span class="odt-code-line">{ data: 2, do: <span style="font-weight:bold">[Function: do] </span>}</span>
+<span class="odt-code-line">doSomething</span>
 </code></pre></div>
 
 

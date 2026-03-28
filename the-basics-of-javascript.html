@@ -420,18 +420,7 @@
   <a href="#31-script-bases-01" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1. script &#91;bases-01&#93;
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#32-script-bases-02" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.2. script &#91;bases-02&#93;
+        3.1. script [bases-01]
       
     </span>
   </a>
@@ -442,7 +431,7 @@
   <a href="#33-script-bases-03" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.3. script &#91;bases-03&#93;
+        3.3. script [bases-03]
       
     </span>
   </a>
@@ -453,7 +442,7 @@
   <a href="#34-script-bases-04" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.4. script &#91;bases-04&#93;
+        3.4. script [bases-04]
       
     </span>
   </a>
@@ -464,7 +453,7 @@
   <a href="#35-script-bases-05" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.5. script &#91;bases-05&#93;
+        3.5. script [bases-05]
       
     </span>
   </a>
@@ -475,7 +464,7 @@
   <a href="#36-script-bases-06" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.6. script &#91;bases-06&#93;
+        3.6. script [bases-06]
       
     </span>
   </a>
@@ -486,18 +475,7 @@
   <a href="#37-script-bases-07" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.7. script &#91;bases-07&#93;
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#38-script-bases-08" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.8. script &#91;bases-08&#93;
+        3.7. script [bases-07]
       
     </span>
   </a>
@@ -829,625 +807,662 @@
   
 
 
-<h1 id="3-the-basics-of-javascript">3. <a id="refheadingtoc2041813980233556"></a><span>The Basics of JavaScript</span></h1>
-<p><b>Note</b><span>: From here on, the term </span><b>&#91;JavaScript&#93; </b><span>will always refer to the ECMAScript 6 standard.</span></p>
-<p><span>Inside the previous JavaScript project, create a folder </span><b>named &#91;bases&#93;</b><span>. We will place the examples from this section there:</span></p>
-<p><img src="images/image67.png" class="docx-zoomable" style="width:437px;height:188px;" alt="Image" /></p>
-<h2 id="31-script-bases-01">3.1. <a id="refheadingtoc2041833980233556"></a><span>script &#91;bases-01&#93;</span></h2>
-<p><span>To introduce the basics of PHP7, we used the following code (see </span><a href="https://tahe.developpez.com/tutoriels-cours/php7/"><span style="color:#0563C1"><u>linked</u></span></a><span> paragraph):</span></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-php">
-<span class="docx-code-line">&lt;?php</span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line">// this is a comment</span>
-<span class="docx-code-line">// variable used without being declared</span>
-<span class="docx-code-line"><span style="color:#0000FF">$name </span><span style="color:#000000">= </span><span style="color:#008000">&quot;dupont&quot;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">// a screen display</span>
-<span class="docx-code-line"><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;</span><span style="color:#0000FF">name=$name</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">// an array with elements of different types</span>
-<span class="docx-code-line"><span style="color:#0000FF">$array </span><span style="color:#000000">= </span><span style="font-weight:bold;color:#000000">array</span><span style="color:#000000">(</span><span style="color:#008000">&quot;one&quot;</span><span style="color:#000000">, </span><span style="color:#008000">&quot;two&quot;</span><span style="color:#000000">,</span><span style="color:#000080"> 3</span><span style="color:#000000">,</span><span style="color:#000080"> 4</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line">// its number of elements</span>
-<span class="docx-code-line"><span style="color:#0000FF">$n </span><span style="color:#000000">= count(</span><span style="color:#0000FF">$array</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line">// a loop</span>
-<span class="docx-code-line"><span style="font-weight:bold;color:#000000">for </span><span style="color:#000000">(</span><span style="color:#0000FF">$i </span><span style="color:#000000">=</span><span style="color:#000080"> 0</span><span style="color:#000000">; </span><span style="color:#0000FF">$i </span><span style="color:#000000">&lt; </span><span style="color:#0000FF">$n</span><span style="color:#000000">; $i++) {</span></span>
-<span class="docx-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;array</span><span style="font-weight:bold;color:#008000">[$i] </span><span style="color:#008000">= </span><span style="color:#0000FF">$array</span><span style="font-weight:bold;color:#0000FF">[$i]</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line">// Initializing 2 variables with the contents of an array</span>
-<span class="docx-code-line"><span style="font-weight:bold;color:#000000">list</span><span style="color:#000000">(</span><span style="color:#0000FF">$string1</span><span style="color:#000000">, </span><span style="color:#0000FF">$string2</span><span style="color:#000000">) = </span><span style="font-weight:bold;color:#000000">array</span><span style="color:#000000">(</span><span style="color:#008000">&quot;string1&quot;</span><span style="color:#000000">, </span><span style="color:#008000">&quot;string2&quot;</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line">// concatenating the two strings</span>
-<span class="docx-code-line"><span style="color:#0000FF">$string3 </span><span style="color:#000000">= </span><span style="color:#0000FF">$string1 </span><span style="color:#000000">. </span><span style="color:#0000FF">$string2</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">// display result</span>
-<span class="docx-code-line"><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;</span><span style="font-weight:bold;color:#008000">[$string1,$string2,$string3]</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">// function usage</span>
-<span class="docx-code-line"><span style="color:#000000">display(</span><span style="color:#0000FF">$string1</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line">// the type of a variable can be known</span>
-<span class="docx-code-line"><span style="color:#000000">displayType(</span><span style="color:#008000">&quot;n&quot;</span><span style="color:#000000">, </span><span style="color:#0000FF">$n</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line"><span style="color:#000000">displayType(</span><span style="color:#008000">&quot;string1&quot;</span><span style="color:#000000">, </span><span style="color:#0000FF">$string1</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line"><span style="color:#000000">displayType(</span><span style="color:#008000">&quot;array&quot;</span><span style="color:#000000">, </span><span style="color:#0000FF">$array</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line">// the type of a variable can change during execution</span>
-<span class="docx-code-line"><span style="color:#0000FF">$n </span><span style="color:#000000">= </span><span style="color:#008000">&quot;has changed&quot;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line"><span style="color:#000000">displayType(</span><span style="color:#008000">&quot;n&quot;</span><span style="color:#000000">, </span><span style="color:#0000FF">$n</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line">// a function can return a result</span>
-<span class="docx-code-line"><span style="color:#0000FF">$res1 </span><span style="color:#000000">= f1(</span><span style="color:#000080">4</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line"><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;</span><span style="color:#0000FF">res1=$res1</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">// a function can return an array of values</span>
-<span class="docx-code-line"><span style="font-weight:bold;color:#000000">list</span><span style="color:#000000">(</span><span style="color:#0000FF">$res1</span><span style="color:#000000">, </span><span style="color:#0000FF">$res2</span><span style="color:#000000">, </span><span style="color:#0000FF">$res3</span><span style="color:#000000">) = f2();</span></span>
-<span class="docx-code-line"><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;(res1,res2,res3)=</span><span style="font-weight:bold;color:#008000">[$res1,$res2,$res3]</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">// we could have retrieved these values into an array</span>
-<span class="docx-code-line"><span style="color:#0000FF">$t </span><span style="color:#000000">= f2();</span></span>
-<span class="docx-code-line"><span style="font-weight:bold;color:#000000">for </span><span style="color:#000000">(</span><span style="color:#0000FF">$i </span><span style="color:#000000">=</span><span style="color:#000080"> 0</span><span style="color:#000000">; </span><span style="color:#0000FF">$i </span><span style="color:#000000">&lt; count(</span><span style="color:#0000FF">$t</span><span style="color:#000000">); $i++) {</span></span>
-<span class="docx-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;t</span><span style="font-weight:bold;color:#008000">[$i]</span><span style="color:#0000FF">=$t</span><span style="font-weight:bold;color:#0000FF">[$i]</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line">// some tests</span>
-<span class="docx-code-line"><span style="font-weight:bold;color:#000000">for </span><span style="color:#000000">(</span><span style="color:#0000FF">$i </span><span style="color:#000000">=</span><span style="color:#000080"> 0</span><span style="color:#000000">; </span><span style="color:#0000FF">$i </span><span style="color:#000000">&lt; count(</span><span style="color:#0000FF">$t</span><span style="color:#000000">); $i++) {</span></span>
-<span class="docx-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// display only strings</span></span>
-<span class="docx-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">if </span><span style="color:#000000">(getType(</span><span style="color:#0000FF">$t</span><span style="font-weight:bold;color:#000000">[$i]</span><span style="color:#000000">) === </span><span style="color:#008000">&quot;string&quot;</span><span style="color:#000000">) {</span></span>
-<span class="docx-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;t</span><span style="font-weight:bold;color:#008000">[$i]</span><span style="color:#0000FF">=$t</span><span style="font-weight:bold;color:#0000FF">[$i]</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line">// comparison operators == and ===</span>
-<span class="docx-code-line"><span style="font-weight:bold;color:#000000">if</span><span style="color:#000000">(</span><span style="color:#008000">&quot;2&quot;</span><span style="color:#000080">==2</span><span style="color:#000000">){</span></span>
-<span class="docx-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;With the == operator, the string 2 is equal to the integer 2\n&quot;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line"><span style="color:#000000">}</span><span style="font-weight:bold;color:#000000">else</span><span style="color:#000000">{</span></span>
-<span class="docx-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;with the == operator, the string 2 is not equal to the integer 2\n&quot;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line"><span style="font-weight:bold;color:#000000">if</span><span style="color:#000000">(</span><span style="color:#008000">&quot;2&quot;</span><span style="color:#000080">===2</span><span style="color:#000000">){</span></span>
-<span class="docx-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;With the === operator, the string 2 is equal to the integer 2\n&quot;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line"><span style="font-weight:bold;color:#000000">else</span><span style="color:#000000">{</span></span>
-<span class="docx-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;with the === operator, the string 2 is not equal to the integer 2\n&quot;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line">// other tests</span>
-<span class="docx-code-line"><span style="font-weight:bold;color:#000000">for </span><span style="color:#000000">(</span><span style="color:#0000FF">$i </span><span style="color:#000000">=</span><span style="color:#000080"> 0</span><span style="color:#000000">; </span><span style="color:#0000FF">$i </span><span style="color:#000000">&lt; count(</span><span style="color:#0000FF">$t</span><span style="color:#000000">); $i++) {</span></span>
-<span class="docx-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// only displays integers &gt;10</span></span>
-<span class="docx-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">if </span><span style="color:#000000">(getType(</span><span style="color:#0000FF">$t</span><span style="font-weight:bold;color:#000000">[$i]</span><span style="color:#000000">) === </span><span style="color:#008000">&quot;integer&quot; </span><span style="font-weight:bold;color:#000000">and </span><span style="color:#0000FF">$t</span><span style="font-weight:bold;color:#000000">[$i] </span><span style="color:#000000">&gt;</span><span style="color:#000080"> 10</span><span style="color:#000000">) {</span></span>
-<span class="docx-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;t</span><span style="font-weight:bold;color:#008000">[$i] </span><span style="color:#0000FF">= $t</span><span style="font-weight:bold;color:#0000FF">[$i]</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line">// a while loop</span>
-<span class="docx-code-line"><span style="color:#0000FF">$t </span><span style="color:#000000">= </span><span style="font-weight:bold;color:#000000">[8, 5, 0, -2, 3, 4]</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line"><span style="color:#0000FF">$i </span><span style="color:#000000">=</span><span style="color:#000080"> 0</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line"><span style="color:#0000FF">$sum </span><span style="color:#000000">=</span><span style="color:#000080"> 0</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line"><span style="font-weight:bold;color:#000000">while </span><span style="color:#000000">(</span><span style="color:#0000FF">$i </span><span style="color:#000000">&lt; count(</span><span style="color:#0000FF">$t</span><span style="color:#000000">) </span><span style="font-weight:bold;color:#000000">and </span><span style="color:#0000FF">$t</span><span style="font-weight:bold;color:#000000">[$i] </span><span style="color:#000000">&gt;</span><span style="color:#000080"> 0</span><span style="color:#000000">) {</span></span>
-<span class="docx-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;t</span><span style="font-weight:bold;color:#008000">[$i]</span><span style="color:#0000FF">=$t</span><span style="font-weight:bold;color:#0000FF">[$i]</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line"><span style="color:#008080">  </span><span style="color:#0000FF">$sum </span><span style="color:#000000">+= </span><span style="color:#0000FF">$t</span><span style="font-weight:bold;color:#000000">[$i]</span><span style="color:#000000">;</span><span style="color:#008080">  </span><span style="font-style:italic;color:#808080"> //$sum=$sum+$t</span><span style="font-weight:bold;font-style:italic;color:#808080">[$i]</span></span>
-<span class="docx-code-line"><span style="color:#008080">  </span><span style="color:#000000">$i++;</span><span style="color:#008080">              </span><span style="font-style:italic;color:#808080"> //$i=$i+1</span></span>
-<span class="docx-code-line"><span style="color:#000000">}</span><span style="font-style:italic;color:#808080">//while</span></span>
-<span class="docx-code-line"><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;</span><span style="color:#0000FF">sum=$sum</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line">// end of program</span>
-<span class="docx-code-line"><span style="font-weight:bold;color:#000000">exit</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line">//----------------------------------</span>
-<span class="docx-code-line"><span style="font-weight:bold;color:#000000">function </span><span style="color:#000000">display(</span><span style="color:#0000FF">$string</span><span style="color:#000000">) {</span></span>
-<span class="docx-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// display $string</span></span>
-<span class="docx-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;</span><span style="color:#0000FF">string=$string</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line">//display</span>
-<span class="docx-code-line">//----------------------------------</span>
-<span class="docx-code-line"><span style="font-weight:bold;color:#000000">function </span><span style="color:#000000">displayType(</span><span style="color:#0000FF">$name</span><span style="color:#000000">, </span><span style="color:#0000FF">$variable</span><span style="color:#000000">) {</span></span>
-<span class="docx-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// displays the type of $variable</span></span>
-<span class="docx-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;type</span><span style="font-weight:bold;color:#008000">[variable $&quot; . $name . &quot;]</span><span style="color:#008000">=&quot; </span><span style="color:#000000">. getType(</span><span style="color:#0000FF">$variable</span><span style="color:#000000">) . </span><span style="color:#008000">&quot;\n&quot;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line">//displayType</span>
-<span class="docx-code-line">//----------------------------------</span>
-<span class="docx-code-line"><span style="font-weight:bold;color:#000000">function </span><span style="color:#000000">f1(</span><span style="color:#0000FF">$param</span><span style="color:#000000">) {</span></span>
-<span class="docx-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// add 10 to $param</span></span>
-<span class="docx-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#0000FF">$param </span><span style="color:#000000">+</span><span style="color:#000080"> 10</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line">//----------------------------------</span>
-<span class="docx-code-line"><span style="font-weight:bold;color:#000000">function </span><span style="color:#000000">f2() {</span></span>
-<span class="docx-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// returns 3 values</span></span>
-<span class="docx-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">return array</span><span style="color:#000000">(</span><span style="color:#008000">&quot;one&quot;</span><span style="color:#000000">,</span><span style="color:#000080"> 0</span><span style="color:#000000">,</span><span style="color:#000080"> 100</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line">?&gt;</span>
+<p><a id="refheadingtoc2041813980233556"></a></p>
+<h1 id="3-the-basics-of-javascript">3. <span style="color: #365f91">The Basics of JavaScript</span></h1>
+<p><strong>Note</strong>: From here on, the term <strong>[JavaScript]</strong> will always refer to the ECMAScript 6 standard.</p>
+<p>Inside the previous JavaScript project, create a folder <strong>named [bases]</strong>. We will place the examples from this section there:</p>
+<p><img src="images/1000000000000444000001D76F20A45A.png" style="width:11.561cm;height:4.987cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000444000001D76F20A45A.png" /></p>
+<p><a id="refheadingtoc2041833980233556"></a></p>
+<h2 id="31-script-bases-01">3.1. <span style="color: #4f81bd">script [bases-01]</span></h2>
+<p>To introduce the basics of PHP7, we used the following code (see <a href="https://tahe.developpez.com/tutoriels-cours/php7/"><u><span style="color: #0563c1">linked</span></u></a> paragraph):</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
+<span class="odt-code-line">&lt;?php</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// this is a comment</span>
+<span class="odt-code-line">// variable used without being declared</span>
+<span class="odt-code-line"><span style="color:#0000ff">$name </span><span style="color:#000000">= </span><span style="color:#008000">&quot;dupont&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// a screen display</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;</span><span style="color:#0000ff">name=$name</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// an array with elements of different types</span>
+<span class="odt-code-line"><span style="color:#0000ff">$array </span><span style="color:#000000">= </span><span style="font-weight:bold;color:#000000">array</span><span style="color:#000000">(</span><span style="color:#008000">&quot;one&quot;</span><span style="color:#000000">, </span><span style="color:#008000">&quot;two&quot;</span><span style="color:#000000">,</span><span style="color:#000080"> 3</span><span style="color:#000000">,</span><span style="color:#000080"> 4</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">// its number of elements</span>
+<span class="odt-code-line"><span style="color:#0000ff">$n </span><span style="color:#000000">= count(</span><span style="color:#0000ff">$array</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">// a loop</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">for </span><span style="color:#000000">(</span><span style="color:#0000ff">$i </span><span style="color:#000000">=</span><span style="color:#000080"> 0</span><span style="color:#000000">; </span><span style="color:#0000ff">$i </span><span style="color:#000000">&lt; </span><span style="color:#0000ff">$n</span><span style="color:#000000">; $i++) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;array</span><span style="font-weight:bold;color:#008000">[$i] </span><span style="color:#008000">= </span><span style="color:#0000ff">$array</span><span style="font-weight:bold;color:#0000ff">[$i]</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// Initializing 2 variables with the contents of an array</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">list</span><span style="color:#000000">(</span><span style="color:#0000ff">$string1</span><span style="color:#000000">, </span><span style="color:#0000ff">$string2</span><span style="color:#000000">) = </span><span style="font-weight:bold;color:#000000">array</span><span style="color:#000000">(</span><span style="color:#008000">&quot;string1&quot;</span><span style="color:#000000">, </span><span style="color:#008000">&quot;string2&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">// concatenating the two strings</span>
+<span class="odt-code-line"><span style="color:#0000ff">$string3 </span><span style="color:#000000">= </span><span style="color:#0000ff">$string1 </span><span style="color:#000000">. </span><span style="color:#0000ff">$string2</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// display result</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;</span><span style="font-weight:bold;color:#008000">[$string1,$string2,$string3]</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// function usage</span>
+<span class="odt-code-line"><span style="color:#000000">display(</span><span style="color:#0000ff">$string1</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">// the type of a variable can be known</span>
+<span class="odt-code-line"><span style="color:#000000">displayType(</span><span style="color:#008000">&quot;n&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">$n</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">displayType(</span><span style="color:#008000">&quot;string1&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">$string1</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">displayType(</span><span style="color:#008000">&quot;array&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">$array</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">// the type of a variable can change during execution</span>
+<span class="odt-code-line"><span style="color:#0000ff">$n </span><span style="color:#000000">= </span><span style="color:#008000">&quot;has changed&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#000000">displayType(</span><span style="color:#008000">&quot;n&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">$n</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">// a function can return a result</span>
+<span class="odt-code-line"><span style="color:#0000ff">$res1 </span><span style="color:#000000">= f1(</span><span style="color:#000080">4</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;</span><span style="color:#0000ff">res1=$res1</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// a function can return an array of values</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">list</span><span style="color:#000000">(</span><span style="color:#0000ff">$res1</span><span style="color:#000000">, </span><span style="color:#0000ff">$res2</span><span style="color:#000000">, </span><span style="color:#0000ff">$res3</span><span style="color:#000000">) = f2();</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;(res1,res2,res3)=</span><span style="font-weight:bold;color:#008000">[$res1,$res2,$res3]</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// we could have retrieved these values into an array</span>
+<span class="odt-code-line"><span style="color:#0000ff">$t </span><span style="color:#000000">= f2();</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">for </span><span style="color:#000000">(</span><span style="color:#0000ff">$i </span><span style="color:#000000">=</span><span style="color:#000080"> 0</span><span style="color:#000000">; </span><span style="color:#0000ff">$i </span><span style="color:#000000">&lt; count(</span><span style="color:#0000ff">$t</span><span style="color:#000000">); $i++) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;t</span><span style="font-weight:bold;color:#008000">[$i]</span><span style="color:#0000ff">=$t</span><span style="font-weight:bold;color:#0000ff">[$i]</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// some tests</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">for </span><span style="color:#000000">(</span><span style="color:#0000ff">$i </span><span style="color:#000000">=</span><span style="color:#000080"> 0</span><span style="color:#000000">; </span><span style="color:#0000ff">$i </span><span style="color:#000000">&lt; count(</span><span style="color:#0000ff">$t</span><span style="color:#000000">); $i++) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// display only strings</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">if </span><span style="color:#000000">(getType(</span><span style="color:#0000ff">$t</span><span style="font-weight:bold;color:#000000">[$i]</span><span style="color:#000000">) === </span><span style="color:#008000">&quot;string&quot;</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;t</span><span style="font-weight:bold;color:#008000">[$i]</span><span style="color:#0000ff">=$t</span><span style="font-weight:bold;color:#0000ff">[$i]</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// comparison operators == and ===</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">if</span><span style="color:#000000">(</span><span style="color:#008000">&quot;2&quot;</span><span style="color:#000080">==2</span><span style="color:#000000">){</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;With the == operator, the string 2 is equal to the integer 2\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#000000">}</span><span style="font-weight:bold;color:#000000">else</span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;with the == operator, the string 2 is not equal to the integer 2\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">if</span><span style="color:#000000">(</span><span style="color:#008000">&quot;2&quot;</span><span style="color:#000080">===2</span><span style="color:#000000">){</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;With the === operator, the string 2 is equal to the integer 2\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">else</span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;with the === operator, the string 2 is not equal to the integer 2\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// other tests</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">for </span><span style="color:#000000">(</span><span style="color:#0000ff">$i </span><span style="color:#000000">=</span><span style="color:#000080"> 0</span><span style="color:#000000">; </span><span style="color:#0000ff">$i </span><span style="color:#000000">&lt; count(</span><span style="color:#0000ff">$t</span><span style="color:#000000">); $i++) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// only displays integers &gt;10</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">if </span><span style="color:#000000">(getType(</span><span style="color:#0000ff">$t</span><span style="font-weight:bold;color:#000000">[$i]</span><span style="color:#000000">) === </span><span style="color:#008000">&quot;integer&quot; </span><span style="font-weight:bold;color:#000000">and </span><span style="color:#0000ff">$t</span><span style="font-weight:bold;color:#000000">[$i] </span><span style="color:#000000">&gt;</span><span style="color:#000080"> 10</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;t</span><span style="font-weight:bold;color:#008000">[$i] </span><span style="color:#0000ff">= $t</span><span style="font-weight:bold;color:#0000ff">[$i]</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// a while loop</span>
+<span class="odt-code-line"><span style="color:#0000ff">$t </span><span style="color:#000000">= </span><span style="font-weight:bold;color:#000000">[8, 5, 0, -2, 3, 4]</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">$i </span><span style="color:#000000">=</span><span style="color:#000080"> 0</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">$sum </span><span style="color:#000000">=</span><span style="color:#000080"> 0</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">while </span><span style="color:#000000">(</span><span style="color:#0000ff">$i </span><span style="color:#000000">&lt; count(</span><span style="color:#0000ff">$t</span><span style="color:#000000">) </span><span style="font-weight:bold;color:#000000">and </span><span style="color:#0000ff">$t</span><span style="font-weight:bold;color:#000000">[$i] </span><span style="color:#000000">&gt;</span><span style="color:#000080"> 0</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;t</span><span style="font-weight:bold;color:#008000">[$i]</span><span style="color:#0000ff">=$t</span><span style="font-weight:bold;color:#0000ff">[$i]</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#0000ff">$sum </span><span style="color:#000000">+= </span><span style="color:#0000ff">$t</span><span style="font-weight:bold;color:#000000">[$i]</span><span style="color:#000000">;</span><span style="color:#008080">  </span><span style="font-style:italic;color:#808080"> //$sum=$sum+$t</span><span style="font-weight:bold;font-style:italic;color:#808080">[$i]</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">$i++;</span><span style="color:#008080">              </span><span style="font-style:italic;color:#808080"> //$i=$i+1</span></span>
+<span class="odt-code-line"><span style="color:#000000">}</span><span style="font-style:italic;color:#808080">//while</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;</span><span style="color:#0000ff">sum=$sum</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// end of program</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">exit</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">//----------------------------------</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">function </span><span style="color:#000000">display(</span><span style="color:#0000ff">$string</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// display $string</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;</span><span style="color:#0000ff">string=$string</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">//display</span>
+<span class="odt-code-line">//----------------------------------</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">function </span><span style="color:#000000">displayType(</span><span style="color:#0000ff">$name</span><span style="color:#000000">, </span><span style="color:#0000ff">$variable</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// displays the type of $variable</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;type</span><span style="font-weight:bold;color:#008000">[variable $&quot; . $name . &quot;]</span><span style="color:#008000">=&quot; </span><span style="color:#000000">. getType(</span><span style="color:#0000ff">$variable</span><span style="color:#000000">) . </span><span style="color:#008000">&quot;\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">//displayType</span>
+<span class="odt-code-line">//----------------------------------</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">function </span><span style="color:#000000">f1(</span><span style="color:#0000ff">$param</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// add 10 to $param</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#0000ff">$param </span><span style="color:#000000">+</span><span style="color:#000080"> 10</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">//----------------------------------</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">function </span><span style="color:#000000">f2() {</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// returns 3 values</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">return array</span><span style="color:#000000">(</span><span style="color:#008000">&quot;one&quot;</span><span style="color:#000000">,</span><span style="color:#000080"> 0</span><span style="color:#000000">,</span><span style="color:#000080"> 100</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">?&gt;</span>
 </code></pre></div>
 
-<p><span>Translated into JavaScript, this results in the following code:</span></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-csharp">
-<span class="docx-code-line"><span style="color:#A31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">// this is a comment</span>
-<span class="docx-code-line">// constant</span>
-<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">name = </span><span style="color:#A31515">&quot;dupont&quot;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">// a screen display</span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;name: &quot;</span><span style="color:#000000">, name);</span></span>
-<span class="docx-code-line">// an array with elements of different types</span>
-<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">array = </span><span style="font-weight:bold;color:#000000">[&quot;one&quot;, &quot;two&quot;, 3, 4]</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">// its number of elements</span>
-<span class="docx-code-line"><span style="color:#0000FF">let </span><span style="color:#000000">n = array.length;</span></span>
-<span class="docx-code-line">// a loop</span>
-<span class="docx-code-line"><span style="color:#0000FF">for </span><span style="color:#000000">(</span><span style="color:#0000FF">let </span><span style="color:#000000">i = 0; i &lt; n; i++) {</span></span>
-<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">&quot;array</span><span style="font-weight:bold;color:#A31515">[&quot;, i, &quot;] </span><span style="color:#A31515">= &quot;</span><span style="color:#000000">, array</span><span style="font-weight:bold;color:#000000">[i]</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line">// Initializing 2 variables with the contents of an array</span>
-<span class="docx-code-line"><span style="color:#0000FF">let </span><span style="font-weight:bold;color:#000000">[string1, string2] </span><span style="color:#000000">= </span><span style="font-weight:bold;color:#000000">[&quot;string1&quot;, &quot;string2&quot;]</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">// concatenating the two strings</span>
-<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">string3 = string1 + string2;</span></span>
-<span class="docx-code-line">// display result</span>
-<span class="docx-code-line">console.log(<span style="font-weight:bold">[string1, string2, string3]</span>);</span>
-<span class="docx-code-line">// using the function</span>
-<span class="docx-code-line">display(string1);</span>
-<span class="docx-code-line">// the type of a variable can be determined</span>
-<span class="docx-code-line"><span style="color:#000000">displayType(</span><span style="color:#A31515">&quot;n&quot;</span><span style="color:#000000">, n);</span></span>
-<span class="docx-code-line"><span style="color:#000000">displayType(</span><span style="color:#A31515">&quot;string1&quot;</span><span style="color:#000000">, string1);</span></span>
-<span class="docx-code-line"><span style="color:#000000">displayType(</span><span style="color:#A31515">&quot;array&quot;</span><span style="color:#000000">, array);</span></span>
-<span class="docx-code-line">// the type of a variable can change during execution</span>
-<span class="docx-code-line"><span style="color:#000000">n = </span><span style="color:#A31515">&quot;has changed&quot;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line"><span style="color:#000000">afficheType(</span><span style="color:#A31515">&quot;n&quot;</span><span style="color:#000000">, n);</span></span>
-<span class="docx-code-line">// A function can return a result</span>
-<span class="docx-code-line"><span style="color:#0000FF">let </span><span style="color:#000000">res1 = f1(4);</span></span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;res1=&quot;</span><span style="color:#000000">, res1);</span></span>
-<span class="docx-code-line">// a function can return an array of values</span>
-<span class="docx-code-line"><span style="color:#0000FF">let </span><span style="color:#000000">res2, res3;</span></span>
-<span class="docx-code-line"><span style="font-weight:bold">[res1, res2, res3] </span>= f2();</span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;(res1,res2,res3)=&quot;</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#000000">[res1, res2, res3]</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line">// we could have retrieved these values in an array</span>
-<span class="docx-code-line"><span style="color:#0000FF">let </span><span style="color:#000000">t = f2();</span></span>
-<span class="docx-code-line"><span style="color:#0000FF">for </span><span style="color:#000000">(</span><span style="color:#0000FF">let </span><span style="color:#000000">i = 0; i &lt; t.length; i++) {</span></span>
-<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">&quot;t</span><span style="font-weight:bold;color:#A31515">[i]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, t</span><span style="font-weight:bold;color:#000000">[i]</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line">// some tests</span>
-<span class="docx-code-line"><span style="color:#0000FF">for </span><span style="color:#000000">(</span><span style="color:#0000FF">let </span><span style="color:#000000">i = 0; i &lt; t.length; i++) {</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// only displays strings</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">if </span><span style="color:#000000">(</span><span style="color:#0000FF">typeof </span><span style="color:#000000">(t</span><span style="font-weight:bold;color:#000000">[i]</span><span style="color:#000000">) === </span><span style="color:#A31515">&quot;string&quot;</span><span style="color:#000000">) {</span></span>
-<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;t</span><span style="font-weight:bold;color:#A31515">[i]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, t</span><span style="font-weight:bold;color:#000000">[i]</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line">  }</span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line">// comparison operators == and ===</span>
-<span class="docx-code-line"><span style="color:#0000FF">if </span><span style="color:#000000">(</span><span style="color:#A31515">&quot;2&quot; </span><span style="color:#000000">== 2) {</span></span>
-<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">&quot;With the == operator, the string 2 is equal to the integer 2&quot;</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line"><span style="color:#000000">} </span><span style="color:#0000FF">else </span><span style="color:#000000">{</span></span>
-<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">&quot;with the == operator, the string 2 is not equal to the integer 2&quot;</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line"><span style="color:#0000FF">if </span><span style="color:#000000">(</span><span style="color:#A31515">&quot;2&quot; </span><span style="color:#000000">=== 2) {</span></span>
-<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">&quot;With the === operator, the string 2 is equal to the integer 2&quot;</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line"><span style="color:#000000">} </span><span style="color:#0000FF">else </span><span style="color:#000000">{</span></span>
-<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">&quot;With the === operator, the string &#x27;2&#x27; is not equal to the integer 2&quot;</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line">// other tests</span>
-<span class="docx-code-line"><span style="color:#0000FF">for </span><span style="color:#000000">(</span><span style="color:#0000FF">let </span><span style="color:#000000">i = 0; i &lt; t.length; i++) {</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// displays only integers &gt;10</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">if </span><span style="color:#000000">(</span><span style="color:#0000FF">typeof </span><span style="color:#000000">(t</span><span style="font-weight:bold;color:#000000">[i]</span><span style="color:#000000">) === </span><span style="color:#A31515">&quot;number&quot; </span><span style="color:#000000">&amp;&amp; Math.floor(t</span><span style="font-weight:bold;color:#000000">[i]</span><span style="color:#000000">) === t</span><span style="font-weight:bold;color:#000000">[i] </span><span style="color:#000000">&amp;&amp; t</span><span style="font-weight:bold;color:#000000">[i] </span><span style="color:#000000">&gt; 10) {</span></span>
-<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;t</span><span style="font-weight:bold;color:#A31515">[i]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, t</span><span style="font-weight:bold;color:#000000">[i]</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line">  }</span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line">// a while loop</span>
-<span class="docx-code-line">t = <span style="font-weight:bold">[8, 5, 0, -2, 3, 4]</span>;</span>
-<span class="docx-code-line"><span style="color:#0000FF">let </span><span style="color:#000000">i = 0;</span></span>
-<span class="docx-code-line"><span style="color:#0000FF">let </span><span style="color:#000000">sum = 0;</span></span>
-<span class="docx-code-line"><span style="color:#0000FF">while </span><span style="color:#000000">(i &lt; t.length &amp;&amp; t</span><span style="font-weight:bold;color:#000000">[i] </span><span style="color:#000000">&gt; 0) {</span></span>
-<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">&quot;t</span><span style="font-weight:bold;color:#A31515">[i]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, t</span><span style="font-weight:bold;color:#000000">[i]</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line">  sum += t<span style="font-weight:bold">[i]</span>;</span>
-<span class="docx-code-line">  i++;</span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;sum=&quot;</span><span style="color:#000000">, sum);</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line">// program terminates because there is no more executable code</span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line">//display</span>
-<span class="docx-code-line">//----------------------------------</span>
-<span class="docx-code-line"><span style="color:#0000FF">function </span><span style="color:#000000">display(string) {</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// displays string</span></span>
-<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">&quot;string=&quot;</span><span style="color:#000000">, string);</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line">//displayType</span>
-<span class="docx-code-line">//----------------------------------</span>
-<span class="docx-code-line"><span style="color:#0000FF">function </span><span style="color:#000000">displayType(name, variable) {</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// displays the variable type</span></span>
-<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">&quot;type</span><span style="font-weight:bold;color:#A31515">[variable &quot;, name, &quot;]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000FF">typeof </span><span style="color:#000000">(variable));</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line">//----------------------------------</span>
-<span class="docx-code-line"><span style="color:#0000FF">function </span><span style="color:#000000">f1(param) {</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// adds 10 to param</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">return </span><span style="color:#000000">param + 10;</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line">//----------------------------------</span>
-<span class="docx-code-line"><span style="color:#0000FF">function </span><span style="color:#000000">f2() {</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// returns 3 values</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">return </span><span style="font-weight:bold;color:#000000">[&quot;one&quot;, 0, 100]</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">}</span>
+<p>Translated into JavaScript, this results in the following code:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// this is a comment</span>
+<span class="odt-code-line">// constant</span>
+<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">name = </span><span style="color:#a31515">&quot;dupont&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// a screen display</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;name: &quot;</span><span style="color:#000000">, name);</span></span>
+<span class="odt-code-line">// an array with elements of different types</span>
+<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">array = </span><span style="font-weight:bold;color:#000000">[&quot;one&quot;, &quot;two&quot;, 3, 4]</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// its number of elements</span>
+<span class="odt-code-line"><span style="color:#0000ff">let </span><span style="color:#000000">n = array.length;</span></span>
+<span class="odt-code-line">// a loop</span>
+<span class="odt-code-line"><span style="color:#0000ff">for </span><span style="color:#000000">(</span><span style="color:#0000ff">let </span><span style="color:#000000">i = 0; i &lt; n; i++) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;array</span><span style="font-weight:bold;color:#a31515">[&quot;, i, &quot;] </span><span style="color:#a31515">= &quot;</span><span style="color:#000000">, array</span><span style="font-weight:bold;color:#000000">[i]</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// Initializing 2 variables with the contents of an array</span>
+<span class="odt-code-line"><span style="color:#0000ff">let </span><span style="font-weight:bold;color:#000000">[string1, string2] </span><span style="color:#000000">= </span><span style="font-weight:bold;color:#000000">[&quot;string1&quot;, &quot;string2&quot;]</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// concatenating the two strings</span>
+<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">string3 = string1 + string2;</span></span>
+<span class="odt-code-line">// display result</span>
+<span class="odt-code-line">console.log(<span style="font-weight:bold">[string1, string2, string3]</span>);</span>
+<span class="odt-code-line">// using the function</span>
+<span class="odt-code-line">display(string1);</span>
+<span class="odt-code-line">// the type of a variable can be determined</span>
+<span class="odt-code-line"><span style="color:#000000">displayType(</span><span style="color:#a31515">&quot;n&quot;</span><span style="color:#000000">, n);</span></span>
+<span class="odt-code-line"><span style="color:#000000">displayType(</span><span style="color:#a31515">&quot;string1&quot;</span><span style="color:#000000">, string1);</span></span>
+<span class="odt-code-line"><span style="color:#000000">displayType(</span><span style="color:#a31515">&quot;array&quot;</span><span style="color:#000000">, array);</span></span>
+<span class="odt-code-line">// the type of a variable can change during execution</span>
+<span class="odt-code-line"><span style="color:#000000">n = </span><span style="color:#a31515">&quot;has changed&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#000000">afficheType(</span><span style="color:#a31515">&quot;n&quot;</span><span style="color:#000000">, n);</span></span>
+<span class="odt-code-line">// A function can return a result</span>
+<span class="odt-code-line"><span style="color:#0000ff">let </span><span style="color:#000000">res1 = f1(4);</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;res1=&quot;</span><span style="color:#000000">, res1);</span></span>
+<span class="odt-code-line">// a function can return an array of values</span>
+<span class="odt-code-line"><span style="color:#0000ff">let </span><span style="color:#000000">res2, res3;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold">[res1, res2, res3] </span>= f2();</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;(res1,res2,res3)=&quot;</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#000000">[res1, res2, res3]</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">// we could have retrieved these values in an array</span>
+<span class="odt-code-line"><span style="color:#0000ff">let </span><span style="color:#000000">t = f2();</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">for </span><span style="color:#000000">(</span><span style="color:#0000ff">let </span><span style="color:#000000">i = 0; i &lt; t.length; i++) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;t</span><span style="font-weight:bold;color:#a31515">[i]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, t</span><span style="font-weight:bold;color:#000000">[i]</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// some tests</span>
+<span class="odt-code-line"><span style="color:#0000ff">for </span><span style="color:#000000">(</span><span style="color:#0000ff">let </span><span style="color:#000000">i = 0; i &lt; t.length; i++) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// only displays strings</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">if </span><span style="color:#000000">(</span><span style="color:#0000ff">typeof </span><span style="color:#000000">(t</span><span style="font-weight:bold;color:#000000">[i]</span><span style="color:#000000">) === </span><span style="color:#a31515">&quot;string&quot;</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;t</span><span style="font-weight:bold;color:#a31515">[i]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, t</span><span style="font-weight:bold;color:#000000">[i]</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// comparison operators == and ===</span>
+<span class="odt-code-line"><span style="color:#0000ff">if </span><span style="color:#000000">(</span><span style="color:#a31515">&quot;2&quot; </span><span style="color:#000000">== 2) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;With the == operator, the string 2 is equal to the integer 2&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">} </span><span style="color:#0000ff">else </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;with the == operator, the string 2 is not equal to the integer 2&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line"><span style="color:#0000ff">if </span><span style="color:#000000">(</span><span style="color:#a31515">&quot;2&quot; </span><span style="color:#000000">=== 2) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;With the === operator, the string 2 is equal to the integer 2&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">} </span><span style="color:#0000ff">else </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;With the === operator, the string &#x27;2&#x27; is not equal to the integer 2&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// other tests</span>
+<span class="odt-code-line"><span style="color:#0000ff">for </span><span style="color:#000000">(</span><span style="color:#0000ff">let </span><span style="color:#000000">i = 0; i &lt; t.length; i++) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// displays only integers &gt;10</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">if </span><span style="color:#000000">(</span><span style="color:#0000ff">typeof </span><span style="color:#000000">(t</span><span style="font-weight:bold;color:#000000">[i]</span><span style="color:#000000">) === </span><span style="color:#a31515">&quot;number&quot; </span><span style="color:#000000">&amp;&amp; Math.floor(t</span><span style="font-weight:bold;color:#000000">[i]</span><span style="color:#000000">) === t</span><span style="font-weight:bold;color:#000000">[i] </span><span style="color:#000000">&amp;&amp; t</span><span style="font-weight:bold;color:#000000">[i] </span><span style="color:#000000">&gt; 10) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;t</span><span style="font-weight:bold;color:#a31515">[i]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, t</span><span style="font-weight:bold;color:#000000">[i]</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// a while loop</span>
+<span class="odt-code-line">t = <span style="font-weight:bold">[8, 5, 0, -2, 3, 4]</span>;</span>
+<span class="odt-code-line"><span style="color:#0000ff">let </span><span style="color:#000000">i = 0;</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">let </span><span style="color:#000000">sum = 0;</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">while </span><span style="color:#000000">(i &lt; t.length &amp;&amp; t</span><span style="font-weight:bold;color:#000000">[i] </span><span style="color:#000000">&gt; 0) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;t</span><span style="font-weight:bold;color:#a31515">[i]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, t</span><span style="font-weight:bold;color:#000000">[i]</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">  sum += t<span style="font-weight:bold">[i]</span>;</span>
+<span class="odt-code-line">  i++;</span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;sum=&quot;</span><span style="color:#000000">, sum);</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// program terminates because there is no more executable code</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">//display</span>
+<span class="odt-code-line">//----------------------------------</span>
+<span class="odt-code-line"><span style="color:#0000ff">function </span><span style="color:#000000">display(string) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// displays string</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;string=&quot;</span><span style="color:#000000">, string);</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">//displayType</span>
+<span class="odt-code-line">//----------------------------------</span>
+<span class="odt-code-line"><span style="color:#0000ff">function </span><span style="color:#000000">displayType(name, variable) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// displays the variable type</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;type</span><span style="font-weight:bold;color:#a31515">[variable &quot;, name, &quot;]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof </span><span style="color:#000000">(variable));</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">//----------------------------------</span>
+<span class="odt-code-line"><span style="color:#0000ff">function </span><span style="color:#000000">f1(param) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// adds 10 to param</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">return </span><span style="color:#000000">param + 10;</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">//----------------------------------</span>
+<span class="odt-code-line"><span style="color:#0000ff">function </span><span style="color:#000000">f2() {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// returns 3 values</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">return </span><span style="font-weight:bold;color:#000000">[&quot;one&quot;, 0, 100]</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">}</span>
 </code></pre></div>
 
-<p><span>Let’s discuss the differences between PHP and ECMAScript 6 code with the </span><b>&#91;use strict&#93; </b><span>declaration (line 1):</span></p>
+<p>Let’s discuss the differences between PHP and ECMAScript 6 code with the <strong>[use strict]</strong> declaration (line 1):</p>
 <ul>
-<li><span>The first difference is that in ECMAScript, </span><b>variables are declared </b><span>using the following keywords:</span><ul>
-<li><b>&#91;let&#93; </b><span>to declare a variable whose value </span><b>may change </b><span>during code execution;</span></li>
-<li><b>&#91;const&#93; </b><span>to declare a variable whose value </span><b>will not change </b><span>(i.e., a constant) during code execution;</span></li>
-<li><span>You can also use the </span><b>&#91;var&#93; </b><span>keyword instead of </span><b>&#91;let&#93;</b><span>. This was the keyword used in ECMAScript 5. We will not use it in this course;</span></li>
+  <li>The first difference is that in ECMAScript, <b>variables are declared </b>using the following keywords:
+    <ul>
+      <li><b>[let] </b>to declare a variable whose value <b>may change </b>during code execution;
+      </li>
+      <li><b>[const] </b>to declare a variable whose value <b>will not change </b>(i.e., a constant) during code execution;
+      </li>
+      <li>You can also use the <b>[var] </b>keyword instead of <b>[let]</b>. This was the keyword used in ECMAScript 5. We will not use it in this course;
+      </li>
+    </ul>
+  </li>
+  <li>line 6: the <b>[console.log] </b>method can display all kinds of data: strings, numbers, booleans, arrays, and objects. The PHP <b>[print] </b>method cannot natively display arrays and objects. In the <b>[console.log] </b>expression, <b>[console] </b>is an object and <b>[log] </b>is a method of that object;
+  </li>
+  <li>line 8: JavaScript arrays are <b>objects referenced by a pointer</b>. When we write:
+  </li>
 </ul>
-</li>
-<li><span>line 6: the </span><b>&#91;console.log&#93; </b><span>method can display all kinds of data: strings, numbers, booleans, arrays, and objects. The PHP </span><b>&#91;print&#93; </b><span>method cannot natively display arrays and objects. In the </span><b>&#91;console.log&#93; </b><span>expression, </span><b>&#91;console&#93; </b><span>is an object and </span><b>&#91;log&#93; </b><span>is a method of that object;</span></li>
-<li><span>line 8: JavaScript arrays are </span><b>objects referenced by a pointer</b><span>. When we write:</span>
-<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
-<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">array = </span><span style="font-weight:bold;color:#000000">[&quot;one&quot;, &quot;two&quot;, 3, 4]</span><span style="color:#000000">;</span></span>
+
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">array = </span><span style="font-weight:bold;color:#000000">[&quot;one&quot;, &quot;two&quot;, 3, 4]</span><span style="color:#000000">;</span></span>
 </code></pre></div>
 
-</li>
-</ul>
-
-<p><span>the variable </span><b>&#91;array&#93; </b><span>is a </span><b>pointer </b><span>to the literal array </span><b>&#91;&quot;one&quot;, &quot;two&quot;, 3, 4&#93;</b><span>. Modifying the array’s contents does not change its pointer. Therefore, an array is most often declared with the </span><b>&#91;const&#93; </b><span>keyword. In PHP, an array is not referenced by a pointer. It is a literal value;</span></p>
+<p>the variable <strong>[array]</strong> is a <strong>pointer</strong> to the literal array <strong>[&quot;one&quot;, &quot;two&quot;, 3, 4]</strong>. Modifying the array’s contents does not change its pointer. Therefore, an array is most often declared with the <strong>[const]</strong> keyword. In PHP, an array is not referenced by a pointer. It is a literal value;</p>
 <ul>
-<li><span>Line 12: The loop variable </span><b>&#91;i&#93; </b><span>is declared (let) within the loop. The keyword </span><b>&#91;let&#93; </b><span>is block-scoped (code within curly braces). Therefore, the variable </span><b>&#91;i&#93; </b><span>on line 12 is only accessible within the loop;</span></li>
-<li><span>Line 18: The string concatenation operator is the + operator in JavaScript and the . operator in PHP. A distinctive feature of this operator is that it takes precedence over the + addition operator. Thus:</span><ul>
-<li><span>in PHP, ‘1’ + 2 yields the number 3;</span></li>
-<li><span>in JavaScript, ‘1’+2 yields the string ‘12’;</span></li>
-</ul>
-</li>
-<li><span>line 20: </span><b>&#91;console.log&#93; </b><span>can display arrays;</span></li>
-<li><span>line 82: in JavaScript, it is not possible to specify the type of a function’s parameters;</span></li>
-<li><span>line 91: the </span><b>&#91;typeof&#93; </b><span>operator allows you to determine the type of a data item. There are four types: number, string, boolean, and object. Note that in JavaScript there is no </span><b>&#91;integer&#93; </b><span>type or </span><b>&#91;array&#93; </b><span>type. As mentioned, arrays are handled via pointers and fall into the object category;</span></li>
-<li><span>lines 50–59: As in PHP, JavaScript has two comparison operators, == and ‘===’, with the same meaning as in PHP. ESLint most often flags the == operator as a potential error. We will consistently use the ‘===’ operator;</span></li>
-<li><span>line 79: we could have included the </span><b>&#91;return&#93; </b><span>statement, but ESLint issues a warning that </span><b>&#91;return&#93; </b><span>should only be used within a function;</span></li>
+  <li>Line 12: The loop variable <b>[i] </b>is declared (let) within the loop. The keyword <b>[let] </b>is block-scoped (code within curly braces). Therefore, the variable <b>[i] </b>on line 12 is only accessible within the loop;
+  </li>
+  <li>Line 18: The string concatenation operator is the + operator in JavaScript and the . operator in PHP. A distinctive feature of this operator is that it takes precedence over the + addition operator. Thus:
+    <ul>
+      <li>in PHP, ‘1’ + 2 yields the number 3;
+      </li>
+      <li>in JavaScript, ‘1’+2 yields the string ‘12’;
+      </li>
+    </ul>
+  </li>
+  <li>line 20: <b>[console.log] </b>can display arrays;
+  </li>
+  <li>line 82: in JavaScript, it is not possible to specify the type of a function’s parameters;
+  </li>
+  <li>line 91: the <b>[typeof] </b>operator allows you to determine the type of a data item. There are four types: number, string, boolean, and object. Note that in JavaScript there is no <b>[integer] </b>type or <b>[array] </b>type. As mentioned, arrays are handled via pointers and fall into the object category;
+  </li>
+  <li>lines 50–59: As in PHP, JavaScript has two comparison operators, == and ‘===’, with the same meaning as in PHP. ESLint most often flags the == operator as a potential error. We will consistently use the ‘===’ operator;
+  </li>
+  <li>line 79: we could have included the <b>[return] </b>statement, but ESLint issues a warning that <b>[return] </b>should only be used within a function;
+  </li>
 </ul>
 
-<p><span>Let’s run this code:</span></p>
-<p><img src="images/image68.png" class="docx-zoomable" style="width:331px;height:161px;" alt="Image" /></p>
-<p><span> </span></p>
-<p><span>Execution results:</span></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-text">
-<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Running] </span><span style="color:#A31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\bases\bases-01.js&quot;</span></span>
-<span class="docx-code-line">name: dupont</span>
-<span class="docx-code-line">array<span style="font-weight:bold">[ 0 ] </span>= one</span>
-<span class="docx-code-line">array<span style="font-weight:bold">[ 1 ] </span>= two</span>
-<span class="docx-code-line">array<span style="font-weight:bold">[ 2 ] </span>= 3</span>
-<span class="docx-code-line">array<span style="font-weight:bold">[ 3 ] </span>= 4</span>
-<span class="docx-code-line">[ &#x27;string1&#x27;, &#x27;string2&#x27;, &#x27;string1string2&#x27; ]</span>
-<span class="docx-code-line">string = string1</span>
-<span class="docx-code-line">type<span style="font-weight:bold">[variable n] </span>= number</span>
-<span class="docx-code-line">type<span style="font-weight:bold">[variable string1] </span>= string</span>
-<span class="docx-code-line">type<span style="font-weight:bold">[variable array] </span>= object</span>
-<span class="docx-code-line">type<span style="font-weight:bold">[variable n] </span>= string</span>
-<span class="docx-code-line">res1 = 14</span>
-<span class="docx-code-line">(res1, res2, res3) = <span style="font-weight:bold">[&#x27;one&#x27;, 0, 100]</span></span>
-<span class="docx-code-line">t<span style="font-weight:bold">[0] </span>= one</span>
-<span class="docx-code-line">t<span style="font-weight:bold">[1] </span>= 0</span>
-<span class="docx-code-line">t<span style="font-weight:bold">[2] </span>= 100</span>
-<span class="docx-code-line">t<span style="font-weight:bold">[0] </span>= one</span>
-<span class="docx-code-line">With the == operator, the string 2 is equal to the integer 2</span>
-<span class="docx-code-line">With the === operator, string 2 is not equal to the integer 2</span>
-<span class="docx-code-line">t<span style="font-weight:bold">[ 2 ]</span>= 100</span>
-<span class="docx-code-line">t<span style="font-weight:bold">[ 0 ]</span>= 8</span>
-<span class="docx-code-line">t<span style="font-weight:bold">[ 1 ]</span>= 5</span>
-<span class="docx-code-line">sum= 13</span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Done] </span><span style="color:#A31515">exited with </span><span style="color:#800080">code=0 </span><span style="color:#A31515">in</span><span style="color:#09885A"> 0.316 </span><span style="color:#A31515">seconds</span></span>
+<p>Let’s run this code:</p>
+<p><img src="images/100000000000033C00000192E8D1CF4C.png" style="width:8.759cm;height:4.253cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000033C00000192E8D1CF4C.png" /></p>
+<p>Execution results:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running] </span><span style="color:#a31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\bases\bases-01.js&quot;</span></span>
+<span class="odt-code-line">name: dupont</span>
+<span class="odt-code-line">array<span style="font-weight:bold">[ 0 ] </span>= one</span>
+<span class="odt-code-line">array<span style="font-weight:bold">[ 1 ] </span>= two</span>
+<span class="odt-code-line">array<span style="font-weight:bold">[ 2 ] </span>= 3</span>
+<span class="odt-code-line">array<span style="font-weight:bold">[ 3 ] </span>= 4</span>
+<span class="odt-code-line">[ &#x27;string1&#x27;, &#x27;string2&#x27;, &#x27;string1string2&#x27; ]</span>
+<span class="odt-code-line">string = string1</span>
+<span class="odt-code-line">type<span style="font-weight:bold">[variable n] </span>= number</span>
+<span class="odt-code-line">type<span style="font-weight:bold">[variable string1] </span>= string</span>
+<span class="odt-code-line">type<span style="font-weight:bold">[variable array] </span>= object</span>
+<span class="odt-code-line">type<span style="font-weight:bold">[variable n] </span>= string</span>
+<span class="odt-code-line">res1 = 14</span>
+<span class="odt-code-line">(res1, res2, res3) = <span style="font-weight:bold">[&#x27;one&#x27;, 0, 100]</span></span>
+<span class="odt-code-line">t<span style="font-weight:bold">[0] </span>= one</span>
+<span class="odt-code-line">t<span style="font-weight:bold">[1] </span>= 0</span>
+<span class="odt-code-line">t<span style="font-weight:bold">[2] </span>= 100</span>
+<span class="odt-code-line">t<span style="font-weight:bold">[0] </span>= one</span>
+<span class="odt-code-line">With the == operator, the string 2 is equal to the integer 2</span>
+<span class="odt-code-line">With the === operator, string 2 is not equal to the integer 2</span>
+<span class="odt-code-line">t<span style="font-weight:bold">[ 2 ]</span>= 100</span>
+<span class="odt-code-line">t<span style="font-weight:bold">[ 0 ]</span>= 8</span>
+<span class="odt-code-line">t<span style="font-weight:bold">[ 1 ]</span>= 5</span>
+<span class="odt-code-line">sum= 13</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Done] </span><span style="color:#a31515">exited with </span><span style="color:#800080">code=0 </span><span style="color:#a31515">in</span><span style="color:#09885a"> 0.316 </span><span style="color:#a31515">seconds</span></span>
 </code></pre></div>
 
-<p><span>In the written code, ESLint reports two errors:</span></p>
-<p><img src="images/image69.png" class="docx-zoomable" style="width:597px;height:139px;" alt="Image" /></p>
+<p>In the written code, ESLint reports two errors:</p>
+<p><img src="images/10000000000005D50000015C686F68EF.png" style="width:15.799cm;height:3.683cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005D50000015C686F68EF.png" /></p>
 <ul>
-<li><span>When you hover over the red warning line, you see error message </span><b>&#91;3&#93;</b><span>. Here, ESLint does not recognize that two constants are being compared. One of the two operands should be a variable;</span></li>
-<li><span>in </span><b>&#91;4&#93;</b><span>, a </span><b>&#91;Quick Fix&#93; </b><span>option allows you to dismiss the warning if you decide not to correct the error;</span></li>
+  <li>When you hover over the red warning line, you see error message <b>[3]</b>. Here, ESLint does not recognize that two constants are being compared. One of the two operands should be a variable;
+  </li>
+  <li>in <b>[4]</b>, a <b>[Quick Fix] </b>option allows you to dismiss the warning if you decide not to correct the error;
+  </li>
 </ul>
 
-<p><img src="images/image70.png" class="docx-zoomable" style="width:599px;height:105px;" alt="Image" /></p>
+<p><img src="images/10000000000005DA0000010746915282.png" style="width:15.85cm;height:2.783cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005DA0000010746915282.png" /></p>
 <ul>
-<li><span>in </span><b>&#91;5&#93;</b><span>, you can disable the warning for the current line or for the entire file. We choose the latter option here. Line </span><b>&#91;6&#93; </b><span>is then generated at the beginning of the file;</span></li>
+  <li>in <b>[5]</b>, you can disable the warning for the current line or for the entire file. We choose the latter option here. Line <b>[6] </b>is then generated at the beginning of the file;
+<a id="refheadingtoc2041853980233556"></a>
+
+## 3.2. <span style="color: #4f81bd">script [bases-02]</span>
+
+  </li>
 </ul>
 
-<h2 id="32-script-bases-02">3.2. <a id="refheadingtoc2041853980233556"></a><span>script &#91;bases-02&#93;</span></h2>
-<p><span>The </span><b>&#91;bases-02&#93; </b><span>script demonstrates the use of the </span><b>&#91;let&#93; </b><span>and </span><b>&#91;const&#93; </b><span>keywords:</span></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-javascript">
-<span class="docx-code-line"><span style="color:#A31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">// To initialize a variable, use let or const</span>
-<span class="docx-code-line">// let for variables</span>
-<span class="docx-code-line"><span style="color:#0000FF">let </span><span style="color:#000000">x = 4;</span></span>
-<span class="docx-code-line">x++;</span>
-<span class="docx-code-line">console.log(x);</span>
-<span class="docx-code-line">// const for constants</span>
-<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">y = 10;</span></span>
-<span class="docx-code-line">x += y;</span>
-<span class="docx-code-line">// not allowed</span>
-<span class="docx-code-line">y++;</span>
-</code></pre></div>
-
-<ul>
-<li><span>Line 11 causes a runtime error </span><b>&#91;1-2&#93;</b><span>. It is flagged by ESLint before execution </span><b>&#91;3&#93;</b><span>:</span></li>
-</ul>
-
-<p><img src="images/image71.png" class="docx-zoomable" style="width:556px;height:137px;" alt="Image" /></p>
-<h2 id="33-script-bases-03">3.3. <a id="refheadingtoc2041873980233556"></a><span>script &#91;bases-03&#93;</span></h2>
-<p><span>The script </span><b>&#91;bases-03&#93; </b><span>examines the scope of variables in JavaScript:</span></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-javascript">
-<span class="docx-code-line"><span style="color:#A31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">// variable scope</span>
-<span class="docx-code-line"><span style="color:#0000FF">let </span><span style="color:#000000">count = 1;</span></span>
-<span class="docx-code-line"><span style="color:#0000FF">function </span><span style="color:#000000">doSomething() {</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// count is known here</span></span>
-<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">&quot;count=&quot;</span><span style="color:#000000">, count);</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line">// call</span>
-<span class="docx-code-line">doSomething();</span>
+<p>The <strong>[bases-02]</strong> script demonstrates the use of the <strong>[let]</strong> and <strong>[const]</strong> keywords:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// To initialize a variable, use let or const</span>
+<span class="odt-code-line">// let for variables</span>
+<span class="odt-code-line"><span style="color:#0000ff">let </span><span style="color:#000000">x = 4;</span></span>
+<span class="odt-code-line">x++;</span>
+<span class="odt-code-line">console.log(x);</span>
+<span class="odt-code-line">// const for constants</span>
+<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">y = 10;</span></span>
+<span class="odt-code-line">x += y;</span>
+<span class="odt-code-line">// not allowed</span>
+<span class="odt-code-line">y++;</span>
 </code></pre></div>
 
 <ul>
-<li><span>the variable </span><b>&#91;count&#93; </b><span>declared outside the </span><b>&#91;doSomething&#93; </b><span>function is nevertheless known within this function. This is a fundamental difference from PHP;</span></li>
+  <li>Line 11 causes a runtime error <b>[1-2]</b>. It is flagged by ESLint before execution <b>[3]</b>:
+  </li>
 </ul>
 
-<p><b>Execution</b></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-text">
-<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Running] </span><span style="color:#A31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\bases\bases-03.js&quot;</span></span>
-<span class="docx-code-line">count= 1</span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Done] </span><span style="color:#A31515">exited with </span><span style="color:#800080">code=0 </span><span style="color:#A31515">in</span><span style="color:#09885A"> 0.3 </span><span style="color:#A31515">seconds</span></span>
+<p><img src="images/100000000000056E000001566AC0ABC5.png" style="width:14.713cm;height:3.62cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000056E000001566AC0ABC5.png" /></p>
+<p><a id="refheadingtoc2041873980233556"></a></p>
+<h2 id="33-script-bases-03">3.3. <span style="color: #4f81bd">script [bases-03]</span></h2>
+<p>The script <strong>[bases-03]</strong> examines the scope of variables in JavaScript:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// variable scope</span>
+<span class="odt-code-line"><span style="color:#0000ff">let </span><span style="color:#000000">count = 1;</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">function </span><span style="color:#000000">doSomething() {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// count is known here</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;count=&quot;</span><span style="color:#000000">, count);</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// call</span>
+<span class="odt-code-line">doSomething();</span>
 </code></pre></div>
 
-<h2 id="34-script-bases-04">3.4. <a id="refheadingtoc2041893980233556"></a><span>script &#91;bases-04&#93;</span></h2>
-<p><span>A local variable hides a global variable with the same name:</span></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-javascript">
-<span class="docx-code-line"><span style="color:#A31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">// variable scope</span>
-<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">count = 1;</span></span>
-<span class="docx-code-line"><span style="color:#0000FF">function </span><span style="color:#000000">doSomething() {</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// the local variable hides the global variable</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">const </span><span style="color:#000000">count = 2;</span></span>
-<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">&quot;count inside function=&quot;</span><span style="color:#000000">, count);</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line">// global variable</span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;count outside function=&quot;</span><span style="color:#000000">, count);</span></span>
-<span class="docx-code-line">// local variable</span>
-<span class="docx-code-line">doSomething();</span>
-</code></pre></div>
-
-<p><b>Execution</b></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-javascript">
-<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Running] </span><span style="color:#A31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\bases\bases-04.js&quot;</span></span>
-<span class="docx-code-line">count outside function= 1</span>
-<span class="docx-code-line">count inside function= 2</span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Done] </span><span style="color:#A31515">exited with </span><span style="color:#800080">code=0 </span><span style="color:#A31515">in</span><span style="color:#09885A"> 0.246 </span><span style="color:#A31515">seconds</span></span>
-</code></pre></div>
-
-<h2 id="35-script-bases-05">3.5. <a id="refheadingtoc2041913980233556"></a><span>script &#91;bases-05&#93;</span></h2>
-<p><span>A variable defined within a function is not known outside of it:</span></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-python">
-<span class="docx-code-line"><span style="color:#A31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">// variable scope</span>
-<span class="docx-code-line"><span style="color:#0000FF">function </span><span style="color:#000000">doSomething() {</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// variable local to the function</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">const </span><span style="color:#000000">count = 2;</span></span>
-<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">&quot;count inside function=&quot;</span><span style="color:#000000">, count);</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line">// Here, `count` is not defined</span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;count outside function=&quot;</span><span style="color:#000000">, count);</span></span>
-<span class="docx-code-line">doSomething();</span>
-</code></pre></div>
-
-<p><span>ESLint reports an error on line 9:</span></p>
-<p><img src="images/image72.png" class="docx-zoomable" style="width:513px;height:115px;" alt="Image" /></p>
-<h2 id="36-script-bases-06">3.6. <a id="refheadingtoc2041933980233556"></a><span>script &#91;bases-06&#93;</span></h2>
-<p><span>The keywords </span><b>&#91;let&#93; </b><span>and </span><b>&#91;const&#93; </b><span>define variables with </span><b>&#91;block&#93; </b><span>scope (code within curly braces), but not the keyword </span><b>&#91;var&#93;</b><span>:</span></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-python">
-<span class="docx-code-line"><span style="color:#A31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">// the <span style="font-weight:bold">[let] </span>keyword allows you to define a block-scoped variable</span>
-<span class="docx-code-line">{</span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// the variable </span><span style="font-weight:bold;color:#008000">[count] </span><span style="color:#008000">is only known within this block</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">let </span><span style="color:#000000">count = 1;</span></span>
-<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">&quot;count=&quot;</span><span style="color:#000000">, count);</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line">// Here, the variable <span style="font-weight:bold">[count] </span>is not known</span>
-<span class="docx-code-line">count++;</span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line">// the keyword <span style="font-weight:bold">[const] </span>allows you to define a block-scoped variable</span>
-<span class="docx-code-line">{</span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// the variable </span><span style="font-weight:bold;color:#008000">[count2] </span><span style="color:#008000">is only known within this block</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">const </span><span style="color:#000000">count2 = 1;</span></span>
-<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">&quot;count=&quot;</span><span style="color:#000000">, count2);</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line">// here the variable <span style="font-weight:bold">[count2] </span>is not known</span>
-<span class="docx-code-line">count2++;</span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line">// the keyword <span style="font-weight:bold">[var] </span>does not allow defining a block-scoped variable</span>
-<span class="docx-code-line">{</span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// the variable </span><span style="font-weight:bold;color:#008000">[count3] </span><span style="color:#008000">will be known globally</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">var </span><span style="color:#000000">count3 = 1;</span></span>
-<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">&quot;count=&quot;</span><span style="color:#000000">, count3);</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line">// here the variable <span style="font-weight:bold">[count3] </span>is known</span>
-<span class="docx-code-line">count3++;</span>
-</code></pre></div>
-
-<p><b>Comments</b></p>
 <ul>
-<li><span>line 5: the variable </span><b>&#91;count&#93; </b><span>is only known within the code block in which it is declared (lines 3–7);</span></li>
-<li><span>line 14: the constant </span><b>&#91;count2&#93; </b><span>is only known within the code block in which it is declared (lines 12–16);</span></li>
-<li><span>line 23: the variable </span><b>&#91;count3&#93; </b><span>is known outside the code block in which it is declared (lines 21–25);</span></li>
+  <li>the variable <b>[count] </b>declared outside the <b>[doSomething] </b>function is nevertheless known within this function. This is a fundamental difference from PHP;
+  </li>
 </ul>
 
-<p><span>ESLint reports the following errors:</span></p>
-<p><img src="images/image73.png" class="docx-zoomable" style="width:400px;height:334px;" alt="Image" /></p>
-<p><span>For these reasons related to block scope, we will only use the keywords </span><b>&#91;let&#93; </b><span>and </span><b>&#91;const&#93; </b><span>from now on.</span></p>
-<h2 id="37-script-bases-07">3.7. <a id="refheadingtoc2041953980233556"></a><span>script &#91;bases-07&#93;</span></h2>
-<p><span>Data types in JavaScript:</span></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-javascript">
-<span class="docx-code-line"><span style="color:#A31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line">// JavaScript data types</span>
-<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">var1 = 10;</span></span>
-<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">var2 = </span><span style="color:#A31515">&quot;abc&quot;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">var3 = </span><span style="color:#0000FF">true</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">var4 = </span><span style="font-weight:bold;color:#000000">[1, 2, 3]</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">var5 = {</span></span>
-<span class="docx-code-line"><span style="color:#000000">  name: </span><span style="color:#A31515">&#x27;axèle&#x27;</span></span>
-<span class="docx-code-line">};</span>
-<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">var6 = </span><span style="color:#0000FF">function </span><span style="color:#000000">() {</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">return </span><span style="color:#000000">+3;</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line">// Displaying types</span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;typeof(var1)=&quot;</span><span style="color:#000000">, </span><span style="color:#0000FF">typeof</span><span style="color:#000000">(var1));</span></span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;typeof(var2)=&quot;</span><span style="color:#000000">, </span><span style="color:#0000FF">typeof</span><span style="color:#000000">(var2));</span></span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;typeof(var3)=&quot;</span><span style="color:#000000">, </span><span style="color:#0000FF">typeof </span><span style="color:#000000">(var3));</span></span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;typeof(var4)=&quot;</span><span style="color:#000000">, </span><span style="color:#0000FF">typeof </span><span style="color:#000000">(var4));</span></span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;typeof(var5)=&quot;</span><span style="color:#000000">, </span><span style="color:#0000FF">typeof</span><span style="color:#000000">(var5));</span></span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;typeof(var6)=&quot;</span><span style="color:#000000">, </span><span style="color:#0000FF">typeof</span><span style="color:#000000">(var6));</span></span>
+<p><strong>Execution</strong></p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running] </span><span style="color:#a31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\bases\bases-03.js&quot;</span></span>
+<span class="odt-code-line">count= 1</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Done] </span><span style="color:#a31515">exited with </span><span style="color:#800080">code=0 </span><span style="color:#a31515">in</span><span style="color:#09885a"> 0.3 </span><span style="color:#a31515">seconds</span></span>
 </code></pre></div>
 
-<p><b>Execution</b></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-javascript">
-<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Running] </span><span style="color:#A31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\bases\bases-07.js&quot;</span></span>
-<span class="docx-code-line">typeof(var1)= number</span>
-<span class="docx-code-line">typeof(var2)= string</span>
-<span class="docx-code-line">typeof(var3) = boolean</span>
-<span class="docx-code-line">typeof(var4) = object</span>
-<span class="docx-code-line">typeof(var5) = object</span>
-<span class="docx-code-line">typeof(var6) = function</span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Done] </span><span style="color:#A31515">exited with </span><span style="color:#800080">code=0 </span><span style="color:#A31515">in</span><span style="color:#09885A"> 0.26 </span><span style="color:#A31515">seconds</span></span>
+<p><a id="refheadingtoc2041893980233556"></a></p>
+<h2 id="34-script-bases-04">3.4. <span style="color: #4f81bd">script [bases-04]</span></h2>
+<p>A local variable hides a global variable with the same name:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// variable scope</span>
+<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">count = 1;</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">function </span><span style="color:#000000">doSomething() {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// the local variable hides the global variable</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">const </span><span style="color:#000000">count = 2;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;count inside function=&quot;</span><span style="color:#000000">, count);</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// global variable</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;count outside function=&quot;</span><span style="color:#000000">, count);</span></span>
+<span class="odt-code-line">// local variable</span>
+<span class="odt-code-line">doSomething();</span>
 </code></pre></div>
 
-<p><b>Comments</b></p>
+<p><strong>Execution</strong></p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-js">
+<span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running] </span><span style="color:#a31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\bases\bases-04.js&quot;</span></span>
+<span class="odt-code-line">count outside function= 1</span>
+<span class="odt-code-line">count inside function= 2</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Done] </span><span style="color:#a31515">exited with </span><span style="color:#800080">code=0 </span><span style="color:#a31515">in</span><span style="color:#09885a"> 0.246 </span><span style="color:#a31515">seconds</span></span>
+</code></pre></div>
+
+<p><a id="refheadingtoc2041913980233556"></a></p>
+<h2 id="35-script-bases-05">3.5. <span style="color: #4f81bd">script [bases-05]</span></h2>
+<p>A variable defined within a function is not known outside of it:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// variable scope</span>
+<span class="odt-code-line"><span style="color:#0000ff">function </span><span style="color:#000000">doSomething() {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// variable local to the function</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">const </span><span style="color:#000000">count = 2;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;count inside function=&quot;</span><span style="color:#000000">, count);</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// Here, `count` is not defined</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;count outside function=&quot;</span><span style="color:#000000">, count);</span></span>
+<span class="odt-code-line">doSomething();</span>
+</code></pre></div>
+
+<p>ESLint reports an error on line 9:</p>
+<p><img src="images/10000000000005BA00000149D2F450CA.png" style="width:13.58cm;height:3.048cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005BA00000149D2F450CA.png" /></p>
+<p><a id="refheadingtoc2041933980233556"></a></p>
+<h2 id="36-script-bases-06">3.6. <span style="color: #4f81bd">script [bases-06]</span></h2>
+<p>The keywords <strong>[let]</strong> and <strong>[const]</strong> define variables with <strong>[block]</strong> scope (code within curly braces), but not the keyword <strong>[var]</strong>:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// the <span style="font-weight:bold">[let] </span>keyword allows you to define a block-scoped variable</span>
+<span class="odt-code-line">{</span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// the variable </span><span style="font-weight:bold;color:#008000">[count] </span><span style="color:#008000">is only known within this block</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">let </span><span style="color:#000000">count = 1;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;count=&quot;</span><span style="color:#000000">, count);</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// Here, the variable <span style="font-weight:bold">[count] </span>is not known</span>
+<span class="odt-code-line">count++;</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// the keyword <span style="font-weight:bold">[const] </span>allows you to define a block-scoped variable</span>
+<span class="odt-code-line">{</span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// the variable </span><span style="font-weight:bold;color:#008000">[count2] </span><span style="color:#008000">is only known within this block</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">const </span><span style="color:#000000">count2 = 1;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;count=&quot;</span><span style="color:#000000">, count2);</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// here the variable <span style="font-weight:bold">[count2] </span>is not known</span>
+<span class="odt-code-line">count2++;</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// the keyword <span style="font-weight:bold">[var] </span>does not allow defining a block-scoped variable</span>
+<span class="odt-code-line">{</span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// the variable </span><span style="font-weight:bold;color:#008000">[count3] </span><span style="color:#008000">will be known globally</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">var </span><span style="color:#000000">count3 = 1;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;count=&quot;</span><span style="color:#000000">, count3);</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// here the variable <span style="font-weight:bold">[count3] </span>is known</span>
+<span class="odt-code-line">count3++;</span>
+</code></pre></div>
+
+<p><strong>Comments</strong></p>
 <ul>
-<li><span>line 7 (code): an array is an object. As such, </span><b>&#91;var4&#93; </b><span>is a pointer to the array, not the array itself;</span></li>
-<li><span>line 8 (code): </span><b>&#91;var5&#93; </b><span>is a pointer to a literal object. We will see that JavaScript literal objects closely resemble PHP class instances. They, too, are referenced via pointers;</span></li>
-<li><span>line 11 (code): a variable can be of type </span><b>&#91;function&#93; </b><span>(line 7 of the results);</span></li>
+  <li>line 5: the variable <b>[count] </b>is only known within the code block in which it is declared (lines 3–7);
+  </li>
+  <li>line 14: the constant <b>[count2] </b>is only known within the code block in which it is declared (lines 12–16);
+  </li>
+  <li>line 23: the variable <b>[count3] </b>is known outside the code block in which it is declared (lines 21–25);
+  </li>
 </ul>
 
-<h2 id="38-script-bases-08">3.8. <a id="refheadingtoc2041973980233556"></a><span>script &#91;bases-08&#93;</span></h2>
-<p><span>This script demonstrates the possible type conversions in JavaScript.</span></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-python">
-<span class="docx-code-line"><span style="color:#A31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line">// implicit type conversions</span>
-<span class="docx-code-line">// type --&gt; bool</span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;---------------</span><span style="font-weight:bold;color:#A31515">[Implicit conversion to a boolean]</span><span style="color:#A31515">------------------------------&quot;</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line"><span style="color:#000000">showBool(</span><span style="color:#A31515">&quot;abcd&quot;</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line"><span style="color:#000000">showBool(</span><span style="color:#A31515">&quot;&quot;</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line">showBool(<span style="font-weight:bold">[1, 2, 3]</span>);</span>
-<span class="docx-code-line">showBool([]);</span>
-<span class="docx-code-line"><span style="color:#000000">showBool(</span><span style="color:#0000FF">null</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line">showBool(0.0);</span>
-<span class="docx-code-line">showBool(0);</span>
-<span class="docx-code-line">showBool(4.6);</span>
-<span class="docx-code-line">showBool({});</span>
-<span class="docx-code-line">showBool(undefined);</span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="color:#0000FF">function </span><span style="color:#000000">showBool(data) {</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// The conversion of data to a boolean is done automatically in the following test</span></span>
-<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">&quot;</span><span style="font-weight:bold;color:#A31515">[data=&quot;, data, &quot;]</span><span style="color:#A31515">, </span><span style="font-weight:bold;color:#A31515">[type(data)]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000FF">typeof </span><span style="color:#000000">(data), </span><span style="color:#A31515">&quot;</span><span style="font-weight:bold;color:#A31515">[boolean value(data)]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, data ? </span><span style="color:#0000FF">true </span><span style="color:#000000">: </span><span style="color:#0000FF">false</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line">// Implicit type conversions to a numeric type</span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;---------------</span><span style="font-weight:bold;color:#A31515">[Implicit conversion to a number]</span><span style="color:#A31515">------------------------------&quot;</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line"><span style="color:#000000">showNumber(</span><span style="color:#A31515">&quot;12&quot;</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line"><span style="color:#000000">showNumber(</span><span style="color:#A31515">&quot;45.67&quot;</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line"><span style="color:#000000">showNumber(</span><span style="color:#A31515">&quot;abcd&quot;</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="color:#0000FF">function </span><span style="color:#000000">showNumber(data) {</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// data + 1 doesn&#x27;t work because JavaScript performs string concatenation instead of addition</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">const </span><span style="color:#000000">number = data * 1;</span></span>
-<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">&quot;</span><span style="font-weight:bold;color:#A31515">[data=&quot;, data, &quot;]</span><span style="color:#A31515">, </span><span style="font-weight:bold;color:#A31515">[type(data)]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000FF">typeof </span><span style="color:#000000">(data), </span><span style="color:#A31515">&quot;</span><span style="font-weight:bold;color:#A31515">[number]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, number, </span><span style="color:#A31515">&quot;</span><span style="font-weight:bold;color:#A31515">[type(number)]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000FF">typeof </span><span style="color:#000000">(number));</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line">// Explicit type conversions to a boolean</span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;---------------</span><span style="font-weight:bold;color:#A31515">[Explicit conversion to a boolean]</span><span style="color:#A31515">------------------------------&quot;</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line"><span style="color:#000000">showBool2(</span><span style="color:#A31515">&quot;abcd&quot;</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line"><span style="color:#000000">showBool2(</span><span style="color:#A31515">&quot;&quot;</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line">showBool2(<span style="font-weight:bold">[1, 2, 3]</span>);</span>
-<span class="docx-code-line">showBool2([]);</span>
-<span class="docx-code-line"><span style="color:#000000">showBool2(</span><span style="color:#0000FF">null</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line">showBool2(0.0);</span>
-<span class="docx-code-line">showBool2(0);</span>
-<span class="docx-code-line">showBool2(4.6);</span>
-<span class="docx-code-line">showBool2({});</span>
-<span class="docx-code-line">showBool2(undefined);</span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="color:#0000FF">function </span><span style="color:#000000">showBool2(data) {</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// The conversion of data to a boolean is done explicitly in the following test</span></span>
-<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">&quot;</span><span style="font-weight:bold;color:#A31515">[&quot;, data, &quot;]</span><span style="color:#A31515">, </span><span style="font-weight:bold;color:#A31515">[type(data)]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000FF">typeof </span><span style="color:#000000">(data), </span><span style="color:#A31515">&quot;</span><span style="font-weight:bold;color:#A31515">[boolean value(data)]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, Boolean(data));</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line">// Explicit type conversions to Number</span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;---------------</span><span style="font-weight:bold;color:#A31515">[Explicit conversion to a number]</span><span style="color:#A31515">------------------------------&quot;</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line"><span style="color:#000000">showNumber2(</span><span style="color:#A31515">&quot;12.45&quot;</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line">showNumber2(67.8);</span>
-<span class="docx-code-line"><span style="color:#000000">showNumber2(</span><span style="color:#0000FF">true</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line"><span style="color:#000000">showNumber2(</span><span style="color:#0000FF">null</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="color:#0000FF">function </span><span style="color:#000000">showNumber2(data) {</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">const </span><span style="color:#000000">number = Number(data);</span></span>
-<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">&quot;</span><span style="font-weight:bold;color:#A31515">[data=&quot;, data, &quot;]</span><span style="color:#A31515">, </span><span style="font-weight:bold;color:#A31515">[type(data)]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000FF">typeof </span><span style="color:#000000">(data), </span><span style="color:#A31515">&quot;</span><span style="font-weight:bold;color:#A31515">[number]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, number, </span><span style="color:#A31515">&quot;</span><span style="font-weight:bold;color:#A31515">[type(number)]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000FF">typeof </span><span style="color:#000000">(number));</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line">// to String</span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;---------------</span><span style="font-weight:bold;color:#A31515">[Explicit conversion to a string]</span><span style="color:#A31515">------------------------------&quot;</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line">showString(5);</span>
-<span class="docx-code-line">showString(6.7);</span>
-<span class="docx-code-line"><span style="color:#000000">showString(</span><span style="color:#0000FF">false</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line"><span style="color:#000000">showString(</span><span style="color:#0000FF">null</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="color:#0000FF">function </span><span style="color:#000000">showString(data) {</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">const </span><span style="color:#000000">string = String(data);</span></span>
-<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">&quot;</span><span style="font-weight:bold;color:#A31515">[data=&quot;, data, &quot;]</span><span style="color:#A31515">, </span><span style="font-weight:bold;color:#A31515">[type(data)]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000FF">typeof </span><span style="color:#000000">(data), </span><span style="color:#A31515">&quot;</span><span style="font-weight:bold;color:#A31515">[string]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, string, </span><span style="color:#A31515">&quot;</span><span style="font-weight:bold;color:#A31515">[type(string)]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000FF">typeof </span><span style="color:#000000">(string));</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line">// some unexpected implicit conversions</span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;---------------</span><span style="font-weight:bold;color:#A31515">[Other cases]</span><span style="color:#A31515">------------------------------&quot;</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">string1 = </span><span style="color:#A31515">&#x27;1000.78&#x27;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">// default string concatenation</span>
-<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">data1 = string1 + 1.034;</span></span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;data1=&quot;</span><span style="color:#000000">, data1, </span><span style="color:#A31515">&quot;type=&quot;</span><span style="color:#000000">, </span><span style="color:#0000FF">typeof </span><span style="color:#000000">(data1));</span></span>
-<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">data2 = 1.034 + string1;</span></span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;data2=&quot;</span><span style="color:#000000">, data2, </span><span style="color:#A31515">&quot;type=&quot;</span><span style="color:#000000">, </span><span style="color:#0000FF">typeof </span><span style="color:#000000">(data2));</span></span>
-<span class="docx-code-line">// Explicit conversion to number</span>
-<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">data3 = Number(string1) + 1.034;</span></span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;data3=&quot;</span><span style="color:#000000">, data3, </span><span style="color:#A31515">&quot;type=&quot;</span><span style="color:#000000">, </span><span style="color:#0000FF">typeof </span><span style="color:#000000">(data3));</span></span>
-<span class="docx-code-line">// true is converted to the number 1</span>
-<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">data4 = </span><span style="color:#0000FF">true </span><span style="color:#000000">* 1.18;</span></span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;data4=&quot;</span><span style="color:#000000">, data4, </span><span style="color:#A31515">&quot;type=&quot;</span><span style="color:#000000">, </span><span style="color:#0000FF">typeof </span><span style="color:#000000">(data4));</span></span>
-<span class="docx-code-line">// false is converted to the number 0</span>
-<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">data5 = </span><span style="color:#0000FF">false </span><span style="color:#000000">* 1.18;</span></span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;data5=&quot;</span><span style="color:#000000">, data5, </span><span style="color:#A31515">&quot;type=&quot;</span><span style="color:#000000">, </span><span style="color:#0000FF">typeof </span><span style="color:#000000">(data5));</span></span>
+<p>ESLint reports the following errors:</p>
+<p><img src="images/100000000000053400000459582F975E.png" style="width:10.582cm;height:8.841cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000053400000459582F975E.png" /></p>
+<p>For these reasons related to block scope, we will only use the keywords <strong>[let]</strong> and <strong>[const]</strong> from now on.</p>
+<p><a id="refheadingtoc2041953980233556"></a></p>
+<h2 id="37-script-bases-07">3.7. <span style="color: #4f81bd">script [bases-07]</span></h2>
+<p>Data types in JavaScript:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// JavaScript data types</span>
+<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">var1 = 10;</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">var2 = </span><span style="color:#a31515">&quot;abc&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">var3 = </span><span style="color:#0000ff">true</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">var4 = </span><span style="font-weight:bold;color:#000000">[1, 2, 3]</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">var5 = {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  name: </span><span style="color:#a31515">&#x27;axèle&#x27;</span></span>
+<span class="odt-code-line">};</span>
+<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">var6 = </span><span style="color:#0000ff">function </span><span style="color:#000000">() {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">return </span><span style="color:#000000">+3;</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// Displaying types</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;typeof(var1)=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000">(var1));</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;typeof(var2)=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000">(var2));</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;typeof(var3)=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof </span><span style="color:#000000">(var3));</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;typeof(var4)=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof </span><span style="color:#000000">(var4));</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;typeof(var5)=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000">(var5));</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;typeof(var6)=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000">(var6));</span></span>
 </code></pre></div>
 
-<p><b>Execution</b></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-python">
-<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Running] </span><span style="color:#A31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Data\st-2019\dev\es6\javascript\bases\bases-08.js&quot;</span></span>
-<span class="docx-code-line">---------------<span style="font-weight:bold">[Implicit conversion to a boolean]</span>------------------------------</span>
-<span class="docx-code-line"><span style="font-weight:bold">[data= abcd ]</span>, <span style="font-weight:bold">[type(data)]</span>= string <span style="font-weight:bold">[boolean value(data)]</span>= true</span>
-<span class="docx-code-line"><span style="font-weight:bold">[data= ]</span>, <span style="font-weight:bold">[type(data)]</span>= string <span style="font-weight:bold">[boolean value(data)]</span>= false</span>
-<span class="docx-code-line"><span style="font-weight:bold">[data= [ 1, 2, 3 ] </span>], <span style="font-weight:bold">[type(data)]</span>= object <span style="font-weight:bold">[boolean value(data)]</span>= true</span>
-<span class="docx-code-line"><span style="font-weight:bold">[data= [] </span>], <span style="font-weight:bold">[type(data)]</span>= object <span style="font-weight:bold">[boolean value(data)]</span>= true</span>
-<span class="docx-code-line"><span style="font-weight:bold">[data= null ]</span>, <span style="font-weight:bold">[type(data)]</span>= object <span style="font-weight:bold">[boolean value(data)]</span>= false</span>
-<span class="docx-code-line"><span style="font-weight:bold">[data= 0 ]</span>, <span style="font-weight:bold">[type(data)]</span>= number <span style="font-weight:bold">[boolean value(data)]</span>= false</span>
-<span class="docx-code-line"><span style="font-weight:bold">[data= 0 ]</span>, <span style="font-weight:bold">[type(data)]</span>= number <span style="font-weight:bold">[boolean value(data)]</span>= false</span>
-<span class="docx-code-line"><span style="font-weight:bold">[data= 4.6 ]</span>, <span style="font-weight:bold">[type(data)]</span>= number <span style="font-weight:bold">[boolean value(data)]</span>= true</span>
-<span class="docx-code-line"><span style="font-weight:bold">[data= {} ]</span>, <span style="font-weight:bold">[type(data)]</span>= object <span style="font-weight:bold">[boolean value(data)]</span>= true</span>
-<span class="docx-code-line"><span style="font-weight:bold">[data= undefined ]</span>, <span style="font-weight:bold">[type(data)]</span>= undefined <span style="font-weight:bold">[boolean value(data)]</span>= false</span>
-<span class="docx-code-line">---------------<span style="font-weight:bold">[Implicit conversion to a number]</span>------------------------------</span>
-<span class="docx-code-line"><span style="font-weight:bold">[data= 12 ]</span>, <span style="font-weight:bold">[type(data)]</span>= string <span style="font-weight:bold">[number]</span>= 12 <span style="font-weight:bold">[type(number)]</span>= number</span>
-<span class="docx-code-line"><span style="font-weight:bold">[data= 45.67 ]</span>, <span style="font-weight:bold">[type(data)]</span>= string <span style="font-weight:bold">[number]</span>= 45.67 <span style="font-weight:bold">[type(number)]</span>= number</span>
-<span class="docx-code-line"><span style="font-weight:bold">[data= abcd ]</span>, <span style="font-weight:bold">[type(data)]</span>= string <span style="font-weight:bold">[number]</span>= NaN <span style="font-weight:bold">[type(number)]</span>= number</span>
-<span class="docx-code-line">---------------<span style="font-weight:bold">[Explicit conversion to a Boolean]</span>------------------------------</span>
-<span class="docx-code-line"><span style="font-weight:bold">[ abcd ]</span>, <span style="font-weight:bold">[type(data)]</span>= string <span style="font-weight:bold">[boolean value(data)]</span>= true</span>
-<span class="docx-code-line"><span style="font-weight:bold">[ ]</span>, <span style="font-weight:bold">[type(data)]</span>= string <span style="font-weight:bold">[boolean value(data)]</span>= false</span>
-<span class="docx-code-line"><span style="font-weight:bold">[ [ 1, 2, 3 ] </span>], <span style="font-weight:bold">[type(data)]</span>= object <span style="font-weight:bold">[boolean value(data)]</span>= true</span>
-<span class="docx-code-line"><span style="font-weight:bold">[ [] </span>], <span style="font-weight:bold">[type(data)]</span>= object <span style="font-weight:bold">[boolean value(data)]</span>= true</span>
-<span class="docx-code-line"><span style="font-weight:bold">[ null ]</span>, <span style="font-weight:bold">[type(data)]</span>= object <span style="font-weight:bold">[boolean value(data)]</span>= false</span>
-<span class="docx-code-line"><span style="font-weight:bold">[ 0 ]</span>, <span style="font-weight:bold">[type(data)]</span>= number <span style="font-weight:bold">[boolean value(data)]</span>= false</span>
-<span class="docx-code-line"><span style="font-weight:bold">[ 0 ]</span>, <span style="font-weight:bold">[type(data)]</span>= number <span style="font-weight:bold">[boolean value(data)]</span>= false</span>
-<span class="docx-code-line"><span style="font-weight:bold">[ 4.6 ]</span>, <span style="font-weight:bold">[type(data)]</span>= number <span style="font-weight:bold">[boolean value(data)]</span>= true</span>
-<span class="docx-code-line"><span style="font-weight:bold">[ {} ]</span>, <span style="font-weight:bold">[type(data)]</span>= object <span style="font-weight:bold">[boolean value(data)]</span>= true</span>
-<span class="docx-code-line"><span style="font-weight:bold">[undefined]</span>, <span style="font-weight:bold">[type(data)]</span>= undefined <span style="font-weight:bold">[boolean value(data)]</span>= false</span>
-<span class="docx-code-line">---------------<span style="font-weight:bold">[Explicit conversion to a number]</span>------------------------------</span>
-<span class="docx-code-line"><span style="font-weight:bold">[data= 12.45 ]</span>, <span style="font-weight:bold">[type(data)]</span>= string <span style="font-weight:bold">[number]</span>= 12.45 <span style="font-weight:bold">[type(number)]</span>= number</span>
-<span class="docx-code-line"><span style="font-weight:bold">[data= 67.8 ]</span>, <span style="font-weight:bold">[type(data)]</span>= number <span style="font-weight:bold">[number]</span>= 67.8 <span style="font-weight:bold">[type(number)]</span>= number</span>
-<span class="docx-code-line"><span style="font-weight:bold">[data= true ]</span>, <span style="font-weight:bold">[type(data)]</span>= boolean <span style="font-weight:bold">[number]</span>= 1 <span style="font-weight:bold">[type(number)]</span>= number</span>
-<span class="docx-code-line"><span style="font-weight:bold">[data= null ]</span>, <span style="font-weight:bold">[type(data)]</span>= object <span style="font-weight:bold">[number]</span>= 0 <span style="font-weight:bold">[type(number)]</span>= number</span>
-<span class="docx-code-line">---------------<span style="font-weight:bold">[Explicit conversion to a string]</span>------------------------------</span>
-<span class="docx-code-line"><span style="font-weight:bold">[data= 5 ]</span>, <span style="font-weight:bold">[type(data)]</span>= number <span style="font-weight:bold">[string]</span>= 5 <span style="font-weight:bold">[type(string)]</span>= string</span>
-<span class="docx-code-line"><span style="font-weight:bold">[data= 6.7 ]</span>, <span style="font-weight:bold">[type(data)]</span>= number <span style="font-weight:bold">[string]</span>= 6.7 <span style="font-weight:bold">[type(string)]</span>= string</span>
-<span class="docx-code-line"><span style="font-weight:bold">[data= false ]</span>, <span style="font-weight:bold">[type(data)]</span>= boolean <span style="font-weight:bold">[string]</span>= false <span style="font-weight:bold">[type(string)]</span>= string</span>
-<span class="docx-code-line"><span style="font-weight:bold">[data= null ]</span>, <span style="font-weight:bold">[type(data)]</span>= object <span style="font-weight:bold">[string]</span>= null <span style="font-weight:bold">[type(string)]</span>= string</span>
-<span class="docx-code-line">---------------<span style="font-weight:bold">[Other cases]</span>------------------------------</span>
-<span class="docx-code-line">data1= 1000.781.034 type= string</span>
-<span class="docx-code-line">data2= 1.0341000.78 type= string</span>
-<span class="docx-code-line">data3= 1001.814 type= number</span>
-<span class="docx-code-line">data4= 1.18 type= number</span>
-<span class="docx-code-line">data5= 0 type= number</span>
+<p><strong>Execution</strong></p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-js">
+<span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running] </span><span style="color:#a31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\bases\bases-07.js&quot;</span></span>
+<span class="odt-code-line">typeof(var1)= number</span>
+<span class="odt-code-line">typeof(var2)= string</span>
+<span class="odt-code-line">typeof(var3) = boolean</span>
+<span class="odt-code-line">typeof(var4) = object</span>
+<span class="odt-code-line">typeof(var5) = object</span>
+<span class="odt-code-line">typeof(var6) = function</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Done] </span><span style="color:#a31515">exited with </span><span style="color:#800080">code=0 </span><span style="color:#a31515">in</span><span style="color:#09885a"> 0.26 </span><span style="color:#a31515">seconds</span></span>
+</code></pre></div>
+
+<p><strong>Comments</strong></p>
+<ul>
+  <li>line 7 (code): an array is an object. As such, <b>[var4] </b>is a pointer to the array, not the array itself;
+  </li>
+  <li>line 8 (code): <b>[var5] </b>is a pointer to a literal object. We will see that JavaScript literal objects closely resemble PHP class instances. They, too, are referenced via pointers;
+  </li>
+  <li>line 11 (code): a variable can be of type <b>[function] </b>(line 7 of the results);
+<a id="refheadingtoc2041973980233556"></a>
+
+## 3.8. <span style="color: #4f81bd">script [bases-08]</span>
+
+  </li>
+</ul>
+
+<p>This script demonstrates the possible type conversions in JavaScript.</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// implicit type conversions</span>
+<span class="odt-code-line">// type --&gt; bool</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;---------------</span><span style="font-weight:bold;color:#a31515">[Implicit conversion to a boolean]</span><span style="color:#a31515">------------------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">showBool(</span><span style="color:#a31515">&quot;abcd&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">showBool(</span><span style="color:#a31515">&quot;&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">showBool(<span style="font-weight:bold">[1, 2, 3]</span>);</span>
+<span class="odt-code-line">showBool([]);</span>
+<span class="odt-code-line"><span style="color:#000000">showBool(</span><span style="color:#0000ff">null</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">showBool(0.0);</span>
+<span class="odt-code-line">showBool(0);</span>
+<span class="odt-code-line">showBool(4.6);</span>
+<span class="odt-code-line">showBool({});</span>
+<span class="odt-code-line">showBool(undefined);</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#0000ff">function </span><span style="color:#000000">showBool(data) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// The conversion of data to a boolean is done automatically in the following test</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[data=&quot;, data, &quot;]</span><span style="color:#a31515">, </span><span style="font-weight:bold;color:#a31515">[type(data)]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof </span><span style="color:#000000">(data), </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[boolean value(data)]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, data ? </span><span style="color:#0000ff">true </span><span style="color:#000000">: </span><span style="color:#0000ff">false</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// Implicit type conversions to a numeric type</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;---------------</span><span style="font-weight:bold;color:#a31515">[Implicit conversion to a number]</span><span style="color:#a31515">------------------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">showNumber(</span><span style="color:#a31515">&quot;12&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">showNumber(</span><span style="color:#a31515">&quot;45.67&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">showNumber(</span><span style="color:#a31515">&quot;abcd&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#0000ff">function </span><span style="color:#000000">showNumber(data) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// data + 1 doesn&#x27;t work because JavaScript performs string concatenation instead of addition</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">const </span><span style="color:#000000">number = data * 1;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[data=&quot;, data, &quot;]</span><span style="color:#a31515">, </span><span style="font-weight:bold;color:#a31515">[type(data)]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof </span><span style="color:#000000">(data), </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[number]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, number, </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[type(number)]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof </span><span style="color:#000000">(number));</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// Explicit type conversions to a boolean</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;---------------</span><span style="font-weight:bold;color:#a31515">[Explicit conversion to a boolean]</span><span style="color:#a31515">------------------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">showBool2(</span><span style="color:#a31515">&quot;abcd&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">showBool2(</span><span style="color:#a31515">&quot;&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">showBool2(<span style="font-weight:bold">[1, 2, 3]</span>);</span>
+<span class="odt-code-line">showBool2([]);</span>
+<span class="odt-code-line"><span style="color:#000000">showBool2(</span><span style="color:#0000ff">null</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">showBool2(0.0);</span>
+<span class="odt-code-line">showBool2(0);</span>
+<span class="odt-code-line">showBool2(4.6);</span>
+<span class="odt-code-line">showBool2({});</span>
+<span class="odt-code-line">showBool2(undefined);</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#0000ff">function </span><span style="color:#000000">showBool2(data) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// The conversion of data to a boolean is done explicitly in the following test</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[&quot;, data, &quot;]</span><span style="color:#a31515">, </span><span style="font-weight:bold;color:#a31515">[type(data)]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof </span><span style="color:#000000">(data), </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[boolean value(data)]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, Boolean(data));</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// Explicit type conversions to Number</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;---------------</span><span style="font-weight:bold;color:#a31515">[Explicit conversion to a number]</span><span style="color:#a31515">------------------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">showNumber2(</span><span style="color:#a31515">&quot;12.45&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">showNumber2(67.8);</span>
+<span class="odt-code-line"><span style="color:#000000">showNumber2(</span><span style="color:#0000ff">true</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">showNumber2(</span><span style="color:#0000ff">null</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#0000ff">function </span><span style="color:#000000">showNumber2(data) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">const </span><span style="color:#000000">number = Number(data);</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[data=&quot;, data, &quot;]</span><span style="color:#a31515">, </span><span style="font-weight:bold;color:#a31515">[type(data)]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof </span><span style="color:#000000">(data), </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[number]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, number, </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[type(number)]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof </span><span style="color:#000000">(number));</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// to String</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;---------------</span><span style="font-weight:bold;color:#a31515">[Explicit conversion to a string]</span><span style="color:#a31515">------------------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">showString(5);</span>
+<span class="odt-code-line">showString(6.7);</span>
+<span class="odt-code-line"><span style="color:#000000">showString(</span><span style="color:#0000ff">false</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">showString(</span><span style="color:#0000ff">null</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#0000ff">function </span><span style="color:#000000">showString(data) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">const </span><span style="color:#000000">string = String(data);</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[data=&quot;, data, &quot;]</span><span style="color:#a31515">, </span><span style="font-weight:bold;color:#a31515">[type(data)]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof </span><span style="color:#000000">(data), </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[string]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, string, </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[type(string)]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof </span><span style="color:#000000">(string));</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// some unexpected implicit conversions</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;---------------</span><span style="font-weight:bold;color:#a31515">[Other cases]</span><span style="color:#a31515">------------------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">string1 = </span><span style="color:#a31515">&#x27;1000.78&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// default string concatenation</span>
+<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">data1 = string1 + 1.034;</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;data1=&quot;</span><span style="color:#000000">, data1, </span><span style="color:#a31515">&quot;type=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof </span><span style="color:#000000">(data1));</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">data2 = 1.034 + string1;</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;data2=&quot;</span><span style="color:#000000">, data2, </span><span style="color:#a31515">&quot;type=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof </span><span style="color:#000000">(data2));</span></span>
+<span class="odt-code-line">// Explicit conversion to number</span>
+<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">data3 = Number(string1) + 1.034;</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;data3=&quot;</span><span style="color:#000000">, data3, </span><span style="color:#a31515">&quot;type=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof </span><span style="color:#000000">(data3));</span></span>
+<span class="odt-code-line">// true is converted to the number 1</span>
+<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">data4 = </span><span style="color:#0000ff">true </span><span style="color:#000000">* 1.18;</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;data4=&quot;</span><span style="color:#000000">, data4, </span><span style="color:#a31515">&quot;type=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof </span><span style="color:#000000">(data4));</span></span>
+<span class="odt-code-line">// false is converted to the number 0</span>
+<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">data5 = </span><span style="color:#0000ff">false </span><span style="color:#000000">* 1.18;</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;data5=&quot;</span><span style="color:#000000">, data5, </span><span style="color:#a31515">&quot;type=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof </span><span style="color:#000000">(data5));</span></span>
+</code></pre></div>
+
+<p><strong>Execution</strong></p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running] </span><span style="color:#a31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Data\st-2019\dev\es6\javascript\bases\bases-08.js&quot;</span></span>
+<span class="odt-code-line">---------------<span style="font-weight:bold">[Implicit conversion to a boolean]</span>------------------------------</span>
+<span class="odt-code-line"><span style="font-weight:bold">[data= abcd ]</span>, <span style="font-weight:bold">[type(data)]</span>= string <span style="font-weight:bold">[boolean value(data)]</span>= true</span>
+<span class="odt-code-line"><span style="font-weight:bold">[data= ]</span>, <span style="font-weight:bold">[type(data)]</span>= string <span style="font-weight:bold">[boolean value(data)]</span>= false</span>
+<span class="odt-code-line"><span style="font-weight:bold">[data= [ 1, 2, 3 ] </span>], <span style="font-weight:bold">[type(data)]</span>= object <span style="font-weight:bold">[boolean value(data)]</span>= true</span>
+<span class="odt-code-line"><span style="font-weight:bold">[data= [] </span>], <span style="font-weight:bold">[type(data)]</span>= object <span style="font-weight:bold">[boolean value(data)]</span>= true</span>
+<span class="odt-code-line"><span style="font-weight:bold">[data= null ]</span>, <span style="font-weight:bold">[type(data)]</span>= object <span style="font-weight:bold">[boolean value(data)]</span>= false</span>
+<span class="odt-code-line"><span style="font-weight:bold">[data= 0 ]</span>, <span style="font-weight:bold">[type(data)]</span>= number <span style="font-weight:bold">[boolean value(data)]</span>= false</span>
+<span class="odt-code-line"><span style="font-weight:bold">[data= 0 ]</span>, <span style="font-weight:bold">[type(data)]</span>= number <span style="font-weight:bold">[boolean value(data)]</span>= false</span>
+<span class="odt-code-line"><span style="font-weight:bold">[data= 4.6 ]</span>, <span style="font-weight:bold">[type(data)]</span>= number <span style="font-weight:bold">[boolean value(data)]</span>= true</span>
+<span class="odt-code-line"><span style="font-weight:bold">[data= {} ]</span>, <span style="font-weight:bold">[type(data)]</span>= object <span style="font-weight:bold">[boolean value(data)]</span>= true</span>
+<span class="odt-code-line"><span style="font-weight:bold">[data= undefined ]</span>, <span style="font-weight:bold">[type(data)]</span>= undefined <span style="font-weight:bold">[boolean value(data)]</span>= false</span>
+<span class="odt-code-line">---------------<span style="font-weight:bold">[Implicit conversion to a number]</span>------------------------------</span>
+<span class="odt-code-line"><span style="font-weight:bold">[data= 12 ]</span>, <span style="font-weight:bold">[type(data)]</span>= string <span style="font-weight:bold">[number]</span>= 12 <span style="font-weight:bold">[type(number)]</span>= number</span>
+<span class="odt-code-line"><span style="font-weight:bold">[data= 45.67 ]</span>, <span style="font-weight:bold">[type(data)]</span>= string <span style="font-weight:bold">[number]</span>= 45.67 <span style="font-weight:bold">[type(number)]</span>= number</span>
+<span class="odt-code-line"><span style="font-weight:bold">[data= abcd ]</span>, <span style="font-weight:bold">[type(data)]</span>= string <span style="font-weight:bold">[number]</span>= NaN <span style="font-weight:bold">[type(number)]</span>= number</span>
+<span class="odt-code-line">---------------<span style="font-weight:bold">[Explicit conversion to a Boolean]</span>------------------------------</span>
+<span class="odt-code-line"><span style="font-weight:bold">[ abcd ]</span>, <span style="font-weight:bold">[type(data)]</span>= string <span style="font-weight:bold">[boolean value(data)]</span>= true</span>
+<span class="odt-code-line"><span style="font-weight:bold">[ ]</span>, <span style="font-weight:bold">[type(data)]</span>= string <span style="font-weight:bold">[boolean value(data)]</span>= false</span>
+<span class="odt-code-line"><span style="font-weight:bold">[ [ 1, 2, 3 ] </span>], <span style="font-weight:bold">[type(data)]</span>= object <span style="font-weight:bold">[boolean value(data)]</span>= true</span>
+<span class="odt-code-line"><span style="font-weight:bold">[ [] </span>], <span style="font-weight:bold">[type(data)]</span>= object <span style="font-weight:bold">[boolean value(data)]</span>= true</span>
+<span class="odt-code-line"><span style="font-weight:bold">[ null ]</span>, <span style="font-weight:bold">[type(data)]</span>= object <span style="font-weight:bold">[boolean value(data)]</span>= false</span>
+<span class="odt-code-line"><span style="font-weight:bold">[ 0 ]</span>, <span style="font-weight:bold">[type(data)]</span>= number <span style="font-weight:bold">[boolean value(data)]</span>= false</span>
+<span class="odt-code-line"><span style="font-weight:bold">[ 0 ]</span>, <span style="font-weight:bold">[type(data)]</span>= number <span style="font-weight:bold">[boolean value(data)]</span>= false</span>
+<span class="odt-code-line"><span style="font-weight:bold">[ 4.6 ]</span>, <span style="font-weight:bold">[type(data)]</span>= number <span style="font-weight:bold">[boolean value(data)]</span>= true</span>
+<span class="odt-code-line"><span style="font-weight:bold">[ {} ]</span>, <span style="font-weight:bold">[type(data)]</span>= object <span style="font-weight:bold">[boolean value(data)]</span>= true</span>
+<span class="odt-code-line"><span style="font-weight:bold">[undefined]</span>, <span style="font-weight:bold">[type(data)]</span>= undefined <span style="font-weight:bold">[boolean value(data)]</span>= false</span>
+<span class="odt-code-line">---------------<span style="font-weight:bold">[Explicit conversion to a number]</span>------------------------------</span>
+<span class="odt-code-line"><span style="font-weight:bold">[data= 12.45 ]</span>, <span style="font-weight:bold">[type(data)]</span>= string <span style="font-weight:bold">[number]</span>= 12.45 <span style="font-weight:bold">[type(number)]</span>= number</span>
+<span class="odt-code-line"><span style="font-weight:bold">[data= 67.8 ]</span>, <span style="font-weight:bold">[type(data)]</span>= number <span style="font-weight:bold">[number]</span>= 67.8 <span style="font-weight:bold">[type(number)]</span>= number</span>
+<span class="odt-code-line"><span style="font-weight:bold">[data= true ]</span>, <span style="font-weight:bold">[type(data)]</span>= boolean <span style="font-weight:bold">[number]</span>= 1 <span style="font-weight:bold">[type(number)]</span>= number</span>
+<span class="odt-code-line"><span style="font-weight:bold">[data= null ]</span>, <span style="font-weight:bold">[type(data)]</span>= object <span style="font-weight:bold">[number]</span>= 0 <span style="font-weight:bold">[type(number)]</span>= number</span>
+<span class="odt-code-line">---------------<span style="font-weight:bold">[Explicit conversion to a string]</span>------------------------------</span>
+<span class="odt-code-line"><span style="font-weight:bold">[data= 5 ]</span>, <span style="font-weight:bold">[type(data)]</span>= number <span style="font-weight:bold">[string]</span>= 5 <span style="font-weight:bold">[type(string)]</span>= string</span>
+<span class="odt-code-line"><span style="font-weight:bold">[data= 6.7 ]</span>, <span style="font-weight:bold">[type(data)]</span>= number <span style="font-weight:bold">[string]</span>= 6.7 <span style="font-weight:bold">[type(string)]</span>= string</span>
+<span class="odt-code-line"><span style="font-weight:bold">[data= false ]</span>, <span style="font-weight:bold">[type(data)]</span>= boolean <span style="font-weight:bold">[string]</span>= false <span style="font-weight:bold">[type(string)]</span>= string</span>
+<span class="odt-code-line"><span style="font-weight:bold">[data= null ]</span>, <span style="font-weight:bold">[type(data)]</span>= object <span style="font-weight:bold">[string]</span>= null <span style="font-weight:bold">[type(string)]</span>= string</span>
+<span class="odt-code-line">---------------<span style="font-weight:bold">[Other cases]</span>------------------------------</span>
+<span class="odt-code-line">data1= 1000.781.034 type= string</span>
+<span class="odt-code-line">data2= 1.0341000.78 type= string</span>
+<span class="odt-code-line">data3= 1001.814 type= number</span>
+<span class="odt-code-line">data4= 1.18 type= number</span>
+<span class="odt-code-line">data5= 0 type= number</span>
 </code></pre></div>
 
 

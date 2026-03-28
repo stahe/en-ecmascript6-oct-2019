@@ -447,18 +447,7 @@
   <a href="#41-script-tab-01" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.1. script &#91;tab-01&#93;
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#42-script-tab-02" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2. script &#91;tab-02&#93;
+        4.1. script [tab-01]
       
     </span>
   </a>
@@ -469,18 +458,7 @@
   <a href="#43-script-tab-03" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.3. script &#91;tab-03&#93;
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#44-script-tab-04" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.4. script &#91;tab-04&#93;
+        4.3. script [tab-03]
       
     </span>
   </a>
@@ -785,298 +763,345 @@
   
 
 
-<h1 id="4-tables">4. <a id="refheadingtoc2041993980233556"></a><span>Tables</span></h1>
-<p><img src="images/image74.png" class="docx-zoomable" style="width:99px;height:87px;" alt="Image" /></p>
-<h2 id="41-script-tab-01">4.1. <a id="refheadingtoc2042013980233556"></a><span>script &#91;tab-01&#93;</span></h2>
-<p><span>The following script illustrates some characteristics of JavaScript arrays. These resemble PHP arrays, but with one major difference: they are manipulated via pointers and are considered objects.</span></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-csharp">
-<span class="docx-code-line"><span style="color:#A31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line">// An array is an object manipulated via its address</span>
-<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">tab1 = </span><span style="font-weight:bold;color:#000000">[1, 2, 3]</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">// copying addresses</span>
-<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">tab2 = tab1;</span></span>
-<span class="docx-code-line">// tab1 and tab2 point to the same array</span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;tab1===tab2 :&quot;</span><span style="color:#000000">, tab1 === tab2);</span></span>
-<span class="docx-code-line">// You can modify the array using either tab1 or tab2</span>
-<span class="docx-code-line">tab2<span style="font-weight:bold">[1] </span>= 10;</span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;tab1=&quot;</span><span style="color:#000000">, tab1);</span></span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;tab2=&quot;</span><span style="color:#000000">, tab2);</span></span>
+<p><a id="refheadingtoc2041993980233556"></a></p>
+<h1 id="4-tables">4. <span style="color: #365f91">Tables</span></h1>
+<p><img src="images/10000000000000F7000000DA0354C5DC.png" style="width:2.611cm;height:2.304cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000F7000000DA0354C5DC.png" /></p>
+<p><a id="refheadingtoc2042013980233556"></a></p>
+<h2 id="41-script-tab-01">4.1. <span style="color: #4f81bd">script [tab-01]</span></h2>
+<p>The following script illustrates some characteristics of JavaScript arrays. These resemble PHP arrays, but with one major difference: they are manipulated via pointers and are considered objects.</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// An array is an object manipulated via its address</span>
+<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">tab1 = </span><span style="font-weight:bold;color:#000000">[1, 2, 3]</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// copying addresses</span>
+<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">tab2 = tab1;</span></span>
+<span class="odt-code-line">// tab1 and tab2 point to the same array</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab1===tab2 :&quot;</span><span style="color:#000000">, tab1 === tab2);</span></span>
+<span class="odt-code-line">// You can modify the array using either tab1 or tab2</span>
+<span class="odt-code-line">tab2<span style="font-weight:bold">[1] </span>= 10;</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab1=&quot;</span><span style="color:#000000">, tab1);</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab2=&quot;</span><span style="color:#000000">, tab2);</span></span>
 </code></pre></div>
 
-<p><b>Execution</b></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-text">
-<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Running] </span><span style="color:#A31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\tableaux\tab-01.js&quot;</span></span>
-<span class="docx-code-line">tab1===tab2: true</span>
-<span class="docx-code-line">tab1= <span style="font-weight:bold">[ 1, 10, 3 ]</span></span>
-<span class="docx-code-line">tab2= <span style="font-weight:bold">[ 1, 10, 3 ]</span></span>
+<p><strong>Execution</strong></p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running] </span><span style="color:#a31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\tableaux\tab-01.js&quot;</span></span>
+<span class="odt-code-line">tab1===tab2: true</span>
+<span class="odt-code-line">tab1= <span style="font-weight:bold">[ 1, 10, 3 ]</span></span>
+<span class="odt-code-line">tab2= <span style="font-weight:bold">[ 1, 10, 3 ]</span></span>
 </code></pre></div>
 
-<p><b>Comments</b></p>
+<p><strong>Comments</strong></p>
 <ul>
-<li><span>Line 2 of the results shows that </span><b>&#91;tab1&#93; </b><span>and </span><b>&#91;tab2&#93; </b><span>are two equal entities, in fact two equal pointers;</span></li>
-<li><span>Lines 4 and 5 of the results show that these two pointers point to the same array;</span></li>
+  <li>Line 2 of the results shows that <b>[tab1] </b>and <b>[tab2] </b>are two equal entities, in fact two equal pointers;
+  </li>
+  <li>Lines 4 and 5 of the results show that these two pointers point to the same array;
+<a id="refheadingtoc2042033980233556"></a>
+
+## 4.2. <span style="color: #4f81bd">script [tab-02]</span>
+
+  </li>
 </ul>
 
-<h2 id="42-script-tab-02">4.2. <a id="refheadingtoc2042033980233556"></a><span>script &#91;tab-02&#93;</span></h2>
-<p><span>This script demonstrates that JavaScript arrays differ from arrays in compiled languages.</span></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-javascript">
-<span class="docx-code-line"><span style="color:#A31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line">// array</span>
-<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">tab = [];</span></span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;tab=&quot;</span><span style="color:#000000">, tab, </span><span style="color:#A31515">&quot;, length=</span><span style="font-weight:bold;color:#A31515">[&quot;, tab.length, &quot;]</span><span style="color:#A31515">&quot;</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;-------------------------------&quot;</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line">// initializing an element</span>
-<span class="docx-code-line">tab<span style="font-weight:bold">[3] </span>= 100;</span>
-<span class="docx-code-line"><span style="color:#000000">tab</span><span style="font-weight:bold;color:#000000">[1] </span><span style="color:#000000">= </span><span style="color:#A31515">&quot;eight&quot;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">// array</span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;tab=&quot;</span><span style="color:#000000">, tab, </span><span style="color:#A31515">&quot;, length=</span><span style="font-weight:bold;color:#A31515">[&quot;, tab.length, &quot;]</span><span style="color:#A31515">&quot;</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;-------------------------------&quot;</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line">// toString</span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;tab.toString=</span><span style="font-weight:bold;color:#A31515">[&quot;, tab.toString(), &quot;]</span><span style="color:#A31515">&quot;</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;-------------------------------&quot;</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line">// the keys of the array are its indices</span>
-<span class="docx-code-line"><span style="color:#0000FF">for </span><span style="color:#000000">(</span><span style="color:#0000FF">let </span><span style="color:#000000">key </span><span style="color:#0000FF">of </span><span style="color:#000000">tab.keys()) {</span></span>
-<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">&quot;key=</span><span style="font-weight:bold;color:#A31515">[&quot;, key, &quot;]</span><span style="color:#A31515">, value=</span><span style="font-weight:bold;color:#A31515">[&quot;, tab[key]</span><span style="color:#000000">, </span><span style="color:#A31515">&quot;]&quot;</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;-------------------------------&quot;</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line">// the array&#x27;s values</span>
-<span class="docx-code-line"><span style="color:#0000FF">for </span><span style="color:#000000">(</span><span style="color:#0000FF">let </span><span style="color:#000000">value </span><span style="color:#0000FF">of </span><span style="color:#000000">tab.values()) {</span></span>
-<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">&quot;value=</span><span style="font-weight:bold;color:#A31515">[&quot;, value, &quot;]</span><span style="color:#A31515">&quot;</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line">}</span>
+<p>This script demonstrates that JavaScript arrays differ from arrays in compiled languages.</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// array</span>
+<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">tab = [];</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab, </span><span style="color:#a31515">&quot;, length=</span><span style="font-weight:bold;color:#a31515">[&quot;, tab.length, &quot;]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;-------------------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">// initializing an element</span>
+<span class="odt-code-line">tab<span style="font-weight:bold">[3] </span>= 100;</span>
+<span class="odt-code-line"><span style="color:#000000">tab</span><span style="font-weight:bold;color:#000000">[1] </span><span style="color:#000000">= </span><span style="color:#a31515">&quot;eight&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// array</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab, </span><span style="color:#a31515">&quot;, length=</span><span style="font-weight:bold;color:#a31515">[&quot;, tab.length, &quot;]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;-------------------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">// toString</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab.toString=</span><span style="font-weight:bold;color:#a31515">[&quot;, tab.toString(), &quot;]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;-------------------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">// the keys of the array are its indices</span>
+<span class="odt-code-line"><span style="color:#0000ff">for </span><span style="color:#000000">(</span><span style="color:#0000ff">let </span><span style="color:#000000">key </span><span style="color:#0000ff">of </span><span style="color:#000000">tab.keys()) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;key=</span><span style="font-weight:bold;color:#a31515">[&quot;, key, &quot;]</span><span style="color:#a31515">, value=</span><span style="font-weight:bold;color:#a31515">[&quot;, tab[key]</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;]&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;-------------------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">// the array&#x27;s values</span>
+<span class="odt-code-line"><span style="color:#0000ff">for </span><span style="color:#000000">(</span><span style="color:#0000ff">let </span><span style="color:#000000">value </span><span style="color:#0000ff">of </span><span style="color:#000000">tab.values()) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;value=</span><span style="font-weight:bold;color:#a31515">[&quot;, value, &quot;]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">}</span>
 </code></pre></div>
 
 <ul>
-<li><span>line 4: an empty array;</span></li>
-<li><span>line 8: an array does not have a fixed size. It is simply a sequence of elements indexed by a number. You can initialize element #3 even if elements </span><b>&#91;0, 1, 2&#93; </b><span>are not yet defined;</span></li>
-<li><span>lines 16–24: A JavaScript array behaves similarly to a PHP array;</span></li>
+  <li>line 4: an empty array;
+  </li>
+  <li>line 8: an array does not have a fixed size. It is simply a sequence of elements indexed by a number. You can initialize element #3 even if elements <b>[0, 1, 2] </b>are not yet defined;
+  </li>
+  <li>lines 16–24: A JavaScript array behaves similarly to a PHP array;
+  </li>
 </ul>
 
-<p><span> </span><b>Execution</b></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-python">
-<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Running] </span><span style="color:#A31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\tableaux\tab-02.js&quot;</span></span>
-<span class="docx-code-line">tab= <span style="font-weight:bold">[] , length=[ 0 ]</span></span>
-<span class="docx-code-line">-------------------------------</span>
-<span class="docx-code-line">tab= <span style="font-weight:bold">[ &lt;1 empty item&gt;, &#x27;eight&#x27;, &lt;1 empty item&gt;, 100 ] </span>, length=<span style="font-weight:bold">[ 4 ]</span></span>
-<span class="docx-code-line">-------------------------------</span>
-<span class="docx-code-line">tab.toString=<span style="font-weight:bold">[ ,eight,,100 ]</span></span>
-<span class="docx-code-line">-------------------------------</span>
-<span class="docx-code-line">key=<span style="font-weight:bold">[ 0 ]</span>, value=<span style="font-weight:bold">[ undefined ]</span></span>
-<span class="docx-code-line">key=<span style="font-weight:bold">[ 1 ]</span>, value=<span style="font-weight:bold">[ eight ]</span></span>
-<span class="docx-code-line">key=<span style="font-weight:bold">[ 2 ]</span>, value=<span style="font-weight:bold">[ undefined ]</span></span>
-<span class="docx-code-line">key=<span style="font-weight:bold">[ 3 ]</span>, value=<span style="font-weight:bold">[ 100 ]</span></span>
-<span class="docx-code-line">-------------------------------</span>
-<span class="docx-code-line">value=<span style="font-weight:bold">[ undefined ]</span></span>
-<span class="docx-code-line">value=<span style="font-weight:bold">[ eight ]</span></span>
-<span class="docx-code-line">value=<span style="font-weight:bold">[ undefined ]</span></span>
-<span class="docx-code-line">value=<span style="font-weight:bold">[ 100 ]</span></span>
+<p><strong>Execution</strong></p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running] </span><span style="color:#a31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\tableaux\tab-02.js&quot;</span></span>
+<span class="odt-code-line">tab= <span style="font-weight:bold">[] , length=[ 0 ]</span></span>
+<span class="odt-code-line">-------------------------------</span>
+<span class="odt-code-line">tab= <span style="font-weight:bold">[ &lt;1 empty item&gt;, &#x27;eight&#x27;, &lt;1 empty item&gt;, 100 ] </span>, length=<span style="font-weight:bold">[ 4 ]</span></span>
+<span class="odt-code-line">-------------------------------</span>
+<span class="odt-code-line">tab.toString=<span style="font-weight:bold">[ ,eight,,100 ]</span></span>
+<span class="odt-code-line">-------------------------------</span>
+<span class="odt-code-line">key=<span style="font-weight:bold">[ 0 ]</span>, value=<span style="font-weight:bold">[ undefined ]</span></span>
+<span class="odt-code-line">key=<span style="font-weight:bold">[ 1 ]</span>, value=<span style="font-weight:bold">[ eight ]</span></span>
+<span class="odt-code-line">key=<span style="font-weight:bold">[ 2 ]</span>, value=<span style="font-weight:bold">[ undefined ]</span></span>
+<span class="odt-code-line">key=<span style="font-weight:bold">[ 3 ]</span>, value=<span style="font-weight:bold">[ 100 ]</span></span>
+<span class="odt-code-line">-------------------------------</span>
+<span class="odt-code-line">value=<span style="font-weight:bold">[ undefined ]</span></span>
+<span class="odt-code-line">value=<span style="font-weight:bold">[ eight ]</span></span>
+<span class="odt-code-line">value=<span style="font-weight:bold">[ undefined ]</span></span>
+<span class="odt-code-line">value=<span style="font-weight:bold">[ 100 ]</span></span>
 </code></pre></div>
 
-<h2 id="43-script-tab-03">4.3. <a id="refheadingtoc2042053980233556"></a><span>script &#91;tab-03&#93;</span></h2>
-<p><span>This script demonstrates various methods of the </span><b>&#91;array&#93; </b><span>object.</span></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-csharp">
-<span class="docx-code-line"><span style="color:#A31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line">// An array can contain different types of data</span>
-<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">tab = </span><span style="font-weight:bold;color:#000000">[1, 2, &quot;one&quot;, &quot;two&quot;, true, [10, 20]</span><span style="color:#000000">, { prop1: 10, prop2: </span><span style="color:#A31515">&quot;abc&quot; </span><span style="color:#000000">}];</span></span>
-<span class="docx-code-line">// console.log can display the contents of an array</span>
-<span class="docx-code-line">show(1);</span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span>
-<span class="docx-code-line">show(2);</span>
-<span class="docx-code-line">// Iterate through the array using foreach</span>
-<span class="docx-code-line">tab.forEach(element =&gt; {</span>
-<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">&quot;element=&quot;</span><span style="color:#000000">, element, </span><span style="color:#0000FF">typeof </span><span style="color:#000000">(element));</span></span>
-<span class="docx-code-line">});</span>
-<span class="docx-code-line"><span style="color:#000000">show(</span><span style="color:#A31515">&quot;2b&quot;</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line">// another way to do the same thing</span>
-<span class="docx-code-line"><span style="color:#000000">tab.forEach(</span><span style="color:#0000FF">function </span><span style="color:#000000">(element) {</span></span>
-<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">&quot;element=&quot;</span><span style="color:#000000">, element, </span><span style="color:#0000FF">typeof </span><span style="color:#000000">(element));</span></span>
-<span class="docx-code-line">});</span>
-<span class="docx-code-line">show(3);</span>
-<span class="docx-code-line">// Iterate through the array using for</span>
-<span class="docx-code-line"><span style="color:#0000FF">for </span><span style="color:#000000">(</span><span style="color:#0000FF">let </span><span style="color:#000000">i = 0; i &lt; tab.length; i++) {</span></span>
-<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">&quot;i=&quot;</span><span style="color:#000000">, i, </span><span style="color:#A31515">&quot;tab</span><span style="font-weight:bold;color:#A31515">[i]</span><span style="color:#A31515">=&quot;</span><span style="color:#000000">, tab</span><span style="font-weight:bold;color:#000000">[i]</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line">show(4);</span>
-<span class="docx-code-line">// modify tab<span style="font-weight:bold">[i]</span></span>
-<span class="docx-code-line">tab<span style="font-weight:bold">[5] </span>= [];</span>
-<span class="docx-code-line">// display</span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span>
-<span class="docx-code-line">show(5);</span>
-<span class="docx-code-line">// remove the last element</span>
-<span class="docx-code-line"><span style="color:#0000FF">let </span><span style="color:#000000">element = tab.pop(tab);</span></span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;element=&quot;</span><span style="color:#000000">, element, </span><span style="color:#A31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span>
-<span class="docx-code-line">show(6);</span>
-<span class="docx-code-line"><span style="color:#008000">// add an element to the end of the array</span></span>
-<span class="docx-code-line"><span style="color:#000000">tab.push(</span><span style="color:#A31515">&#x27;xyz&#x27;</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span>
-<span class="docx-code-line">show(7);</span>
-<span class="docx-code-line"><span style="color:#008000">// Add an element to the beginning of the array</span></span>
-<span class="docx-code-line">tab.unshift(1000);</span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span>
-<span class="docx-code-line">show(8);</span>
-<span class="docx-code-line"><span style="color:#008000">// Remove the first element from the array</span></span>
-<span class="docx-code-line">element = tab.shift();</span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;element=&quot;</span><span style="color:#000000">, element, </span><span style="color:#A31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span>
-<span class="docx-code-line">show(9);</span>
-<span class="docx-code-line"><span style="color:#008000">// Remove the second element from the array</span></span>
-<span class="docx-code-line">element = tab.splice(2, 1);</span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;element=&quot;</span><span style="color:#000000">, element, </span><span style="color:#A31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span>
-<span class="docx-code-line">show(10);</span>
-<span class="docx-code-line"><span style="color:#008000">// Remove two elements from the array starting with element #1</span></span>
-<span class="docx-code-line">element = tab.splice(1, 2);</span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;element=&quot;</span><span style="color:#000000">, element, </span><span style="color:#A31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line">// function</span>
-<span class="docx-code-line"><span style="color:#0000FF">function </span><span style="color:#000000">show(param) {</span></span>
-<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">&quot;</span><span style="font-weight:bold;color:#A31515">[&quot;, param, &quot;:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: ]</span><span style="color:#A31515">&quot;</span><span style="color:#000000">);</span></span>
-<span class="docx-code-line">}</span>
+<p><a id="refheadingtoc2042053980233556"></a></p>
+<h2 id="43-script-tab-03">4.3. <span style="color: #4f81bd">script [tab-03]</span></h2>
+<p>This script demonstrates various methods of the <strong>[array]</strong> object.</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// An array can contain different types of data</span>
+<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">tab = </span><span style="font-weight:bold;color:#000000">[1, 2, &quot;one&quot;, &quot;two&quot;, true, [10, 20]</span><span style="color:#000000">, { prop1: 10, prop2: </span><span style="color:#a31515">&quot;abc&quot; </span><span style="color:#000000">}];</span></span>
+<span class="odt-code-line">// console.log can display the contents of an array</span>
+<span class="odt-code-line">show(1);</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span>
+<span class="odt-code-line">show(2);</span>
+<span class="odt-code-line">// Iterate through the array using foreach</span>
+<span class="odt-code-line">tab.forEach(element =&gt; {</span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;element=&quot;</span><span style="color:#000000">, element, </span><span style="color:#0000ff">typeof </span><span style="color:#000000">(element));</span></span>
+<span class="odt-code-line">});</span>
+<span class="odt-code-line"><span style="color:#000000">show(</span><span style="color:#a31515">&quot;2b&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">// another way to do the same thing</span>
+<span class="odt-code-line"><span style="color:#000000">tab.forEach(</span><span style="color:#0000ff">function </span><span style="color:#000000">(element) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;element=&quot;</span><span style="color:#000000">, element, </span><span style="color:#0000ff">typeof </span><span style="color:#000000">(element));</span></span>
+<span class="odt-code-line">});</span>
+<span class="odt-code-line">show(3);</span>
+<span class="odt-code-line">// Iterate through the array using for</span>
+<span class="odt-code-line"><span style="color:#0000ff">for </span><span style="color:#000000">(</span><span style="color:#0000ff">let </span><span style="color:#000000">i = 0; i &lt; tab.length; i++) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;i=&quot;</span><span style="color:#000000">, i, </span><span style="color:#a31515">&quot;tab</span><span style="font-weight:bold;color:#a31515">[i]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, tab</span><span style="font-weight:bold;color:#000000">[i]</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">show(4);</span>
+<span class="odt-code-line">// modify tab<span style="font-weight:bold">[i]</span></span>
+<span class="odt-code-line">tab<span style="font-weight:bold">[5] </span>= [];</span>
+<span class="odt-code-line">// display</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span>
+<span class="odt-code-line">show(5);</span>
+<span class="odt-code-line">// remove the last element</span>
+<span class="odt-code-line"><span style="color:#0000ff">let </span><span style="color:#000000">element = tab.pop(tab);</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;element=&quot;</span><span style="color:#000000">, element, </span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span>
+<span class="odt-code-line">show(6);</span>
+<span class="odt-code-line"><span style="color:#008000">// add an element to the end of the array</span></span>
+<span class="odt-code-line"><span style="color:#000000">tab.push(</span><span style="color:#a31515">&#x27;xyz&#x27;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span>
+<span class="odt-code-line">show(7);</span>
+<span class="odt-code-line"><span style="color:#008000">// Add an element to the beginning of the array</span></span>
+<span class="odt-code-line">tab.unshift(1000);</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span>
+<span class="odt-code-line">show(8);</span>
+<span class="odt-code-line"><span style="color:#008000">// Remove the first element from the array</span></span>
+<span class="odt-code-line">element = tab.shift();</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;element=&quot;</span><span style="color:#000000">, element, </span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span>
+<span class="odt-code-line">show(9);</span>
+<span class="odt-code-line"><span style="color:#008000">// Remove the second element from the array</span></span>
+<span class="odt-code-line">element = tab.splice(2, 1);</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;element=&quot;</span><span style="color:#000000">, element, </span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span>
+<span class="odt-code-line">show(10);</span>
+<span class="odt-code-line"><span style="color:#008000">// Remove two elements from the array starting with element #1</span></span>
+<span class="odt-code-line">element = tab.splice(1, 2);</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;element=&quot;</span><span style="color:#000000">, element, </span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// function</span>
+<span class="odt-code-line"><span style="color:#0000ff">function </span><span style="color:#000000">show(param) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[&quot;, param, &quot;:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: ]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">}</span>
 </code></pre></div>
 
-<p><b>Comments</b></p>
+<p><strong>Comments</strong></p>
 <ul>
-<li><span>The difference between PHP arrays and JavaScript arrays is illustrated by lines 3 and 24:</span><ul>
-<li><span>Line 3 declares the variable </span><b>&#91;tab&#93; </b><span>as a constant;</span></li>
-<li><span>Line 24 modifies the element tab</span><b>&#91;5&#93;</b><span>;</span></li>
-</ul>
-</li>
+  <li>The difference between PHP arrays and JavaScript arrays is illustrated by lines 3 and 24:
+    <ul>
+      <li>Line 3 declares the variable <b>[tab] </b>as a constant;
+      </li>
+      <li>Line 24 modifies the element tab<b>[5]</b>;
+      </li>
+    </ul>
+  </li>
 </ul>
 
-<p><span>In line 3, it is the pointer pointing to the array that is declared a constant, not the array itself. The array itself can be modified.</span></p>
+<p>In line 3, it is the pointer pointing to the array that is declared a constant, not the array itself. The array itself can be modified.</p>
 <ul>
-<li><span>Lines 14–16: The </span><b>&#91;tab&#93; </b><span>array is iterated over using the </span><b>&#91;forEach&#93; </b><span>method of the </span><b>&#91;tab&#93; </b><span>array. This method takes as a parameter the definition of a function, which could be called a literal function. This function takes one parameter: the current element of the </span><b>&#91;tab&#93; </b><span>array. The function is called for each element of the array. This type of syntax is common in JavaScript;</span></li>
-<li><span>lines 9–10: we use a different syntax to define the function. Instead of writing:</span><ul>
-<li><b>function(p1, p2, …, pn){….}</b></li>
-</ul>
-</li>
+  <li>Lines 14–16: The <b>[tab] </b>array is iterated over using the <b>[forEach] </b>method of the <b>[tab] </b>array. This method takes as a parameter the definition of a function, which could be called a literal function. This function takes one parameter: the current element of the <b>[tab] </b>array. The function is called for each element of the array. This type of syntax is common in JavaScript;
+  </li>
+  <li>lines 9–10: we use a different syntax to define the function. Instead of writing:
+    <ul>
+      <li><b>function(p1, p2, …, pn){….}</b>
+      </li>
+    </ul>
+  </li>
 </ul>
 
-<p><span>we write:</span></p>
+<p>we write:</p>
 <ul>
-<li><span>(continued)</span><ul>
-<li><b>(p1,p2, ..,pn)=&gt;{.…}</b><span>. This is called the “arrow” notation;</span></li>
-</ul>
-</li>
-<li><span>The rest of the code is explained by the comments;</span></li>
+  <li>(continued)
+    <ul>
+      <li><b>(p1,p2, ..,pn)=&gt;{.…}</b>. This is called the “arrow” notation;
+      </li>
+    </ul>
+  </li>
+  <li>The rest of the code is explained by the comments;
+  </li>
 </ul>
 
-<p><span>From this script, note that:</span></p>
+<p>From this script, note that:</p>
 <ul>
-<li><span>an array is an object referenced by a pointer;</span></li>
-<li><span>this object has methods </span><b>&#91;forEach, pop, push, shift, unshift&#93;</b><span>;</span></li>
+  <li>an array is an object referenced by a pointer;
+  </li>
+  <li>this object has methods <b>[forEach, pop, push, shift, unshift]</b>;
+<a id="refheadingtoc2042073980233556"></a>
+
+## 4.4. <span style="color: #4f81bd">script [tab-04]</span>
+
+  </li>
 </ul>
 
-<h2 id="44-script-tab-04">4.4. <a id="refheadingtoc2042073980233556"></a><span>script &#91;tab-04&#93;</span></h2>
-<p><span>This script introduces other methods of array objects.</span></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-javascript">
-<span class="docx-code-line"><span style="color:#A31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line">// array manipulation method</span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line">// an array</span>
-<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">tab = [];</span></span>
-<span class="docx-code-line"><span style="color:#0000FF">for </span><span style="color:#000000">(</span><span style="color:#0000FF">let </span><span style="color:#000000">i = 0; i &lt; 10; i++) {</span></span>
-<span class="docx-code-line">  tab<span style="font-weight:bold">[i] </span>= i * 10;</span>
-<span class="docx-code-line">}</span>
-<span class="docx-code-line">// display</span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span>
-<span class="docx-code-line">// map</span>
-<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">tab2 = tab.map(element =&gt; {</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">return </span><span style="color:#000000">{ prop1: element, prop2: element * element }</span></span>
-<span class="docx-code-line">});</span>
-<span class="docx-code-line">// display</span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;tab2=&quot;</span><span style="color:#000000">, tab2);</span></span>
-<span class="docx-code-line">// reduce without initial value</span>
-<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">sum = tab.reduce((accumulator, currentValue) =&gt; accumulator + currentValue);</span></span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;sum tab=&quot;</span><span style="color:#000000">, sum);</span></span>
-<span class="docx-code-line">// reduce with initial value</span>
-<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">sum2 = tab.reduce((accumulator, currentValue) =&gt; accumulator + currentValue, 10);</span></span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;sum2 tab=&quot;</span><span style="color:#000000">, sum2);</span></span>
-<span class="docx-code-line">// filter</span>
-<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">tab4 = tab.filter((element) =&gt; {</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">if </span><span style="color:#000000">(element &gt; 50) {</span></span>
-<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">return </span><span style="color:#000000">element;</span></span>
-<span class="docx-code-line">  }</span>
-<span class="docx-code-line">});</span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;tab4=&quot;</span><span style="color:#000000">, tab4);</span></span>
-<span class="docx-code-line">// find</span>
-<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">element1 = tab.find((element) =&gt; (element &gt; 20));</span></span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;element1=&quot;</span><span style="color:#000000">, element1);</span></span>
-<span class="docx-code-line">// findIndex</span>
-<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">index1 = tab.findIndex((element) =&gt; (element === 20));</span></span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;index1 20=&quot;</span><span style="color:#000000">, index1);</span></span>
-<span class="docx-code-line">// indexOf</span>
-<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">index2 = tab.indexOf(30);</span></span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;index2 30=&quot;</span><span style="color:#000000">, index2);</span></span>
-<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">index3 = tab.indexOf(31);</span></span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;index3 31=&quot;</span><span style="color:#000000">, index3);</span></span>
-<span class="docx-code-line">// lastIndexOf</span>
-<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">index4 = </span><span style="font-weight:bold;color:#000000">[4, 5, 4, 2]</span><span style="color:#000000">.lastIndexOf(4);</span></span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;index4 4=&quot;</span><span style="color:#000000">, index4);</span></span>
-<span class="docx-code-line">// sort</span>
-<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">tab5 = </span><span style="font-weight:bold;color:#000000">[4, 5, 4, 2]</span><span style="color:#000000">.sort();</span></span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;tab5=&quot;</span><span style="color:#000000">, tab5);</span></span>
-<span class="docx-code-line">// reverse sort</span>
-<span class="docx-code-line"><span style="color:#0000FF">const </span><span style="color:#000000">tab6 = </span><span style="font-weight:bold;color:#000000">[4, 5, 4, 2]</span><span style="color:#000000">.sort((e1, e2) =&gt; {</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">if </span><span style="color:#000000">(e1 &gt; e2) {</span></span>
-<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">return </span><span style="color:#000000">-1;</span></span>
-<span class="docx-code-line">  }</span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">else if </span><span style="color:#000000">(e1 === e2) {</span></span>
-<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">return</span><span style="color:#000000"> 0;</span></span>
-<span class="docx-code-line"><span style="color:#000000">  } </span><span style="color:#0000FF">else </span><span style="color:#000000">{</span></span>
-<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">return </span><span style="color:#000000">+1;</span></span>
-<span class="docx-code-line">  }</span>
-<span class="docx-code-line">});</span>
-<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;tab6=&quot;</span><span style="color:#000000">, tab6);</span></span>
+<p>This script introduces other methods of array objects.</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// array manipulation method</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// an array</span>
+<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">tab = [];</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">for </span><span style="color:#000000">(</span><span style="color:#0000ff">let </span><span style="color:#000000">i = 0; i &lt; 10; i++) {</span></span>
+<span class="odt-code-line">  tab<span style="font-weight:bold">[i] </span>= i * 10;</span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// display</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span>
+<span class="odt-code-line">// map</span>
+<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">tab2 = tab.map(element =&gt; {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">return </span><span style="color:#000000">{ prop1: element, prop2: element * element }</span></span>
+<span class="odt-code-line">});</span>
+<span class="odt-code-line">// display</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab2=&quot;</span><span style="color:#000000">, tab2);</span></span>
+<span class="odt-code-line">// reduce without initial value</span>
+<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">sum = tab.reduce((accumulator, currentValue) =&gt; accumulator + currentValue);</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;sum tab=&quot;</span><span style="color:#000000">, sum);</span></span>
+<span class="odt-code-line">// reduce with initial value</span>
+<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">sum2 = tab.reduce((accumulator, currentValue) =&gt; accumulator + currentValue, 10);</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;sum2 tab=&quot;</span><span style="color:#000000">, sum2);</span></span>
+<span class="odt-code-line">// filter</span>
+<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">tab4 = tab.filter((element) =&gt; {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">if </span><span style="color:#000000">(element &gt; 50) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">return </span><span style="color:#000000">element;</span></span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line">});</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab4=&quot;</span><span style="color:#000000">, tab4);</span></span>
+<span class="odt-code-line">// find</span>
+<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">element1 = tab.find((element) =&gt; (element &gt; 20));</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;element1=&quot;</span><span style="color:#000000">, element1);</span></span>
+<span class="odt-code-line">// findIndex</span>
+<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">index1 = tab.findIndex((element) =&gt; (element === 20));</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;index1 20=&quot;</span><span style="color:#000000">, index1);</span></span>
+<span class="odt-code-line">// indexOf</span>
+<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">index2 = tab.indexOf(30);</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;index2 30=&quot;</span><span style="color:#000000">, index2);</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">index3 = tab.indexOf(31);</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;index3 31=&quot;</span><span style="color:#000000">, index3);</span></span>
+<span class="odt-code-line">// lastIndexOf</span>
+<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">index4 = </span><span style="font-weight:bold;color:#000000">[4, 5, 4, 2]</span><span style="color:#000000">.lastIndexOf(4);</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;index4 4=&quot;</span><span style="color:#000000">, index4);</span></span>
+<span class="odt-code-line">// sort</span>
+<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">tab5 = </span><span style="font-weight:bold;color:#000000">[4, 5, 4, 2]</span><span style="color:#000000">.sort();</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab5=&quot;</span><span style="color:#000000">, tab5);</span></span>
+<span class="odt-code-line">// reverse sort</span>
+<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">tab6 = </span><span style="font-weight:bold;color:#000000">[4, 5, 4, 2]</span><span style="color:#000000">.sort((e1, e2) =&gt; {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">if </span><span style="color:#000000">(e1 &gt; e2) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">return </span><span style="color:#000000">-1;</span></span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">else if </span><span style="color:#000000">(e1 === e2) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> 0;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  } </span><span style="color:#0000ff">else </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">return </span><span style="color:#000000">+1;</span></span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line">});</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab6=&quot;</span><span style="color:#000000">, tab6);</span></span>
 </code></pre></div>
 
-<p><b>Comments</b></p>
+<p><strong>Comments</strong></p>
 <ul>
-<li><span>lines 13–15: The </span><b>&#91;map&#93; </b><span>method takes a transformation function as a parameter. This function is called repeatedly for each element in the array. It is responsible for transforming the element into something else—in this case, an object with the properties </span><b>&#91;prop1, prop2&#93;</b><span>. The </span><b>&#91;map&#93; </b><span>method returns a new array. The original array remains unchanged:</span>
-<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
-<span class="docx-code-line">tab= <span style="font-weight:bold">[ 0, 10, 20, 30, 40, 50, 60, 70, 80, 90 ]</span></span>
-<span class="docx-code-line">tab2= [ { prop1: 0, prop2: 0 },</span>
-<span class="docx-code-line">{ prop1: 10, prop2: 100 },</span>
-<span class="docx-code-line">{ prop1: 20, prop2: 400 },</span>
-<span class="docx-code-line">{ prop1: 30, prop2: 900 },</span>
-<span class="docx-code-line">{ prop1: 40, prop2: 1600 },</span>
-<span class="docx-code-line">{ prop1: 50, prop2: 2500 },</span>
-<span class="docx-code-line">{ prop1: 60, prop2: 3600 },</span>
-<span class="docx-code-line">{ prop1: 70, prop2: 4900 },</span>
-<span class="docx-code-line">{ prop1: 80, prop2: 6400 },</span>
-<span class="docx-code-line">{ prop1: 90, prop2: 8100 } ]</span>
+  <li>lines 13–15: The <b>[map] </b>method takes a transformation function as a parameter. This function is called repeatedly for each element in the array. It is responsible for transforming the element into something else—in this case, an object with the properties <b>[prop1, prop2]</b>. The <b>[map] </b>method returns a new array. The original array remains unchanged:
+  </li>
+</ul>
+
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line">tab= <span style="font-weight:bold">[ 0, 10, 20, 30, 40, 50, 60, 70, 80, 90 ]</span></span>
+<span class="odt-code-line">tab2= [ { prop1: 0, prop2: 0 },</span>
+<span class="odt-code-line">{ prop1: 10, prop2: 100 },</span>
+<span class="odt-code-line">{ prop1: 20, prop2: 400 },</span>
+<span class="odt-code-line">{ prop1: 30, prop2: 900 },</span>
+<span class="odt-code-line">{ prop1: 40, prop2: 1600 },</span>
+<span class="odt-code-line">{ prop1: 50, prop2: 2500 },</span>
+<span class="odt-code-line">{ prop1: 60, prop2: 3600 },</span>
+<span class="odt-code-line">{ prop1: 70, prop2: 4900 },</span>
+<span class="odt-code-line">{ prop1: 80, prop2: 6400 },</span>
+<span class="odt-code-line">{ prop1: 90, prop2: 8100 } ]</span>
 </code></pre></div>
 
-</li>
-<li><span>line 20: The </span><b>&#91;reduce&#93; </b><span>method takes as a parameter a two-argument function that is called repeatedly for each element of the array. This function takes two arguments:</span><ul>
-<li><b>&#91;currentValue&#93; </b><span>is the current element of the array;</span></li>
-<li><b>&#91;accumulator&#93; </b><span>is the last result obtained by the function. If no initial value is provided for this accumulator, then it will be 0;</span></li>
-<li><span>the first time the accumulation function is called, it returns </span><b>&#91;0+tab&#91;0&#93;</b><span>&#93;. This value is assigned to the accumulator;</span></li>
-<li><span>the second time, it returns accumulator+tab</span><b>&#91;1&#93;</b><span>, i.e., tab</span><b>&#91;0&#93;</b><span>+tab</span><b>&#91;1&#93;</b><span>;</span></li>
-<li><span>The third time, it returns accumulator + tab</span><b>&#91;2&#93;</b><span>, which is tab</span><b>&#91;0&#93; </b><span>+ tab</span><b>&#91;1&#93; </b><span>+ tab</span><b>&#91;2&#93;</b><span>;</span></li>
-<li><span>etc. Ultimately, the accumulator will represent the sum of all elements in the array </span><b>&#91;tab&#93;</b><span>;</span></li>
-</ul>
-</li>
-<li><span>line 26: the </span><b>&#91;filter&#93; </b><span>method takes a filtering function as a parameter. This function is called repeatedly for each element of the array and receives that element as a parameter. It must return:</span><ul>
-<li><b>&#91;true&#93; </b><span>if the element should be kept;</span></li>
-<li><b>&#91;false&#93; </b><span>otherwise;</span></li>
-</ul>
-</li>
-<li><span>line 33: the </span><b>&#91;find&#93; </b><span>method takes a search function as a parameter. This function is called repeatedly for each element of the array and receives that element as a parameter. It must return </span><b>&#91;true&#93; </b><span>if the received element satisfies the search criteria. The search then stops. The </span><b>&#91;find&#93; </b><span>method therefore returns 0 or 1 element;</span></li>
-<li><span>line 36: the </span><b>&#91;findIndex&#93; </b><span>method works like the </span><b>&#91;find&#93; </b><span>method, but instead of returning the found element, it returns its index in the array;</span></li>
-<li><span>lines 39, 41: the </span><b>&#91;indexOf(value)&#93; </b><span>method searches for </span><b>&#91;value&#93; </b><span>in the array and returns its index, or -1 if it is not found;</span></li>
-<li><span>line 44: the </span><b>&#91;lastIndexOf(value)&#93; </b><span>method works like the </span><b>&#91;indexOf(value)&#93; </b><span>method but starts its search from the end of the array;</span></li>
-<li><span>line 47: the </span><b>&#91;sort&#93; </b><span>method without parameters returns an array sorted in natural order (numbers, strings);</span></li>
-<li><span>line 50: when the natural order is not suitable, you must pass a function with two parameters (e1, e2) to the </span><b>&#91;sort&#93; </b><span>method, which returns:</span><ul>
-<li><span>+1 if e1 should be sorted after e2;</span></li>
-<li><span>-1 if e1 should be sorted before e2;</span></li>
-<li><span>0 if both elements should have the same rank;</span></li>
-</ul>
-</li>
+<ul>
+  <li>line 20: The <b>[reduce] </b>method takes as a parameter a two-argument function that is called repeatedly for each element of the array. This function takes two arguments:
+    <ul>
+      <li><b>[currentValue] </b>is the current element of the array;
+      </li>
+      <li><b>[accumulator] </b>is the last result obtained by the function. If no initial value is provided for this accumulator, then it will be 0;
+      </li>
+      <li>the first time the accumulation function is called, it returns <b>[0+tab[0]</b>]. This value is assigned to the accumulator;
+      </li>
+      <li>the second time, it returns accumulator+tab<b>[1]</b>, i.e., tab<b>[0]</b>+tab<b>[1]</b>;
+      </li>
+      <li>The third time, it returns accumulator + tab<b>[2]</b>, which is tab<b>[0] </b>+ tab<b>[1] </b>+ tab<b>[2]</b>;
+      </li>
+      <li>etc. Ultimately, the accumulator will represent the sum of all elements in the array <b>[tab]</b>;
+      </li>
+    </ul>
+  </li>
+  <li>line 26: the <b>[filter] </b>method takes a filtering function as a parameter. This function is called repeatedly for each element of the array and receives that element as a parameter. It must return:
+    <ul>
+      <li><b>[true] </b>if the element should be kept;
+      </li>
+      <li><b>[false] </b>otherwise;
+      </li>
+    </ul>
+  </li>
+  <li>line 33: the <b>[find] </b>method takes a search function as a parameter. This function is called repeatedly for each element of the array and receives that element as a parameter. It must return <b>[true] </b>if the received element satisfies the search criteria. The search then stops. The <b>[find] </b>method therefore returns 0 or 1 element;
+  </li>
+  <li>line 36: the <b>[findIndex] </b>method works like the <b>[find] </b>method, but instead of returning the found element, it returns its index in the array;
+  </li>
+  <li>lines 39, 41: the <b>[indexOf(value)] </b>method searches for <b>[value] </b>in the array and returns its index, or -1 if it is not found;
+  </li>
+  <li>line 44: the <b>[lastIndexOf(value)] </b>method works like the <b>[indexOf(value)] </b>method but starts its search from the end of the array;
+  </li>
+  <li>line 47: the <b>[sort] </b>method without parameters returns an array sorted in natural order (numbers, strings);
+  </li>
+  <li>line 50: when the natural order is not suitable, you must pass a function with two parameters (e1, e2) to the <b>[sort] </b>method, which returns:
+    <ul>
+      <li>+1 if e1 should be sorted after e2;
+      </li>
+      <li>-1 if e1 should be sorted before e2;
+      </li>
+      <li>0 if both elements should have the same rank;
+      </li>
+    </ul>
+  </li>
 </ul>
 
-<p><span>The function passed as a parameter to the </span><b>&#91;sort&#93; </b><span>method is repeatedly called by it to compare two elements of the array;</span></p>
+<p>The function passed as a parameter to the <strong>[sort]</strong> method is repeatedly called by it to compare two elements of the array;</p>
 
 
 
