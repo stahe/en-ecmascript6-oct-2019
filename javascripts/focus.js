@@ -84,8 +84,8 @@ document.addEventListener("DOMContentLoaded",function(){
 });
 // --- Copy-to-clipboard for code blocks (DOCX converter) ---
 (function() {
-  var COPY_LABEL = "Copier";
-  var COPIED_LABEL = "Copié";
+  var COPY_LABEL = "Copy";
+  var COPIED_LABEL = "Copied";
   var ONLY_RECOGNIZED = true;
   var MIN_LINES = 0;
   var PYGMENTS_HEURISTIC = true;
