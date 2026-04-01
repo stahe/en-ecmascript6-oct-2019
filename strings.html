@@ -1018,7 +1018,7 @@
 <span class="odt-code-line"><span style="color:#0000ff">import </span><span style="color:#000000">{ sprintf } </span><span style="color:#0000ff">from </span><span style="color:#a31515">&#x27;sprintf-js&#x27;</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line">// string</span>
 <span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">string = </span><span style="color:#a31515">&quot;Introduction to JavaScript by Example&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"><span style="color:#008000">// substr method</span></span>
+<span class="odt-code-line">// substr method</span>
 <span class="odt-code-line"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">.substr(3,2)=</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, string, string.substr(3, 2)));</span></span>
 </code></pre></div>
 
@@ -1028,51 +1028,51 @@
 <p>Here is what the documentation says about the <strong>[sprintf]</strong> function:</p>
 <p><em>The placeholders in the format string are marked by % and are followed by one or more of these elements, in this order:</em></p>
 <ul>
-  <li><i>An optional number followed by a $ sign that selects which argument index to use for the value. If not specified, arguments will be placed in the same order as the placeholders in the input string.</i>
+  <li>An optional number followed by a $ sign that selects which argument index to use for the value. If not specified, arguments will be placed in the same order as the placeholders in the input string.
   </li>
-  <li><i>An optional + sign that forces the result to be preceded by a plus or minus sign for numeric values. By default, only the - sign is used for negative numbers.</i>
+  <li>An optional + sign that forces the result to be preceded by a plus or minus sign for numeric values. By default, only the - sign is used for negative numbers.
   </li>
-  <li><i>An optional padding specifier that specifies which character to use for padding (if specified). Possible values are 0 or any other character preceded by a &#x27; (single quote). The default is to pad with spaces.</i>
+  <li>An optional padding specifier that specifies which character to use for padding (if specified). Possible values are 0 or any other character preceded by a &#x27; (single quote). The default is to pad with spaces.
   </li>
-  <li><i>An optional - sign that causes sprintf to left-align the result of this placeholder. The default is to right-align the result.</i>
+  <li>An optional - sign that causes sprintf to left-align the result of this placeholder. The default is to right-align the result.
   </li>
-  <li><i>An optional number specifying the number of characters the result should contain. If the value to be returned is shorter than this number, the result will be padded. When used with the j (JSON) type specifier, the padding length specifies the tab size used for indentation.</i>
+  <li>An optional number specifying the number of characters the result should contain. If the value to be returned is shorter than this number, the result will be padded. When used with the j (JSON) type specifier, the padding length specifies the tab size used for indentation.
   </li>
-  <li><i>An optional precision modifier, consisting of a . (dot) followed by a number, which specifies how many digits should be displayed for floating-point numbers. When used with the g type specifier, it specifies the number of significant digits. When used on a string, it causes the result to be truncated.</i>
+  <li>An optional precision modifier, consisting of a . (dot) followed by a number, which specifies how many digits should be displayed for floating-point numbers. When used with the g type specifier, it specifies the number of significant digits. When used on a string, it causes the result to be truncated.
   </li>
-  <li><i>A type specifier that can be any of:</i>
+  <li>A type specifier that can be any of:
     <ul>
-      <li><i>% — yields a literal % character</i>
+      <li>% — yields a literal % character
       </li>
-      <li><i>b — yields an integer as a binary number</i>
+      <li>b — yields an integer as a binary number
       </li>
-      <li><i>c — yields an integer as the character with that ASCII value</i>
+      <li>c — yields an integer as the character with that ASCII value
       </li>
-      <li><i>d or i — yields an integer as a signed decimal number</i>
+      <li>d or i — yields an integer as a signed decimal number
       </li>
-      <li><i>e — yields a float using scientific notation</i>
+      <li>e — yields a float using scientific notation
       </li>
-      <li><i>u — yields an integer as an unsigned decimal number</i>
+      <li>u — yields an integer as an unsigned decimal number
       </li>
-      <li><i>f — returns a float as is; see notes on precision above</i>
+      <li>f — returns a float as is; see notes on precision above
       </li>
-      <li><i>g — returns a float as is; see notes on precision above</i>
+      <li>g — returns a float as is; see notes on precision above
       </li>
-      <li><i>o — returns an integer as an octal number</i>
+      <li>o — returns an integer as an octal number
       </li>
-      <li><i>s — returns a string as is</i>
+      <li>s — returns a string as is
       </li>
-      <li><i>t — returns true or false</i>
+      <li>t — returns true or false
       </li>
       <li><i>T — returns the type of the </i><a href="https://www.npmjs.com/package/sprintf-js#fn-1"><u><span style="color: #0563c1">argument1</span></u></a>
       </li>
-      <li><i>v — returns the primitive value of the specified argument</i>
+      <li>v — returns the primitive value of the specified argument
       </li>
-      <li><i>x — returns an integer as a hexadecimal number (lowercase)</i>
+      <li>x — returns an integer as a hexadecimal number (lowercase)
       </li>
-      <li><i>X — yields an integer as a hexadecimal number (uppercase)</i>
+      <li>X — yields an integer as a hexadecimal number (uppercase)
       </li>
-      <li><i>j — returns a JavaScript object or array as a JSON-encoded string</i>
+      <li>j — returns a JavaScript object or array as a JSON-encoded string
       </li>
     </ul>
   </li>
