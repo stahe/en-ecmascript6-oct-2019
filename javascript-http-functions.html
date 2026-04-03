@@ -721,6 +721,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#124-script-fetch-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.4. script [fetch-02]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#125-script-axios-01" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -747,6 +758,17 @@
     <span class="md-ellipsis">
       
         12.7. script [axios-03]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#128-script-axios-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.8. script [axios-04]
       
     </span>
   </a>
@@ -1248,13 +1270,10 @@
   <li>line 24: we can see that the HTTP status code of the server response is 400, an error code. However, <b>[fetch] </b>did not throw an exception. As long as <b>[fetch] </b>receives a response from the server, it processes it and does not throw an exception;
   </li>
   <li>lines 41–43: the response obtained by the asynchronous function <b>[main]</b>;
-<a id="refheadingtoc225398640539168"></a>
-
-## 12.4. <span style="color: #4f81bd">script [fetch-02]</span>
-
   </li>
 </ul>
-
+<p><a id="refheadingtoc225398640539168"></a></p>
+<h2 id="124-script-fetch-02">12.4. <span style="color: #4f81bd">script [fetch-02]</span></h2>
 <p>The following script reuses the <strong>[fetch-01]</strong> script while removing all unnecessary details:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
@@ -2102,14 +2121,11 @@
 
 <ul>
   <li>lines 9-12: user authentication fails: the server did not retain the fact that a JSON session had been initiated. This is because the session cookie sent in response to the first <b>[init-session] </b>request was not sent back;
-<a id="axios04"></a>
-<a id="refheadingtoc2152561731793072"></a>
-
-## 12.8. <span style="color: #4f81bd">script [axios-04]</span>
-
   </li>
 </ul>
-
+<p><a id="axios04"></a>
+<a id="refheadingtoc2152561731793072"></a></p>
+<h2 id="128-script-axios-04">12.8. <span style="color: #4f81bd">script [axios-04]</span></h2>
 <p>The <strong>[axios-04]</strong> script introduces two improvements to the <strong>[axios-03]</strong> script:</p>
 <ul>
   <li>it handles the session cookie;

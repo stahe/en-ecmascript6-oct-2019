@@ -731,6 +731,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="14.2. HTTP Client 1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1421-the-dao-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.2.1. The [dao] layer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1422-the-main1js-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.2.2. The [main1.js] script
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -741,6 +769,67 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="14.3. HTTP 2 Client">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1431-the-javascript-business-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.3.1. The JavaScript [Business] class
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1432-the-javascript-class-dao2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.3.2. The JavaScript class [Dao2]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1433-modification-of-the-tax-calculation-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.3.3. Modification of the tax calculation server
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1434-postman-server-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.3.4. [Postman] server tests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1435-the-main-script-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.3.5. The main script [main]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -768,6 +857,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#1442-installing-project-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.4.2. Installing project dependencies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#1443-webpack-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -783,6 +883,17 @@
     <span class="md-ellipsis">
       
         14.4.4. Compiling and running the project
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1445-testing-the-javascript-client-for-the-tax-calculation-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.4.5. Testing the JavaScript client for the tax calculation server
       
     </span>
   </a>
@@ -873,13 +984,10 @@
   <li>the <b>[DAO] </b>layer as a class;
   </li>
   <li>the <b>[main] </b>layer as a script using this class;
-<a id="refheadingtoc225424640539168"></a>
-
-### 14.2.1. <span style="color: #4f81bd">The [dao] layer</span>
-
   </li>
 </ul>
-
+<p><a id="refheadingtoc225424640539168"></a></p>
+<h3 id="1421-the-dao-layer">14.2.1. <span style="color: #4f81bd">The [dao] layer</span></h3>
 <p>The <strong>[dao]</strong> layer will be implemented by the following class <strong>[Dao1.js]</strong>:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
@@ -1067,13 +1175,10 @@
   <li>line 121: the notation <b>[this.axios] </b>is used because here, the <b>[axios] </b>object passed to the constructor has been stored in the <b>[this.axios] </b>property;
   </li>
   <li>line 161: the <b>[Dao1] </b>class is exported so it can be used;
-<a id="refheadingtoc225426640539168"></a>
-
-### 14.2.2. <span style="color: #4f81bd">The [main1.js] script</span>
-
   </li>
 </ul>
-
+<p><a id="refheadingtoc225426640539168"></a></p>
+<h3 id="1422-the-main1js-script">14.2.2. <span style="color: #4f81bd">The [main1.js] script</span></h3>
 <p>The <strong>[main1.js]</strong> script makes a series of calls to the server using the <strong>[Dao1]</strong> class:</p>
 <ul>
   <li>initialization of a JSON session;
@@ -1322,13 +1427,10 @@
   <li>the <b>[main] </b>layer asks the <b>[business] </b>layer to perform the tax calculations;
   </li>
   <li>the <b>[business] </b>layer is independent of the <b>[DAO] </b>layer and never calls upon it;
-<a id="refheadingtoc225430640539168"></a>
-
-### 14.3.1. <span style="color: #4f81bd">The JavaScript [Business] class</span>
-
   </li>
 </ul>
-
+<p><a id="refheadingtoc225430640539168"></a></p>
+<h3 id="1431-the-javascript-business-class">14.3.1. <span style="color: #4f81bd">The JavaScript [Business] class</span></h3>
 <p>The essence of the <strong>[Business]</strong> class in PHP was described in the <a href="https://tahe.developpez.com/tutoriels-cours/php7/"><u><span style="color: #0563c1">linked</span></u></a> article. It is a rather complex piece of code that we are recalling here, not to explain it, but to be able to translate it into JavaScript:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line">&lt;?php</span>
@@ -1765,13 +1867,10 @@
   <li>The JavaScript code closely follows the PHP code;
   </li>
   <li>The <b>[Business] </b>class is exported, line 187;
-<a id="refheadingtoc225432640539168"></a>
-
-### 14.3.2. <span style="color: #4f81bd">The JavaScript class [Dao2]</span>
-
   </li>
 </ul>
-
+<p><a id="refheadingtoc225432640539168"></a></p>
+<h3 id="1432-the-javascript-class-dao2">14.3.2. <span style="color: #4f81bd">The JavaScript class [Dao2]</span></h3>
 <p><img src="images/10000000000005DF000001A53E81FA2B.png" style="width:15.91cm;height:4.457cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005DF000001A53E81FA2B.png" /></p>
 <p>The <strong>[Dao2]</strong> class implements the <strong>[dao]</strong> layer of the above JavaScript client as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
@@ -1907,13 +2006,10 @@
     </ul>
   </li>
   <li>lines 52–65: we introduce a new action <b>[get-admindata] </b>to the server. This action had not been implemented until now. We are doing so now.
-<a id="refheadingtoc225122172732026"></a>
-
-### 14.3.3. <span style="color: #4f81bd">Modification of the tax calculation server</span>
-
   </li>
 </ul>
-
+<p><a id="refheadingtoc225122172732026"></a></p>
+<h3 id="1433-modification-of-the-tax-calculation-server">14.3.3. <span style="color: #4f81bd">Modification of the tax calculation server</span></h3>
 <p>The tax calculation server must implement a new action. We will do this on version 14 of the server. The action to be implemented has the following characteristics:</p>
 <ul>
   <li>it is requested by an operation <b><span style="color: #008000">[get /main.php?action=get-admindata]</span></b><span style="color: #008000">;</span>
@@ -2399,13 +2495,10 @@
 <p><strong><span style="color: #000000">Comments</span></strong></p>
 <ul>
   <li><span style="color: #000000">In the original code, after line 30, the method </span><b><span style="color: #000000">[parent::checkForAllAttributes] </span></b><span style="color: #000000">was called. This is no longer necessary since it is now automatically handled by the method </span><b><span style="color: #000000">[parent::setFromJsonFile($jsonFilename)]</span></b><span style="color: #000000">;</span>
-<a id="refheadingtoc225434640539168"></a>
-
-### 14.3.4. <span style="color: #4f81bd">[Postman] server tests</span>
-
   </li>
 </ul>
-
+<p><a id="refheadingtoc225434640539168"></a></p>
+<h3 id="1434-postman-server-tests">14.3.4. <span style="color: #4f81bd">[Postman] server tests</span></h3>
 <p><strong>[Postman]</strong> was introduced in the <a href="https://tahe.developpez.com/tutoriels-cours/php7/"><u><span style="color: #0563c1">linked</span></u></a> article.</p>
 <p>We use the following Postman tests:</p>
 <p><img src="images/10000000000005E8000001099796212B.png" style="width:14.002cm;height:2.454cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005E8000001099796212B.png" /></p>
@@ -2415,13 +2508,10 @@
 <p><img src="images/10000000000004040000059B948EE974.png" style="width:9.52cm;height:13.289cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004040000059B948EE974.png" /></p>
 <ul>
   <li>In <b>[5-8]</b>, you can see that the attributes in the JSON string do indeed have numeric values (not strings). This result will allow the JavaScript <b>[Business] </b>class to execute normally;
-<a id="refheadingtoc225436640539168"></a>
-
-### 14.3.5. <span style="color: #4f81bd">The main script [main]</span>
-
   </li>
 </ul>
-
+<p><a id="refheadingtoc225436640539168"></a></p>
+<h3 id="1435-the-main-script-main">14.3.5. <span style="color: #4f81bd">The main script [main]</span></h3>
 <p><img src="images/10000000000005D7000001B131AB47B5.png" style="width:15.82cm;height:4.583cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005D7000001B131AB47B5.png" /></p>
 <p>The main script <strong>[main]</strong> of the JavaScript client is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
@@ -2622,14 +2712,11 @@
 <p><img src="images/1000000000000619000001A8A2CEED91.png" style="width:16.521cm;height:4.487cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000619000001A8A2CEED91.png" /></p>
 <ul>
   <li>in <b>[4-5]</b>, the project configuration file <b>[package.json] </b>generated from the various answers provided;
-<a id="webpack"></a>
-<a id="refheadingtoc225442640539168"></a>
-
-### 14.4.2. <span style="color: #4f81bd">Installing project dependencies</span>
-
   </li>
 </ul>
-
+<p><a id="webpack"></a>
+<a id="refheadingtoc225442640539168"></a></p>
+<h3 id="1442-installing-project-dependencies">14.4.2. <span style="color: #4f81bd">Installing project dependencies</span></h3>
 <p>We will install the following dependencies:</p>
 <ul>
   <li><b>[@babel/core]</b>: the core of the <b>[Babel] </b>tool <b>[https://babeljs.io], </b>which transforms ES 2015+ code into code executable on both modern and older browsers;
@@ -2967,13 +3054,10 @@
 <p><img src="images/100000000000022B000002F6F4291A79.png" style="width:4.399cm;height:6.01cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000022B000002F6F4291A79.png" /></p>
 <ul>
   <li>in <b>[2]</b>, the <b>[Auto Save] </b>option must not be checked;
-<a id="refheadingtoc225124172732026"></a>
-
-### 14.4.5. <span style="color: #4f81bd">Testing the JavaScript client for the tax calculation server</span>
-
   </li>
 </ul>
-
+<p><a id="refheadingtoc225124172732026"></a></p>
+<h3 id="1445-testing-the-javascript-client-for-the-tax-calculation-server">14.4.5. <span style="color: #4f81bd">Testing the JavaScript client for the tax calculation server</span></h3>
 <p>To test the JavaScript client for the tax calculation server, you must designate <strong>[main.js] [1]</strong> as the project’s entry point in the <strong>[webpack.config.js]</strong> file <strong>[2-3]</strong>:</p>
 <p><img src="images/10000000000003CD000001BDC8860154.png" style="width:10.299cm;height:4.711cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003CD000001BDC8860154.png" /></p>
 <p>Remember that the <strong>[main.js]</strong> script must include two additional imports compared to its version in <strong>[HTTP Client 2]</strong>:</p>

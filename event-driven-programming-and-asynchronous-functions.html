@@ -633,6 +633,39 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#111-script-async-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.1. script [async-01]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#112-script-async-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.2. script [async-02]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#113-script-async-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.3. script [async-03]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#114-script-async-04" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -648,6 +681,17 @@
     <span class="md-ellipsis">
       
         11.5. script [async-05]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#116-script-async-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.6. script [async-06]
       
     </span>
   </a>
@@ -780,13 +824,10 @@
   <li>the main script must subscribe to these events if it wants to retrieve the results of the asynchronous actions;
   </li>
   <li>the script is not finished until all events it has emitted have been processed;
-<a id="refheadingtoc225376640539168"></a>
-
-## 11.1. <span style="color: #4f81bd">script [async-01]</span>
-
   </li>
 </ul>
-
+<p><a id="refheadingtoc225376640539168"></a></p>
+<h2 id="111-script-async-01">11.1. <span style="color: #4f81bd">script [async-01]</span></h2>
 <p>The following script demonstrates the behavior of a script containing an asynchronous action.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span>;</span>
@@ -902,13 +943,10 @@
     </ul>
   </li>
   <li>the main code that launched an asynchronous task can subscribe to the events that this task is likely to emit. When one of these is emitted, the main code is notified and can trigger the execution of a specific function designed to handle the event. This function receives, as a parameter, the data that the asynchronous task associated with the emitted event;
-<a id="refheadingtoc225378640539168"></a>
-
-## 11.2. <span style="color: #4f81bd">script [async-02]</span>
-
   </li>
 </ul>
-
+<p><a id="refheadingtoc225378640539168"></a></p>
+<h2 id="112-script-async-02">11.2. <span style="color: #4f81bd">script [async-02]</span></h2>
 <p>In this script, the asynchronous function <strong>[setTimeout]</strong> will emit events to communicate data to the code that has subscribed to them.</p>
 <p>Accessing <strong>[node.js]</strong> events requires additional libraries. We choose the <strong>[events]</strong> library, which we install using <strong>[npm]</strong>:</p>
 <p><img src="images/10000000000005850000019732E59DD8.png" style="width:14.951cm;height:4.306cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005850000019732E59DD8.png" /></p>
@@ -1029,13 +1067,10 @@
   <li>line 6: processing of the <b>[‘timer1Failure’] </b>event, 1 ms later than the <b>[‘timer1Success’] </b>event;
   </li>
   <li>line 8: end of the global script with a total duration of 1.627 seconds;
-<a id="refheadingtoc225380640539168"></a>
-
-## 11.3. <span style="color: #4f81bd">script [async-03]</span>
-
   </li>
 </ul>
-
+<p><a id="refheadingtoc225380640539168"></a></p>
+<h2 id="113-script-async-03">11.3. <span style="color: #4f81bd">script [async-03]</span></h2>
 <p>The following script demonstrates another aspect of the <strong>[node.js]</strong> event loop:</p>
 <ul>
   <li>the loop executes events one after another, generally in the order they arrive. Some operating systems assign priorities to events, which are then processed in order of priority rather than order of arrival;
@@ -1602,13 +1637,10 @@
   <li>line 8:   the <b>[then] </b>method of <b>[Promise.all] </b>is executed. It receives as a parameter an array <b>[result1, result2] </b>where <b>[result1] </b>is the result returned by <b>[async01]</b>, and <b>[result2] </b>is the result returned by <b>[async02]</b>;
   </li>
   <li>line 9: the <b>[finally] </b>method of <b>[Promise.all] </b>is executed;
-<a id="refheadingtoc225386640539168"></a>
-
-## 11.6. <span style="color: #4f81bd">script [async-06]</span>
-
   </li>
 </ul>
-
+<p><a id="refheadingtoc225386640539168"></a></p>
+<h2 id="116-script-async-06">11.6. <span style="color: #4f81bd">script [async-06]</span></h2>
 <p>This new script demonstrates how the combined use of the <strong>[async / await]</strong> keywords allows for <strong>asynchronous</strong> code that resembles <strong>synchronous</strong> code. Event handling is completely hidden, making the code easier to understand.</p>
 <p>We revisit the previous example with the following modifications:</p>
 <ul>
