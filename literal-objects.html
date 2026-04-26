@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An Introduction to ECMAScript 6 through Examples">
+        <meta name="description" content="An Introduction to Android Tablet Programming with Android Studio">
       
       
         <meta name="author" content="Serge Tahé">
@@ -29,7 +29,7 @@
     
     
       
-        <title>5. Literal objects - An Introduction to ECMAScript 6 through Examples</title>
+        <title>5. Literal objects - An Introduction to Android Tablet Programming with Android Studio</title>
       
     
     
@@ -65,7 +65,7 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    var siteName = "An Introduction to ECMAScript 6 through Examples";
+    var siteName = "An Introduction to Android Tablet Programming with Android Studio";
     gtag('config', 'G-EBZC3JVJNR', {
         'page_title': siteName
     });
@@ -108,7 +108,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="index.html" title="An Introduction to ECMAScript 6 through Examples" class="md-header__button md-logo" aria-label="An Introduction to ECMAScript 6 through Examples" data-md-component="logo">
+    <a href="index.html" title="An Introduction to Android Tablet Programming with Android Studio" class="md-header__button md-logo" aria-label="An Introduction to Android Tablet Programming with Android Studio" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -122,7 +122,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            An Introduction to ECMAScript 6 through Examples
+            An Introduction to Android Tablet Programming with Android Studio
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -246,13 +246,13 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="index.html" title="An Introduction to ECMAScript 6 through Examples" class="md-nav__button md-logo" aria-label="An Introduction to ECMAScript 6 through Examples" data-md-component="logo">
+    <a href="index.html" title="An Introduction to Android Tablet Programming with Android Studio" class="md-nav__button md-logo" aria-label="An Introduction to Android Tablet Programming with Android Studio" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    An Introduction to ECMAScript 6 through Examples
+    An Introduction to Android Tablet Programming with Android Studio
   </label>
   
     <div class="md-nav__source">
@@ -310,7 +310,7 @@
   <span class="md-ellipsis">
     
   
-    1. Introduction to the ECMASCRIPT 6 language
+    1. Introduction to the ECMASCRIPT 6 Language
   
 
     
@@ -843,43 +843,43 @@
 <p><a id="refheadingtoc2042093980233556"></a></p>
 <h1 id="5-literal-objects">5. <span style="color: #365f91">Literal objects</span></h1>
 <p>Here, we refer to objects defined literally in the code as ‘literal objects’. JavaScript has the concept of classes and class instance objects. Therefore, this is not the type of object we are discussing now.</p>
-<p><img src="images/10000000000000D400000142997DBFD1.png" style="width:2.24cm;height:3.404cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000D400000142997DBFD1.png" /></p>
+<p><img src="images/10000000000000D400000142997DBFD1.png" width="85" height="129" style="width:2.24cm;height:3.404cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000D400000142997DBFD1.png" /></p>
 <p><a id="refheadingtoc2042113980233556"></a></p>
-<h2 id="51-script-obj-01">5.1. <span style="color: #4f81bd">script [obj-01]</span></h2>
+<h2 id="51-script-obj-01">5.1. <span style="color: #4f81bd"><strong>script</strong> [obj-01]</span></h2>
 <p>Here we present the basic properties of literal objects. The main one is that the object is manipulated via a pointer.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">// an empty object</span>
-<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">obj1 = {};</span></span>
-<span class="odt-code-line">// we can dynamically create the object&#x27;s properties</span>
-<span class="odt-code-line"><span style="color:#000000">obj1.prop1 = </span><span style="color:#a31515">&quot;abcd&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&#x27;obj1=&#x27;</span><span style="color:#000000">, obj1);</span></span>
-<span class="odt-code-line">// another property</span>
-<span class="odt-code-line">obj1.prop2 = <span style="font-weight:bold">[1, 2, 3]</span>;</span>
-<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;obj1=&quot;</span><span style="color:#000000">, obj1);</span></span>
-<span class="odt-code-line">// another property with a different notation</span>
-<span class="odt-code-line"><span style="color:#000000">obj1</span><span style="font-weight:bold;color:#000000">[&#x27;prop3&#x27;] </span><span style="color:#000000">= </span><span style="color:#0000ff">true</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;obj1=&quot;</span><span style="color:#000000">, obj1);</span></span>
-<span class="odt-code-line">// obj1 is a reference to the object (pointer), not the object itself</span>
-<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">obj2 = obj1;</span></span>
-<span class="odt-code-line">// obj2 and obj1 point to the same object</span>
-<span class="odt-code-line"><span style="color:#000000">obj2.prop1 = </span><span style="color:#a31515">&quot;xyzt&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;obj1=&quot;</span><span style="color:#000000">, obj1);</span></span>
-<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;obj2=&quot;</span><span style="color:#000000">, obj2);</span></span>
-<span class="odt-code-line">// Properties can be variables</span>
-<span class="odt-code-line"><span style="color:#0000ff">const var1 = </span><span style="color:#a31515">&#x27;prop1&#x27;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&#x27;prop1=&#x27;</span><span style="color:#000000">, obj1</span><span style="font-weight:bold;color:#000000">[var1]</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// an empty object</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> obj1={};</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// object properties can be dynamically created</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">obj1.prop1=</span><span style="color:#a31515">&quot;abcd&quot;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&#x27;obj1=&#x27;</span><span style="color:#000000">,obj1);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// other property</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">obj1.prop2=<span style="font-weight:bold">[1,2,3]</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;obj1=&quot;</span><span style="color:#000000">,obj1);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// another property with a different notation</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">obj1</span><span style="font-weight:bold;color:#000000">[&#x27;prop3&#x27;]</span><span style="color:#000000">=</span><span style="color:#0000ff">true</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;obj1=&quot;</span><span style="color:#000000">,obj1);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// obj1 is a reference to the object (pointer), not the object itself</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> obj2=obj1;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// obj2 and obj1 point to the same object</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">obj2.prop1=</span><span style="color:#a31515">&quot;xyzt&quot;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;obj1=&quot;</span><span style="color:#000000">,obj1);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;obj2=&quot;</span><span style="color:#000000">,obj2);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// properties can be variables</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> var1=</span><span style="color:#a31515">&#x27;prop1&#x27;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&#x27;prop1=&#x27;</span><span style="color:#000000">,obj1</span><span style="font-weight:bold;color:#000000">[var1]</span><span style="color:#000000">);</span></span></span>
 </code></pre></div>
 
 <p><strong>Execution</strong></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running] </span><span style="color:#a31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\objects\obj-01.js&quot;</span></span>
-<span class="odt-code-line">obj1=<span style="font-weight:bold">[object Object]</span></span>
-<span class="odt-code-line">obj1= { prop1: &#x27;abcd&#x27;, prop2: <span style="font-weight:bold">[ 1, 2, 3 ] </span>}</span>
-<span class="odt-code-line">obj1= { prop1: &#x27;abcd&#x27;, prop2: <span style="font-weight:bold">[ 1, 2, 3 ]</span>, prop3: true }</span>
-<span class="odt-code-line">obj1 = { prop1: &#x27;xyzt&#x27;, prop2: <span style="font-weight:bold">[1, 2, 3]</span>, prop3: true }</span>
-<span class="odt-code-line">obj2 = { prop1: &#x27;xyzt&#x27;, prop2: <span style="font-weight:bold">[1, 2, 3]</span>, prop3: true }</span>
-<span class="odt-code-line">prop1 = xyzt</span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\objets\obj-01.js&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">obj1=<span style="font-weight:bold">[object Object]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">obj1= { prop1: &#x27;abcd&#x27;, prop2: <span style="font-weight:bold">[ 1, 2, 3 ]</span> }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">obj1= { prop1: &#x27;abcd&#x27;, prop2: <span style="font-weight:bold">[ 1, 2, 3 ]</span>, prop3: true }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">obj1= { prop1: &#x27;xyzt&#x27;, prop2: <span style="font-weight:bold">[ 1, 2, 3 ]</span>, prop3: true }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">obj2= { prop1: &#x27;xyzt&#x27;, prop2: <span style="font-weight:bold">[ 1, 2, 3 ]</span>, prop3: true }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">prop1= xyzt</span></span>
 </code></pre></div>
 
 <p><strong>Comments</strong></p>
@@ -894,37 +894,37 @@
   </li>
 </ul>
 <p><a id="refheadingtoc2042133980233556"></a></p>
-<h2 id="52-script-obj-02">5.2. <span style="color: #4f81bd">script [obj-02]</span></h2>
+<h2 id="52-script-obj-02">5.2. <span style="color: #4f81bd"><strong>script</strong> [obj-02]</span></h2>
 <p>This script demonstrates that an object’s properties can have an object as their value. This results in multi-level objects. We also introduce the global object <strong>[JSON],</strong> which enables object-to-string and string-to-object conversions.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">// a multi-level object</span>
-<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">person = {</span></span>
-<span class="odt-code-line"><span style="color:#000000">  firstName: </span><span style="color:#a31515">&quot;martin&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line">  age: 12,</span>
-<span class="odt-code-line">  father: {</span>
-<span class="odt-code-line"><span style="color:#000000">    firstName: </span><span style="color:#a31515">&quot;Paul&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line">    age: 45</span>
-<span class="odt-code-line">  },</span>
-<span class="odt-code-line">  mother: {</span>
-<span class="odt-code-line"><span style="color:#000000">    first_name: </span><span style="color:#a31515">&quot;micheline&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line">    age: 42</span>
-<span class="odt-code-line">  }</span>
-<span class="odt-code-line">}</span>
-<span class="odt-code-line">// access properties</span>
-<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;person&#x27;s first name=&quot;</span><span style="color:#000000">, person.firstName);</span></span>
-<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;mother&#x27;s first name=&quot;</span><span style="color:#000000">, person.mother.firstName);</span></span>
-<span class="odt-code-line">person.mother.age = 40;</span>
-<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;mother&#x27;s age=&quot;</span><span style="color:#000000">, person.mother.age);</span></span>
-<span class="odt-code-line">// console.log can display objects</span>
-<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;person=&quot;</span><span style="color:#000000">, person);</span></span>
-<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;mother=&quot;</span><span style="color:#000000">, person.mother);</span></span>
-<span class="odt-code-line">// we can also display the object&#x27;s JSON string</span>
-<span class="odt-code-line"><span style="color:#0000ff">let </span><span style="color:#000000">json = JSON.stringify(person);</span></span>
-<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;JSON=&quot;</span><span style="color:#000000">, json);</span></span>
-<span class="odt-code-line">// We can parse the JSON</span>
-<span class="odt-code-line"><span style="color:#0000ff">let </span><span style="color:#000000">person2 = JSON.parse(json);</span></span>
-<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;father=&quot;</span><span style="color:#000000">, person2.father);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// a multi-level object</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> personne = {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  prénom: </span><span style="color:#a31515">&quot;martin&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  âge: 12,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  père: {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    prénom: </span><span style="color:#a31515">&quot;paul&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    âge: 45</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  mère: {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    prénom: </span><span style="color:#a31515">&quot;micheline&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    âge: 42</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// access to properties</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;prénom personne=&quot;</span><span style="color:#000000">, personne.prénom);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;prénom mère=&quot;</span><span style="color:#000000">, personne.mère.prénom);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">personne.mère.âge = 40;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;âge mère=&quot;</span><span style="color:#000000">, personne.mère.âge);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// console.log can display objects</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;personne=&quot;</span><span style="color:#000000">, personne);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;mère=&quot;</span><span style="color:#000000">, personne.mère);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// you can also display the jSON string of the</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">let</span><span style="color:#000000"> json = JSON.stringify(personne);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;jSON=&quot;</span><span style="color:#000000">, json);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// you can reread the jSON</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">let</span><span style="color:#000000"> personne2 = JSON.parse(json);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;père=&quot;</span><span style="color:#000000">, personne2.père);</span></span></span>
 </code></pre></div>
 
 <p><strong>Comments</strong></p>
@@ -937,17 +937,17 @@
 
 <p><strong>Execution</strong></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running] </span><span style="color:#a31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\objects\obj-02.js&quot;</span></span>
-<span class="odt-code-line">person&#x27;s first name = martin</span>
-<span class="odt-code-line">mother&#x27;s first name = Micheline</span>
-<span class="odt-code-line">mother&#x27;s age= 40</span>
-<span class="odt-code-line">person= { &#x27;first_name&#x27;: &#x27;martin&#x27;,</span>
-<span class="odt-code-line">&#x27;age&#x27;: 12,</span>
-<span class="odt-code-line">&#x27;father&#x27;: { &#x27;first_name&#x27;: &#x27;Paul&#x27;, &#x27;age&#x27;: 45 },</span>
-<span class="odt-code-line">&#x27;mother&#x27;: { &#x27;first_name&#x27;: &#x27;Micheline&#x27;, &#x27;age&#x27;: 40 } }</span>
-<span class="odt-code-line">mother = { &#x27;first_name&#x27;: &#x27;micheline&#x27;, &#x27;age&#x27;: 40 }</span>
-<span class="odt-code-line">jSON = {&quot;firstName&quot;: &quot;martin&quot;, &quot;age&quot;: 12, &quot;father&quot;: {&quot;firstName&quot;: &quot;paul&quot;, &quot;age&quot;: 45}, &quot;mother&quot;: {&quot;firstName&quot;: &quot;micheline&quot;, &quot;age&quot;: 40}}</span>
-<span class="odt-code-line">father = { &#x27;first_name&#x27;: &#x27;paul&#x27;, &#x27;age&#x27;: 45 }</span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\objets\obj-02.js&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">prénom personne= martin</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">prénom mère= micheline</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">âge mère= 40</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">personne= { &#x27;prénom&#x27;: &#x27;martin&#x27;,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;âge&#x27;: 12,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;père&#x27;: { &#x27;prénom&#x27;: &#x27;paul&#x27;, &#x27;âge&#x27;: 45 },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;mère&#x27;: { &#x27;prénom&#x27;: &#x27;micheline&#x27;, &#x27;âge&#x27;: 40 } }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">mère= { &#x27;prénom&#x27;: &#x27;micheline&#x27;, &#x27;âge&#x27;: 40 }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">jSON= {&quot;prénom&quot;:&quot;martin&quot;,&quot;âge&quot;:12,&quot;père&quot;:{&quot;prénom&quot;:&quot;paul&quot;,&quot;âge&quot;:45},&quot;mère&quot;:{&quot;prénom&quot;:&quot;micheline&quot;,&quot;âge&quot;:40}}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">père= { &#x27;prénom&#x27;: &#x27;paul&#x27;, &#x27;âge&#x27;: 45 }</span></span>
 </code></pre></div>
 
 <p><strong>Comments</strong></p>
@@ -956,32 +956,32 @@
   </li>
 </ul>
 <p><a id="refheadingtoc2042153980233556"></a></p>
-<h2 id="53-script-obj-03">5.3. <span style="color: #4f81bd">script [obj-03]</span></h2>
+<h2 id="53-script-obj-03">5.3. <span style="color: #4f81bd"><strong>script</strong> [obj-03]</span></h2>
 <p>This script introduces the concept of getters and setters for an object&#x27;s property:</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">// getters and setters of an object</span>
-<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">person = {</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// getter</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">get </span><span style="color:#000000">name() {</span></span>
-<span class="odt-code-line"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;getter name&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">return this</span><span style="color:#000000">._name;</span></span>
-<span class="odt-code-line">  },</span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// setter</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">set </span><span style="color:#000000">name(aName) {</span></span>
-<span class="odt-code-line"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;setter name&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">._name = aName;</span></span>
-<span class="odt-code-line">  }</span>
-<span class="odt-code-line">};</span>
-<span class="odt-code-line">// setter</span>
-<span class="odt-code-line"><span style="color:#000000">person.name = </span><span style="color:#a31515">&quot;Hercules&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">// getter</span>
-<span class="odt-code-line">console.log(person.name);</span>
-<span class="odt-code-line">// the object itself</span>
-<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;person=&quot;</span><span style="color:#000000">, person);</span></span>
-<span class="odt-code-line">// this doesn&#x27;t prevent you from accessing the <span style="font-weight:bold">[_name] </span>property directly</span>
-<span class="odt-code-line"><span style="color:#000000">person._name = </span><span style="color:#a31515">&quot;xyz&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;person=&quot;</span><span style="color:#000000">, person);</span></span>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// object getters and setters</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> personne = {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// getter</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">get</span><span style="color:#000000"> nom() {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;getter nom&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#0000ff">this</span><span style="color:#000000">._nom;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// setter</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">set</span><span style="color:#000000"> nom(unNom) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;setter nom&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">._nom = unNom;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">};</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// setter</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">personne.nom = </span><span style="color:#a31515">&quot;Hercule&quot;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// getter</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">console.log(personne.nom);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// the object itself</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;personne=&quot;</span><span style="color:#000000">, personne);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// this does not prevent direct access to property [_nom]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">personne._nom = </span><span style="color:#a31515">&quot;xyz&quot;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;personne=&quot;</span><span style="color:#000000">, personne);</span></span></span>
 </code></pre></div>
 
 <p><strong>Comments</strong></p>
@@ -1002,85 +1002,85 @@
 
 <p><strong>Execution</strong></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running] </span><span style="color:#a31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\objets\obj-03.js&quot;</span></span>
-<span class="odt-code-line">setter name</span>
-<span class="odt-code-line">getter name</span>
-<span class="odt-code-line">Hercule</span>
-<span class="odt-code-line">person = { name: <span style="font-weight:bold">[Getter/Setter]</span>, _name: &#x27;Hercule&#x27; }</span>
-<span class="odt-code-line">person = { name: <span style="font-weight:bold">[Getter/Setter]</span>, _name: &#x27;xyz&#x27; }</span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\objets\obj-03.js&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">setter nom</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">getter nom</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">Hercule</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">personne= { nom: <span style="font-weight:bold">[Getter/Setter]</span>, _nom: &#x27;Hercule&#x27; }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">personne= { nom: <span style="font-weight:bold">[Getter/Setter]</span>, _nom: &#x27;xyz&#x27; }</span></span>
 </code></pre></div>
 
 <p>Note lines 5–6: <strong>[console.log]</strong> also displays properties that are functions.</p>
 <p><a id="refheadingtoc2042173980233556"></a></p>
-<h2 id="54-script-obj-04">5.4. <span style="color: #4f81bd">script [obj-04]</span></h2>
+<h2 id="54-script-obj-04">5.4. <span style="color: #4f81bd"><strong>script</strong> [obj-04]</span></h2>
 <p>This script shows three ways to write the names of an object&#x27;s properties and two ways to access them.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">// The names of an object&#x27;s properties can be literals <span style="font-weight:bold">[name]</span>, enclosed in single quotes <span style="font-weight:bold">[&#x27;name&#x27;]</span></span>
-<span class="odt-code-line">// or double quotes <span style="font-weight:bold">[&quot;name&quot;]</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">// literals</span>
-<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">obj1 = {</span></span>
-<span class="odt-code-line"><span style="color:#000000">  lastName: </span><span style="color:#a31515">&quot;martin&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"><span style="color:#000000">  firstName: </span><span style="color:#a31515">&quot;jean&quot;</span></span>
-<span class="odt-code-line">};</span>
-<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;first_name=&quot;</span><span style="color:#000000">, obj1.first_name);</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">// enclosed in single quotes</span>
-<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">obj2 = {</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#a31515">&#x27;lastName</span><span style="color:#000000">&#x27;: </span><span style="color:#a31515">&quot;martin&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#a31515">&#x27;firstName</span><span style="color:#000000">&#x27;: </span><span style="color:#a31515">&quot;jean&quot;</span></span>
-<span class="odt-code-line">};</span>
-<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;lastName=&quot;</span><span style="color:#000000">, obj2.lastName);</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">// enclosed in quotes</span>
-<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">obj3 = {</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#a31515">&quot;lastName&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;martin&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#a31515">&quot;firstName&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;jean&quot;</span></span>
-<span class="odt-code-line">};</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">// two possible ways to access the <span style="font-weight:bold">[lastName] </span>property</span>
-<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;lastName=&quot;</span><span style="color:#000000">, obj3.lastName);</span></span>
-<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;lastName=&quot;</span><span style="color:#000000">, obj3</span><span style="font-weight:bold;color:#000000">[&#x27;lastName&#x27;]</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// object property names may be literal [name], surrounded by apostrophes [&#x27;name&#x27;], or may have a double quotation mark [&#x27;name&#x27;]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// or quotation marks [&quot;name&quot;]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// literal</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> obj1 = {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  nom: </span><span style="color:#a31515">&quot;martin&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  prénom: </span><span style="color:#a31515">&quot;jean&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">};</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;prénom=&quot;</span><span style="color:#000000">, obj1.prénom);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// surrounded by apostrophes</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> obj2 = {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&#x27;nom&#x27;: &quot;martin&quot;,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&#x27;prénom&#x27;: &quot;jean&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">};</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;nom=&quot;</span><span style="color:#000000">, obj2.nom);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// surrounded by quotation marks</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> obj3 = {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#a31515">&quot;nom&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;martin&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#a31515">&quot;prénom&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;jean&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">};</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// two possible syntaxes for accessing the [name] property</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;nom=&quot;</span><span style="color:#000000">, obj3.nom);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;nom=&quot;</span><span style="color:#000000">, obj3</span><span style="font-weight:bold;color:#000000">[&#x27;nom&#x27;]</span><span style="color:#000000">);</span></span></span>
 </code></pre></div>
 
 <p><strong>Execution</strong></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running] </span><span style="color:#a31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\objects\obj-04.js&quot;</span></span>
-<span class="odt-code-line">firstName=jean</span>
-<span class="odt-code-line">lastName= martin</span>
-<span class="odt-code-line">lastName= martin</span>
-<span class="odt-code-line">last_name= martin</span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\objets\obj-04.js&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">prénom= jean</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">nom= martin</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">nom= martin</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">nom= martin</span></span>
 </code></pre></div>
 
 <p><a id="refheadingtoc2042193980233556"></a></p>
-<h2 id="55-script-obj-05">5.5. <span style="color: #4f81bd">script [obj-05]</span></h2>
+<h2 id="55-script-obj-05">5.5. <span style="color: #4f81bd"><strong>script</strong> [obj-05]</span></h2>
 <p>The script shows that the properties of a literal object can be functions. This is very similar to a class instance object, which has properties and methods.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">// an object can have properties of type <span style="font-weight:bold">[function]</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">person = {</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// properties</span></span>
-<span class="odt-code-line"><span style="color:#000000">  firstName: </span><span style="color:#a31515">&quot;martin&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line">  age: 12,</span>
-<span class="odt-code-line">  father: {</span>
-<span class="odt-code-line"><span style="color:#000000">    first_name: </span><span style="color:#a31515">&quot;paul&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line">    age: 45</span>
-<span class="odt-code-line">  },</span>
-<span class="odt-code-line">  mother: {</span>
-<span class="odt-code-line"><span style="color:#000000">    first_name: </span><span style="color:#a31515">&quot;micheline&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line">    age: 42</span>
-<span class="odt-code-line">  },</span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// method</span></span>
-<span class="odt-code-line"><span style="color:#000000">  toString: </span><span style="color:#0000ff">function </span><span style="color:#000000">() {</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">return </span><span style="color:#000000">JSON.stringify(</span><span style="color:#0000ff">this</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">  }</span>
-<span class="odt-code-line">}</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">// usage</span>
-<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;person=&quot;</span><span style="color:#000000">, person);</span></span>
-<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;person.toString=&quot;</span><span style="color:#000000">, person.toString());</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// an object can have properties of type [function]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> personne = {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// properties</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  prénom: </span><span style="color:#a31515">&quot;martin&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  âge: 12,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  père: {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    prénom: </span><span style="color:#a31515">&quot;paul&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    âge: 45</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  mère: {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    prénom: </span><span style="color:#a31515">&quot;micheline&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    âge: 42</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// method</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  toString: </span><span style="color:#0000ff">function</span><span style="color:#000000"> () {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> JSON.stringify(</span><span style="color:#0000ff">this</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// use</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;personne=&quot;</span><span style="color:#000000">, personne);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;personne.toString=&quot;</span><span style="color:#000000">, personne.toString());</span></span></span>
 </code></pre></div>
 
 <ul>
@@ -1090,67 +1090,67 @@
 
 <p><strong>Execution</strong></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running] </span><span style="color:#a31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\objects\obj-05.js&quot;</span></span>
-<span class="odt-code-line">person = { &#x27;firstName&#x27;: &#x27;martin&#x27;,</span>
-<span class="odt-code-line">&#x27;age&#x27;: 12,</span>
-<span class="odt-code-line">&#x27;father&#x27;: { &#x27;firstName&#x27;: &#x27;paul&#x27;, &#x27;age&#x27;: 45 },</span>
-<span class="odt-code-line">&#x27;mother&#x27;: { &#x27;firstName&#x27;: &#x27;micheline&#x27;, &#x27;age&#x27;: 42 },</span>
-<span class="odt-code-line">toString: <span style="font-weight:bold">[Function: toString] </span>}</span>
-<span class="odt-code-line">person.toString = {&quot;firstName&quot;:&quot;martin&quot;,&quot;age&quot;:12,&quot;father&quot;:{&quot;firstName&quot;:&quot;paul&quot;,&quot;age&quot;:45},&quot;mother&quot;:{&quot;firstName&quot;:&quot;micheline&quot;,&quot;age&quot;:42}}</span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\objets\obj-05.js&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">personne= { &#x27;prénom&#x27;: &#x27;martin&#x27;,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;âge&#x27;: 12,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;père&#x27;: { &#x27;prénom&#x27;: &#x27;paul&#x27;, &#x27;âge&#x27;: 45 },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;mère&#x27;: { &#x27;prénom&#x27;: &#x27;micheline&#x27;, &#x27;âge&#x27;: 42 },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">toString: <span style="font-weight:bold">[Function: toString]</span> }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">personne.toString= {&quot;prénom&quot;:&quot;martin&quot;,&quot;âge&quot;:12,&quot;père&quot;:{&quot;prénom&quot;:&quot;paul&quot;,&quot;âge&quot;:45},&quot;mère&quot;:{&quot;prénom&quot;:&quot;micheline&quot;,&quot;âge&quot;:42}}</span></span>
 </code></pre></div>
 
 <p><a id="refheadingtoc2042213980233556"></a></p>
-<h2 id="56-script-obj-06">5.6. <span style="color: #4f81bd">script [obj-06]</span></h2>
+<h2 id="56-script-obj-06">5.6. <span style="color: #4f81bd"><strong>script</strong> [obj-06]</span></h2>
 <p>This script demonstrates how to access an object&#x27;s properties when their names are not known in advance.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">// An object can have properties of type <span style="font-weight:bold">[function]</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">let </span><span style="color:#000000">person = {</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// properties</span></span>
-<span class="odt-code-line"><span style="color:#000000">  firstName: </span><span style="color:#a31515">&quot;martin&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line">  age: 12,</span>
-<span class="odt-code-line">  father: {</span>
-<span class="odt-code-line"><span style="color:#000000">    first_name: </span><span style="color:#a31515">&quot;paul&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line">    age: 45</span>
-<span class="odt-code-line">  },</span>
-<span class="odt-code-line">  mother: {</span>
-<span class="odt-code-line"><span style="color:#000000">    first_name: </span><span style="color:#a31515">&quot;micheline&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line">    age: 42</span>
-<span class="odt-code-line">  },</span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// method</span></span>
-<span class="odt-code-line"><span style="color:#000000">  toString: </span><span style="color:#0000ff">function </span><span style="color:#000000">() {</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">return </span><span style="color:#000000">JSON.stringify(</span><span style="color:#0000ff">this</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">  }</span>
-<span class="odt-code-line">}</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">// usage</span>
-<span class="odt-code-line">console.log(person);</span>
-<span class="odt-code-line">// properties</span>
-<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;-----------------------&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">for </span><span style="color:#000000">(</span><span style="color:#0000ff">const </span><span style="color:#000000">key </span><span style="color:#0000ff">in </span><span style="color:#000000">person) {</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">if </span><span style="color:#000000">(person.hasOwnProperty(key)) {</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">const </span><span style="color:#000000">element = person</span><span style="font-weight:bold;color:#000000">[key]</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    console.log(key, </span><span style="color:#a31515">&quot;=&quot;</span><span style="color:#000000">, element);</span></span>
-<span class="odt-code-line">  }</span>
-<span class="odt-code-line">}</span>
-<span class="odt-code-line">// to bypass the ESLint warning (1)</span>
-<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;-----------------------&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">for </span><span style="color:#000000">(</span><span style="color:#0000ff">const </span><span style="color:#000000">key </span><span style="color:#0000ff">in </span><span style="color:#000000">person) {</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">if </span><span style="color:#000000">(Object.prototype.hasOwnProperty.call(person, key)) {</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">const </span><span style="color:#000000">element = person</span><span style="font-weight:bold;color:#000000">[key]</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    console.log(key, </span><span style="color:#a31515">&quot;=&quot;</span><span style="color:#000000">, element);</span></span>
-<span class="odt-code-line">  }</span>
-<span class="odt-code-line">}</span>
-<span class="odt-code-line">// to bypass the ESLint warning (2)</span>
-<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;-----------------------&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">for </span><span style="color:#000000">(</span><span style="color:#0000ff">const </span><span style="color:#000000">key </span><span style="color:#0000ff">in </span><span style="color:#000000">person) {</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// eslint-disable-next-line no-prototype-builtins</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">if </span><span style="color:#000000">(person.hasOwnProperty(key)) {</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">const </span><span style="color:#000000">element = person</span><span style="font-weight:bold;color:#000000">[key]</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    console.log(key, </span><span style="color:#a31515">&quot;=&quot;</span><span style="color:#000000">, element);</span></span>
-<span class="odt-code-line">  }</span>
-<span class="odt-code-line">}</span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// an object can have properties of type [function]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">let</span><span style="color:#000000"> personne = {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// properties</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  prénom: </span><span style="color:#a31515">&quot;martin&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  âge: 12,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  père: {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    prénom: </span><span style="color:#a31515">&quot;paul&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    âge: 45</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  mère: {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    prénom: </span><span style="color:#a31515">&quot;micheline&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    âge: 42</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// method</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  toString: </span><span style="color:#0000ff">function</span><span style="color:#000000"> () {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> JSON.stringify(</span><span style="color:#0000ff">this</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// use</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">console.log(personne);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// properties</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;-----------------------&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">for</span><span style="color:#000000"> (</span><span style="color:#0000ff">const</span><span style="color:#000000"> key </span><span style="color:#0000ff">in</span><span style="color:#000000"> personne) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">if</span><span style="color:#000000"> (personne.hasOwnProperty(key)) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> element = personne</span><span style="font-weight:bold;color:#000000">[key]</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(key, </span><span style="color:#a31515">&quot;=&quot;</span><span style="color:#000000">, element);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// to escape the eslint warning (1)</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;-----------------------&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">for</span><span style="color:#000000"> (</span><span style="color:#0000ff">const</span><span style="color:#000000"> key </span><span style="color:#0000ff">in</span><span style="color:#000000"> personne) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">if</span><span style="color:#000000"> (Object.prototype.hasOwnProperty.call(personne, key)) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> element = personne</span><span style="font-weight:bold;color:#000000">[key]</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(key, </span><span style="color:#a31515">&quot;=&quot;</span><span style="color:#000000">, element);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// to escape the eslint warning (2)</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;-----------------------&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">for</span><span style="color:#000000"> (</span><span style="color:#0000ff">const</span><span style="color:#000000"> key </span><span style="color:#0000ff">in</span><span style="color:#000000"> personne) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// eslint-disable-next-line no-prototype-builtins</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">if</span><span style="color:#000000"> (personne.hasOwnProperty(key)) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> element = personne</span><span style="font-weight:bold;color:#000000">[key]</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(key, </span><span style="color:#a31515">&quot;=&quot;</span><span style="color:#000000">, element);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
 <p><strong>Comments</strong></p>
@@ -1159,7 +1159,7 @@
   </li>
 </ul>
 
-<p><img src="images/1000000000000687000002662860A8EF.png" style="width:13.259cm;height:4.872cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000687000002662860A8EF.png" /></p>
+<p><img src="images/1000000000000687000002662860A8EF.png" width="501" height="184" style="width:13.259cm;height:4.872cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000687000002662860A8EF.png" /></p>
 <ul>
   <li>lines 32–39: the code that allows us to bypass the ESLint warning. We use the prototype of the <b>[Object] </b>class;
   </li>
@@ -1169,38 +1169,38 @@
 <p><a id="refheadingtoc5458631626043720"></a></p>
 <h2 id="57-script-obj-07">5.7. <span style="color: #4f81bd">script [obj-07]</span></h2>
 <p>The [obj-07] script demonstrates the ability to destruct an object:</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
-<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">// destructuring</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">// literals</span>
-<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">obj1 = {</span></span>
-<span class="odt-code-line"><span style="color:#000000">  name: </span><span style="color:#a31515">&quot;martin&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"><span style="color:#000000">  first_name: </span><span style="color:#a31515">&quot;jean&quot;</span></span>
-<span class="odt-code-line">};</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">// unpacking obj1 into variables [n, p]</span>
-<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">{ lastName: n, firstName: p } = obj1;</span></span>
-<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;n=&quot;</span><span style="color:#000000">, n, </span><span style="color:#a31515">&quot;p=&quot;</span><span style="color:#000000">, p);</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">// Destructuring obj1 into variables [n2, p2]</span>
-<span class="odt-code-line"><span style="color:#0000ff">function </span><span style="color:#000000">f({ lastName: n2, firstName: p2 }) {</span></span>
-<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;f-n2=&quot;</span><span style="color:#000000">, n2, </span><span style="color:#a31515">&quot;f-p2=&quot;</span><span style="color:#000000">, p2);</span></span>
-<span class="odt-code-line">}</span>
-<span class="odt-code-line">f(obj1);</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">// destructuring obj1 into variables [lastName, firstName]</span>
-<span class="odt-code-line"><span style="color:#0000ff">function </span><span style="color:#000000">g({ lastName: lastName, firstName: firstName }) {</span></span>
-<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;g-lastName=&quot;</span><span style="color:#000000">, lastName, </span><span style="color:#a31515">&quot;g-firstName=&quot;</span><span style="color:#000000">, firstName);</span></span>
-<span class="odt-code-line">}</span>
-<span class="odt-code-line">g(obj1);</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">// destructuring obj1 into variables [lastName, firstName]</span>
-<span class="odt-code-line">// using shorthand notation equivalent to h({lastName:lastName, firstName:firstName})</span>
-<span class="odt-code-line"><span style="color:#0000ff">function </span><span style="color:#000000">h({ lastName, firstName }) {</span></span>
-<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;h-lastName=&quot;</span><span style="color:#000000">, lastName, </span><span style="color:#a31515">&quot;h-firstName=&quot;</span><span style="color:#000000">, firstName);</span></span>
-<span class="odt-code-line">}</span>
-<span class="odt-code-line">h(obj1);</span>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// destructuring</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// literal</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> obj1 = {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  nom: </span><span style="color:#a31515">&quot;martin&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  prénom: </span><span style="color:#a31515">&quot;jean&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">};</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// destructuring obj1 into variables [n,p]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> { nom: n, prénom: p } = obj1;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;n=&quot;</span><span style="color:#000000">, n, </span><span style="color:#a31515">&quot;p=&quot;</span><span style="color:#000000">, p);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// destructure obj1 in variables [n2,p2]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> f({ nom: n2, prénom: p2 }) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;f-n2=&quot;</span><span style="color:#000000">, n2, </span><span style="color:#a31515">&quot;f-p2=&quot;</span><span style="color:#000000">, p2);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">f(obj1);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// destructuring obj1 into variables [last name,first name]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> g({ nom: nom, prénom: prénom }) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;g-nom=&quot;</span><span style="color:#000000">, nom, </span><span style="color:#a31515">&quot;g-prénom=&quot;</span><span style="color:#000000">, prénom);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">g(obj1);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// destructuring obj1 into variables [last name,first name]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// with shortened notation equivalent to h({name:surname,firstname:firstname})</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> h({ nom, prénom }) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;h-nom=&quot;</span><span style="color:#000000">, nom, </span><span style="color:#a31515">&quot;h-prénom=&quot;</span><span style="color:#000000">, prénom);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">h(obj1);</span></span>
 </code></pre></div>
 
 <p><strong>Comments</strong></p>
@@ -1209,19 +1209,19 @@
   </li>
 </ul>
 
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">{ lastName: n, firstName: p } = obj1</span></span>
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> { nom: n, prénom: p } = obj1</span></span></span>
 </code></pre></div>
 
 <p>creates two variables [n] and [p] and is equivalent to:</p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">n = obj1.lastName</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">p = obj1.firstName</span></span>
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> </span><span style="color:#000000">n</span><span style="color:#000000"> = obj1.nom</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> p = obj1.prénom</span></span></span>
 </code></pre></div>
 
 <p>The declaration could be written as follows:</p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">{ lastName =&gt; n, firstName =&gt; p } = obj1</span></span>
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> { nom =&gt; n, prénom =&gt; p } = obj1</span></span></span>
 </code></pre></div>
 
 <p>to indicate that the values of the attributes [lastName, firstName] go into the variables [n, p];</p>
@@ -1232,38 +1232,38 @@
   </li>
 </ul>
 
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-js">
-<span class="odt-code-line"><span style="color:#0000ff">function </span><span style="color:#000000">h({ lastName: lastName, firstName: firstName })</span></span>
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> h({ nom : nom, prénom : prénom })</span></span></span>
 </code></pre></div>
 
 <p>The results of the execution are as follows:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
-<span class="normal"><a href="#__codelineno-0-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>n= martin p= jean
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a>f-last2= martin f-first2= jean
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a>g-last_name= martin g-first_name= jean
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a>h-last_name= martin h-first_name= jean
+<span class="normal"><a href="#__codelineno-0-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>n= martin p= jean
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>f-n2= martin f-p2= jean
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>g-nom= martin g-prénom= jean
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>h-nom= martin h-prénom= jean
 </code></pre></div></td></tr></table></div>
 <p><a id="refheadingtoc5458651626043720"></a></p>
 <h2 id="58-script-obj-08">5.8. <span style="color: #4f81bd">script [obj-08]</span></h2>
 <p>The script [obj-08] shows how to obtain a copy of an object:</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
-<span class="odt-code-line">&#x27;use strict&#x27;</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">// object cloning</span>
-<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">obj1 = {</span></span>
-<span class="odt-code-line"><span style="color:#000000">  name: </span><span style="color:#a31515">&quot;martin&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"><span style="color:#000000">  firstName: </span><span style="color:#a31515">&quot;jean&quot;</span></span>
-<span class="odt-code-line">};</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">// Clone (copy) of obj1 using the spread operator</span>
-<span class="odt-code-line"><span style="color:#0000ff">const </span><span style="color:#000000">obj2 = { ...obj1 }</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">// checks</span>
-<span class="odt-code-line">// obj2 points to a copy of obj1</span>
-<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;obj2===obj1 :&quot;</span><span style="color:#000000">, obj1 === obj2)</span></span>
-<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;obj2=&quot;</span><span style="color:#000000">, obj2)</span></span>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// object cloning</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> obj1 = {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  nom: </span><span style="color:#a31515">&quot;martin&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  prénom: </span><span style="color:#a31515">&quot;jean&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">};</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// clone (copy) of obj1 with the spread operator</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> obj2 = { ...obj1 }</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// checks</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// obj2 points to a copy of obj1</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;obj2===obj1 :&quot;</span><span style="color:#000000">, obj1 === obj2)</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;obj2=&quot;</span><span style="color:#000000">, obj2)</span></span></span>
 </code></pre></div>
 
 <ul>
@@ -1273,8 +1273,8 @@
 
 <p>The results of the execution are as follows:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>obj2===obj1: false
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>obj2= { name: &#39;martin&#39;, &#39;first_name&#39;: &#39;jean&#39; }
+<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>obj2===obj1 : false
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>obj2= { nom: &#39;martin&#39;, &#39;prénom&#39;: &#39;jean&#39; }
 </code></pre></div></td></tr></table></div>
 <ul>
   <li>line 1: shows that the references [obj1] and [obj2] do not point to the same object;
@@ -1321,8 +1321,8 @@
     <div class="md-footer-meta__inner">
 
       <div>
-        <a href="https://tahe.developpez.com" target="_blank">
-          https://tahe.developpez.com
+        <a href="https://stahe.github.io/" target="_blank">
+          https://stahe.github.io/
         </a>
         <br>
         This tutorial written by <strong>Serge Tahé</strong> is made available to the public under the terms of the
