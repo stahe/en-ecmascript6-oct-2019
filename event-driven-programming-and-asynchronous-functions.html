@@ -807,8 +807,8 @@
   
 
 
-<p><a id="fontionsasync"></a>
-<a id="refheadingtoc2091462346209355"></a></p>
+<p><a id="refheadingtoc2091462346209355"></a>
+<a id="fontionsasync"></a></p>
 <h1 id="11-event-driven-programming-and-asynchronous-functions">11. <span style="color: #365f91">Event-driven programming and asynchronous functions</span></h1>
 <p><img src="images/10000000000000E900000136448462DF.png" width="93" height="124" style="width:2.469cm;height:3.286cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000E900000136448462DF.png" /></p>
 <p>An asynchronous function is a function whose execution is initiated but whose result is not awaited. When execution is complete, the asynchronous function emits an event and transmits its result via that event.</p>
@@ -827,7 +827,7 @@
   </li>
 </ul>
 <p><a id="refheadingtoc225376640539168"></a></p>
-<h2 id="111-script-async-01">11.1. <span style="color: #4f81bd"><strong>script [async-01]</strong></span></h2>
+<h2 id="111-script-async-01">11.1. <span style="color: #4f81bd">script [async-01]</span></h2>
 <p>The following script demonstrates the behavior of a script containing an asynchronous action.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
@@ -980,17 +980,17 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  eventEmitter.emit(</span><span style="color:#a31515">&quot;timer1Failure&quot;</span><span style="color:#000000">, { failure: 6 });</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}, 1000)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// subscribe to evt [timer1Success]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// subscribe to evt [timer1Success]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">eventEmitter.on(</span><span style="color:#a31515">&#x27;timer1Success&#x27;</span><span style="color:#000000">, (result) =&gt; {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(sprintf(</span><span style="color:#a31515">&quot;la fonction asynchrone du timer a rendu le résultat </span><span style="font-weight:bold;color:#a31515">[%j]</span><span style="color:#a31515">, %s, via l&#x27;événement </span><span style="font-weight:bold;color:#a31515">[timer1Success]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, result, heure(débutScript)));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">});</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// subscribe to evt [timer1Failure]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// subscribe to evt [timer1Failure]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">eventEmitter.on(</span><span style="color:#a31515">&#x27;timer1Failure&#x27;</span><span style="color:#000000">, (result) =&gt; {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(sprintf(</span><span style="color:#a31515">&quot;la fonction asynchrone du timer a rendu le résultat </span><span style="font-weight:bold;color:#a31515">[%j]</span><span style="color:#a31515">, %s, via l&#x27;événement </span><span style="font-weight:bold;color:#a31515">[timer1Failure]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, result, heure(débutScript)));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">});</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// will be displayed before the msg of evts issued by the function associated with [timer1]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// will be displayed before the msg of evts issued by the function associated with [timer1]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[fin du code principal du script]</span><span style="color:#a31515">,&quot;</span><span style="color:#000000">, heure(débutScript));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// time and duration display utility</span></span>
@@ -1109,24 +1109,24 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  eventEmitter.emit(</span><span style="color:#a31515">&quot;timer1Failure&quot;</span><span style="color:#000000">, { failure: 6 });</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}, 1000)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// subscribe to evt [timer1Success]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// subscribe to evt [timer1Success]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">eventEmitter.on(</span><span style="color:#a31515">&#x27;timer1Success&#x27;</span><span style="color:#000000">, (result) =&gt; {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(sprintf(</span><span style="color:#a31515">&quot;la fonction asynchrone du timer a rendu le résultat </span><span style="font-weight:bold;color:#a31515">[%j]</span><span style="color:#a31515">, %s, via l&#x27;événement </span><span style="font-weight:bold;color:#a31515">[timer1Success]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, result, heure(débutScript)));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">});</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// subscribe to evt [timer1Failure]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// subscribe to evt [timer1Failure]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">eventEmitter.on(</span><span style="color:#a31515">&#x27;timer1Failure&#x27;</span><span style="color:#000000">, (result) =&gt; {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(sprintf(</span><span style="color:#a31515">&quot;la fonction asynchrone du timer a rendu le résultat </span><span style="font-weight:bold;color:#a31515">[%j]</span><span style="color:#a31515">, %s, via l&#x27;événement </span><span style="font-weight:bold;color:#a31515">[timer1Failure]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, result, heure(débutScript)));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">});</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// slightly intensive synchronous code that prevented the main code from completing before the end of [timer1]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// slightly intensive synchronous code that prevented the main code from completing before the end of [timer1]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">for</span><span style="color:#000000"> (</span><span style="color:#0000ff">let</span><span style="color:#000000"> i = 0; i &lt; 1000000; i++) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">for</span><span style="color:#000000"> (</span><span style="color:#0000ff">let</span><span style="color:#000000"> j = 0; j &lt; 10000; j++) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    i + i ^ 2 + i ^ 3;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// will be displayed before the msg of evts issued by the function associated with [timer1]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// will be displayed before the msg of evts issued by the function associated with [timer1]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[fin du script]</span><span style="color:#a31515">,&quot;</span><span style="color:#000000">, heure(débutScript));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// time and duration display utility</span></span>
@@ -1181,10 +1181,10 @@
 <span class="normal"><a href="#__codelineno-0-5">5</a></span>
 <span class="normal"><a href="#__codelineno-0-6">6</a></span>
 <span class="normal"><a href="#__codelineno-0-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">promise</span><span class="o">=</span><span class="ow">new</span><span class="w"> </span><span class="nb">Promise</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span><span class="w"> </span><span class="nx">reject</span><span class="p">){</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">        </span><span class="c1">// an asynchronous task is launched</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">     </span><span class="c1">// an asynchronous task is launched</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="err">…</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">        </span><span class="c1">// if successful: call resolve(result) where [result] is the result of the asynchronous task;</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">        </span><span class="c1">// if unsuccessful: call reject(error) where [error] is an object encapsulating the error encountered;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">     </span><span class="c1">// if successful: call resolve(result) where [result] is the result of the asynchronous task;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">     </span><span class="c1">// if unsuccessful: call reject(error) where [error] is an object encapsulating the error encountered;</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="p">}</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="c1">// subscribe to events issued by the [Promise] asynchronous task</span>
 </code></pre></div></td></tr></table></div>
@@ -1289,7 +1289,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// it is possible to obtain the results (success, failure) of an asynchronous function</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// without explicitly using events thanks to the [Promise] class</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// without explicitly using events thanks to the [Promise] class</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// this class implicitly uses events, but these are not visible in the code</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// imports</span></span>
@@ -1300,8 +1300,8 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> débutScript = moment(Date.now());</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[début du script]</span><span style="color:#a31515">,&quot;</span><span style="color:#000000">, heure(débutScript));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// definition of an asynchronous task using a promise [Promise]</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// the asynchronous task is the [Promise] constructor parameter</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// definition of an asynchronous task using a promise [Promise]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// the asynchronous task is the [Promise] constructor parameter</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> débutPromise1 = moment(Date.now());</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> promise1 = </span><span style="color:#0000ff">new</span><span style="color:#000000"> Promise(</span><span style="color:#0000ff">function</span><span style="color:#000000"> (resolve) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// log</span></span></span>
@@ -1315,11 +1315,11 @@
 <span class="odt-code-line"><span class="odt-code-line-content">  }, 1000)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">});</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// we can know the result of the promise [promise1]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// we can know the result of the promise [promise1]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// when it has been resolved or rejected</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// the following instruction is a subscription to the [resolved] event via the [then] method</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// and to the [rejected] event via the [catch] method</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// the [finally] method is executed whether after a then or a catch</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// the following instruction is a subscription to the [resolved] event via the [then] method</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// and to the [rejected] event via the [catch] method</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// the [finally] method is executed whether after a then or a catch</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">promise1.then(result =&gt; {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// promise success stories [evt resolved]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[promise1.then]</span><span style="color:#a31515">, %s, result=%s&quot;</span><span style="color:#000000">, heure(débutPromise2), result));</span></span></span>
@@ -1331,7 +1331,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[promise1.finally]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, heure(débutPromise1));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">});</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// definition of an asynchronous task using a promise [Promise]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// definition of an asynchronous task using a promise [Promise]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> débutPromise2 = moment(Date.now());</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> promise2 = </span><span style="color:#0000ff">new</span><span style="color:#000000"> Promise(</span><span style="color:#0000ff">function</span><span style="color:#000000"> (resolve, reject) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// log</span></span></span>
@@ -1345,7 +1345,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">  }, 2000)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">});</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// we can know the result of the promise [promise2]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// we can know the result of the promise [promise2]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// when it has been resolved or rejected</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">promise2.then(result =&gt; {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// promise success stories [evt resolved]</span></span></span>
@@ -1466,10 +1466,10 @@
 <a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="c1">// definition of the asynchronous function</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="kd">function</span><span class="w"> </span><span class="nx">uneFonctionAsynchrone</span><span class="w"> </span><span class="p">(</span><span class="nx">p1</span><span class="p">,</span><span class="w"> </span><span class="nx">p2</span><span class="p">,</span><span class="w"> </span><span class="err">…</span><span class="p">,</span><span class="w"> </span><span class="nx">pn</span><span class="p">){</span>
 <a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Promise</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span><span class="w"> </span><span class="nx">reject</span><span class="p">){</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">        </span><span class="c1">// an asynchronous task is launched with parameters (P1, p2, ..., pn)</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">     </span><span class="c1">// an asynchronous task is launched with parameters (P1, p2, ..., pn)</span>
 <a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">    </span><span class="c1">// …</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">        </span><span class="c1">// if successful: call resolve(result) where [result] is the result of the asynchronous task;</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">        </span><span class="c1">// if unsuccessful: call reject(error) where [error] is an object encapsulating the error encountered;</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">     </span><span class="c1">// if successful: call resolve(result) where [result] is the result of the asynchronous task;</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">     </span><span class="c1">// if unsuccessful: call reject(error) where [error] is an object encapsulating the error encountered;</span>
 <a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="p">}</span>
 <a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="c1">// subscribe to [resolved, rejected] events to be sent by the asynchronous function [uneFonctionAsynchrone]</span>
 <a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="err">…</span>
@@ -1487,8 +1487,8 @@
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// we can define asynchronous functions that render a [Promise] type</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// they can then be tagged with the keyword [async]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// we can define asynchronous functions that render a [Promise] type</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// they can then be tagged with the keyword [async]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// imports</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> moment </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;moment&#x27;</span><span style="color:#000000">;</span></span></span>
@@ -1498,7 +1498,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> débutScript = moment(Date.now());</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[début du script]</span><span style="color:#a31515">,&quot;</span><span style="color:#000000">, heure());</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// an asynchronous function that renders a promise [Promise]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// an asynchronous function that renders a promise [Promise]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> async01(p1) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#0000ff">new</span><span style="color:#000000"> Promise((resolve) =&gt; {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[début de la tâche asynchrone async01]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">);</span></span></span>
@@ -1516,7 +1516,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">  });</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// an asynchronous function that renders a promise [Promise]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// an asynchronous function that renders a promise [Promise]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> async02(p1, p2) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#0000ff">new</span><span style="color:#000000"> Promise(resolve =&gt; {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[début de la tâche asynchrone async02]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">);</span></span></span>
@@ -1536,8 +1536,8 @@
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// run the two asynchronous functions in parallel</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// and wait for them both to finish</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// the then executes only if both functions have issued the [resolved] event</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// the catch is executed as soon as one of the two functions issues the [rejected] event</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// the then executes only if both functions have issued the [resolved] event</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// the catch is executed as soon as one of the two functions issues the [rejected] event</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">Promise.all(<span style="font-weight:bold">[async01(10), async02(10, 20)]</span>)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// the result is an array [result1, result2] where [result1] is the result emitted by a [resolve] of [async01]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// and [result2] the result emitted by a [resolve] of [async02]</span></span></span>
@@ -1756,7 +1756,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> débutScript = moment(Date.now());</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[début du code principal du script]</span><span style="color:#a31515">,&quot;</span><span style="color:#000000">, heure());</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// an asynchronous function rendering a [Promise]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// an asynchronous function rendering a [Promise]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> async01(débutAsync01) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#0000ff">new</span><span style="color:#000000"> Promise(</span><span style="color:#0000ff">function</span><span style="color:#000000"> (resolve) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[début fonction asynchrone async01]</span><span style="color:#a31515">,&quot;</span><span style="color:#000000">, heure());</span></span></span>
@@ -1773,7 +1773,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">  });</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// an asynchronous function rendering a [Promise]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// an asynchronous function rendering a [Promise]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> async02(débutAsync02) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[début fonction asynchrone async02]</span><span style="color:#a31515">,&quot;</span><span style="color:#000000">, heure());</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#0000ff">new</span><span style="color:#000000"> Promise(</span><span style="color:#0000ff">function</span><span style="color:#000000"> (resolve) {</span></span></span>
@@ -1790,7 +1790,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">  })</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// an asynchronous function rendering a [Promise]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// an asynchronous function rendering a [Promise]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> async03(débutAsync03) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[début fonction asynchrone async03]</span><span style="color:#a31515">,&quot;</span><span style="color:#000000">, heure());</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#0000ff">new</span><span style="color:#000000"> Promise((resolve, reject) =&gt; {</span></span></span>

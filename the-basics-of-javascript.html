@@ -1248,31 +1248,31 @@
 <p>The keywords <strong>[let]</strong> and <strong>[const]</strong> define variables with <strong>[block]</strong> scope (code within curly braces), but not the keyword <strong>[var]</strong>:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// the [let] keyword is used to define a block-scope variable</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// the [let] keyword is used to define a block-scope variable</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">{</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// the [count] variable is only known in this block</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">let</span><span style="color:#000000"> count = 1;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;count=&quot;</span><span style="color:#000000">, count);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// here the variable [count] is not known</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// here the variable [count] is not known</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">count++;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// the [const] keyword is used to define a block-span variable</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// the [const] keyword is used to define a block-span variable</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">{</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// the [count2] variable is only known in this block</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> count2 = 1;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;count=&quot;</span><span style="color:#000000">, count2);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// here the variable [count2] is not known</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// here the variable [count2] is not known</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">count2++;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// the [var] keyword cannot be used to define a block-scope variable</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// the [var] keyword cannot be used to define a block-scope variable</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">{</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// the variable [count3] will be known globally</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">var</span><span style="color:#000000"> count3 = 1;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;count=&quot;</span><span style="color:#000000">, count3);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// here the variable [count3] is known</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// here the variable [count3] is known</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">count3++;</span></span>
 </code></pre></div>
 

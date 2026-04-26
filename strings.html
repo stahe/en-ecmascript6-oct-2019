@@ -863,11 +863,11 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> chaîne2 = </span><span style="color:#0000ff">new</span><span style="color:#000000"> String(</span><span style="color:#a31515">&quot;xyzt&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// type</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;typeof(chaîne2)=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (chaîne2));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008000">// other entry (without new) - type [string] not [object]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// other entry (without new) - type [string] not [object]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> chaîne3 = String(</span><span style="color:#a31515">&quot;12 34&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// type</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;typeof(chaîne3)=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (chaîne3));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// type [string] and type [object] offer the same methods, those of the String class</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// type [string] and type [object] offer the same methods, those of the String class</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;chaîne1.length=&quot;</span><span style="color:#000000">, chaîne1.length);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;chaîne2.length=&quot;</span><span style="color:#000000">, chaîne2.length);</span></span></span>
 </code></pre></div>
@@ -1154,7 +1154,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">// slice (7,10): strings of characters 7 to 9</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">.slice(7,10)=</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne.slice(7, 10)));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// match: searches for an expression in the string - this expression can be a regular expression</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// /intro/i: regular expression designating the string [intro] in upper or lower case</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// /intro/i: regular expression designating the string [intro] in upper or lower case</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// returns the string found</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">.match(/intro/i)=</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne.match(</span><span style="color:#a31515">/intro/</span><span style="color:#0000ff">i</span><span style="color:#000000">)));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// replace: replaces string1 with string2 in string</span></span>

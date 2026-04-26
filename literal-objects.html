@@ -979,7 +979,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">console.log(personne.nom);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// the object itself</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;personne=&quot;</span><span style="color:#000000">, personne);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// this does not prevent direct access to property [_nom]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// this does not prevent direct access to property [_nom]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">personne._nom = </span><span style="color:#a31515">&quot;xyz&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;personne=&quot;</span><span style="color:#000000">, personne);</span></span></span>
 </code></pre></div>
@@ -1016,8 +1016,8 @@
 <p>This script shows three ways to write the names of an object&#x27;s properties and two ways to access them.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// object property names may be literal [name], surrounded by apostrophes [&#x27;name&#x27;], or may have a double quotation mark [&#x27;name&#x27;]</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// or quotation marks [&quot;name&quot;]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// object property names may be literal [name], surrounded by apostrophes [&#x27;name&#x27;], or may have a double quotation mark [&#x27;name&#x27;]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// or quotation marks [&quot;name&quot;]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// literal</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> obj1 = {</span></span></span>
@@ -1039,7 +1039,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#a31515">&quot;prénom&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;jean&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">};</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// two possible syntaxes for accessing the [name] property</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// two possible syntaxes for accessing the [name] property</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;nom=&quot;</span><span style="color:#000000">, obj3.nom);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;nom=&quot;</span><span style="color:#000000">, obj3</span><span style="font-weight:bold;color:#000000">[&#x27;nom&#x27;]</span><span style="color:#000000">);</span></span></span>
 </code></pre></div>
@@ -1059,7 +1059,7 @@
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// an object can have properties of type [function]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// an object can have properties of type [function]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> personne = {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// properties</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  prénom: </span><span style="color:#a31515">&quot;martin&quot;</span><span style="color:#000000">,</span></span></span>
@@ -1105,7 +1105,7 @@
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// an object can have properties of type [function]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// an object can have properties of type [function]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">let</span><span style="color:#000000"> personne = {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// properties</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  prénom: </span><span style="color:#a31515">&quot;martin&quot;</span><span style="color:#000000">,</span></span></span>

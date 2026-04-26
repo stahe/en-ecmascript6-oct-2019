@@ -956,7 +956,7 @@
 
 
 <p><a id="refheadingtoc225418640539168"></a></p>
-<h1 id="14-javascript-http-clients-of-the-tax-calculation-service">14. <span style="color: #365f91"><strong>Javascript HTTP clients of the tax calculation service</strong></span></h1>
+<h1 id="14-javascript-http-clients-of-the-tax-calculation-service">14. <span style="color: #365f91">Javascript HTTP clients of the tax calculation service</span></h1>
 <p><a id="refheadingtoc225420640539168"></a></p>
 <h2 id="141-introduction">14.1. <span style="color: #4f81bd">Introduction</span></h2>
 <p>Here, we propose to write a <strong>[Node.js]</strong> client for version 14 of the tax calculation service. The client/server architecture will be as follows:</p>
@@ -975,7 +975,7 @@
 
 <p><img src="images/10000000000005D4000001ADD25A3E45.png" width="597" height="172" style="width:15.79cm;height:4.54cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005D4000001ADD25A3E45.png" /></p>
 <p><a id="refheadingtoc225422640539168"></a></p>
-<h2 id="142-http-client-1">14.2. <span style="color: #4f81bd"><strong>HTTP Client 1</strong></span></h2>
+<h2 id="142-http-client-1">14.2. <span style="color: #4f81bd">HTTP Client 1</span></h2>
 <p><img src="images/10000000000000DB000000B5A9A61CA0.png" width="99" height="82" style="width:2.611cm;height:2.157cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000DB000000B5A9A61CA0.png" /></p>
 <p>As mentioned, the HTTP 1 client implements the following client/server architecture:</p>
 <p><img src="images/10000000000005C3000001A876F4498E.png" width="590" height="170" style="width:15.61cm;height:4.487cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005C3000001A876F4498E.png" /></p>
@@ -1200,7 +1200,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">// dao1 class import</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Dao </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./Dao1&#x27;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// asynchronous function [main]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// asynchronous function [main]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">async</span><span style="color:#000000"> </span><span style="color:#0000ff">function</span><span style="color:#000000"> main() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// axios configuration</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  axios.defaults.timeout = 2000;</span></span>
@@ -2123,7 +2123,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">use</span><span style="color:#000000"> \Symfony\Component\HttpFoundation\Response;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">use</span><span style="color:#000000"> \Symfony\Component\HttpFoundation\Request;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">use</span><span style="color:#000000"> \Symfony\Component\HttpFoundation\Session\Session;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// layer alias [dao]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// layer alias [dao]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">use</span><span style="color:#000000"> \Application\ServerDaoWithSession </span><span style="color:#0000ff">as</span><span style="color:#000000"> ServerDaoWithRedis;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">AdminDataController</span><span style="color:#000000"> </span><span style="color:#0000ff">implements</span><span style="color:#000000"> </span><span style="color:#2b91af">InterfaceController</span><span style="color:#000000"> {</span></span></span>
@@ -2229,7 +2229,7 @@
 <p><img src="images/1000000000000425000002C5D5F37389.png" width="372" height="248" style="width:9.83cm;height:6.569cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000425000002C5D5F37389.png" /></p>
 <p><img src="images/1000000000000A29000002E9D4535C0C.png" width="650" height="186" style="width:17.2cm;height:4.927cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000A29000002E9D4535C0C.png" /></p>
 <ul>
-  <li><span style="color: #000000">In </span><b><span style="color: #000000">[5-7]</span></b><span style="color: #000000">, we see that numeric values were stored as strings. PHP handled this because the + operator in calculations involving numbers and strings implicitly causes a type conversion from string to number. But JavaScript does the opposite: the + operator in calculations involving numbers and strings </span><span style="color: #000000">implicitly causes a type conversion from a number to a string. The calculations in the JavaScript </span><b><span style="color: #000000">[Métier] </span></b><span style="color: #000000">class are therefore incorrect;</span>
+  <li><span style="color: #000000">In </span><b><span style="color: #000000">[5-7]</span></b><span style="color: #000000">, we see that numeric values were stored as strings. PHP handled this because the + operator in calculations involving numbers and strings implicitly causes a type conversion from string to number. But JavaScript does the opposite: the + operator in calculations involving numbers and strings implicitly causes a type conversion from a number to a string. The calculations in the JavaScript </span><b><span style="color: #000000">[Métier] </span></b><span style="color: #000000">class are therefore incorrect;</span>
   </li>
 </ul>
 
@@ -2522,7 +2522,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Dao </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./Dao2&#x27;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Métier </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./Métier&#x27;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// asynchronous function [main]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// asynchronous function [main]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">async</span><span style="color:#000000"> </span><span style="color:#0000ff">function</span><span style="color:#000000"> main() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// axios configuration</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  axios.defaults.timeout = 2000;</span></span>
@@ -2714,8 +2714,8 @@
   <li>in <b>[4-5]</b>, the project configuration file <b>[package.json] </b>generated from the various answers provided;
   </li>
 </ul>
-<p><a id="webpack"></a>
-<a id="refheadingtoc225442640539168"></a></p>
+<p><a id="refheadingtoc225442640539168"></a>
+<a id="webpack"></a></p>
 <h3 id="1442-installing-project-dependencies">14.4.2. <span style="color: #4f81bd">Installing project dependencies</span></h3>
 <p>We will install the following dependencies:</p>
 <ul>
@@ -3073,7 +3073,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Dao </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./Dao2&#x27;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Métier </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./Métier&#x27;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// asynchronous function [main]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// asynchronous function [main]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">async</span><span style="color:#000000"> </span><span style="color:#0000ff">function</span><span style="color:#000000"> main() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// axios configuration</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  axios.defaults.timeout = 2000;</span></span>
@@ -3316,7 +3316,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Dao </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./Dao2&#x27;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Métier </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./Métier&#x27;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// asynchronous function [main]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// asynchronous function [main]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">async</span><span style="color:#000000"> </span><span style="color:#0000ff">function</span><span style="color:#000000"> main() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// axios configuration</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  axios.defaults.timeout = 2000;</span></span>
