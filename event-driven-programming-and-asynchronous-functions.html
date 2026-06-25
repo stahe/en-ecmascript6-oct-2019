@@ -15,10 +15,10 @@
         <link rel="canonical" href="https://stahe.github.io/en-ecmascript6-oct-2019/event-driven-programming-and-asynchronous-functions.html">
       
       
-        <link rel="prev" href="es6-modules.html">
+        <link rel="prev" href="the-es6-modules.html">
       
       
-        <link rel="next" href="javascript-http-functions.html">
+        <link rel="next" href="the-functions-http-of-javascript.html">
       
       
         
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -310,7 +312,7 @@
   <span class="md-ellipsis">
     
   
-    1. Introduction to the ECMASCRIPT 6 Language
+    1. Introduction to the ECMASCRIPT 6 language
   
 
     
@@ -364,7 +366,7 @@
   <span class="md-ellipsis">
     
   
-    3. The Basics of JavaScript
+    3. The Basics of Javascript
   
 
     
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="tables.html" class="md-nav__link">
+      <a href="the-tables.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Tables
+    4. The tables
   
 
     
@@ -526,7 +528,7 @@
   <span class="md-ellipsis">
     
   
-    9. Errors and exceptions
+    9. Errors and Exceptions
   
 
     
@@ -546,14 +548,14 @@
   
   
     <li class="md-nav__item">
-      <a href="es6-modules.html" class="md-nav__link">
+      <a href="the-es6-modules.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. ES6 Modules
+    10. The ES6 modules
   
 
     
@@ -713,14 +715,14 @@
   
   
     <li class="md-nav__item">
-      <a href="javascript-http-functions.html" class="md-nav__link">
+      <a href="the-functions-http-of-javascript.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. JavaScript HTTP functions
+    12. The functions HTTP of Javascript
   
 
     
@@ -767,14 +769,14 @@
   
   
     <li class="md-nav__item">
-      <a href="javascript-http-clients-of-the-tax-calculation-service.html" class="md-nav__link">
+      <a href="clients-http-javascript-from-the-tax-calculation-service.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. Javascript HTTP clients of the tax calculation service
+    14. Clients HTTP Javascript from the tax calculation service
   
 
     
@@ -807,26 +809,26 @@
   
 
 
-<p><a id="refheadingtoc2091462346209355"></a>
-<a id="fontionsasync"></a></p>
+<p><span id="refheadingtoc2091462346209355" name="refheadingtoc2091462346209355" class="odt-bookmark-anchor"></span>
+<span id="fontionsasync" name="fontionsasync" class="odt-bookmark-anchor"></span></p>
 <h1 id="11-event-driven-programming-and-asynchronous-functions">11. <span style="color: #365f91">Event-driven programming and asynchronous functions</span></h1>
 <p><img src="images/10000000000000E900000136448462DF.png" width="93" height="124" style="width:2.469cm;height:3.286cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000E900000136448462DF.png" /></p>
 <p>An asynchronous function is a function whose execution is initiated but whose result is not awaited. When execution is complete, the asynchronous function emits an event and transmits its result via that event.</p>
-<p>This mode of operation is well-suited for execution within a web browser. Indeed, an application running within a browser is an event-driven application: the application reacts to events, primarily triggered by the user (clicks, mouse movements, text input, etc.). JavaScript applications running within a browser interact with external services via the HTTP protocol. JavaScript’s native HTTP functions are asynchronous: they are initiated, and the receipt of a response from the requested external service is signaled by an event that is added to the set of events managed by the application.</p>
-<p>The following scripts will be executed by <strong>[node.js]</strong> and not by a browser. <strong>[node.js]</strong> also has an event-driven execution model:</p>
+<p>This mode of operation is well-suited for execution within a web browser. Indeed, an application running within a browser is an event-driven application: the application reacts to events, primarily triggered by the user (clicks, mouse movements, text input, etc.). Javascript applications running within a browser are designed to communicate with external services via the HTTP protocol. The native HTTP functions of Javascript are asynchronous: they are launched, and the receipt of a response from the requested external service is signaled by an event that is added to the set of events managed by the application.</p>
+<p>The following scripts will be executed by <strong>[node.js]</strong>, not by a browser. <strong>[node.js]</strong> also has an event-driven execution mode:</p>
 <ul>
   <li><b>[node.js]</b>, like a browser, uses an event loop to execute a script;
   </li>
   <li>execution of the script’s main code is the first event executed;
   </li>
-  <li>if this main code has launched asynchronous tasks, execution continues until these asynchronous tasks are completed. These tasks emit an event when they are finished. These events are queued in the event loop;
+  <li>if this main code has launched asynchronous tasks, execution continues until these asynchronous tasks are completed. These tasks emit an event when they are completed. These events are queued in the event loop;
   </li>
   <li>the main script must subscribe to these events if it wants to retrieve the results of the asynchronous actions;
   </li>
   <li>the script is not finished until all events it has emitted have been processed;
   </li>
 </ul>
-<p><a id="refheadingtoc225376640539168"></a></p>
+<p><span id="refheadingtoc225376640539168" name="refheadingtoc225376640539168" class="odt-bookmark-anchor"></span></p>
 <h2 id="111-script-async-01">11.1. <span style="color: #4f81bd">script [async-01]</span></h2>
 <p>The following script demonstrates the behavior of a script containing an asynchronous action.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
@@ -840,7 +842,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> débutScript = moment(Date.now());</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[début du script]</span><span style="color:#a31515">,&quot;</span><span style="color:#000000">, heure());</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// setTimeout arms a 1000 ms timer (2nd parameter) and immediately returns the timer number</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// setTimeout sets a 1000 ms timer (2nd parameter) and immediately returns the timer number</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// when the timer has run out of 1000 ms, it emits an event which is queued by the runtime</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// when the event is processed by the runtime, the function (1st parameter) is executed</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">setTimeout(</span><span style="color:#0000ff">function</span><span style="color:#000000"> () {</span></span></span>
@@ -871,25 +873,25 @@
 </code></pre></div>
 
 <ul>
-  <li>line 4: we import the <b>[moment] </b>library to format dates (line 27);
+  <li>line 4: we import the <b>[moment]</b> library to format dates (line 27);
   </li>
-  <li>line 5: import the <b>[sprintf-js] </b>library to format durations (line 34);
+  <li>line 5: import the <b>[sprintf-js]</b> library to format durations (line 34);
   </li>
   <li>line 8: we record the script&#x27;s start time;
   </li>
-  <li>line 9: we display it using the <b>[time] </b>method in lines 20–34;
+  <li>line 9: we display it using the <b>[heure]</b> method from lines 20–34;
   </li>
-  <li>lines 14–17: the <b>[setTimeout] </b>function has two parameters (f, duration): <b>f </b>is a function that is executed when <b>[duration] </b>milliseconds have elapsed;
+  <li>lines 14–17: The function <b>[setTimeout] </b>has two parameters (f, duration): <b>f </b>is a function that is executed when <b>[durée] </b>milliseconds have elapsed;
   </li>
-  <li>line 14: when the script runs, the <b>[setTimeout] </b>function is executed:
+  <li>line 14: when the script runs, the function <b>[setTimeout] </b>is executed:
     <ul>
-      <li>line 17: a 1000 ms timer is started and the countdown begins until it eventually reaches 0. The <b>[setTimeout] </b>function completes as soon as the timer is initialized and the countdown begins. It <b>does not wait </b>for the countdown to end. It returns an ID number for the timer used, and execution moves on to the next instruction, line 20. Here, the result of <b>[setTimeout] </b>is not used;
+      <li>line 17: a 1000 ms timer is started and the countdown begins until it eventually reaches 0. The <b>[setTimeout]</b> function terminates as soon as the timer is initialized and the countdown begins. It <b>does not wait </b>for the countdown to end. It returns a number identifying the timer used, and execution proceeds to the next instruction, line 20. Here, the result of <b>[setTimeout] </b>is not used;
       </li>
     </ul>
   </li>
-  <li>line 16: this message will be displayed at the end of the 1000 ms delay of the <b>[setTimeout] </b>function;
+  <li>line 16: this message will be displayed at the end of the 1000 ms delay of the <b>[setTimeout]</b> function;
   </li>
-  <li>lines 15–16: the function f, the first parameter of the <b>[setTimeout] </b>function, will be executed at the end of the 1000 ms delay. The message on line 16 will then be displayed;
+  <li>lines 15–16: the function f, the first parameter of the <b>[setTimeout]</b> function, will be executed at the end of the 1000 ms delay. The message on line 16 will then be displayed;
   </li>
   <li>line 20: this message will be displayed before the one on line 16;
   </li>
@@ -897,13 +899,13 @@
 
 <p><strong>Time</strong> function:</p>
 <ul>
-  <li>line 23: the function accepts an optional parameter <b>[time], </b>which is the start time of an operation whose duration it must display;
+  <li>line 23: the function accepts an optional parameter <b>[heure], </b>which is the start time of an operation whose duration it must display;
   </li>
   <li>lines 25–27: the current time is calculated and formatted;
   </li>
-  <li>line 29: if the <b>[start] </b>parameter is present, then a duration must be calculated;
+  <li>line 29: if the parameter <b>[début] </b>is present, then a duration must be calculated;
   </li>
-  <li>line 30: the duration of the operation. This results in a number of milliseconds;
+  <li>line 30: the duration of the operation. This yields a number of milliseconds;
   </li>
   <li>lines 31–32: this number of milliseconds is broken down into seconds and milliseconds;
   </li>
@@ -916,39 +918,39 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\async\async-01.js&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[début du script]</span>, heure=09:26:40:238</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[fin du code principal du script]</span>, heure=09:26:40:246, durée= 0 seconde(s) et 11 millisecondes</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[fin de l&#x27;action asynchrone setTimeout]</span>, heure=09:26:41:249, durée= 1 seconde(s) et 14 millisecondes</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">[fin de l&#x27;asynchronous action setTimeout], time=09:26:41:249, duration= 1 second(s) and 14 milliseconds</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Done]</span><span style="color:#a31515"> exited with </span><span style="color:#800080">code=0</span><span style="color:#a31515"> in </span><span style="color:#09885a">1.672</span><span style="color:#a31515"> seconds</span></span></span>
 </code></pre></div>
 
 <ul>
-  <li>line 4, we can see that the asynchronous action <b>[setTimeout] </b>finished approximately 1 second after the end of the script&#x27;s main code;
+  <li>line 4: we see that the asynchronous action <b>[setTimeOut] </b>finished approximately 1 second after the end of the script’s main code;
   </li>
-  <li>Line 6: The time displayed on line 3 is the time when the main code finishes. If the main code has initiated asynchronous tasks, the script is not complete until all asynchronous tasks have been executed. The duration displayed on line 6 is the total execution time of the script (main code + asynchronous tasks);
+  <li>Line 6: The time displayed on line 3 is the time the main code finished. If the main code launched asynchronous tasks, the script is not finished until all asynchronous tasks have been executed. The duration displayed on line 6 is the total execution time of the script (main code + asynchronous tasks);
   </li>
 </ul>
 
 <p>The <strong>[setTimeout]</strong> function will allow us to simulate asynchronous tasks in a <strong>[node.js]</strong> environment. In fact, the <strong>[setTimeout]</strong> function behaves like an asynchronous task:</p>
 <ul>
-  <li>it returns a result immediately—in this case, a timer ID—using the standard function mechanism (return);
+  <li>it returns a result immediately—in this case, a timer number—using the standard function mechanism (return);
   </li>
-  <li>it may <b>later </b>(which is not yet the case above) return other results <b>via events </b>that are then processed by the <b>[node.js] </b>event loop;
+  <li>it may <b>later </b>(which is not yet the case above) return other results <b>via events </b>that are then processed by the event loop of <b>[node.js]</b>;
   </li>
   <li>in most of the cases that follow, there will be two such events:
     <ul>
       <li>an event that could be called <b>[success]</b>, which will be emitted by the asynchronous task that successfully completed its task. A piece of data—the result of the task—is associated with the emitted event;
       </li>
-      <li>an event that could be called <b>[failure]</b>, which is emitted by the asynchronous task that failed to complete its task. A piece of data—typically an object describing the error—is associated with the emitted event. Possible errors with an asynchronous internet task, for example, would be ‘network unavailable’, ‘server machine does not exist’, ‘timeout exceeded’, ...
+      <li>an event that could be called <b>[failure]</b>, which will be emitted by the asynchronous task that failed to complete its task. A piece of data—typically an object describing the error—is associated with the emitted event. Possible errors with an asynchronous internet task, for example, would be “network unavailable,” “server not found,” “timeout exceeded,” etc.
       </li>
     </ul>
   </li>
-  <li>the main code that launched an asynchronous task can subscribe to the events that this task is likely to emit. When one of these is emitted, the main code is notified and can trigger the execution of a specific function designed to handle the event. This function receives as a parameter the data that the asynchronous task associated with the emitted event;
+  <li>The main code that launched an asynchronous task can subscribe to the events that this task is likely to emit. When one of these is emitted, the main code is notified and can trigger the execution of a specific function designed to handle the event. This function receives as a parameter the data that the asynchronous task associated with the emitted event;
   </li>
 </ul>
-<p><a id="refheadingtoc225378640539168"></a></p>
+<p><span id="refheadingtoc225378640539168" name="refheadingtoc225378640539168" class="odt-bookmark-anchor"></span></p>
 <h2 id="112-script-async-02">11.2. <span style="color: #4f81bd">script [async-02]</span></h2>
 <p>In this script, the asynchronous function <strong>[setTimeout]</strong> will emit events to communicate data to the code that has subscribed to them.</p>
-<p>Accessing <strong>[node.js]</strong> events requires additional libraries. We choose the <strong>[events]</strong> library, which we install using <strong>[npm]</strong>:</p>
+<p>Accessing the events of <strong>[node.js]</strong> requires additional libraries. We choose the <strong>[events]</strong> library, which we install along with <strong>[npm]</strong>:</p>
 <p><img src="images/10000000000005850000019732E59DD8.png" width="565" height="163" style="width:14.951cm;height:4.306cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005850000019732E59DD8.png" /></p>
 <p>The <strong>[async-02]</strong> script is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
@@ -1014,15 +1016,15 @@
 
 <p><strong>Comments</strong></p>
 <ul>
-  <li>line 9: we import the <b>[EventEmitter] </b>class from the <b>[events] </b>library. This is new: until now, we had only imported literal objects and functions;
+  <li>line 9: we import the <b>[EventEmitter]</b> class from the <b>[events]</b> library. This is a new feature: until now, we had only imported literal objects and functions;
   </li>
-  <li>line 15: we create a <b>[node.js] </b>event emitter by instantiating the <b>[EventEmitter] </b>class with the <b>[new] </b>keyword;
+  <li>line 15: we create an event emitter <b>[node.js] </b>by instantiating the class <b>[EventEmitter] </b>with the keyword <b>[new]</b>;
   </li>
-  <li>Lines 20–27: the asynchronous function <b>[setTimeout]</b>. It will emit two events when executed:
+  <li>lines 20–27: the asynchronous function <b>[setTimeout]</b>. It will emit two events during execution:
     <ul>
-      <li>line 24, the <b>[timer1Success] </b>event with the object {success: 4} as its associated value;
+      <li>line 24, the event <b>[timer1Success] </b>with the associated value {success : 4};
       </li>
-      <li>line 26, the <b>[timer1Failure] </b>event with the object {failure: 6} as its associated value;
+      <li>line 26, the event <b>[timer1Failure] </b>with the associated value {failure: 6};
       </li>
       <li>an asynchronous function can emit as many events as it wants. We mentioned earlier that most often it emits one of the two events <b>[success, failure]</b>, not both as we are doing here;
       </li>
@@ -1030,17 +1032,17 @@
   </li>
   <li>line 20: the execution of <b>[setTimeout] </b>is instantaneous: a timer is set and its ID returned to the calling code. The events will be emitted later, in this case 1 second later;
   </li>
-  <li>triggering events is pointless if there is no code to handle them when they occur. This is why the main code must subscribe to both events <b>[timer1Success, timer1Failure] </b>if it wants to handle them, specifically to retrieve the data associated with these events;
+  <li>Sending events is pointless if there is no code to handle them when they occur. This is why the main code must subscribe to both <b>[timer1Success, timer1Failure]</b> events if it wants to manage them, specifically to retrieve the data associated with these events;
   </li>
-  <li>Lines 30–32: The main code subscribes to the <b>[timer1Success] </b>event. When the <b>[node.js] </b>event listener processes this event, it will call the function that is the second parameter of the <b>[eventEmitter.on] </b>method, passing it the data (here called <b>[result]</b>) associated with the <b>[timer1Success] </b>event;
+  <li>lines 30–32: the main code subscribes to the <b>[timer1Success]</b> event. When the <b>[node.js]</b> event listener processes this event, it will call the function that is the second parameter of the <b>[eventEmitter.on]</b> method, passing it the data (here called <b>[result]</b>) associated with the <b>[timer1Success]</b> event;
   </li>
-  <li>line 31: the event handler function will display the JSON of the data associated with the event as well as the current time;
+  <li>line 31: the event handler function will display the jSON of the data associated with the event as well as the current time;
   </li>
-  <li>lines 35–37: using similar code, the main code subscribes to the <b>[timer1Failure] </b>event;
+  <li>lines 35–37: using similar code, the main code subscribes to the event <b>[timer1Failure]</b>;
   </li>
-  <li>Subscribing to an event (first parameter) does not immediately execute the code of the <b>[callback] </b>function (second parameter). This function will only be executed after the event has occurred;
+  <li>Subscribing to an event (1st parameter) does not immediately execute the code of the <b>[callback]</b> function (2nd parameter). This function will only be executed after the event has occurred;
   </li>
-  <li>line 40: the main script code has finished, but the script itself has not, since the main code launched an asynchronous task. The overall script will not finish until this asynchronous task has completed;
+  <li>Line 40: The main script code has finished, but the script itself has not, since the main code launched an asynchronous task. The overall script will not finish until this asynchronous task has completed;
   </li>
 </ul>
 
@@ -1049,9 +1051,9 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\async\async-02.js&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[début du script]</span>, heure=09:34:58:909</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[fin du code principal du script]</span>, heure=09:34:58:916, durée= 0 seconde(s) et 10 millisecondes</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[setTimeout, fin du timer d&#x27;1 s]</span>, heure=09:34:59:929, durée= 1 seconde(s) et 23 millisecondes</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">la fonction asynchrone du timer a rendu le résultat <span style="font-weight:bold">[{&quot;success&quot;:4}]</span>, heure=09:34:59:931, durée= 1 seconde(s) et 25 millisecondes, via l&#x27;événement <span style="font-weight:bold">[timer1Success]</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">la fonction asynchrone du timer a rendu le résultat <span style="font-weight:bold">[{&quot;failure&quot;:6}]</span>, heure=09:34:59:932, durée= 1 seconde(s) et 26 millisecondes, via l&#x27;événement <span style="font-weight:bold">[timer1Failure]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">[setTimeout, fin du timer d&#x27;1 s], time=09:34:59:929, duration= 1 second(s) and 23 milliseconds</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">la fonction asynchrone du timer a rendu le résultat [{&quot;success&quot;:4}], heure=09:34:59:931, durée= 1 seconde(s) et 25 millisecondes, via l&#x27;event [timer1Success]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">la fonction asynchrone du timer a rendu le résultat [{&quot;failure&quot;:6}], heure=09:34:59:932, durée= 1 seconde(s) et 26 millisecondes, via l&#x27;event [timer1Failure]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Done]</span><span style="color:#a31515"> exited with </span><span style="color:#800080">code=0</span><span style="color:#a31515"> in </span><span style="color:#09885a">1.627</span><span style="color:#a31515"> seconds</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1060,20 +1062,20 @@
 <ul>
   <li>line 3: end of the main code 10 ms after the script started;
   </li>
-  <li>line 4: start of the function encapsulated in the 1000 ms timer, approximately 1 second after the script starts;
+  <li>line 4: start of the function encapsulated in the 1000 ms timer, approximately 1 second after the start of the script;
   </li>
-  <li>line 5: processing of the <b>[‘timer1Success’] </b>event, 2 ms later;
+  <li>line 5: processing of event <b>[‘timer1Success’]</b>, 2 ms later;
   </li>
-  <li>line 6: processing of the <b>[‘timer1Failure’] </b>event, 1 ms after the <b>[‘timer1Success’] </b>event;
+  <li>Line 6: Processing of event <b>[‘timer1Failure’]</b>, 1 ms after event <b>[‘timer1Success’]</b>;
   </li>
-  <li>line 8: end of the global script with a total duration of 1.627 seconds;
+  <li>Line 8: End of the global script with a total duration of 1.627 seconds;
   </li>
 </ul>
-<p><a id="refheadingtoc225380640539168"></a></p>
+<p><span id="refheadingtoc225380640539168" name="refheadingtoc225380640539168" class="odt-bookmark-anchor"></span></p>
 <h2 id="113-script-async-03">11.3. <span style="color: #4f81bd">script [async-03]</span></h2>
-<p>The following script demonstrates another aspect of the <strong>[node.js]</strong> event loop:</p>
+<p>The following script shows another aspect of the <strong>[node.js]</strong> event loop:</p>
 <ul>
-  <li>the loop executes events one after another, generally in the order they arrive. Some operating systems assign priorities to events, which are then processed in order of priority rather than order of arrival;
+  <li>the loop executes events one after another, generally in the order they arrive. Some OS scripts assign priorities to events, which are then processed in order of priority rather than order of arrival;
   </li>
   <li>the loop <b>executes only one event at a time</b>. The next event is processed only after the previous one has finished. In an event-driven system, you should therefore avoid writing code that monopolizes the processor for long periods, as events will not be processed when they occur but later when the event loop reaches them. This results in an application that is not very “responsive”;
   </li>
@@ -1139,13 +1141,13 @@
 <ul>
   <li>This code is from the previous example <b>[async-02], </b>to which lines 39–44 have been added;
   </li>
-  <li>Lines 20–27: The <b>[setTimeout] </b>function has been programmed to execute an internal asynchronous function after a delay of one second. After this second has elapsed, the execution of the timer’s asynchronous function does not occur immediately: an event is placed in the execution loop to request it. If the execution loop is busy processing another event, the execution of the timer’s asynchronous function will have to wait;
+  <li>Lines 20–27: The function <b>[setTimeout] </b>has been programmed to execute an internal asynchronous function after a delay of one second. After this second has elapsed, the execution of the timer’s asynchronous function does not occur immediately: an event is placed in the execution loop to request it. If the execution loop is busy processing another event, the execution of the timer’s asynchronous function will have to wait;
   </li>
-  <li>lines 20–27: as soon as the <b>[setTimeout] </b>function has set its timer for a one-second delay, it releases the processor and returns control to the calling code. The calling code continues with lines 30–37, which are event subscriptions and have negligible execution time;
+  <li>lines 20–27: as soon as the function <b>[setTimeout] </b>has set its timer for a one-second delay, it releases the processor and returns control to the calling code. The calling code continues with lines 30–37, which are event subscriptions and have negligible execution time;
   </li>
-  <li>the main code continues with lines 40–44, which form a loop of 1,010 iterations. This code will be in execution when the timer triggers its “end of 1-second delay” event. This event is then placed in the event loop but must wait until the script’s main code has finished executing to have a chance of being processed;
+  <li>the main code continues with lines 40–44, which form a loop of 1,010 iterations. This code will be in execution when the timer triggers its “end of 1-second delay” event.  This event is then placed in the event loop but must wait until the script’s main code has finished executing to have a chance of being processed;
   </li>
-  <li>Line 47: end of the script’s main code. It is after this final display that the timer end event can be processed and the internal asynchronous function of <b>[setTimeout] </b>can be executed;
+  <li>Line 47: end of the script’s main code. It is after this final display that the timer end event can be processed and the internal asynchronous function in <b>[setTimeout] </b>can be executed;
   </li>
 </ul>
 
@@ -1154,52 +1156,52 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\async\async-03.js&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[début du script]</span>, heure=08:55:02:665</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[fin du code principal du script]</span>, heure=08:55:11:789, durée= 9 seconde(s) et 131 millisecondes</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[setTimeout, fin du timer d&#x27;1 s]</span>, heure=08:55:11:794, durée= 9 seconde(s) et 136 millisecondes</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">la fonction asynchrone du timer a rendu le résultat <span style="font-weight:bold">[{&quot;success&quot;:4}]</span>, heure=08:55:11:794, durée= 9 seconde(s) et 136 millisecondes, via l&#x27;événement <span style="font-weight:bold">[timer1Success]</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">la fonction asynchrone du timer a rendu le résultat <span style="font-weight:bold">[{&quot;failure&quot;:6}]</span>, heure=08:55:11:794, durée= 9 seconde(s) et 136 millisecondes, via l&#x27;événement <span style="font-weight:bold">[timer1Failure]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">[setTimeout, fin du timer d&#x27;1 s], time=08:55:11:794, duration= 9 second(s) and 136 milliseconds</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">la fonction asynchrone du timer a rendu le résultat [{&quot;success&quot;:4}], heure=08:55:11:794, durée= 9 seconde(s) et 136 millisecondes, via l&#x27;event [timer1Success]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">la fonction asynchrone du timer a rendu le résultat [{&quot;failure&quot;:6}], heure=08:55:11:794, durée= 9 seconde(s) et 136 millisecondes, via l&#x27;event [timer1Failure]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Done]</span><span style="color:#a31515"> exited with </span><span style="color:#800080">code=0</span><span style="color:#a31515"> in </span><span style="color:#09885a">9.796</span><span style="color:#a31515"> seconds</span></span></span>
 </code></pre></div>
 
 <p><strong>Comments</strong></p>
 <ul>
-  <li>line 3: we see that the script’s main code took 9 seconds to execute. Any events that occurred during this time were queued in the event loop;
+  <li>line 3: we see that the main script code took 9 seconds to execute. Any events that may have occurred during this time were queued in the event loop;
   </li>
-  <li>line 4: we see that the <b>[timer end] </b>event was processed 5 ms after the main code finished. It was emitted approximately 1 s after the script started but had to wait an additional 8 s to finally be processed;
+  <li>line 4: we see that the event <b>[fin du timer] </b>was processed 5 ms after the main code finished. It was emitted approximately 1 s after the script started but had to wait an additional 8 s to finally be processed;
   </li>
 </ul>
 
-<p>The key takeaway from this example is that in an event-driven system, code should never occupy the processor for very long. If you have synchronous code that takes a long time to execute, you must find a way to break it down into shorter asynchronous tasks that signal their completion with an event.</p>
-<p><a id="refheadingtoc225382640539168"></a></p>
+<p>The key takeaway from this example is that in an event-driven system, code should never occupy the processor for very long. If you have a synchronous code long to execute, you must “figure out” how to break it down into shorter asynchronous tasks that will signal their completion with an event.</p>
+<p><span id="refheadingtoc225382640539168" name="refheadingtoc225382640539168" class="odt-bookmark-anchor"></span></p>
 <h2 id="114-script-async-04">11.4. <span style="color: #4f81bd">script [async-04]</span></h2>
-<p>The <strong>[async-04]</strong> script demonstrates another mechanism, called <strong>[Promise]</strong>, a promise of a result. This mechanism avoids the need to explicitly handle <strong>[node.js]</strong> events. It is handled implicitly, and the developer can therefore ignore the existence of these events. Understanding them, however, will help the developer better grasp how <strong>[Promise]</strong> works, which is complex at first glance.</p>
-<p>The <strong>[Promise]</strong> type is a JavaScript class. Its constructor accepts an asynchronous function as a parameter, to which it passes two parameters traditionally called <strong>[resolve]</strong> and <strong>[reject]</strong>. They could have different names;</p>
+<p>The script <strong>[async-04]</strong> demonstrates another mechanism, called <strong>[Promise]</strong>, a result promise. This mechanism avoids the need to explicitly handle <strong>[node.js]</strong> events. It is handled implicitly, and the developer can therefore ignore the existence of these events. However, understanding them will help the developer better grasp the functioning of <strong>[Promise],</strong> which is complex at first glance.</p>
+<p>The <strong>[Promise]</strong> type is a Javascript class. Its constructor accepts as a parameter an asynchronous function to which it passes two parameters traditionally called <strong>[resolve]</strong> and <strong>[reject]</strong>. They could have different names;</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
 <span class="normal"><a href="#__codelineno-0-4">4</a></span>
 <span class="normal"><a href="#__codelineno-0-5">5</a></span>
 <span class="normal"><a href="#__codelineno-0-6">6</a></span>
-<span class="normal"><a href="#__codelineno-0-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">promise</span><span class="o">=</span><span class="ow">new</span><span class="w"> </span><span class="nb">Promise</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span><span class="w"> </span><span class="nx">reject</span><span class="p">){</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">     </span><span class="c1">// an asynchronous task is launched</span>
+<span class="normal"><a href="#__codelineno-0-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">const</span><span class="w"> </span><span class="n">promise</span><span class="o">=</span><span class="k">new</span><span class="w"> </span><span class="n">Promise</span><span class="p">(</span><span class="k">function</span><span class="p">(</span><span class="n">resolve</span><span class="p">,</span><span class="w"> </span><span class="n">reject</span><span class="p">)</span><span class="err">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">     </span><span class="o">//</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">asynchronous</span><span class="w"> </span><span class="n">task</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">launched</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="err">…</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">     </span><span class="c1">// if successful: call resolve(result) where [result] is the result of the asynchronous task;</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">     </span><span class="c1">// if unsuccessful: call reject(error) where [error] is an object encapsulating the error encountered;</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="p">}</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="c1">// subscribe to events issued by the [Promise] asynchronous task</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">     </span><span class="o">//</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">successful</span><span class="p">:</span><span class="w"> </span><span class="k">call</span><span class="w"> </span><span class="n">resolve</span><span class="p">(</span><span class="k">result</span><span class="p">)</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="p">[</span><span class="k">result</span><span class="p">]</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">result</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">asynchronous</span><span class="w"> </span><span class="n">task</span><span class="p">;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">     </span><span class="o">//</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">unsuccessful</span><span class="p">:</span><span class="w"> </span><span class="k">call</span><span class="w"> </span><span class="n">reject</span><span class="p">(</span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="p">[</span><span class="n">error</span><span class="p">]</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="k">object</span><span class="w"> </span><span class="n">encapsulating</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="n">encountered</span><span class="p">;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="err">}</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="o">//</span><span class="w"> </span><span class="n">subscribe</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">events</span><span class="w"> </span><span class="n">issued</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="p">[</span><span class="n">Promise</span><span class="p">]</span><span class="w"> </span><span class="n">asynchronous</span><span class="w"> </span><span class="n">task</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-  <li>the <b>[Promise] </b>constructor does two things:
+  <li>The constructor of <b>[Promise] </b>does two things:
     <ul>
-      <li>it creates an event to trigger the execution of the <b>[function(resolve, reject)] function </b>passed to it as a parameter, but does not wait for its result and immediately returns a <b>[Promise] </b>object to the calling code. This object can have four states:
+      <li>it creates an event to trigger the execution of the <b>[function(resolve, reject)]</b> function passed to it as a parameter but does not wait for its result and immediately returns a <b>[Promise]</b> object to the calling code. This object can have four states:
         <ul>
-          <li><b>[pending]</b>: the asynchronous action that returned the <b>[Promise] </b>is not yet complete;
+          <li><b>[pending]</b>: the asynchronous action that returned <b>[Promise] </b>is not yet complete;
           </li>
-          <li><b>[fulfilled]</b>: the asynchronous action that returned the <b>[Promise] </b>has completed successfully;
+          <li><b>[fulfilled]</b>: the asynchronous action that returned <b>[Promise] </b>has completed successfully;
           </li>
-          <li><b>[rejected]</b>: the asynchronous action that returned the <b>[Promise] </b>has failed;
+          <li><b>[rejected]</b>: The asynchronous action that returned <b>[Promise] </b>failed;
           </li>
-          <li><b>[settled]</b>: the asynchronous action that returned the <b>[Promise] </b>has completed;
+          <li><b>[settled]</b>: The asynchronous action that returned <b>[Promise] </b>has completed;
           </li>
         </ul>
       </li>
@@ -1211,13 +1213,13 @@
 <ul>
   <li>(continued)
     <ul>
-      <li>the asynchronous task in lines 2–5 is <b>launched immediately</b>. Asynchronous tasks are most often input/output tasks that break down as follows:
+      <li>The asynchronous task in lines 2–5 is <b>launched immediately</b>. Asynchronous tasks are most often input/output tasks that break down as follows:
         <ol>
           <li>execution of synchronous code to initiate the I/O operation with another component, such as a remote server;
           </li>
           <li>waiting for a response from that component;
           </li>
-          <li>processing of this response;
+          <li>processing this response;
           </li>
         </ol>
       </li>
@@ -1225,21 +1227,21 @@
   </li>
 </ul>
 
-<p>Phase 2—waiting for the external component—is the most resource-intensive. Rather than waiting:</p>
+<p>It is phase 2—waiting for the external component—that is the most resource-intensive. Rather than waiting:</p>
 <ul>
   <li>the receipt of the data requested from the external component will be signaled by an event;
   </li>
-  <li>in the synchronous code that follows phase 1 (line 7 of the example code), we will subscribe to this event and then, at some point, return to the <b>[node.js] </b>event loop. The next event in the list of pending events will then be processed;
+  <li>in the synchronous code following phase 1 (line 7 of the example code), we will subscribe to this event and then, at some point, return to the event loop of <b>[node.js]</b>. The next event in the list of pending events will then be processed;
   </li>
-  <li>during phase 2, there is parallel execution but on different devices:
+  <li>During phase 2, there is parallel execution, but on different devices:
     <ul>
       <li>the processor for the event loop;
       </li>
-      <li>an external component (disk, database, remote server) for retrieving the requested data;
+      <li>an external device (disk, database, remote server) for retrieving the requested data;
       </li>
     </ul>
   </li>
-  <li>At the end of phase 2, once the I/O operation has obtained the data it requested, an event will be triggered to indicate that the I/O result is available. This event will then join the others in the event queue;
+  <li>At the end of phase 2, once the I/O operation has obtained the requested data, an event is triggered to indicate that the I/O result is available. This event then joins the others in the event queue;
   </li>
   <li>when its turn comes, it will be processed. The function associated with this event (line 7 of the example code) will then be executed;
   </li>
@@ -1249,13 +1251,13 @@
 <ul>
   <li>(continued)
     <ul>
-      <li>once the asynchronous task in lines 2 and 5 has been launched and has completed its work, it can return a result to the calling code using the two functions <b>[resolve, reject] </b>that the <b>[Promise] </b>constructor passed to it as parameters. The convention is as follows:
+      <li>once the asynchronous task in lines 2 and 5 has been launched and has completed its work, it can return a result to the calling code using the two functions <b>[resolve, reject] </b>that the constructor <b>[Promise] </b>passed to it as parameters. The convention is as follows:
         <ul>
-          <li>the asynchronous task signals success via <b>[resolve(result)]</b>. This amounts to adding an event to the <b>[node.js] </b>event loop that could be called <b>[resolved]</b>, with <b>[result] </b>as the associated data;
+          <li>the asynchronous task signals success via <b>[resolve(result)]</b>. This amounts to placing an event—which we could call <b>[resolved]</b>—in the event loop of <b>[node.js]</b>, with <b>[result] </b>as the associated data;
           </li>
-          <li>the asynchronous task signals a failure via <b>[reject(error)]</b>. This amounts to adding an event to the <b>[node.js] </b>event loop that could be called <b>[rejected]</b>, with <b>[error] </b>as the associated data—typically an object detailing the error that occurred;
+          <li>the asynchronous task signals a failure via <b>[reject(error)]</b>. This amounts to placing an event—which we could call <b>[rejected]</b>—into the event loop of <b>[node.js]</b>, with <b>[error] </b>as the associated data, typically an object detailing the error that occurred;
           </li>
-          <li>the calling code must therefore subscribe to these two events to be notified when the result of the asynchronous function is available;
+          <li>the calling code must therefore subscribe to both of these events to be notified when the result of the asynchronous function is available;
           </li>
         </ul>
       </li>
@@ -1263,27 +1265,27 @@
   </li>
 </ul>
 
-<p>After the asynchronous task encapsulated in the <strong>[Promise]</strong> has finished executing, the state of the <strong>[promise]</strong> object returned by the <strong>[Promise(…)]</strong> constructor changes:</p>
+<p>After the asynchronous task encapsulated in <strong>[Promise]</strong> has finished executing, the state of the <strong>[promise]</strong> object returned by the <strong>[Promise(…)]</strong> constructor changes:</p>
 <ul>
-  <li>the <b>[resolved] </b>event changes its state from <b>[pending] </b>to <b>[resolved]</b>;
+  <li>the <b>[resolved]</b> event changes it from the <b>[pending]</b> state to <b>[resolved]</b>;
   </li>
-  <li>the <b>[rejected] </b>event changes it from the <b>[pending] </b>state to <b>[rejected]</b>;
+  <li>the event <b>[rejected] </b>changes its state from <b>[pending] </b>to <b>[rejected]</b>;
   </li>
 </ul>
 
-<p>Subscribing to the <strong>[resolved]</strong> and <strong>[rejected]</strong> events of the asynchronous task is done using methods of the <strong>[Promise]</strong> class with the following syntax:</p>
+<p>Subscription to the <strong>[resolved]</strong> and <strong>[rejected]</strong> events of the asynchronous task is performed using methods of the <strong>[Promise]</strong> class with the following syntax:</p>
 <p><strong>promise.then(f1).catch(f2).finally(f3);</strong></p>
 <p>where:</p>
 <ul>
-  <li><b>f1 </b>is a function executed when the <b>[promise] </b>state changes from <b>[pending] </b>to <b>[resolved]</b>, i.e., when the asynchronous task has successfully completed its work. It receives the value <b>[result] </b>as a parameter, passed by the <b>[resolve(result)] </b>statement of the asynchronous task;
+  <li><b>f1 </b>is a function executed when the state of <b>[promise] </b>changes from <b>[pending] </b>to <b>[resolved]</b>, i.e., when the asynchronous task has successfully completed its work. It receives the value <b>[result]</b> as a parameter, passed by the <b>[resolve(result)]</b> instruction of the asynchronous task;
   </li>
-  <li><b>f2 </b>is a function executed when the state of <b>[promise] </b>changes from <b>[pending] </b>to <b>[rejected]</b>, i.e., when the asynchronous task has failed to complete its work. It receives the value <b>[error] </b>as a parameter, passed by the <b>[reject(error)] </b>statement of the asynchronous task;
+  <li><b>f2 </b>is a function executed when the state of <b>[promise] </b>changes from <b>[pending] </b>to <b>[rejected]</b>, i.e., when the asynchronous task has failed to complete its work. It receives the value <b>[error]</b> as a parameter, passed by the <b>[reject(errror)]</b> instruction of the asynchronous task;
   </li>
-  <li><b>f3 </b>is a function executed after the <b>[then] </b>or <b>[catch] </b>methods have been executed, so it is always executed. It receives no parameters;
+  <li><b>f3 </b>is a function executed after the methods <b>[then] </b>or <b>[catch] </b>have been executed, so it is always executed. It receives no parameters;
   </li>
 </ul>
 
-<p>This syntax completely hides the events to which we subscribe. However, it is a subscription, and like the one in the previous example, it does not immediately execute the functions <strong>[f1, f2, f3]</strong>. These will be executed—or not—when one of the events <strong>[resolved, rejected]</strong> to which we subscribe occurs.</p>
+<p>This syntax completely hides the events to which we subscribe. However, it is a subscription, and like the one in the previous example, it does not immediately execute the <strong>[f1, f2, f3]</strong> functions. These will be executed—or not—when one of the <strong>[resolved, rejected]</strong> events to which we subscribe occurs.</p>
 <p>The <strong>[async-04]</strong> script demonstrates this mechanism:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
@@ -1318,8 +1320,8 @@
 <span class="odt-code-line"><span class="odt-code-line-content">// we can know the result of the promise [promise1]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// when it has been resolved or rejected</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// the following instruction is a subscription to the [resolved] event via the [then] method</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// and to the [rejected] event via the [catch] method</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the [finally] method is executed whether after a then or a catch</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// et à l&#x27;évt [rejected] via la méthode [catch]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// la méthode [finally] est exécutée que ce soit après un then ou un catch</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">promise1.then(result =&gt; {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// promise success stories [evt resolved]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[promise1.then]</span><span style="color:#a31515">, %s, result=%s&quot;</span><span style="color:#000000">, heure(débutPromise2), result));</span></span></span>
@@ -1383,13 +1385,13 @@
 <ul>
   <li>lines 18–28: creation of a <b>[Promise promise1]</b>. Its asynchronous function returns its result via an event after one second. Once this asynchronous operation is launched (timer is started), we do not wait for it to return its result and immediately proceed to the code on line 35;
   </li>
-  <li>lines 35–44: we subscribe to the two events <b>[resolved, rejected] </b>that the internal asynchronous function of <b>[promise1] </b>can emit;
+  <li>lines 35–44: we subscribe to the two <b>[resolved, rejected]</b> events that the internal asynchronous function of <b>[promise1] </b>can emit;
   </li>
-  <li>lines 46–71: We repeat the same code sequence as before for a second promise <b>[promise2]</b>;
+  <li>lines 46–71: we repeat the same code sequence as before for a second <b>[promise2]</b> promise;
   </li>
-  <li>Line 74: The main body of the script has finished executing, but the script as a whole has not, because two asynchronous actions have been initiated. We return to the event loop, where at some point one of the events <b>[resolved, rejected] </b>for the promises <b>[promise1, promise2] </b>will occur. It will then be handled;
+  <li>line 74: the main code of the script is finished, but not the script as a whole, since two asynchronous actions have been launched. We return to the event loop, where at some point one of the <b>[resolved, rejected]</b> events from the <b>[promise1, promise2]</b> promises will occur. It will then be processed;
   </li>
-  <li>then we return to the event loop. And there, the second <b>[resolved, rejected] </b>event of the promises <b>[promise1, promise2] </b>will be handled when it occurs;
+  <li>then we return to the event loop. And there, the second event <b>[resolved, rejected] </b>from the <b>[promise1, promise2]</b> promises will be processed when it occurs;
   </li>
 </ul>
 
@@ -1418,17 +1420,17 @@
   </li>
   <li>line 5: end of the main code and return to the event loop;
   </li>
-  <li>line 6: processing of the <b>[end of promise1’s asynchronous function] </b>event. The state of <b>[promise1] </b>will change to <b>[resolved]</b>. An event signals this;
+  <li>Line 6: Processing event <b>[fin fonction asynchrone de promise1]</b>. The status of <b>[promise1] </b>will change to <b>[resolved]</b>. An event signals this;
   </li>
-  <li>line 7: since <b>[promise2] </b>has not yet finished its work, the <b>[promise1 resolved] </b>event that has just been added to the loop will be handled by the <b>[promise1.then] </b>method and then by the <b>[promise.finally] </b>method (line 8);
+  <li>Line 7: Since <b>[promise2] </b>has not yet finished its work, the event <b>[promise1 resolved], </b>which has just been added to the loop, will be processed by the method <b>[promise1.then] </b>and then by the method <b>[promise.finally] </b>(line 8);
   </li>
-  <li>lines 9–11: the same mechanism occurs when <b>[promise2] </b>changes from the <b>[pending] </b>state to <b>[resolved]</b>;
+  <li>lines 9–11: the same mechanism occurs when <b>[promise2] </b>transitions from state <b>[pending] </b>to <b>[resolved]</b>;
   </li>
 </ul>
 
-<p><a id="refheadingtoc225384640539168"></a></p>
+<p><span id="refheadingtoc225384640539168" name="refheadingtoc225384640539168" class="odt-bookmark-anchor"></span></p>
 <h2 id="115-script-async-05">11.5. <span style="color: #4f81bd">script [async-05]</span></h2>
-<p>Let’s return to the code for the <strong>[Promise]</strong> object constructor:</p>
+<p>Let’s return to the constructor code for an object <strong>[Promise]</strong>:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
@@ -1447,7 +1449,7 @@
 <a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="p">}</span>
 <a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="c1">// subscribe to events issued by the asynchronous task</span>
 </code></pre></div></td></tr></table></div>
-<p>Line 2: the <strong>[Promise]</strong>’s asynchronous task is launched. It often requires more parameters than just the <strong>[resolve, reject]</strong> parameters passed to it by the function that encapsulates it. In this case, we encapsulate the creation of the <strong>[Promise]</strong> in a function that will pass it the parameters its asynchronous function needs:</p>
+<p>Line 2: the asynchronous task for <strong>[Promise]</strong> is launched. It often requires more parameters than just the <strong>[resolve, reject]</strong> parameters passed to it by the function that encapsulates it. In this case, we encapsulate the creation of <strong>[Promise]</strong> in a function that will pass it the parameters its asynchronous function needs:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
@@ -1478,9 +1480,9 @@
 </code></pre></div></td></tr></table></div>
 <p>The following script:</p>
 <ul>
-  <li>defines two asynchronous functions that return a <b>[Promise]</b>;
+  <li>defines two asynchronous functions returning a <b>[Promise]</b>;
   </li>
-  <li>starts their execution in parallel and waits for both to finish before performing a certain task;
+  <li>launches their execution in parallel and waits for both to finish before performing a certain task;
   </li>
 </ul>
 
@@ -1537,18 +1539,18 @@
 <span class="odt-code-line"><span class="odt-code-line-content">// run the two asynchronous functions in parallel</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// and wait for them both to finish</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// the then executes only if both functions have issued the [resolved] event</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the catch is executed as soon as one of the two functions issues the [rejected] event</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// le catch s&#x27;exécute dès que l&#x27;une des deux fonctions émet l&#x27;évt [rejected]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">Promise.all(<span style="font-weight:bold">[async01(10), async02(10, 20)]</span>)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// the result is an array [result1, result2] where [result1] is the result emitted by a [resolve] of [async01]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// and [result2] the result emitted by a [resolve] of [async02]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  .then(result =&gt; {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[promise-all success]</span><span style="color:#a31515">, %s, result=%j&quot;</span><span style="color:#000000">, heure(débutScript), result));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  })</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// error is the result emitted by the first [reject] of one of the two asynchronous functions</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// error is the result of the first [reject] of one of the two asynchronous functions</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  .catch(error =&gt; {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[promise-all error]</span><span style="color:#a31515">, %s, erreur=%j&quot;</span><span style="color:#000000">, heure(débutScript), error));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  })</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// finally is executed after then or catch</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// finally est exécuté après le then ou le catch</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  .finally(() =&gt; {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[promise-all finally]</span><span style="color:#a31515">, %s&quot;</span><span style="color:#000000">, heure(débutScript)));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  });</span></span>
@@ -1576,35 +1578,35 @@
 
 <p><strong>Comments</strong></p>
 <ul>
-  <li>Lines 15–30: We define a function <b>[async01] </b>that returns its result after 1 second via a timer event. The function <b>[async01] </b>is used in the result on line 26;
+  <li>lines 15-30: we define a function <b>[async01] </b>that returns its result after 1 second via a timer event. The function <b>[async01] </b>is used in its result on line 26;
   </li>
-  <li>lines 33–47: We do the same with a function <b>[async02] </b>that returns its result after 2 seconds via a timer event. The function <b>[async02] </b>takes two parameters, which are used in its result on line 44;
+  <li>lines 33–47: we do the same with a function <b>[async02] </b>that returns its result after 2 seconds via a timer event. The function <b>[async02] </b>takes two parameters that are used in its result on line 44;
   </li>
-  <li>When the two functions <b>[async01] and [async02] </b>are called:
+  <li>When the two functions <b>[async01, async02]</b> are called:
     <ul>
       <li>will be launched;
       </li>
-      <li>will return two promises <b>[promise1, promise2] </b>to the calling code;
+      <li>return two <b>[promise1, promise2]</b> promises to the calling code;
       </li>
       <li>execution will then return to the calling code, which will continue running;
       </li>
       <li>after approximately 1 second, <b>[async01] </b>will emit an event to indicate that it has completed its work. The event in question will be queued in the event loop associated with the result passed by <b>[async01] </b>along with the event;
       </li>
-      <li>after approximately 2 seconds, the same process will occur for <b>[async02]</b>;
+      <li>After approximately 2 seconds, the same process will occur for <b>[async02]</b>;
       </li>
     </ul>
   </li>
-  <li>Line 54: Only now are the asynchronous functions <b>[async01, async02] </b>executed (notations async01(10) and async02(10,20)). They are executed within an array passed as a parameter to the <b>[Promise.all] </b>method. We know that <b>[async01, async02] </b>both return a promise to the calling code. Therefore, the parameter of <b>[Promise.all] </b>is an array of two promises;
+  <li>Line 54: It is only now that the asynchronous functions <b>[async01, async02] </b>are executed (notations async01(10) and async02(10,20)). They are executed within an array passed as a parameter to the <b>[Promise.all]</b> method. We know that <b>[async01, async02] </b>both return a promise to the calling code. Therefore, the parameter of <b>[Promise.all] </b>is an array of two promises;
   </li>
   <li><b>[Promise.all([promise1, promise2, …, promisen]).then(f1).catch(f2).finally(f3)</b>] is an event subscription:
     <ul>
       <li><b>[Promise.all] </b>is of type <b>[Promise]</b>;
       </li>
-      <li>the function <b>[f1] </b>of the <b>[then] </b>method will be executed when <b>all the promises [promise1, promise2, …, promisen] </b>in the parameter array of the <b>[all] </b>method have transitioned from the <b>[pending] </b>state to the <b>[resolved] </b>state. In other words, <b>[f1] </b>will be executed when all the promises in the array have completed successfully;
+      <li>The function <b>[f1] </b>of the method <b>[then] </b>will be executed when <b>all the promises [promise1, promise2, …, promisen] </b>in the parameter array of the method <b>[all] </b>have been passed fromstate <b>[pending] </b>to state <b>[resolved]</b>. In other words, <b>[f1] </b>will be executed when all promises in the array have completed successfully;
       </li>
-      <li>the <b>[f2] </b>function of the <b>[catch] </b>method will be executed as soon as any of the promises in the array changes from the <b>[pending] </b>state to the <b>[rejected] </b>state. In other words, <b>[f2] </b>is executed as soon as any of the promises in the array fails;
+      <li>the function <b>[f2] </b>of the method <b>[catch] </b>will be executed as soon as any of the promises in the array transitions from state <b>[pending] </b>to state <b>[rejected]</b>. In other words, <b>[f2] </b>is executed as soon as one of the promises in the array fails;
       </li>
-      <li>the <b>[f3] </b>function of the <b>[finally] </b>method will be executed after the execution of one of the <b>[then, catch] </b>methods, so it is always executed;
+      <li>the function <b>[f3] </b>of the method <b>[finally] </b>will be executed after the execution of one of the methods <b>[then, catch]</b>, so it is always executed;
       </li>
     </ul>
   </li>
@@ -1626,31 +1628,31 @@
 </code></pre></div>
 
 <ul>
-  <li>lines 6-7: the two asynchronous tasks <b>[async01, async02] </b>are launched. They run in parallel. It is not the execution of their code that occurs in parallel, but their respective waits for the requested data happen at the same time;
+  <li>lines 6-7: the two asynchronous tasks <b>[async01, async02] </b>are launched. They run in parallel. It is not the execution of their code that is done in parallel, but their respective waits for the requested data occur at the same time;
   </li>
-  <li>Line 5: The main body of the script has finished. Now we just have to wait for the two asynchronous tasks <b>[async01, async02] </b>to complete;
+  <li>line 5: the main script code has finished. All that remains is to wait for the two asynchronous tasks <b>[async01, async02]</b> to complete;
   </li>
-  <li>line 6: the asynchronous task <b>[async01] </b>completes approximately 1 second after it was launched. It returns a result using the <b>[resolve] </b>function, so its promise in the array on line 56 of the code changes from the <b>[pending] </b>state to <b>[resolved]</b>. This is not enough to trigger the <b>[then] </b>method, lines 59–60 of the code;
+  <li>Line 6: The asynchronous task <b>[async01] </b>completes approximately 1 second after it is launched. It returns a result using the <b>[resolve]</b> function, so its promise in the array on line 56 of the code changes from the <b>[pending]</b> state to <b>[resolved]</b>. This is not enough to trigger the <b>[then]</b> method, lines 59–60 of the code;
   </li>
-  <li>line 7: the asynchronous task <b>[async02] </b>completes approximately 2 seconds after it is launched. It returns a result using the <b>[resolve] </b>function, so its promise in the array on line 56 of the code changes from the <b>[pending] </b>state to <b>[resolved]</b>. The <b>[then] </b>method will be executed as soon as the event loop allows;
+  <li>Line 7: The asynchronous task <b>[async02] </b>completes approximately 2 seconds after it is launched. It returns a result using the <b>[resolve]</b> function, so its promise in the array on line 56 of the code changes from the <b>[pending]</b> state to <b>[resolved]</b>. The <b>[then]</b> method will be executed as soon as the event loop allows;
   </li>
-  <li>line 8:   the <b>[then] </b>method of <b>[Promise.all] </b>is executed. It receives as a parameter an array <b>[result1, result2] </b>where <b>[result1] </b>is the result returned by <b>[async01]</b>, and <b>[result2] </b>is the result returned by <b>[async02]</b>;
+  <li>Line 8:   the method <b>[then] </b>of <b>[Promise.all] </b>is executed. It receives as a parameter an array <b>[result1, result2], </b>where <b>[result1] </b>is the result returned by <b>[async01]</b>, and <b>[result2] </b>is the result returned by <b>[async02]</b>;
   </li>
-  <li>line 9: the <b>[finally] </b>method of <b>[Promise.all] </b>is executed;
+  <li>line 9: the method <b>[finally] </b>of <b>[Promise.all] </b>is executed;
   </li>
 </ul>
-<p><a id="refheadingtoc225386640539168"></a></p>
-<h2 id="116-script-async-06">11.6. <span style="color: #4f81bd">script [async-06]</span></h2>
-<p>This new script demonstrates how the combined use of the <strong>[async / await]</strong> keywords allows for <strong>asynchronous</strong> code that resembles <strong>synchronous</strong> code. Event handling is completely hidden, making the code easier to understand.</p>
-<p>We revisit the previous example with the following modifications:</p>
+<p><span id="refheadingtoc225386640539168" name="refheadingtoc225386640539168" class="odt-bookmark-anchor"></span></p>
+<h2 id="116-script-async-06">11.6. <span style="color: #4f81bd"><strong>script [async-06]</strong></span></h2>
+<p>This new script demonstrates how using the <strong>[async / await]</strong> keywords together allows for <strong>asynchronous</strong> code that resembles <strong>synchronous</strong> code. Event handling is completely hidden, making the code easier to understand.</p>
+<p>We’ll revisit the previous example with the following modifications:</p>
 <ul>
-  <li>we add a third asynchronous function <b>[async03], </b>which returns its result using the <b>[Promise.reject] </b>method, thereby signaling to the event loop that it has “failed” to complete its task;
+  <li>we add a third asynchronous function <b>[async03], </b>which returns its result using the <b>[Promise.reject]</b> method, thereby signaling to the event loop that it has “failed” to complete its task;
   </li>
-  <li>we execute the three asynchronous functions <b>[async01, async02, async03] </b>sequentially. In the previous example, we had executed the asynchronous functions <b>[async01, async02] </b>in parallel;
+  <li>we execute the three asynchronous functions <b>[async01, async02, async03]</b> sequentially. In the previous example, we had executed the asynchronous functions <b>[async01, async02]</b> in parallel;
   </li>
-  <li>Before the introduction of the <b>[async/await] </b>keywords, the sequential execution of asynchronous actions was achieved using nested <b>[Promise] </b>objects. Whenever there were multiple asynchronous actions to execute in this way, the number of promises increased accordingly, and the code became less readable;
+  <li>Before the appearance of the keywords <b>[async/await]</b>, the sequential execution of asynchronous actions was performed using nested <b>[Promise] </b>functions. As soon as there were several asynchronous actions to execute in this way, the number of promises increased accordingly and the code became less readable;
   </li>
-  <li>With the <b>[async/await] </b>keywords, the sequential execution of asynchronous tasks uses a syntax similar to that of synchronous task execution:
+  <li>with the keywords <b>[async/await]</b>, the sequential execution of asynchronous tasks uses a syntax similar to that of synchronous task execution:
   </li>
 </ul>
 
@@ -1678,29 +1680,29 @@
 </code></pre></div>
 
 <ul>
-  <li>line 6: the asynchronous function <b>[async01] </b>is launched (using the <b>await</b> keyword) and we wait for it to return its result via one of the methods <b>[Promise.resolve, Promise.reject]</b>. This is therefore a <b>blocking</b> operation;
+  <li>line 6: the asynchronous function <b>[async01] </b>is launched (using the <b>await</b> keyword) and we wait for it to publish its result via one of the <b>[Promise.resolve, Promise.reject]</b> methods. This is therefore a <b>blocking</b> operation;
   </li>
-  <li>line 6: the <b>[await] </b>keyword transforms the asynchronous operation <b>[async01] </b>into a blocking operation. We know that the <b>[async01] </b>operation returns a result in two ways:
+  <li>line 6: the keyword <b>[await] </b>transforms the asynchronous operation <b>[async01] </b>into a blocking operation. We know that the operation <b>[async01] </b>returns a result in two ways:
     <ul>
-      <li>it <b>returns </b>a <b>[Promise] </b>object to the calling code almost immediately;
+      <li>It <b>returns </b>a <b>[Promise]</b> object to the calling code almost immediately;
       </li>
-      <li>it subsequently <b>publishes </b>a result to the event loop via the <b>[Promise.resolve, Promise.reject] </b>methods. It is this latter result that <b>[result1] </b>retrieves on line 6. The event-driven handling of the <b>[async01] </b>action has become invisible;
+      <li>it subsequently <b>publishes </b>a result to the event loop via the <b>[Promise.resolve, Promise.reject]</b> methods. It is this latter result that <b>[result1]</b> retrieves, line 6. The event handling for the <b>[async01]</b> action has become invisible;
       </li>
-      <li>if the result <b>[result] </b>of <b>[async01] </b>is published via <b>[Promise.resolve(result)]</b>, it is assigned to <b>[result1] </b>on line 6 and execution continues to line 7;
+      <li>if the result <b>[result] </b>of <b>[async01] </b>is published by <b>[Promise.resolve(result)]</b>, it is assigned to <b>[result1] </b>on line 6 and execution continues on line 7;
       </li>
-      <li>if the result of <b>[async01] </b>is resolved via <b>[Promise.reject]</b>, this triggers an exception and code execution proceeds to line 14, the <b>catch block</b>. The parameter of the <b>[catch] </b>clause is the error object (error) resolved by <b>[async01] </b>using the expression <b>[Promise.reject(error)]</b>. The asynchronous task can also emit the error via a <b>[throw(error)]</b>. The <b>[error] </b>object is the one caught in <b>[catch(error)]</b>;
+      <li>if the result of <b>[async01] </b>is published by <b>[Promise.reject]</b>, this causes an exception and code execution jumps to line 14, the <b>catch</b> block. The parameter of the <b>[catch]</b> clause is the error object (error) published by <b>[async01] </b>with an expression <b>[Promise.reject(error)]</b>. The asynchronous task can also publish the error via a <b>[throw(error)]</b>. The <b>[error]</b> object is the one retrieved in <b>[catch(error)]</b>;
       </li>
-      <li>the <b>[await] </b>keyword must be inside a function preceded by the <b>[async] </b>keyword, line 2. This keyword indicates that the <b>[main] </b>function is an asynchronous function;
+      <li>the keyword <b>[await] </b>must be within a function preceded by the keyword <b>[async]</b>, line 2. This keyword indicates that the function <b>[main] </b>is an asynchronous function;
       </li>
-      <li>in the expression <b>[await f(…)]</b>, <b>[f] </b>must be an asynchronous function that returns a <b>[Promise] </b>object to the calling code;
+      <li>in the expression <b>[await f(…)]</b>, <b>[f] </b>must be an asynchronous function that returns an object <b>[Promise] </b>to the calling code;
       </li>
     </ul>
   </li>
-  <li>We do the same for the asynchronous actions <b>[async02] </b>on line 9 and <b>[async03] </b>on line 12;
+  <li>We do the same for the asynchronous action <b>[async02] </b>on line 9 and <b>[async03] </b>on line 12;
   </li>
 </ul>
 
-<p>Still using the <strong>[async / await]</strong> keywords, it is possible to execute asynchronous tasks in parallel using the following syntax:</p>
+<p>Still using the keywords <strong>[async / await]</strong>, it is possible to execute asynchronous tasks in parallel using the following syntax:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// parallel execution of asynchronous tasks</span></span></span>
@@ -1716,31 +1718,31 @@
 </code></pre></div>
 
 <ul>
-  <li>line 3: we have a <b>blocking</b> operation: we wait for the three asynchronous tasks in the array <b>[async01(..), async02(..), async03(..)] </b>to publish their results on the event loop using one of the methods <b>[Promise.resolve, Promise.reject]</b>;
+  <li>line 3: there is a <b>blocking</b> operation: we wait for the three asynchronous tasks in the <b>[async01(..), async02(..), async03(..)]</b> array to publish their results to the event loop using one of the <b>[Promise.resolve, Promise.reject]</b> methods;
   </li>
-  <li>if the three asynchronous tasks publish their results using <b>[Promise.resolve]</b>, the constant <b>[result] </b>is then the array <b>[result1, result2, result3] </b>where:
+  <li>if the three asynchronous tasks publish their results using <b>[Promise.resolve]</b>, then the constant <b>[result] </b>is the array <b>[result1, result2, result3] </b>where:
     <ul>
       <li><b>[result1] </b>is the result published by <b>[async01] </b>using the expression <b>[Promise.resolve(result1)]</b>;
       </li>
       <li><b>[result2] </b>is the result published by <b>[async02] </b>using the expression <b>[Promise.resolve(result2)]</b>;
       </li>
-      <li><b>[result3] </b>is the result published by <b>[async03] </b>using the expression <b>[Promise.resolve(result3)]</b>;
+      <li><b>[result3] </b>is the result published by <b>[async03] </b>with the expression <b>[Promise.resolve(result3)]</b>;
       </li>
     </ul>
   </li>
-  <li>if any of the three tasks publishes its result using the expression <b>[Promise.reject(error)], </b>then an exception occurs;
+  <li>if any of the three tasks publishes its result with the expression <b>[Promise.reject(error)], </b>then an exception occurs;
     <ul>
       <li>the constant <b>[result] </b>on line 3 does not receive a value;
       </li>
-      <li>execution proceeds directly to the <b>[catch] block </b>on line 5;
+      <li>execution proceeds directly to <b>[catch] </b>on line 5;
       </li>
-      <li>the (error) parameter of the catch is the (error) object published by the expression <b>[Promise.reject(error)]</b>;
+      <li>the parameter (error) of the catch block is the object (error) published by the expression <b>[Promise.reject(error)]</b>;
       </li>
     </ul>
   </li>
 </ul>
 
-<p>By combining these two syntaxes, we can execute asynchronous tasks either sequentially or in parallel, all using syntax similar to that of synchronous code. We should therefore prefer this syntax, which is much more readable than the previous ones. This <strong>[async/await]</strong> syntax has only been available since ECMAScript version 6. There is still a lot of JavaScript code that uses promises <strong>[Promise]</strong>. That is why it is also important to understand how they work.</p>
+<p>By combining these two syntaxes, you can execute asynchronous tasks either sequentially or in parallel, all using syntax similar to that of synchronous code. This syntax is therefore much more readable than the previous ones and should be preferred. This <strong>[async / await]</strong> syntax has only been available since version 6 of ECMAScript. There is still a lot of Javascript code that uses <strong>[Promise]</strong> promises. That is why it is also important to understand how they work.</p>
 <p>The complete code for the <strong>[async-06]</strong> script is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
@@ -1880,21 +1882,21 @@
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\async\async-06.js&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[début du code principal du script]</span>, heure=15:02:00:152</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">------------ exécution séquentielle des tâches asynchrones lancée ------------------------</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">------------ sequential execution of asynchronous tasks launched ------------------------</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[début fonction asynchrone async01]</span>, heure=15:02:00:161</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[fin du code principal du script]</span>, heure=15:02:00:164, durée= 0 seconde(s) et 15 millisecondes</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[fin fonction asynchrone async01]</span>, heure=15:02:01:165, durée= 1 seconde(s) et 4 millisecondes</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[async01 result]</span>= { prop1: <span style="font-weight:bold">[ 11, 21, 31 ]</span>, prop2: &#x27;abcd&#x27; }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">début async02------------- heure=15:02:01:253</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">[async01 result]= { prop1: [ 11, 21, 31 ], prop2: &#x27;abcd&#x27; }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">début async02------------- time=15:02:01:253</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[début fonction asynchrone async02]</span>, heure=15:02:01:254</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[fin fonction asynchrone async02]</span>, heure=15:02:03:265, durée= 2 seconde(s) et 12 millisecondes</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[async02 result]</span>= { prop1: <span style="font-weight:bold">[ 12, 22, 32 ]</span>, prop2: &#x27;xyzt&#x27; }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">début async03------------- heure=15:02:03:268</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">[async02 result]= { prop1: [ 12, 22, 32 ], prop2: &#x27;xyzt&#x27; }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">début async03------------- time=15:02:03:268</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[début fonction asynchrone async03]</span>, heure=15:02:03:268</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[fin fonction asynchrone async03]</span>, heure=15:02:06:285, durée= 3 seconde(s) et 18 millisecondes</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[sequential error]</span>= {&quot;prop1&quot;:<span style="font-weight:bold">[13,23,33]</span>,&quot;prop2&quot;:&quot;échec&quot;}, heure=15:02:06:289, durée= 6 seconde(s) et 129 millisecondes</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[fin exécution séquentielle des tâches asynchrones]</span>, heure=15:02:06:291, durée= 6 seconde(s) et 131 millisecondes</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">------------ exécution parallèle des tâches asynchrones lancée ------------------------</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">------------ parallel execution of asynchronous tasks launched ------------------------</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[début fonction asynchrone async01]</span>, heure=15:02:06:292</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[début fonction asynchrone async02]</span>, heure=15:02:06:293</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[début fonction asynchrone async03]</span>, heure=15:02:06:294</span></span>
@@ -1942,8 +1944,8 @@
     <div class="md-footer-meta__inner">
 
       <div>
-        <a href="https://stahe.github.io/" target="_blank">
-          https://stahe.github.io/
+        <a href="https://stahe.github.io" target="_blank">
+          https://stahe.github.io
         </a>
         <br>
         This tutorial written by <strong>Serge Tahé</strong> is made available to the public under the terms of the

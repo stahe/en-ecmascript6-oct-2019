@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -310,7 +312,7 @@
   <span class="md-ellipsis">
     
   
-    1. Introduction to the ECMASCRIPT 6 Language
+    1. Introduction to the ECMASCRIPT 6 language
   
 
     
@@ -364,7 +366,7 @@
   <span class="md-ellipsis">
     
   
-    3. The Basics of JavaScript
+    3. The Basics of Javascript
   
 
     
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="tables.html" class="md-nav__link">
+      <a href="the-tables.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Tables
+    4. The tables
   
 
     
@@ -552,10 +554,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#81-script-func-01" class="md-nav__link">
+  <a href="#81-func-01-script" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8.1. script [func-01]
+        8.1. [func-01] script
       
     </span>
   </a>
@@ -628,7 +630,7 @@
   <span class="md-ellipsis">
     
   
-    9. Errors and exceptions
+    9. Errors and Exceptions
   
 
     
@@ -648,14 +650,14 @@
   
   
     <li class="md-nav__item">
-      <a href="es6-modules.html" class="md-nav__link">
+      <a href="the-es6-modules.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. ES6 Modules
+    10. The ES6 modules
   
 
     
@@ -702,14 +704,14 @@
   
   
     <li class="md-nav__item">
-      <a href="javascript-http-functions.html" class="md-nav__link">
+      <a href="the-functions-http-of-javascript.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. JavaScript HTTP functions
+    12. The functions HTTP of Javascript
   
 
     
@@ -756,14 +758,14 @@
   
   
     <li class="md-nav__item">
-      <a href="javascript-http-clients-of-the-tax-calculation-service.html" class="md-nav__link">
+      <a href="clients-http-javascript-from-the-tax-calculation-service.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. Javascript HTTP clients of the tax calculation service
+    14. Clients HTTP Javascript from the tax calculation service
   
 
     
@@ -796,12 +798,12 @@
   
 
 
-<p><a id="refheadingtoc2042413980233556"></a></p>
+<p><span id="refheadingtoc2042413980233556" name="refheadingtoc2042413980233556" class="odt-bookmark-anchor"></span></p>
 <h1 id="8-the-functions">8. <span style="color: #365f91">The functions</span></h1>
 <p><img src="images/10000000000000E0000000E3B1A0C324.png" width="90" height="91" style="width:2.371cm;height:2.402cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000E0000000E3B1A0C324.png" /></p>
-<p><a id="refheadingtoc2042433980233556"></a></p>
-<h2 id="81-script-func-01">8.1. <span style="color: #4f81bd">script [func-01]</span></h2>
-<p>The script examines how parameters are passed to a function:</p>
+<p><span id="refheadingtoc2042433980233556" name="refheadingtoc2042433980233556" class="odt-bookmark-anchor"></span></p>
+<h2 id="81-func-01-script">8.1. <span style="color: #4f81bd">[func-01] script</span></h2>
+<p>The script focuses on how function parameters are passed:</p>
 <ul>
   <li>pass-by-value for numbers, strings, and booleans;
   </li>
@@ -842,7 +844,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">doSomethingWithBoolean(bool);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;bool </span><span style="font-weight:bold;color:#a31515">[outside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, bool);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// --------------------- table - passage by reference</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// --------------------- table - passing by reference</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> doSomethingWithArray(param) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  param.push(1000);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[param inside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param, </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[type]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (param), </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[passage par référence]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param === tab);</span></span></span>
@@ -852,7 +854,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">doSomethingWithArray(tab);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[tab outside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, tab);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// --------------------- object - passing by reference</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// --------------------- object - passage by reference</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> doSomethingWithObject(param) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  param.unePropriétéNouvelle = </span><span style="color:#a31515">&quot;xyz&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[param inside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param, </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[type]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (param), </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[passage par référence]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param === obj);</span></span></span>
@@ -885,17 +887,17 @@
 <span class="odt-code-line"><span class="odt-code-line-content">bool <span style="font-weight:bold">[outside function]</span>= true</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[param inside function]</span>= <span style="font-weight:bold">[ 10, 20, 30, 1000 ]</span> <span style="font-weight:bold">[type]</span>= object <span style="font-weight:bold">[passage par référence]</span>= true</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[tab outside function]</span>= <span style="font-weight:bold">[ 10, 20, 30, 1000 ]</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[param inside function]</span>= <span style="font-weight:bold">[ 10, 20, 30, &#x27;unePropriétéNouvelle&#x27;: &#x27;xyz&#x27; ]</span> <span style="font-weight:bold">[type]</span>= object <span style="font-weight:bold">[passage par référence]</span>= true</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[obj outside function]</span>= <span style="font-weight:bold">[ 10, 20, 30, &#x27;unePropriétéNouvelle&#x27;: &#x27;xyz&#x27; ]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">[param inside function]= [ 10, 20, 30, &#x27;unePropriétéNouvelle&#x27;: &#x27;xyz&#x27; ] [type]= object [pass by reference]= true</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">[obj outside function]= [ 10, 20, 30, &#x27;unePropriétéNouvelle&#x27;: &#x27;xyz&#x27; ]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[param inside function]</span>= x =&gt; x + 4 <span style="font-weight:bold">[type]</span>= function <span style="font-weight:bold">[passage par référence]</span>= true</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[f outside function]</span>= x =&gt; x + 4 xyz function</span></span>
 </code></pre></div>
 
-<p><a id="refheadingtoc2042453980233556"></a></p>
+<p><span id="refheadingtoc2042453980233556" name="refheadingtoc2042453980233556" class="odt-bookmark-anchor"></span></p>
 <h2 id="82-script-func-02">8.2. <span style="color: #4f81bd">script [func-02]</span></h2>
-<p>The following script shows that the <strong>[function]</strong> type is a data type like any other and that a variable can have this type. It also shows two ways to define a function:</p>
+<p>The following script shows that the type <strong>[function]</strong> is a data type like any other and that a variable can have this type. It also shows two ways to define a function:</p>
 <ul>
-  <li>one using the <b>[function] </b>keyword;
+  <li>one using the keyword <b>[function]</b>;
   </li>
   <li>the other using the &quot;arrow&quot; notation =&gt;;
   </li>
@@ -930,9 +932,9 @@
 <span class="odt-code-line"><span class="odt-code-line-content">variable3(10,12,14)= 36</span></span>
 </code></pre></div>
 
-<p><a id="refheadingtoc2042473980233556"></a></p>
+<p><span id="refheadingtoc2042473980233556" name="refheadingtoc2042473980233556" class="odt-bookmark-anchor"></span></p>
 <h2 id="83-script-func-03">8.3. <span style="color: #4f81bd">script [func-03]</span></h2>
-<p>This script demonstrates the ability to pass a function as a parameter to another function. This technique is widely used in JavaScript frameworks.</p>
+<p>This script demonstrates the ability to pass a function as a parameter to another function. This technique is widely used in Javascript frameworks.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// function parameters can be of type [function]</span></span>
@@ -971,9 +973,9 @@
 <span class="odt-code-line"><span class="odt-code-line-content">150</span></span>
 </code></pre></div>
 
-<p><a id="refheadingtoc259303196815120"></a></p>
+<p><span id="refheadingtoc259303196815120" name="refheadingtoc259303196815120" class="odt-bookmark-anchor"></span></p>
 <h2 id="84-script-func-04">8.4. <span style="color: #4f81bd">script [func-04]</span></h2>
-<p>The following script demonstrates that a JavaScript function can behave like a class:</p>
+<p>The following script demonstrates that a Javascript function can behave like a class:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// a function can be used as an object</span></span>
@@ -1005,7 +1007,7 @@
 <ul>
   <li>lines 5–7: the body of function f does not define any properties;
   </li>
-  <li>lines 9–12: properties are assigned to the function f from outside;
+  <li>lines 9–12: properties are assigned to function f from outside;
   </li>
   <li>line 14: use of the function (object) f. Note that we do not write <b>[f()] </b>but simply <b>[f]</b>. This is the notation for an object;
   </li>
@@ -1023,9 +1025,9 @@
 </code></pre></div>
 
 <p>ES6 introduced the concept of classes, which now allows us to avoid using functions to create classes.</p>
-<p><a id="refheadingtoc5458671626043720"></a></p>
+<p><span id="refheadingtoc5458671626043720" name="refheadingtoc5458671626043720" class="odt-bookmark-anchor"></span></p>
 <h2 id="85-script-func-05">8.5. <span style="color: #4f81bd">script [func-05]</span></h2>
-<p>The script [func-05] demonstrates the use of an operator called the [rest operator]:</p>
+<p>The script [func-05] demonstrates the use of an operator called [rest operator]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// rest operator</span></span>
@@ -1045,11 +1047,11 @@
 </code></pre></div>
 
 <ul>
-  <li>line 3: the [...otherArgs] notation means that with a call of the form f(param1, param2, param3), we will have line 3:
+  <li>line 3: the notation [...otherArgs] means that with a call of the type f(param1, param2, param3), we will have line 3:
     <ul>
       <li>arg1=param1
       </li>
-      <li>otherArgs = [param2, param3]. [otherArgs] is therefore an array that collects all the actual parameters passed after [param1];
+      <li>otherArgs=[param2, param3]. [otherArgs] is therefore an array that contains all the actual parameters passed to [param1];
       </li>
     </ul>
   </li>
@@ -1099,8 +1101,8 @@
     <div class="md-footer-meta__inner">
 
       <div>
-        <a href="https://stahe.github.io/" target="_blank">
-          https://stahe.github.io/
+        <a href="https://stahe.github.io" target="_blank">
+          https://stahe.github.io
         </a>
         <br>
         This tutorial written by <strong>Serge Tahé</strong> is made available to the public under the terms of the

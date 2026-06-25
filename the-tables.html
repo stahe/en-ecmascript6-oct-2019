@@ -12,7 +12,7 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/en-ecmascript6-oct-2019/tables.html">
+        <link rel="canonical" href="https://stahe.github.io/en-ecmascript6-oct-2019/the-tables.html">
       
       
         <link rel="prev" href="the-basics-of-javascript.html">
@@ -29,7 +29,7 @@
     
     
       
-        <title>4. Tables - An Introduction to ECMASCRIPT 6 Through Examples</title>
+        <title>4. The tables - An Introduction to ECMASCRIPT 6 Through Examples</title>
       
     
     
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -92,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#4-tables" class="md-skip">
+        <a href="#4-the-tables" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              4. Tables
+              4. The tables
             
           </span>
         </div>
@@ -310,7 +312,7 @@
   <span class="md-ellipsis">
     
   
-    1. Introduction to the ECMASCRIPT 6 Language
+    1. Introduction to the ECMASCRIPT 6 language
   
 
     
@@ -364,7 +366,7 @@
   <span class="md-ellipsis">
     
   
-    3. The Basics of JavaScript
+    3. The Basics of Javascript
   
 
     
@@ -400,7 +402,7 @@
   <span class="md-ellipsis">
     
   
-    4. Tables
+    4. The tables
   
 
     
@@ -411,14 +413,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="tables.html" class="md-nav__link md-nav__link--active">
+      <a href="the-tables.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Tables
+    4. The tables
   
 
     
@@ -617,7 +619,7 @@
   <span class="md-ellipsis">
     
   
-    9. Errors and exceptions
+    9. Errors and Exceptions
   
 
     
@@ -637,14 +639,14 @@
   
   
     <li class="md-nav__item">
-      <a href="es6-modules.html" class="md-nav__link">
+      <a href="the-es6-modules.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. ES6 Modules
+    10. The ES6 modules
   
 
     
@@ -691,14 +693,14 @@
   
   
     <li class="md-nav__item">
-      <a href="javascript-http-functions.html" class="md-nav__link">
+      <a href="the-functions-http-of-javascript.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. JavaScript HTTP functions
+    12. The functions HTTP of Javascript
   
 
     
@@ -745,14 +747,14 @@
   
   
     <li class="md-nav__item">
-      <a href="javascript-http-clients-of-the-tax-calculation-service.html" class="md-nav__link">
+      <a href="clients-http-javascript-from-the-tax-calculation-service.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. Javascript HTTP clients of the tax calculation service
+    14. Clients HTTP Javascript from the tax calculation service
   
 
     
@@ -785,12 +787,12 @@
   
 
 
-<p><a id="refheadingtoc2041993980233556"></a></p>
-<h1 id="4-tables">4. <span style="color: #365f91">Tables</span></h1>
+<p><span id="refheadingtoc2041993980233556" name="refheadingtoc2041993980233556" class="odt-bookmark-anchor"></span></p>
+<h1 id="4-the-tables">4. <span style="color: #365f91">The tables</span></h1>
 <p><img src="images/10000000000000F7000000DA0354C5DC.png" width="99" height="87" style="width:2.611cm;height:2.304cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000F7000000DA0354C5DC.png" /></p>
-<p><a id="refheadingtoc2042013980233556"></a></p>
+<p><span id="refheadingtoc2042013980233556" name="refheadingtoc2042013980233556" class="odt-bookmark-anchor"></span></p>
 <h2 id="41-script-tab-01">4.1. <span style="color: #4f81bd"><strong>script</strong> [tab-01]</span></h2>
-<p>The following script illustrates some characteristics of JavaScript arrays. These resemble PHP arrays, but with one major difference: they are manipulated via pointers and are considered objects.</p>
+<p>The following script illustrates certain characteristics of the Javascript arrays. These resemble the PHP arrays, but with one major difference: they are manipulated via pointers and are treated as objects.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -800,7 +802,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> tab2 = tab1;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// tab1 and tab2 point to the same table</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab1===tab2 :&quot;</span><span style="color:#000000">, tab1 === tab2);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the table can be modified using either tab1 or tab2</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// you can modify the table using either tab1 or tab2</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">tab2<span style="font-weight:bold">[1]</span> = 10;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab1=&quot;</span><span style="color:#000000">, tab1);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab2=&quot;</span><span style="color:#000000">, tab2);</span></span></span>
@@ -821,9 +823,9 @@
   <li>Lines 4 and 5 of the results show that these two pointers point to the same array;
   </li>
 </ul>
-<p><a id="refheadingtoc2042033980233556"></a></p>
+<p><span id="refheadingtoc2042033980233556" name="refheadingtoc2042033980233556" class="odt-bookmark-anchor"></span></p>
 <h2 id="42-script-tab-02">4.2. <span style="color: #4f81bd"><strong>script</strong> [tab-02]</span></h2>
-<p>This script demonstrates that JavaScript arrays differ from arrays in compiled languages.</p>
+<p>This script shows that the array Javascript is different from arrays in compiled languages.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -854,9 +856,9 @@
 <ul>
   <li>line 4: an empty array;
   </li>
-  <li>line 8: an array does not have a fixed size. It is simply a sequence of elements indexed by a number. You can initialize element #3 even if elements <b>[0, 1, 2] </b>are not yet defined;
+  <li>Line 8: An array does not have a fixed size. It is simply a sequence of elements indexed by a number. You can initialize element #3 even if the elements <b>[0, 1, 2] </b>have not yet been defined;
   </li>
-  <li>lines 16–24: A JavaScript array behaves similarly to a PHP array;
+  <li>Lines 16–24: An array Javascript behaves similarly to the array PHP;
   </li>
 </ul>
 
@@ -865,7 +867,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\tableaux\tab-02.js&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">tab= <span style="font-weight:bold">[] , longueur=[ 0 ]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">-------------------------------</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">tab= <span style="font-weight:bold">[ &lt;1 empty item&gt;, &#x27;huit&#x27;, &lt;1 empty item&gt;, 100 ]</span> , longueur=<span style="font-weight:bold">[ 4 ]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">tab= [ &lt;1 empty item&gt;, &#x27;eight&#x27;, &lt;1 empty item&gt;, 100 ] length=[ 4 ]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">-------------------------------</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">tab.toString=<span style="font-weight:bold">[ ,huit,,100 ]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">-------------------------------</span></span>
@@ -880,9 +882,9 @@
 <span class="odt-code-line"><span class="odt-code-line-content">valeur=<span style="font-weight:bold">[ 100 ]</span></span></span>
 </code></pre></div>
 
-<p><a id="refheadingtoc2042053980233556"></a></p>
+<p><span id="refheadingtoc2042053980233556" name="refheadingtoc2042053980233556" class="odt-bookmark-anchor"></span></p>
 <h2 id="43-script-tab-03">4.3. <span style="color: #4f81bd"><strong>script</strong> [tab-03]</span></h2>
-<p>This script demonstrates various methods of the <strong>[array]</strong> object.</p>
+<p>This script demonstrates various methods of the <strong>[tableau]</strong> object.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// a table can contain different types of data</span></span>
@@ -943,21 +945,21 @@
 
 <p><strong>Comments</strong></p>
 <ul>
-  <li>The difference between PHP arrays and JavaScript arrays is illustrated by lines 3 and 24:
+  <li>The difference between arrays PHP and Javascript is illustrated by lines 3 and 24:
     <ul>
-      <li>Line 3 declares the variable <b>[tab] </b>as a constant;
+      <li>line 3 declares the variable <b>[tab] </b>as a constant;
       </li>
-      <li>Line 24 modifies the element tab<b>[5]</b>;
+      <li>line 24 modifies the <b>tab[5]</b> element;
       </li>
     </ul>
   </li>
 </ul>
 
-<p>In line 3, it is the pointer pointing to the array that is declared a constant, not the array itself. The array itself can be modified.</p>
+<p>Line 3: it is the pointer pointing to the array that is declared a constant, not the array itself. The array itself can be modified.</p>
 <ul>
-  <li>Lines 14–16: The <b>[tab] </b>array is iterated over using the <b>[forEach] </b>method of the <b>[tab] </b>array. This method takes as a parameter the definition of a function, which could be called a literal function. This function takes one parameter: the current element of the <b>[tab] </b>array. The function is called for each element of the array. This type of syntax is common in JavaScript;
+  <li>Lines 14–16: The array <b>[tab] </b>is traversed using a method <b>[forEach] </b>from the array <b>[tab]</b>. This method receives as a parameter the definition of a function, which could be called a literal function. This parameter function receives one parameter: the current element of the array <b>[tab]</b>. The function is called for each element of the array. This type of syntax is common in Javascript;
   </li>
-  <li>lines 9–10: we use a different syntax to define the function. Instead of writing:
+  <li>lines 9–10: a different syntax is used to define the parameter function. Instead of writing:
     <ul>
       <li>function(p1, p2, …, pn){….}
       </li>
@@ -973,7 +975,7 @@
       </li>
     </ul>
   </li>
-  <li>The rest of the code is explained by the comments;
+  <li>the rest of the code is explained by the comments;
   </li>
 </ul>
 
@@ -981,12 +983,12 @@
 <ul>
   <li>an array is an object referenced by a pointer;
   </li>
-  <li>this object has methods <b>[forEach, pop, push, shift, unshift]</b>;
+  <li>that this object has methods <b>[forEach, pop, push, shift, unshift]</b>;
   </li>
 </ul>
-<p><a id="refheadingtoc2042073980233556"></a></p>
+<p><span id="refheadingtoc2042073980233556" name="refheadingtoc2042073980233556" class="odt-bookmark-anchor"></span></p>
 <h2 id="44-script-tab-04">4.4. <span style="color: #4f81bd"><strong>script</strong> [tab-04]</span></h2>
-<p>This script introduces other methods of array objects.</p>
+<p>This script demonstrates other methods of array objects.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1006,10 +1008,10 @@
 <span class="odt-code-line"><span class="odt-code-line-content">// display</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab2=&quot;</span><span style="color:#000000">, tab2);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// reduce without initial value</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// reduce sans valeur initiale</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> somme = tab.reduce((accumulator, currentValue) =&gt; accumulator + currentValue);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;somme tab=&quot;</span><span style="color:#000000">, somme);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// reduce with initial value</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// reduce avec valeur initiale</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> somme2 = tab.reduce((accumulator, currentValue) =&gt; accumulator + currentValue, 10);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;somme2 tab=&quot;</span><span style="color:#000000">, somme2);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// filter</span></span>
@@ -1033,10 +1035,10 @@
 <span class="odt-code-line"><span class="odt-code-line-content">// lastIndexOf</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> index4 = </span><span style="font-weight:bold;color:#000000">[4, 5, 4, 2]</span><span style="color:#000000">.lastIndexOf(4);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;index4 4=&quot;</span><span style="color:#000000">, index4);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// spell</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// sort</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> tab5 = </span><span style="font-weight:bold;color:#000000">[4, 5, 4, 2]</span><span style="color:#000000">.sort();</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab5=&quot;</span><span style="color:#000000">, tab5);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// reverse spell</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// sort inverse</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> tab6 = </span><span style="font-weight:bold;color:#000000">[4, 5, 4, 2]</span><span style="color:#000000">.sort((e1, e2) =&gt; {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">if</span><span style="color:#000000"> (e1 &gt; e2) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> -1;</span></span></span>
@@ -1052,7 +1054,7 @@
 
 <p><strong>Comments</strong></p>
 <ul>
-  <li>lines 13–15: The <b>[map] </b>method takes a transformation function as a parameter. This function is called repeatedly for each element in the array. It is responsible for transforming the element into something else—in this case, an object with the properties <b>[prop1, prop2]</b>. The <b>[map] </b>method returns a new array. The original array remains unchanged:
+  <li>lines 13-15: the <b>[map]</b> method accepts a transformation function as a parameter. This function is called repeatedly for each element in the array. It is responsible for transforming the element into something else, in this case an object with the properties <b>[prop1, prop2]</b>. The <b>[map]</b> method returns a new array. The original array remains unchanged:
   </li>
 </ul>
 
@@ -1071,23 +1073,23 @@
 </code></pre></div>
 
 <ul>
-  <li>line 20: The <b>[reduce] </b>method takes as a parameter a two-argument function that is called repeatedly for each element of the array. This function takes two arguments:
+  <li>line 20: the method <b>[reduce] </b>takes as a parameter a two-argument function that is called repeatedly for each element of the array. This function takes two arguments:
     <ul>
       <li><b>[currentValue] </b>is the current element of the array;
       </li>
-      <li><b>[accumulator] </b>is the last result obtained by the function. If no initial value is provided for this accumulator, then it will be 0;
+      <li><b>[accumulator] </b>is the last result obtained by the function. If no initial value is specified for this accumulator, then it will be 0;
       </li>
-      <li>the first time the accumulation function is called, it returns <b>[0+tab[0]</b>]. This value is assigned to the accumulator;
+      <li>the first time the accumulation function is called, it returns <b>[0+tab[0]</b>]. This is the value assigned to the accumulator;
       </li>
-      <li>the second time, it returns accumulator+tab<b>[1]</b>, i.e., tab<b>[0]</b>+tab<b>[1]</b>;
+      <li>the second time, it returns <b>accumulator+tab[1]</b>, i.e., <b>tab[0]+tab[1]</b>;
       </li>
-      <li>The third time, it returns accumulator + tab<b>[2]</b>, which is tab<b>[0] </b>+ tab<b>[1] </b>+ tab<b>[2]</b>;
+      <li>the third time, it sets the accumulator to <b>accumulator+tab[2]</b>, i.e., <b>tab[0]+tab[1]+tab[2]</b>;
       </li>
       <li>etc. Ultimately, the accumulator will represent the sum of all elements in the array <b>[tab]</b>;
       </li>
     </ul>
   </li>
-  <li>line 26: the <b>[filter] </b>method takes a filtering function as a parameter. This function is called repeatedly for each element of the array and receives that element as a parameter. It must return:
+  <li>line 26: the method <b>[filter] </b>takes a filtering function as a parameter. This function is called repeatedly for each element of the array and receives that element as a parameter. It must return:
     <ul>
       <li><b>[true] </b>if the element should be kept;
       </li>
@@ -1095,17 +1097,17 @@
       </li>
     </ul>
   </li>
-  <li>line 33: the <b>[find] </b>method takes a search function as a parameter. This function is called repeatedly for each element of the array and receives that element as a parameter. It must return <b>[true] </b>if the received element satisfies the search criteria. The search then stops. The <b>[find] </b>method therefore returns 0 or 1 element;
+  <li>line 33: The method <b>[find] </b>takes a search function as a parameter. This function is called repeatedly for each element of the array and receives the array as a parameter. It must return <b>[true] </b>if the received element satisfies the search criterion. The process then stops. The method <b>[find] </b>therefore returns 0 or 1 element;
   </li>
-  <li>line 36: the <b>[findIndex] </b>method works like the <b>[find] </b>method, but instead of returning the found element, it returns its index in the array;
+  <li>line 36: the method <b>[findIndex] </b>works like the method <b>[find]</b>, but instead of returning the found element, it returns its index in the array;
   </li>
-  <li>lines 39, 41: the <b>[indexOf(value)] </b>method searches for <b>[value] </b>in the array and returns its index, or -1 if it is not found;
+  <li>lines 39, 41: the method <b>[indexOf(valeur)] </b>searches for <b>[valeur] </b>in the array and returns its index, or -1 if it is not found;
   </li>
-  <li>line 44: the <b>[lastIndexOf(value)] </b>method works like the <b>[indexOf(value)] </b>method but starts its search from the end of the array;
+  <li>line 44: the method <b>[lastIndexOf(valeur)] </b>works like the method <b>[indexOf(valeur)] </b>but starts its search at the end of the array;
   </li>
-  <li>line 47: the <b>[sort] </b>method without parameters returns an array sorted in natural order (numbers, strings);
+  <li>line 47: the method <b>[sort] </b>without parameters returns an array sorted in natural order (numbers, strings);
   </li>
-  <li>line 50: when the natural order is not suitable, you must pass a function with two parameters (e1, e2) to the <b>[sort] </b>method, which returns:
+  <li>line 50: when the natural order is not suitable, you must pass a function with two parameters (e1, e2) to the method <b>[sort], </b>which returns:
     <ul>
       <li>+1 if e1 should be sorted after e2;
       </li>
@@ -1153,8 +1155,8 @@
     <div class="md-footer-meta__inner">
 
       <div>
-        <a href="https://stahe.github.io/" target="_blank">
-          https://stahe.github.io/
+        <a href="https://stahe.github.io" target="_blank">
+          https://stahe.github.io
         </a>
         <br>
         This tutorial written by <strong>Serge Tahé</strong> is made available to the public under the terms of the

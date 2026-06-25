@@ -18,7 +18,7 @@
         <link rel="prev" href="the-functions.html">
       
       
-        <link rel="next" href="es6-modules.html">
+        <link rel="next" href="the-es6-modules.html">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>9. Errors and exceptions - An Introduction to ECMASCRIPT 6 Through Examples</title>
+        <title>9. Errors and Exceptions - An Introduction to ECMASCRIPT 6 Through Examples</title>
       
     
     
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -128,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              9. Errors and exceptions
+              9. Errors and Exceptions
             
           </span>
         </div>
@@ -310,7 +312,7 @@
   <span class="md-ellipsis">
     
   
-    1. Introduction to the ECMASCRIPT 6 Language
+    1. Introduction to the ECMASCRIPT 6 language
   
 
     
@@ -364,7 +366,7 @@
   <span class="md-ellipsis">
     
   
-    3. The Basics of JavaScript
+    3. The Basics of Javascript
   
 
     
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="tables.html" class="md-nav__link">
+      <a href="the-tables.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Tables
+    4. The tables
   
 
     
@@ -535,7 +537,7 @@
   <span class="md-ellipsis">
     
   
-    9. Errors and exceptions
+    9. Errors and Exceptions
   
 
     
@@ -553,7 +555,7 @@
   <span class="md-ellipsis">
     
   
-    9. Errors and exceptions
+    9. Errors and Exceptions
   
 
     
@@ -579,10 +581,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#91-script-excep-01" class="md-nav__link">
+  <a href="#91-excep-01-script" class="md-nav__link">
     <span class="md-ellipsis">
       
-        9.1. script [excep-01]
+        9.1. [excep-01] script
       
     </span>
   </a>
@@ -626,14 +628,14 @@
   
   
     <li class="md-nav__item">
-      <a href="es6-modules.html" class="md-nav__link">
+      <a href="the-es6-modules.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. ES6 Modules
+    10. The ES6 modules
   
 
     
@@ -680,14 +682,14 @@
   
   
     <li class="md-nav__item">
-      <a href="javascript-http-functions.html" class="md-nav__link">
+      <a href="the-functions-http-of-javascript.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. JavaScript HTTP functions
+    12. The functions HTTP of Javascript
   
 
     
@@ -734,14 +736,14 @@
   
   
     <li class="md-nav__item">
-      <a href="javascript-http-clients-of-the-tax-calculation-service.html" class="md-nav__link">
+      <a href="clients-http-javascript-from-the-tax-calculation-service.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. Javascript HTTP clients of the tax calculation service
+    14. Clients HTTP Javascript from the tax calculation service
   
 
     
@@ -774,54 +776,53 @@
   
 
 
-<p><a id="refheadingtoc2042493980233556"></a></p>
-<h1 id="9-errors-and-exceptions">9. <span style="color: #365f91">Errors and exceptions</span></h1>
+<p><span id="refheadingtoc2042493980233556" name="refheadingtoc2042493980233556" class="odt-bookmark-anchor"></span></p>
+<h1 id="9-errors-and-exceptions">9. <span style="color: #365f91">Errors and Exceptions</span></h1>
 <p><img src="images/10000000000000ED000000BDBBC75AB1.png" width="95" height="76" style="width:2.512cm;height:2.002cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000ED000000BDBBC75AB1.png" /></p>
-<p>JavaScript does not have a very sophisticated exception-handling system. However, it does provide the <strong>[throw]</strong> statement, which allows you to signal an error, as well as the try/catch/finally structure, which allows you to catch those errors.</p>
-<p><a id="refheadingtoc2042513980233556"></a></p>
-<h2 id="91-script-excep-01">9.1. <span style="color: #4f81bd">script [excep-01]</span></h2>
-<p>In the following script, we will display the current date in the format <strong>[hours:minutes:seconds:milliseconds]</strong>. To do this, we will use a JavaScript library called <strong>[moment.js]</strong>. We install it, as usual, using the <strong>[npm]</strong> tool:</p>
+<p>Javascript does not have a very advanced exception handling system. However, it does provide the <strong>[throw]</strong> statement for reporting errors, as well as the try / catch / finally structure for catching these errors.</p>
+<p><span id="refheadingtoc2042513980233556" name="refheadingtoc2042513980233556" class="odt-bookmark-anchor"></span></p>
+<h2 id="91-excep-01-script">9.1. <span style="color: #4f81bd">[excep-01] script</span></h2>
+<p>In the following script, we will display the current date in the format <strong>[heures:minutes:secondes:millisecondes]</strong>. To do this, we will use a library called <strong>jS</strong>. We install it, as usual, using the <strong>[npm]</strong> tool:</p>
 <p><img src="images/1000000000000580000001BB195119DB.png" width="563" height="177" style="width:14.9cm;height:4.688cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000580000001BB195119DB.png" /></p>
 <p>The script code is as follows:</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// package moment</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> moment </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;moment&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
-</code></pre></div>
-
-<p>To understand how to write the <strong>[import]</strong> line on line 4, we can look at the definition of the <strong>[moment]</strong> module:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="o">//</span> <span class="n">package</span> <span class="n">moment</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">moment</span> <span class="kn">from</span><span class="w"> </span><span class="s1">&#39;moment&#39;</span><span class="p">;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="o">...</span>
+</code></pre></div></td></tr></table></div>
+<p>To find out how to write the line <strong>[import]</strong> on line 4, we can look at the definition of the module <strong>[moment]</strong>:</p>
 <p><img src="images/1000000000000580000001BB195119DB.png" width="563" height="177" style="width:14.9cm;height:4.688cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000580000001BB195119DB.png" /></p>
 <ul>
   <li>in <b>[1-2]</b>, we go to the module definition;
   </li>
-  <li>in <b>[3]</b>, we have a TypeScript file, not a JavaScript file. At runtime, this TypeScript file is compiled into a JavaScript file before being used;
+  <li>in <b>[3]</b>, we have a TypeScript file, not Javascript. At runtime, this TypeScript file is compiled into the Javascript file before being used;
   </li>
-  <li>in <b>[4]</b>, we search for the <b>[export] </b>statements (Ctrl-F);
+  <li>In <b>[4]</b>, we search for the instructions in <b>[export] </b>(Ctrl-F);
   </li>
-  <li>in <b>[5]</b>, the statement exports the <b>[moment] </b>object. This can be imported in ES6 as follows:
+  <li>in <b>[5]</b>, the statement exports the object <b>[moment]</b>. This can be imported into ES6 as follows:
   </li>
 </ul>
 
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> moment </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;moment&#x27;</span><span style="color:#000000">;</span></span></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">moment</span> <span class="kn">from</span><span class="w"> </span><span class="s1">&#39;moment&#39;</span><span class="p">;</span>
 </code></pre></div>
-
-<p>You can use any name to import the <strong>[moment]</strong> object, for example:</p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> m </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;moment&#x27;</span><span style="color:#000000">;</span></span></span>
+<p>You can use any name to import the object <strong>[moment]</strong>, for example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">m</span> <span class="kn">from</span><span class="w"> </span><span class="s1">&#39;moment&#39;</span><span class="p">;</span>
 </code></pre></div>
-
-<p>Let’s go back to the script code:</p>
+<p>Let&#x27;s go back to the script code:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// package moment</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> moment </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;moment&#x27;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// try / catch / finally principle</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// principe du try / catch / finally</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">for</span><span style="color:#000000"> (</span><span style="color:#0000ff">let</span><span style="color:#000000"> i = 0; i &lt; 10; i++) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// date - current time</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> now = Date.now();</span></span></span>
@@ -832,7 +833,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// display</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;--------------------itération n° &quot;</span><span style="color:#000000">, i, </span><span style="color:#a31515">&quot;à&quot;</span><span style="color:#000000">, time);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// number varies according to time of day</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// number depending on time of day</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> nbre = milli % 2;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">if</span><span style="color:#000000"> (nbre === 0) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// launch an error msg</span></span></span>
@@ -852,9 +853,9 @@
 
 <p><strong>Comments</strong></p>
 <ul>
-  <li>line 4: import the <b>[moment] </b>library;
+  <li>line 4: import of the <b>[moment]</b> library;
   </li>
-  <li>The script loops 10 times (line 7). On each loop iteration, the current time is retrieved in the format <b>[hours:minutes:seconds:milliseconds] </b>(lines 8–13);
+  <li>The script loops 10 times (line 7). On each loop iteration, the current time is retrieved in the format <b>[heures:minutes:secondes:millisecondes] </b>(lines 8–13);
   </li>
   <li>if the number of milliseconds is even, an error message is displayed (lines 19–22);
   </li>
@@ -865,46 +866,46 @@
 <p><strong>Execution</strong></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\exceptions\excep-01.js&quot;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 0 à 17:57:04:440</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 0 at 17:57:04:440</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">erreur1= erreur</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">finally</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 1 à 17:57:04:447</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">pas d&#x27;erreur</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 1 at 17:57:04:447</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">pas d&#x27;error</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">finally</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 2 à 17:57:04:448</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">--------------------eration #2 at 17:57:04:448</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">erreur1= erreur</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">finally</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 3 à 17:57:04:448</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">--------------------eration #3 at 17:57:04:448</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">erreur1= erreur</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">finally</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 4 à 17:57:04:448</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">--------------------eration #4 at 17:57:04:448</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">erreur1= erreur</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">finally</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 5 à 17:57:04:448</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">--------------------eration #5 at 17:57:04:448</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">erreur1= erreur</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">finally</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 6 à 17:57:04:448</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">--------------------iteration no. 6 at 17:57:04:448</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">erreur1= erreur</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">finally</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 7 à 17:57:04:448</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">--------------------iteration no. 7 at 17:57:04:448</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">erreur1= erreur</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">finally</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 8 à 17:57:04:449</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">pas d&#x27;erreur</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">--------------------iteration no. 8 at 17:57:04:449</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">pas d&#x27;error</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">finally</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 9 à 17:57:04:449</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">pas d&#x27;erreur</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">--------------------eration no. 9 at 17:57:04:449</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">pas d&#x27;error</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">finally</span></span>
 </code></pre></div>
 
-<p>We can see that the <strong>[finally]</strong> clause is always executed, whether there is an error or not.</p>
-<p><a id="refheadingtoc225364640539168"></a></p>
+<p>We can see that the clause <strong>[finally]</strong> is always executed, whether there is an error or not.</p>
+<p><span id="refheadingtoc225364640539168" name="refheadingtoc225364640539168" class="odt-bookmark-anchor"></span></p>
 <h2 id="92-script-excep-02">9.2. <span style="color: #4f81bd">script [excep-02]</span></h2>
-<p>This script demonstrates that the <strong>[throw]</strong> statement can throw any type of data and that this data is fully captured by the <strong>[catch]</strong> clause.</p>
+<p>This script, which the <strong>[throw]</strong> statement can launch with any type of data, has that data retrieved in its entirety by the <strong>[catch]</strong> clause.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// you can &quot;throw&quot; just about anything to signal an error</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// on peut &quot;lancer&quot; (throw) à peu près n&#x27;importe quoi pour signaler une erreur</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">let</span><span style="color:#000000"> i = 0;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;--------------------essai n° &quot;</span><span style="color:#000000">, i);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// launch a string</span></span>
@@ -932,7 +933,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// there has been a mistake</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;erreur=</span><span style="font-weight:bold;color:#a31515">[&quot;, error, &quot;]</span><span style="color:#a31515">, type=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (error));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// lancer un type Error</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// launch a Error type</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">i++;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;--------------------essai n° &quot;</span><span style="color:#000000">, i);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span></span>
@@ -941,7 +942,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// there has been a mistake</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;erreur=</span><span style="font-weight:bold;color:#a31515">[&quot;, error, &quot;]</span><span style="color:#a31515">, type=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (error));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// lancer un type Error</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// launch a Error type</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">i++;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;--------------------essai n° &quot;</span><span style="color:#000000">, i);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span></span>
@@ -954,22 +955,22 @@
 
 <p><strong>Comments</strong></p>
 <ul>
-  <li>lines 35, 44: <b>[Error] </b>is a JavaScript class whose constructor accepts an error message as an optional first parameter. This message can be retrieved from the <b>[Error.message] </b>property (line 47);
+  <li>lines 35, 44: <b>[Error] </b>is a class of Javascript whose constructor accepts an error message as an optional first parameter. This message can be retrieved from the <b>[Error.message]</b> property (line 47);
   </li>
-  <li>There are other classes besides <b>[Error] </b>that can signal an error: [EvalError, InternalError, RangeError, ReferenceError, SyntaxError, TypeError, URIError);
+  <li>there are other classes besides <b>[Error] </b>for reporting an error: [EvalError, InternalError, RangeError, ReferenceError, SyntaxError,  TypeError, URIError);
   </li>
 </ul>
 
-<p><strong>Execution</strong></p>
+<p><strong>Running</strong></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\exceptions\excep-02.js&quot;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">--------------------essai n° 0</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">erreur=<span style="font-weight:bold">[ msg d&#x27;erreur ]</span>, type= string</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">--------------------essai n° 1</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">-------------------- test no. 0</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">erreur=[ msg d&#x27;error ], type= string</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">-------------------- test no. 1</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">erreur=<span style="font-weight:bold">[ [ 1, 2, 3 ]</span> ], type= object</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">--------------------essai n° 2</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">erreur=<span style="font-weight:bold">[ { nom: &#x27;hercule&#x27;, pays: &#x27;grèce antique&#x27; } ]</span>, type= object</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">--------------------essai n° 3</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">-------------------- test no. 2</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">erreur=[ { nom: &#x27;hercule&#x27;, country: &#x27;ancient greece&#x27; } ], type= object</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">-------------------- test no. 3</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">erreur=[ Error: erreur de connexion au réseau</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">at Object.&lt;anonymous&gt; (c:\Data\st-2019\dev\es6\javascript\exceptions\excep-02.js:35:9)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">at Object.&lt;anonymous&gt; (c:\Temp\19-09-01\javascript\node_modules\esm\esm.js:1:251206)</span></span>
@@ -981,20 +982,20 @@
 <span class="odt-code-line"><span class="odt-code-line-content">at Object.o (c:\Temp\19-09-01\javascript\node_modules\esm\esm.js:1:287137)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">at Object.&lt;anonymous&gt; (c:\Temp\19-09-01\javascript\node_modules\esm\esm.js:1:284879)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">at Object.apply (c:\Temp\19-09-01\javascript\node_modules\esm\esm.js:1:199341) ], type= object</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">--------------------essai n° 4</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">-------------------- test no. 4</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">erreur.message=<span style="font-weight:bold">[ erreur de connexion au réseau ]</span>, type(error)= object</span></span>
 </code></pre></div>
 
-<p><a id="refheadingtoc225366640539168"></a></p>
-<h2 id="93-script-excep-03">9.3. <span style="color: #4f81bd">script [excep-03]</span></h2>
-<p>This script demonstrates that, within a <strong>[catch]</strong>, you can distinguish the type of <strong>[Error]</strong> instance intercepted by the <strong>[catch]</strong>:</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
+<p><span id="refheadingtoc225366640539168" name="refheadingtoc225366640539168" class="odt-bookmark-anchor"></span></p>
+<h2 id="93-script-excep-03">9.3. <span style="color: #4f81bd"><strong>script [excep-03]</strong></span></h2>
+<p>This script demonstrates that, within a <strong>[catch]</strong>, it is possible to distinguish the type of <strong>[Error]</strong> instance intercepted by the <strong>[catch]</strong>:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// package moment</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> moment </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;moment&#x27;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">import moment from &#x27;moment&#x27;;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// differentiate the Error instance received in a [catch]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// différencier l&#x27;instance d&#x27;Error reçue dans un [catch]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">for</span><span style="color:#000000"> (</span><span style="color:#0000ff">let</span><span style="color:#000000"> i = 0; i &lt; 10; i++) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// date - current time</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> now = Date.now();</span></span></span>
@@ -1032,28 +1033,28 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p><strong>Execution</strong></p>
+<p><strong>Running</strong></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\exceptions\excep-03.js&quot;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 0</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">-------------------- operation no. 0</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">ReferenceError : erreur 1</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 1</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">-------------------- operation no. 1</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">RangeError : erreur 2</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 2</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">-------------------- operation no. 2</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">RangeError : erreur 2</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 3</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">-------------------- operation no. 3</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">RangeError : erreur 2</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 4</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">-------------------- operation no. 4</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">RangeError : erreur 2</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 5</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">-------------------- operation no. 5</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">RangeError : erreur 2</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 6</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">-------------------- operation no. 6</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">EvalError : erreur 3</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 7</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">-------------------- operation no. 7</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">EvalError : erreur 3</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 8</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">-------------------- operation no. 8</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">EvalError : erreur 3</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 9</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">-------------------- operation no. 9</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">EvalError : erreur 3</span></span>
 </code></pre></div>
 
@@ -1091,8 +1092,8 @@
     <div class="md-footer-meta__inner">
 
       <div>
-        <a href="https://stahe.github.io/" target="_blank">
-          https://stahe.github.io/
+        <a href="https://stahe.github.io" target="_blank">
+          https://stahe.github.io
         </a>
         <br>
         This tutorial written by <strong>Serge Tahé</strong> is made available to the public under the terms of the

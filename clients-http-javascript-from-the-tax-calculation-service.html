@@ -12,7 +12,7 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/en-ecmascript6-oct-2019/javascript-http-clients-of-the-tax-calculation-service.html">
+        <link rel="canonical" href="https://stahe.github.io/en-ecmascript6-oct-2019/clients-http-javascript-from-the-tax-calculation-service.html">
       
       
         <link rel="prev" href="classes.html">
@@ -27,7 +27,7 @@
     
     
       
-        <title>14. Javascript HTTP clients of the tax calculation service - An Introduction to ECMASCRIPT 6 Through Examples</title>
+        <title>14. Clients HTTP Javascript from the tax calculation service - An Introduction to ECMASCRIPT 6 Through Examples</title>
       
     
     
@@ -54,6 +54,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -90,7 +92,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#14-javascript-http-clients-of-the-tax-calculation-service" class="md-skip">
+        <a href="#14-clients-http-javascript-from-the-tax-calculation-service" class="md-skip">
           Skip to content
         </a>
       
@@ -126,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              14. Javascript HTTP clients of the tax calculation service
+              14. Clients HTTP Javascript from the tax calculation service
             
           </span>
         </div>
@@ -308,7 +310,7 @@
   <span class="md-ellipsis">
     
   
-    1. Introduction to the ECMASCRIPT 6 Language
+    1. Introduction to the ECMASCRIPT 6 language
   
 
     
@@ -362,7 +364,7 @@
   <span class="md-ellipsis">
     
   
-    3. The Basics of JavaScript
+    3. The Basics of Javascript
   
 
     
@@ -382,14 +384,14 @@
   
   
     <li class="md-nav__item">
-      <a href="tables.html" class="md-nav__link">
+      <a href="the-tables.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Tables
+    4. The tables
   
 
     
@@ -524,7 +526,7 @@
   <span class="md-ellipsis">
     
   
-    9. Errors and exceptions
+    9. Errors and Exceptions
   
 
     
@@ -544,14 +546,14 @@
   
   
     <li class="md-nav__item">
-      <a href="es6-modules.html" class="md-nav__link">
+      <a href="the-es6-modules.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. ES6 Modules
+    10. The ES6 modules
   
 
     
@@ -598,14 +600,14 @@
   
   
     <li class="md-nav__item">
-      <a href="javascript-http-functions.html" class="md-nav__link">
+      <a href="the-functions-http-of-javascript.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. JavaScript HTTP functions
+    12. The functions HTTP of Javascript
   
 
     
@@ -668,7 +670,7 @@
   <span class="md-ellipsis">
     
   
-    14. Javascript HTTP clients of the tax calculation service
+    14. Clients HTTP Javascript from the tax calculation service
   
 
     
@@ -679,14 +681,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="javascript-http-clients-of-the-tax-calculation-service.html" class="md-nav__link md-nav__link--active">
+      <a href="clients-http-javascript-from-the-tax-calculation-service.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. Javascript HTTP clients of the tax calculation service
+    14. Clients HTTP Javascript from the tax calculation service
   
 
     
@@ -723,15 +725,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#142-http-client-1" class="md-nav__link">
+  <a href="#142-client-http-1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        14.2. HTTP Client 1
+        14.2. Client HTTP 1
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="14.2. HTTP Client 1">
+    <nav class="md-nav" aria-label="14.2. Client HTTP 1">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -762,22 +764,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#143-http-2-client" class="md-nav__link">
+  <a href="#143-client-http-2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        14.3. HTTP 2 Client
+        14.3. Client HTTP 2
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="14.3. HTTP 2 Client">
+    <nav class="md-nav" aria-label="14.3. Client HTTP 2">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1431-the-javascript-business-class" class="md-nav__link">
+  <a href="#1431-the-class-javascript-metier" class="md-nav__link">
     <span class="md-ellipsis">
       
-        14.3.1. The JavaScript [Business] class
+        14.3.1. The class Javascript [Métier]
       
     </span>
   </a>
@@ -785,10 +787,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#1432-the-javascript-class-dao2" class="md-nav__link">
+  <a href="#1432-the-class-javascript-dao2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        14.3.2. The JavaScript class [Dao2]
+        14.3.2. The class Javascript [Dao2]
       
     </span>
   </a>
@@ -834,15 +836,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#144-http-3-client" class="md-nav__link">
+  <a href="#144-client-http-3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        14.4. HTTP 3 Client
+        14.4. Client HTTP 3
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="14.4. HTTP 3 Client">
+    <nav class="md-nav" aria-label="14.4. Client HTTP 3">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -868,10 +870,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#1443-webpack-configuration" class="md-nav__link">
+  <a href="#1443-configuration-of-webpack" class="md-nav__link">
     <span class="md-ellipsis">
       
-        14.4.3. [webpack] configuration
+        14.4.3. Configuration of [webpack]
       
     </span>
   </a>
@@ -893,7 +895,7 @@
   <a href="#1445-testing-the-javascript-client-for-the-tax-calculation-server" class="md-nav__link">
     <span class="md-ellipsis">
       
-        14.4.5. Testing the JavaScript client for the tax calculation server
+        14.4.5. Testing the Javascript client for the tax calculation server
       
     </span>
   </a>
@@ -906,10 +908,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#145-improvement-to-the-http-client-3" class="md-nav__link">
+  <a href="#145-improvement-to-client-http-3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        14.5. Improvement to the HTTP client 3
+        14.5. Improvement to client HTTP 3
       
     </span>
   </a>
@@ -955,38 +957,38 @@
   
 
 
-<p><a id="refheadingtoc225418640539168"></a></p>
-<h1 id="14-javascript-http-clients-of-the-tax-calculation-service">14. <span style="color: #365f91">Javascript HTTP clients of the tax calculation service</span></h1>
-<p><a id="refheadingtoc225420640539168"></a></p>
+<p><span id="refheadingtoc225418640539168" name="refheadingtoc225418640539168" class="odt-bookmark-anchor"></span></p>
+<h1 id="14-clients-http-javascript-from-the-tax-calculation-service">14. <span style="color: #365f91">Clients HTTP Javascript from the tax calculation service</span></h1>
+<p><span id="refheadingtoc225420640539168" name="refheadingtoc225420640539168" class="odt-bookmark-anchor"></span></p>
 <h2 id="141-introduction">14.1. <span style="color: #4f81bd">Introduction</span></h2>
-<p>Here, we propose to write a <strong>[Node.js]</strong> client for version 14 of the tax calculation service. The client/server architecture will be as follows:</p>
+<p>Here, we propose to write a client <strong>[node.js]</strong> for version 14 of the tax calculation service. The client/server architecture will be as follows:</p>
 <p><img src="images/1000000000000551000001A055C7BE76.png" width="544" height="166" style="width:14.4cm;height:4.403cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000551000001A055C7BE76.png" /></p>
 <p>We will examine two versions of the client:</p>
 <ul>
-  <li>Version 1 of the client will have the following <b>[main, dao] </b>layered structure:
+  <li>Client version 1 will have the following layered structure:
   </li>
 </ul>
 
 <p><img src="images/10000000000005B5000001AEE02F53BD.png" width="584" height="172" style="width:15.46cm;height:4.551cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005B5000001AEE02F53BD.png" /></p>
 <ul>
-  <li>Version 2 of the client will have a <b>[main, business logic, DAO] </b>structure. The server’s <b>[business logic] </b>layer will be moved to the client:
+  <li>Client version 2 will have a <b>[main, métier, dao]</b> structure. The server’s <b>[métier]</b> layer will be offloaded to the client:
   </li>
 </ul>
 
 <p><img src="images/10000000000005D4000001ADD25A3E45.png" width="597" height="172" style="width:15.79cm;height:4.54cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005D4000001ADD25A3E45.png" /></p>
-<p><a id="refheadingtoc225422640539168"></a></p>
-<h2 id="142-http-client-1">14.2. <span style="color: #4f81bd">HTTP Client 1</span></h2>
+<p><span id="refheadingtoc225422640539168" name="refheadingtoc225422640539168" class="odt-bookmark-anchor"></span></p>
+<h2 id="142-client-http-1">14.2. <span style="color: #4f81bd">Client HTTP 1</span></h2>
 <p><img src="images/10000000000000DB000000B5A9A61CA0.png" width="99" height="82" style="width:2.611cm;height:2.157cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000DB000000B5A9A61CA0.png" /></p>
-<p>As mentioned, the HTTP 1 client implements the following client/server architecture:</p>
+<p>As mentioned, the client HTTP 1 implements the following client/server architecture:</p>
 <p><img src="images/10000000000005C3000001A876F4498E.png" width="590" height="170" style="width:15.61cm;height:4.487cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005C3000001A876F4498E.png" /></p>
 <p>We will implement:</p>
 <ul>
-  <li>the <b>[DAO] </b>layer as a class;
+  <li>the <b>[dao]</b> layer as a class;
   </li>
-  <li>the <b>[main] </b>layer as a script using this class;
+  <li>the <b>[main]</b> layer as a script using this class;
   </li>
 </ul>
-<p><a id="refheadingtoc225424640539168"></a></p>
+<p><span id="refheadingtoc225424640539168" name="refheadingtoc225424640539168" class="odt-bookmark-anchor"></span></p>
 <h3 id="1421-the-dao-layer">14.2.1. <span style="color: #4f81bd"><strong>The</strong> [dao] <strong>layer</strong></span></h3>
 <p>The <strong>[dao]</strong> layer will be implemented by the following class <strong>[Dao1.js]</strong>:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
@@ -1112,7 +1114,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// asynchronous request</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      response = </span><span style="color:#0000ff">await</span><span style="color:#000000"> </span><span style="color:#0000ff">this</span><span style="color:#000000">.axios.request(</span><span style="color:#a31515">&#x27;main.php&#x27;</span><span style="color:#000000">, options);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    } </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// the [error] parameter is an exception instance - it can take various forms</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// parameter [error] is an exception instance - it can take various forms</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">if</span><span style="color:#000000"> (error.response) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// the server response is in [error.response]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        response = error.response;</span></span>
@@ -1154,11 +1156,11 @@
 </code></pre></div>
 
 <ul>
-  <li>Here we are using what we learned in the <a href="../../../../../../st-2020/cours/ecmascript6/masters/02/chap-12.docx#fontions_http"><u><span style="color: #0563c1">linked</span></u></a> section, where we introduced the <b>[axios] </b>library, which allows us to make HTTP requests in both <b>[node.js] </b>and a browser. We will look specifically at the script in the <a href="../../../../../../st-2020/cours/ecmascript6/masters/02/chap-12.docx#axios_04"><u><span style="color: #0563c1">linked</span></u></a> section;
+  <li>Here we use what we learned in the <a href="../../../../../../st-2020/cours/ecmascript6/masters/02/chap-12.docx#fontions_http"><u><span style="color: #0563c1">linked</span></u></a> section, where we introduced the <b>[axios]</b> library that allows you to make HTTP requests both in <b>[node.js] </b>and in a browser. We will look in particular at the script in the <a href="../../../../../../st-2020/cours/ecmascript6/masters/02/chap-12.docx#axios_04"><u><span style="color: #0563c1">linked</span></u></a> section;
   </li>
   <li>lines 9–15: the class constructor. This class will have three properties:
     <ul>
-      <li><b>[axios]</b>: the <b>[axios] </b>object used to make HTTP requests. This is passed by the calling code;
+      <li><b>[axios]</b>: the <b>[axios]</b> object used to make HTTP requests. This is passed by the calling code;
       </li>
       <li><b>[sessionCookieName]</b>: depending on the server, the session cookie has different names. Here, it is <b>[PHPSESSID]</b>;
       </li>
@@ -1166,22 +1168,22 @@
       </li>
     </ul>
   </li>
-  <li>lines 53–76: the asynchronous function <b>[calculateTax] </b>makes the request <b>[post /main.php?action=calculate-tax] </b>by posting the parameters <b>[married, children, salary]</b>. It returns the JSON string sent by the server as a JavaScript object;
+  <li>lines 53–76: the asynchronous function <b>[calculerImpot] </b>makes the request <b>[post /main.php?action=calculer-impot] </b>by posting the parameters <b>[marié, enfants, salaire]</b>. It returns the string jSON transmitted by the server in the form of an object Javascript;
   </li>
-  <li>lines 79–92: the asynchronous function <b>[listSimulations] </b>makes the request [<span style="color: #008000">get /main.php?action=list-simulations</span>]. It returns the JSON string sent by the server as a JavaScript object;
+  <li>lines 79–92: the asynchronous function <b>[listeSimulations] </b>makes the request [<span style="color: #008000">get /main.php?action=lister-simulations</span>. It returns the string jSON transmitted by the server in the form of an object Javascript;
   </li>
-  <li>lines 95–109: The asynchronous function <b>[deleteSimulation] </b>makes the request <b>[get /main.php?action=delete-simulation&amp;number=index]</b>. It returns the JSON string sent by the server as a JavaScript object;
+  <li>Lines 95–109: The asynchronous function <b>[supprimerSimulation] </b>makes the request <b>[get /main.php?action=supprimer-simulation&amp;numéro=index]</b>. It returns the string jSON transmitted by the server in the form of an object Javascript;
   </li>
-  <li>line 121: the notation <b>[this.axios] </b>is used because here, the <b>[axios] </b>object passed to the constructor has been stored in the <b>[this.axios] </b>property;
+  <li>line 121: the notation <b>[this.axios]</b> is used because here, the <b>[axios]</b> object passed to the constructor has been stored in the <b>[this.axios]</b> property;
   </li>
-  <li>line 161: the <b>[Dao1] </b>class is exported so it can be used;
+  <li>line 161: the class <b>[Dao1] </b>is exported so it can be used;
   </li>
 </ul>
-<p><a id="refheadingtoc225426640539168"></a></p>
+<p><span id="refheadingtoc225426640539168" name="refheadingtoc225426640539168" class="odt-bookmark-anchor"></span></p>
 <h3 id="1422-the-main1js-script">14.2.2. <span style="color: #4f81bd"><strong>The</strong> [main1.js] <strong>script</strong></span></h3>
-<p>The <strong>[main1.js]</strong> script makes a series of calls to the server using the <strong>[Dao1]</strong> class:</p>
+<p>The script <strong>[main1.js]</strong> makes a series of calls to the server using the class <strong>[Dao1]</strong>:</p>
 <ul>
-  <li>initialization of a JSON session;
+  <li>initialization of a session jSON;
   </li>
   <li>authentication with <b>[admin, admin]</b>;
   </li>
@@ -1194,20 +1196,20 @@
 </ul>
 
 <p>The code is as follows:</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content">// import axios</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> axios </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;axios&#x27;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">import axios from &#x27;axios&#x27;;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// dao1 class import</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Dao </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./Dao1&#x27;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">import Dao from &#x27;./Dao1&#x27;;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// asynchronous function [main]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">async</span><span style="color:#000000"> </span><span style="color:#0000ff">function</span><span style="color:#000000"> main() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// axios configuration</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  axios.defaults.timeout = 2000;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  axios.defaults.baseURL = </span><span style="color:#a31515">&#x27;http://localhost/php7/scripts-web/impots/version-14&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// layer instantiation [dao]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  axios.defaults.baseURL = &#x27;http://localhost/php7/scripts-web/impots/version-14&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// instantiation layer [dao]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> dao = </span><span style="color:#0000ff">new</span><span style="color:#000000"> Dao(axios);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// using the [dao] layer</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// use of the [dao] layer</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// init session</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    log(</span><span style="color:#a31515">&quot;-----------init-session&quot;</span><span style="color:#000000">);</span></span></span>
@@ -1250,25 +1252,25 @@
 
 <p><strong>Comments</strong></p>
 <ul>
-  <li>line 2: import the <b>[axios] </b>library;
+  <li>line 2: import the <b>[axios]</b> library;
   </li>
-  <li>line 4: import the <b>[Dao] </b>class;
+  <li>line 4: import the <b>[Dao]</b> class;
   </li>
-  <li>line 7: the <b>[main] </b>function that communicates with the server is asynchronous;
+  <li>line 7: the <b>[main]</b> function that communicates with the server is asynchronous;
   </li>
-  <li>lines 9-10: default configuration for HTTP requests to be sent to the server:
+  <li>lines 9-10: default configuration of the HTTP requests that will be sent to the server:
     <ul>
-      <li>line 9: <b>[timeout] </b>of 2 seconds;
+      <li>line 9: <b>[timeout] </b>with a 2-second timeout;
       </li>
-      <li>line 10: all URLs are prefixed with the base URL of version 14 of the tax calculation server;
+      <li>line 10: all URL requests are prefixed with the base URL of the tax calculation server’s version 14;
       </li>
     </ul>
   </li>
-  <li>line 12: the <b>[Dao] </b>layer is built. It can now be used;
+  <li>line 12: the <b>[Dao]</b> layer is built. It can now be used;
   </li>
-  <li>lines 46–48: the <b>[log] </b>function is used to display the JSON string of a JavaScript object in a formatted manner: vertically with two-space indentation (3rd parameter);
+  <li>lines 46–48: the function <b>[log] </b>is designed to display the string jSON from an object Javascript in a formatted manner: vertically with a two-space indentation (3rd parameter);
   </li>
-  <li>lines 15–18: initialization of the JSON session;
+  <li>lines 15–18: initialization of the jSON session;
   </li>
   <li>lines 19–22: authentication;
   </li>
@@ -1415,23 +1417,23 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Done]</span><span style="color:#a31515"> exited with </span><span style="color:#800080">code=0</span><span style="color:#a31515"> in </span><span style="color:#09885a">0.516</span><span style="color:#a31515"> seconds</span></span></span>
 </code></pre></div>
 
-<p><a id="refheadingtoc225428640539168"></a></p>
-<h2 id="143-http-2-client">14.3. <span style="color: #4f81bd">HTTP 2 Client</span></h2>
+<p><span id="refheadingtoc225428640539168" name="refheadingtoc225428640539168" class="odt-bookmark-anchor"></span></p>
+<h2 id="143-client-http-2">14.3. <span style="color: #4f81bd">Client HTTP 2</span></h2>
 <p><img src="images/10000000000000F100000110AEDD632E.png" width="109" height="122" style="width:2.872cm;height:3.24cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000F100000110AEDD632E.png" /></p>
 <p>The architecture of the HTTP2 client is as follows:</p>
 <p><img src="images/10000000000005DF000001B235DF3AAD.png" width="526" height="152" style="width:13.921cm;height:4.02cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005DF000001B235DF3AAD.png" /></p>
-<p>We have moved the <strong>[business]</strong> layer from the server to the JavaScript client. Unlike what we did in the PHP7 course, the <strong>[main]</strong> layer will not need to go through the <strong>[business]</strong> layer to reach the <strong>[DAO]</strong> layer. We will use these two layers as specialized components:</p>
+<p>The <strong>[métier]</strong> layer has been moved from the server to the Javascript client. Unlike what we did in the PHP7 course, the <strong>[main]</strong> layer will not have to pass through the <strong>[métier]</strong> layer to reach the <strong>[dao]</strong> layer. We will use these two layers as centers of expertise:</p>
 <ul>
-  <li>the <b>[main] </b>layer goes through the <b>[DAO] </b>layer whenever it needs data that is on the server;
+  <li>the <b>[main]</b> layer goes through the <b>[dao]</b> layer whenever it needs data that is on the server;
   </li>
-  <li>the <b>[main] </b>layer asks the <b>[business] </b>layer to perform the tax calculations;
+  <li>the <b>[main]</b> layer asks the <b>[métier]</b> layer to perform the tax calculations;
   </li>
-  <li>the <b>[business] </b>layer is independent of the <b>[DAO] </b>layer and never calls upon it;
+  <li>The <b>[métier]</b> layer is independent of the <b>[dao]</b> layer and never calls upon it;
   </li>
 </ul>
-<p><a id="refheadingtoc225430640539168"></a></p>
-<h3 id="1431-the-javascript-business-class">14.3.1. <span style="color: #4f81bd"><strong>The JavaScript</strong> [Business] <strong>class</strong></span></h3>
-<p>The essence of the <strong>[Business]</strong> class in PHP was described in the <a href="https://tahe.developpez.com/tutoriels-cours/php7/"><u><span style="color: #0563c1">linked</span></u></a> article. It is a rather complex piece of code that we are recalling here, not to explain it, but to be able to translate it into JavaScript:</p>
+<p><span id="refheadingtoc225430640539168" name="refheadingtoc225430640539168" class="odt-bookmark-anchor"></span></p>
+<h3 id="1431-the-class-javascript-metier">14.3.1. <span style="color: #4f81bd"><strong>The class Javascript</strong> [Métier]</span></h3>
+<p>The essence of the class <strong>[Métier]</strong> in PHP was described in the <a href="https://tahe.developpez.com/tutoriels-cours/php7/"><u><span style="color: #0563c1">linked</span></u></a> article. It is a rather complex code that we recall here, not to explain it, but to be able to translate it into Javascript:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1439,20 +1441,20 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">namespace</span><span style="color:#000000"> </span><span style="color:#2b91af">Application</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">Metier</span><span style="color:#000000"> </span><span style="color:#0000ff">implements</span><span style="color:#000000"> </span><span style="color:#2b91af">InterfaceMetier</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// dao layer</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// layer Dao</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">private</span><span style="color:#000000"> $dao;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// tax administration data</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">private</span><span style="color:#000000"> $taxAdminData;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">//---------------------------------------------</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// setter couche [dao]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// setter layer [dao]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">function</span><span style="color:#000000"> </span><span style="color:#2b91af">setDao</span><span style="color:#000000">(</span><span style="color:#2b91af">InterfaceDao</span><span style="color:#000000"> $dao) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    $this-&gt;dao = $dao;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> $this;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">function</span><span style="color:#000000"> </span><span style="color:#0000ff">__construct</span><span style="color:#000000">(</span><span style="color:#2b91af">InterfaceDao</span><span style="color:#000000"> $dao) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// a reference is stored on the [dao] layer</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// we store a reference on the [dao] layer</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    $this-&gt;dao = $dao;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// recover data for tax calculation</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// method [getTaxAdminData] may throw a ExceptionImpots exception</span></span></span>
@@ -1545,7 +1547,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    $limites = $this-&gt;taxAdminData-&gt;getLimites();</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    $coeffR = $this-&gt;taxAdminData-&gt;getCoeffR();</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    $coeffN = $this-&gt;taxAdminData-&gt;getCoeffN();</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// is set at the end of the limit array to stop the following loop</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// is set at the end of the limit table to stop the following loop</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    $limites</span><span style="font-weight:bold;color:#000000">[count($limites) - 1]</span><span style="color:#000000"> = $quotient;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// tax rate search</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    $i = 0;</span></span>
@@ -1631,7 +1633,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// batch mode tax calculation</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">function</span><span style="color:#000000"> </span><span style="color:#2b91af">executeBatchImpots</span><span style="color:#000000">(</span><span style="color:#2b91af">string</span><span style="color:#000000"> $taxPayersFileName, </span><span style="color:#2b91af">string</span><span style="color:#000000"> $resultsFileName, </span><span style="color:#2b91af">string</span><span style="color:#000000"> $errorsFileName): void {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// we let the exceptions coming from the [dao] layer flow upwards</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// exceptions from the [dao] layer are allowed to bubble up</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// retrieve taxpayer data</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    $taxPayersData = $this-&gt;dao-&gt;getTaxPayersData($taxPayersFileName, $errorsFileName);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// results table</span></span></span>
@@ -1660,19 +1662,19 @@
 </code></pre></div>
 
 <ul>
-  <li>lines 19–26: the PHP class constructor. Since we said we were building a <b>[business] </b>layer independent of the <b>[DAO] </b>layer, we will make two changes to this constructor in JavaScript:
+  <li>lines 19–26: the constructor of the PHP class. Since we specified that we were constructing a <b>[métier]</b> layer independent of the <b>[dao]</b> layer, we will make two changes to this constructor in Javascript:
     <ul>
-      <li>it will not receive an instance of the <b>[DAO] </b>layer (it no longer needs one);
+      <li>it will not receive an instance of the <b>[dao]</b> layer (it no longer needs it);
       </li>
-      <li>it will not request tax data from the <b>[taxAdminData] </b>administration from the <b>[dao] </b>layer: the calling code will pass this data to the constructor;
+      <li>it will not request tax data from the <b>[taxAdminData]</b> administration layer to the <b>[dao]</b> layer: the calling code will transmit this data to the constructor;
       </li>
     </ul>
   </li>
-  <li>Lines 197–122: We will not implement the <b>[executeBatchImpots] </b>method, whose ultimate purpose was to save simulation results to a text file. We want code that works both in <b>[node.js] </b>and in a browser. However, saving data to the file system of the machine running the client browser is not possible;
+  <li>lines 197–122: we will not implement the <b>[executeBatchImpots]</b> method, whose ultimate purpose was to save simulation results to a text file. We want code that works both under <b>[node.js] </b>and in a browser. However, saving data to the file system of the machine running the client browser is not possible;
   </li>
 </ul>
 
-<p>Given these restrictions, the code for the JavaScript <strong>[Métier]</strong> class is as follows:</p>
+<p>Given these restrictions, the code for the Javascript and <strong>[Métier]</strong> classes is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1864,15 +1866,15 @@
 </code></pre></div>
 
 <ul>
-  <li>The JavaScript code closely follows the PHP code;
+  <li>The code Javascript closely follows the code PHP;
   </li>
-  <li>The <b>[Business] </b>class is exported, line 187;
+  <li>The class <b>[Métier] </b>is exported on line 187;
   </li>
 </ul>
-<p><a id="refheadingtoc225432640539168"></a></p>
-<h3 id="1432-the-javascript-class-dao2">14.3.2. <span style="color: #4f81bd"><strong>The JavaScript class</strong> [Dao2]</span></h3>
+<p><span id="refheadingtoc225432640539168" name="refheadingtoc225432640539168" class="odt-bookmark-anchor"></span></p>
+<h3 id="1432-the-class-javascript-dao2">14.3.2. <span style="color: #4f81bd"><strong>The class Javascript</strong> [Dao2]</span></h3>
 <p><img src="images/10000000000005DF000001A53E81FA2B.png" width="601" height="168" style="width:15.91cm;height:4.457cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005DF000001A53E81FA2B.png" /></p>
-<p>The <strong>[Dao2]</strong> class implements the <strong>[dao]</strong> layer of the above JavaScript client as follows:</p>
+<p>The class <strong>[Dao2]</strong> implements the <strong>[dao]</strong> layer of the above client Javascript as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"></span></span>
@@ -1952,7 +1954,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// asynchronous request</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      response = </span><span style="color:#0000ff">await</span><span style="color:#000000"> </span><span style="color:#0000ff">this</span><span style="color:#000000">.axios.request(</span><span style="color:#a31515">&#x27;main.php&#x27;</span><span style="color:#000000">, options);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    } </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// the [error] parameter is an exception instance - it can take various forms</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// parameter [error] is an exception instance - it can take various forms</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">if</span><span style="color:#000000"> (error.response) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// the server response is in [error.response]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        response = error.response;</span></span>
@@ -1995,33 +1997,33 @@
 
 <p><strong>Comments</strong></p>
 <ul>
-  <li>The <b>[Dao2] </b>class implements only three of the possible requests to the tax calculation server:
+  <li>The <b>[Dao2]</b> class implements only three of the possible requests to the tax calculation server:
     <ul>
-      <li><b>[init-session] </b>(lines 17–29): to initialize the JSON session;
+      <li><b>[init-session] </b>(lines 17–29): to initialize the jSON session;
       </li>
-      <li><b>[authenticate-user] </b>(lines 31–50): to authenticate;
+      <li><b>[authentifier-utilisateur] </b>(lines 31–50): to authenticate;
       </li>
-      <li><b>[get-admindata] </b>(lines 52–65): to retrieve the tax administration data needed to perform tax calculations on the client side;
+      <li><b>[get-admindata] </b>(lines 52–65): to retrieve data from the tax authority that will enable tax calculations on the client side;
       </li>
     </ul>
   </li>
-  <li>lines 52–65: we introduce a new action <b>[get-admindata] </b>to the server. This action had not been implemented until now. We are doing so now.
+  <li>lines 52-65: we are introducing a new action, <b>[get-admindata], </b>to the server. This action had not been implemented until now. We are doing so now.
   </li>
 </ul>
-<p><a id="refheadingtoc225122172732026"></a></p>
+<p><span id="refheadingtoc225122172732026" name="refheadingtoc225122172732026" class="odt-bookmark-anchor"></span></p>
 <h3 id="1433-modification-of-the-tax-calculation-server">14.3.3. <span style="color: #4f81bd">Modification of the tax calculation server</span></h3>
-<p>The tax calculation server must implement a new action. We will do this on version 14 of the server. The action to be implemented has the following characteristics:</p>
+<p>The tax calculation server must implement a new action. We will do this on the server’s version 14. The action to be implemented has the following characteristics:</p>
 <ul>
-  <li>it is requested by an operation <b><span style="color: #008000">[get /main.php?action=get-admindata]</span></b><span style="color: #008000">;</span>
+  <li>it is requested by a <b><span style="color: #008000">[get /main.php?action=get-admindata]</span></b> operation<span style="color: #008000">;</span>
   </li>
-  <li>it returns the JSON string of an object encapsulating the tax administration data;
+  <li>it returns the jSON string of an object encapsulating tax administration data;
   </li>
 </ul>
 
 <p>We will review how to add an action to our server.</p>
-<p>The modification will be made in NetBeans:</p>
+<p>The modification will be made under Netbeans:</p>
 <p><img src="images/10000000000005AA0000026A0A027AAB.png" width="580" height="247" style="width:15.349cm;height:6.542cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005AA0000026A0A027AAB.png" /></p>
-<p>In <strong>[2]</strong>, we modify the <strong>[config.json]</strong> file to add the new action:</p>
+<p>In <strong>[2]</strong>, we modify the file <strong>[config.json]</strong> to add the new action:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content">{</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#2e75b6">&quot;databaseFilename&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;Config/database.json&quot;</span><span style="color:#000000">,</span></span></span>
@@ -2107,13 +2109,13 @@
 
 <p><span style="color: #000000">The modification consists of:</span></p>
 <ul>
-  <li><span style="color: #000000">line 67: add the </span><b><span style="color: #000000">[get-admindata] </span></b><span style="color: #000000">action and associate it with a controller;</span>
+  <li><span style="color: #000000">line 67: add the action </span><b><span style="color: #000000">[get-admindata] </span></b><span style="color: #000000">and associate it with a controller;</span>
   </li>
   <li><span style="color: #000000">line 36: declare this controller in the list of classes to be loaded by the PHP application;</span>
   </li>
 </ul>
 
-<p><span style="color: #000000">The next step is to implement the </span><strong><span style="color: #000000">[AdminDataController] </span></strong><span style="color: #000000">controller </span><strong><span style="color: #000000">[3]</span></strong><span style="color: #000000">:</span></p>
+<p><span style="color: #000000">The next step is to implement the </span><strong><span style="color: #000000">[AdminDataController] [3] </span></strong><span style="color: #000000">controller:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -2129,7 +2131,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">AdminDataController</span><span style="color:#000000"> </span><span style="color:#0000ff">implements</span><span style="color:#000000"> </span><span style="color:#2b91af">InterfaceController</span><span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// $config is the application configuration</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// traitement d&#x27;une requête Request</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// request processing</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// session and can modify it</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// $infos is additional information specific to each controller</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// renders an array [$statusCode, $état, $content, $headers]</span></span></span>
@@ -2200,40 +2202,40 @@
 
 <p><strong><span style="color: #000000">Comments</span></strong></p>
 <ul>
-  <li><span style="color: #000000">line 12: like the server’s other controllers, </span><b><span style="color: #000000">[AdminDataController] </span></b><span style="color: #000000">implements the </span><b><span style="color: #000000">[InterfaceController] </span></b><span style="color: #000000">interface consisting of the </span><b><span style="color: #000000">[execute] </span></b><span style="color: #000000">method on lines 19–79;</span>
+  <li><span style="color: #000000">line 12: like the server’s other controllers, </span><b><span style="color: #000000">[AdminDataController] </span></b><span style="color: #000000">implements the </span><b><span style="color: #000000">[InterfaceController]</span></b><span style="color: #000000"> interface consisting of the </span><b><span style="color: #000000">[execute]</span></b><span style="color: #000000"> method on lines 19–79;</span>
   </li>
-  <li><span style="color: #000000">line 78:  as with the server’s other controllers, the </span><b><span style="color: #000000">[AdminDataController.execute] </span></b><span style="color: #000000">method returns an array </span><b><span style="color: #000000">[$status, $status, [‘response’=&gt;$response]</span></b><span style="color: #000000">] with:</span>
+  <li><span style="color: #000000">line 78:  as with the server’s other controllers, the </span><b><span style="color: #000000">[AdminDataController.execute]</span></b><span style="color: #000000"> method returns an array </span><b><span style="color: #000000">[$status, $état, [‘réponse’=&gt;$response]</span></b><span style="color: #000000">] containing:</span>
     <ul>
-      <li><b><span style="color: #000000">[$status]</span></b><span style="color: #000000">: the HTTP response status code;</span>
+      <li><b><span style="color: #000000">[$status]</span></b><span style="color: #000000">: the response status code HTTP;</span>
       </li>
       <li><b><span style="color: #000000">[$état]</span></b><span style="color: #000000">: an internal application code representing the server’s state after executing the client’s request;</span>
       </li>
-      <li><b><span style="color: #000000">[$response]</span></b><span style="color: #000000">: an array encapsulating the response to be sent to the client. Here, this array will later be converted into a JSON string;</span>
+      <li><b><span style="color: #000000">[$response]</span></b><span style="color: #000000">: an array encapsulating the response to be sent to the client. Here, this array will later be converted into the string jSON;</span>
       </li>
     </ul>
   </li>
-  <li><span style="color: #000000">lines 25–34: we verify that the client’s </span><b><span style="color: #000000">[get-admindata] </span></b><span style="color: #000000">action is syntactically correct;</span>
+  <li><span style="color: #000000">lines 25–34: we verify that the client’s action </span><b><span style="color: #000000">[get-admindata] </span></b><span style="color: #000000">is syntactically correct;</span>
   </li>
-  <li><span style="color: #000000">lines 37–74: retrieve a </span><b><span style="color: #000000">[TaxAdminData] </span></b><span style="color: #000000">object found either:</span>
+  <li><span style="color: #000000">lines 37–74: an object named </span><b><span style="color: #000000">[TaxAdminData]</span></b><span style="color: #000000"> is retrieved; if it is found:</span>
     <ul>
-      <li><span style="color: #000000">lines 56–59: from the database if it was not found in the </span><b><span style="color: #000000">[redis] </span></b><span style="color: #000000">cache;</span>
+      <li><span style="color: #000000">lines 56–59: from the database if it was not found in the cache </span><b><span style="color: #000000">[redis]</span></b><span style="color: #000000">;</span>
       </li>
-      <li><span style="color: #000000">lines 70–73: in the </span><b><span style="color: #000000">[redis] </span></b><span style="color: #000000">cache;</span>
+      <li><span style="color: #000000">lines 70–73: from the cache </span><b><span style="color: #000000">[redis]</span></b><span style="color: #000000">;</span>
       </li>
     </ul>
   </li>
 </ul>
 
-<p><span style="color: #000000">This code is taken from the </span><strong><span style="color: #000000">[CalculerImpotController] </span></strong><span style="color: #000000">controller explained in the </span><a href="https://tahe.developpez.com/tutoriels-cours/php7/"><u><span style="color: #0563c1">linked</span></u></a><span style="color: #000000"> article. In fact, this controller also needed to retrieve the </span><strong><span style="color: #000000">[TaxAdminData] </span></strong><span style="color: #000000">object encapsulating the tax administration data.</span></p>
-<p><span style="color: #000000">During testing of the JavaScript client, the JSON format of </span><strong><span style="color: #000000">[TaxAdminData] </span></strong><span style="color: #000000">caused issues when this object was found in the </span><strong><span style="color: #000000">[redis] </span></strong><span style="color: #000000">cache. To understand why, let’s examine how this object is stored in </span><strong><span style="color: #000000">[redis]</span></strong><span style="color: #000000">:</span></p>
+<p><span style="color: #000000">This code is the same as that of the </span><strong><span style="color: #000000">[CalculerImpotController]</span></strong><span style="color: #000000"> controller explained in the </span><a href="https://tahe.developpez.com/tutoriels-cours/php7/"><u><span style="color: #0563c1">linked</span></u></a><span style="color: #000000"> article. In fact, this controller also had to retrieve the </span><strong><span style="color: #000000">[TaxAdminData]</span></strong><span style="color: #000000"> object encapsulating the tax administration data.</span></p>
+<p><span style="color: #000000">During testing of the Javascript client, the jSON form of </span><strong><span style="color: #000000">[TaxAdminData] </span></strong><span style="color: #000000">caused an issue when this object was found in the </span><strong><span style="color: #000000">[redis]</span></strong><span style="color: #000000"> cache. To understand this, let’s examine the format in which this object is stored in </span><strong><span style="color: #000000">[redis]</span></strong><span style="color: #000000">:</span></p>
 <p><img src="images/1000000000000425000002C5D5F37389.png" width="372" height="248" style="width:9.83cm;height:6.569cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000425000002C5D5F37389.png" /></p>
 <p><img src="images/1000000000000A29000002E9D4535C0C.png" width="650" height="186" style="width:17.2cm;height:4.927cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000A29000002E9D4535C0C.png" /></p>
 <ul>
-  <li><span style="color: #000000">In </span><b><span style="color: #000000">[5-7]</span></b><span style="color: #000000">, we see that numeric values were stored as strings. PHP handled this because the + operator in calculations involving numbers and strings implicitly causes a type conversion from string to number. But JavaScript does the opposite: the + operator in calculations involving numbers and strings implicitly causes a type conversion from a number to a string. The calculations in the JavaScript </span><b><span style="color: #000000">[Métier] </span></b><span style="color: #000000">class are therefore incorrect;</span>
+  <li><span style="color: #000000">In </span><b><span style="color: #000000">[5-7]</span></b><span style="color: #000000">, we see that numeric values were stored as character strings. PHP handled this because the + operator in calculations involving numbers and strings implicitly causes a type conversion from string to number. But Javascript does the opposite: the + operator in calculations involving numbers and strings implicitly causes a type cast from the number to a string. The calculations in the Javascript and </span><b><span style="color: #000000">[Métier]</span></b><span style="color: #000000"> classes are therefore incorrect;</span>
   </li>
 </ul>
 
-<p><span style="color: #000000">To fix this issue, we modify the </span><strong><span style="color: #000000">[TaxAdminData.setFromArrayOfAttributes] </span></strong><span style="color: #000000">method used on line 71 of the controller to instantiate a </span><strong><span style="color: #000000">[TaxAdminData] </span></strong><span style="color: #000000">object (see </span><a href="https://tahe.developpez.com/tutoriels-cours/php7/"><u><span style="color: #0563c1">article</span></u></a><span style="color: #000000">) from the JSON string found in the </span><strong><span style="color: #000000">[redis] </span></strong><span style="color: #000000">cache:</span></p>
+<p><span style="color: #000000">To fix this issue, we modify the </span><strong><span style="color: #000000">[TaxAdminData.setFromArrayOfAttributes]</span></strong><span style="color: #000000"> method used on line 71 of the controller to instantiate a </span><strong><span style="color: #000000">[TaxAdminData]</span></strong><span style="color: #000000"> object (see </span><a href="https://tahe.developpez.com/tutoriels-cours/php7/"><u><span style="color: #0563c1">article</span></u></a><span style="color: #000000">) from the string jSON found in the cache </span><strong><span style="color: #000000">[redis]</span></strong><span style="color: #000000">:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -2267,7 +2269,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">protected</span><span style="color:#000000"> </span><span style="color:#0000ff">function</span><span style="color:#000000"> </span><span style="color:#2b91af">check</span><span style="color:#000000">($value): \stdClass {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// $value is an array of string elements or a single element</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// $value is an array of elements of type string or a single element</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">if</span><span style="color:#000000"> (!\</span><span style="color:#0000ff">is_array</span><span style="color:#000000">($value)) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      $tableau = <span style="font-weight:bold">[$value]</span>;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    } </span><span style="color:#0000ff">else</span><span style="color:#000000"> {</span></span></span>
@@ -2341,37 +2343,37 @@
 
 <p><strong><span style="color: #000000">Comments</span></strong></p>
 <ul>
-  <li><span style="color: #000000">line 5: the </span><b><span style="color: #000000">[TaxAdminData] </span></b><span style="color: #000000">class extends the </span><b><span style="color: #000000">[BaseEntity] </span></b><span style="color: #000000">class, which already has the </span><b><span style="color: #000000">[setFromArrayOfAttributes] </span></b><span style="color: #000000">method. Since this method is not suitable, we redefine it on lines 67–75;</span>
+  <li><span style="color: #000000">line 5: the </span><b><span style="color: #000000">[TaxAdminData]</span></b><span style="color: #000000"> class extends the </span><b><span style="color: #000000">[BaseEntity]</span></b><span style="color: #000000"> class, which already has the </span><b><span style="color: #000000">[setFromArrayOfAttributes]</span></b><span style="color: #000000"> method. Since this method is not suitable, we redefine it on lines 67–75;</span>
   </li>
-  <li><span style="color: #000000">line 70: the </span><b><span style="color: #000000">[setFromArrayOfAttributes] </span></b><span style="color: #000000">method of the parent class is first used to initialize the class’s attributes;</span>
+  <li><span style="color: #000000">line 70: the </span><b><span style="color: #000000">[setFromArrayOfAttributes]</span></b><span style="color: #000000"> method of the parent class is first used to initialize the class attributes;</span>
   </li>
-  <li><span style="color: #000000">line 72: the </span><b><span style="color: #000000">[checkAttributes] </span></b><span style="color: #000000">method verifies that the associated values are indeed numbers. If they are strings, they are converted to numbers;</span>
+  <li><span style="color: #000000">line 72: the </span><b><span style="color: #000000">[checkAttributes]</span></b><span style="color: #000000"> method checks that the associated values are indeed numbers. If they are strings, they are converted to numbers;</span>
   </li>
-  <li><span style="color: #000000">line 74: the resulting </span><b><span style="color: #000000">[$this] </span></b><span style="color: #000000">object is then an object with attributes having numeric values;</span>
+  <li><span style="color: #000000">line 74: the resulting </span><b><span style="color: #000000">[$this]</span></b><span style="color: #000000"> object is then an object with attributes having numeric values;</span>
   </li>
-  <li><span style="color: #000000">lines 78–93: the </span><b><span style="color: #000000">[checkAttributes] </span></b><span style="color: #000000">method verifies that the values associated with the object’s attributes are indeed numeric;</span>
+  <li><span style="color: #000000">lines 78–93: the </span><b><span style="color: #000000">[checkAttributes]</span></b><span style="color: #000000"> method verifies that the values associated with the object’s attributes are indeed numeric;</span>
   </li>
   <li><span style="color: #000000">line 80: the list of attributes is traversed;</span>
   </li>
   <li><span style="color: #000000">line 81: if the value of an attribute is of type </span><b><span style="color: #000000">[string]</span></b><span style="color: #000000">;</span>
   </li>
-  <li><span style="color: #000000">line 83: then we check that this string represents a number;</span>
+  <li><span style="color: #000000">line 83: then we verify that this string represents a number;</span>
   </li>
-  <li><span style="color: #000000">line 90: if so, the string is converted to a number and assigned to the attribute being tested;</span>
+  <li><span style="color: #000000">line 90: if so, the string is converted to a number and assigned to the tested attribute;</span>
   </li>
   <li><span style="color: #000000">lines 85–86: if not, an exception is thrown;</span>
   </li>
-  <li><span style="color: #000000">lines 32–65: the </span><b><span style="color: #000000">[check] </span></b><span style="color: #000000">function does a bit more than necessary. It handles both arrays and single values. However, here it is called only to check a value of type </span><b><span style="color: #000000">[string]</span></b><span style="color: #000000">. It returns an object with the properties </span><b><span style="color: #000000">[error, value] </span></b><span style="color: #000000">where:</span>
+  <li><span style="color: #000000">Lines 32–65: The function </span><b><span style="color: #000000">[check] </span></b><span style="color: #000000">does a little more than necessary. It handles both arrays and single values. However, here it is called only to check a value of type </span><b><span style="color: #000000">[string]</span></b><span style="color: #000000">. It returns an object with the properties </span><b><span style="color: #000000">[erreur, value], </span></b><span style="color: #000000">where:</span>
     <ul>
-      <li><b><span style="color: #000000">[error] </span></b><span style="color: #000000">is a boolean indicating whether an error occurred or not;</span>
+      <li><b><span style="color: #000000">[erreur] </span></b><span style="color: #000000">is a Boolean indicating whether an error occurred or not;</span>
       </li>
-      <li><b><span style="color: #000000">[value] </span></b><span style="color: #000000">is the </span><b><span style="color: #000000">[value] </span></b><span style="color: #000000">parameter from line 32, converted to a number or an array of numbers as appropriate;</span>
+      <li><b><span style="color: #000000">[value] </span></b><span style="color: #000000">is the parameter </span><b><span style="color: #000000">[value] </span></b><span style="color: #000000">from line 32, converted to a number or an array of numbers as appropriate;</span>
       </li>
     </ul>
   </li>
 </ul>
 
-<p><span style="color: #000000">The </span><strong><span style="color: #000000">[BaseEntity] </span></strong><span style="color: #000000">class, which previously had an attribute named </span><strong><span style="color: #000000">[arrayOfAttributes], </span></strong><span style="color: #000000">has been modified to remove this attribute: it was causing issues with the </span><strong><span style="color: #000000">[TaxAdminData] </span></strong><span style="color: #000000">JSON string. The class has been rewritten as follows:</span></p>
+<p><span style="color: #000000">The class </span><strong><span style="color: #000000">[BaseEntity], </span></strong><span style="color: #000000">which could have had an attribute named </span><strong><span style="color: #000000">[arrayOfAttributes], </span></strong><span style="color: #000000">is modified to no longer have this attribute: it indeed pollutes the string jSON from </span><strong><span style="color: #000000">[TaxAdminData]</span></strong><span style="color: #000000">. The class is rewritten as follows:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -2426,7 +2428,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">function</span><span style="color:#000000"> </span><span style="color:#2b91af">setFromArrayOfAttributes</span><span style="color:#000000">(</span><span style="color:#0000ff">array</span><span style="color:#000000"> $arrayOfAttributes) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// initialize certain class attributes (not necessarily all)</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// on initialise certains attributs de la classe (pas forcément tous)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">foreach</span><span style="color:#000000"> ($arrayOfAttributes as $key =&gt; $value) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      $this-&gt;$key = $value;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
@@ -2447,11 +2449,11 @@
 
 <p><strong><span style="color: #000000">Comments</span></strong></p>
 <ul>
-  <li><span style="color: #000000">line 20: the attribute </span><b><span style="color: #000000">[$this→arrayOfAttributes] </span></b><span style="color: #000000">has been converted into a variable that must now be passed to the </span><b><span style="color: #000000">[checkForAllAttributes] </span></b><span style="color: #000000">method on line 38, which previously operated on the attribute </span><b><span style="color: #000000">[$this→arrayOfAttributes]</span></b><span style="color: #000000">;</span>
+  <li><span style="color: #000000">line 20: the </span><b><span style="color: #000000">[$this→arrayOfAttributes]</span></b><span style="color: #000000"> attribute has been converted into a variable that must now be passed to the </span><b><span style="color: #000000">[checkForAllAttributes]</span></b><span style="color: #000000"> method on line 38, which previously operated on the </span><b><span style="color: #000000">[$this→arrayOfAttributes]</span></b><span style="color: #000000"> attribute;</span>
   </li>
 </ul>
 
-<p><span style="color: #000000">Due to this change in </span><strong><span style="color: #000000">[BaseEntity]</span></strong><span style="color: #000000">, the </span><strong><span style="color: #000000">[Database] </span></strong><span style="color: #000000">class must also be slightly modified:</span></p>
+<p><span style="color: #000000">Due to this change to </span><strong><span style="color: #000000">[BaseEntity]</span></strong><span style="color: #000000">, the </span><strong><span style="color: #000000">[Database]</span></strong><span style="color: #000000"> class must also be slightly modified:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -2494,40 +2496,40 @@
 
 <p><strong><span style="color: #000000">Comments</span></strong></p>
 <ul>
-  <li><span style="color: #000000">In the original code, after line 30, the method </span><b><span style="color: #000000">[parent::checkForAllAttributes] </span></b><span style="color: #000000">was called. This is no longer necessary since it is now automatically handled by the method </span><b><span style="color: #000000">[parent::setFromJsonFile($jsonFilename)]</span></b><span style="color: #000000">;</span>
+  <li><span style="color: #000000">In the original code, after line 30, the method </span><b><span style="color: #000000">[parent::checkForAllAttributes]</span></b><span style="color: #000000"> was called. This is no longer necessary since it is now automatically handled by the method </span><b><span style="color: #000000">[parent::setFromJsonFile($jsonFilename)]</span></b><span style="color: #000000">;</span>
   </li>
 </ul>
-<p><a id="refheadingtoc225434640539168"></a></p>
+<p><span id="refheadingtoc225434640539168" name="refheadingtoc225434640539168" class="odt-bookmark-anchor"></span></p>
 <h3 id="1434-postman-server-tests">14.3.4. <span style="color: #4f81bd">[Postman] <strong>server tests</strong></span></h3>
-<p><strong>[Postman]</strong> was introduced in the <a href="https://tahe.developpez.com/tutoriels-cours/php7/"><u><span style="color: #0563c1">linked</span></u></a> article.</p>
+<p><strong>[Postman]</strong> was presented in the <a href="https://tahe.developpez.com/tutoriels-cours/php7/"><u><span style="color: #0563c1">linked</span></u></a> article.</p>
 <p>We use the following Postman tests:</p>
 <p><img src="images/10000000000005E8000001099796212B.png" width="529" height="93" style="width:14.002cm;height:2.454cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005E8000001099796212B.png" /></p>
 <p><img src="images/100000000000054B000002C0732671AB.png" width="474" height="246" style="width:12.552cm;height:6.521cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000054B000002C0732671AB.png" /></p>
 <p><img src="images/10000000000004FB0000022E342B7EAE.png" width="446" height="195" style="width:11.8cm;height:5.165cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004FB0000022E342B7EAE.png" /></p>
-<p>The JSON result of this last request is as follows:</p>
+<p>The result of this last request is as follows:</p>
 <p><img src="images/10000000000004040000059B948EE974.png" width="360" height="502" style="width:9.52cm;height:13.289cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004040000059B948EE974.png" /></p>
 <ul>
-  <li>In <b>[5-8]</b>, you can see that the attributes in the JSON string do indeed have numeric values (not strings). This result will allow the JavaScript <b>[Business] </b>class to execute normally;
+  <li>In <b>[5-8]</b>, we can see that the attributes of the string jSON do indeed have numeric values (and not character strings). This result will allow the Javascript and <b>[Métier]</b> classes to execute normally;
   </li>
 </ul>
-<p><a id="refheadingtoc225436640539168"></a></p>
+<p><span id="refheadingtoc225436640539168" name="refheadingtoc225436640539168" class="odt-bookmark-anchor"></span></p>
 <h3 id="1435-the-main-script-main">14.3.5. <span style="color: #4f81bd"><strong>The main script</strong> [main]</span></h3>
 <p><img src="images/10000000000005D7000001B131AB47B5.png" width="598" height="173" style="width:15.82cm;height:4.583cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005D7000001B131AB47B5.png" /></p>
-<p>The main script <strong>[main]</strong> of the JavaScript client is as follows:</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<p>The main script <strong>[main]</strong> for the client Javascript is as follows:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content">// imports</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> axios </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;axios&#x27;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">import axios from &#x27;axios&#x27;;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// imports</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Dao </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./Dao2&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Métier </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./Métier&#x27;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">import Dao from &#x27;./Dao2&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">import Métier from &#x27;trade&#x27;;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// asynchronous function [main]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">async</span><span style="color:#000000"> </span><span style="color:#0000ff">function</span><span style="color:#000000"> main() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// axios configuration</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  axios.defaults.timeout = 2000;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  axios.defaults.baseURL = </span><span style="color:#a31515">&#x27;http://localhost/php7/scripts-web/impots/version-14&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// layer instantiation [dao]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  axios.defaults.baseURL = &#x27;http://localhost/php7/scripts-web/impots/version-14&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// instantiation layer [dao]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> dao = </span><span style="color:#0000ff">new</span><span style="color:#000000"> Dao(axios);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// requests HTTP</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">let</span><span style="color:#000000"> taxAdminData;</span></span></span>
@@ -2581,19 +2583,19 @@
 
 <p><strong>Comments</strong></p>
 <ul>
-  <li>lines 5-6: imports of the <b>[Dao] </b>and <b>[Business] </b>classes;
+  <li>lines 5-6: imports of the <b>[Dao] </b>and <b>[Métier] </b>classes;
   </li>
-  <li>line 9: the asynchronous function <b>[main] </b>that will handle communication with the server using the <b>[Dao] </b>class and ask the <b>[Business] </b>class to perform the tax calculations;
+  <li>line 9: the asynchronous function <b>[main], </b>which will handle communication with the server using the <b>[Dao]</b> class and request the <b>[Métier]</b> class to perform the tax calculations;
   </li>
-  <li>lines 10-36: the script calls the <b>[initSession, authenticateUser, getAdminData] </b>methods of the <b>[Dao] </b>layer sequentially and in a blocking manner;
+  <li>lines 10–36: the script calls the <b>[initSession, authentifierUtilisateur, getAdminData]</b> methods of the <b>[dao]</b> layer sequentially and in a blocking manner;
   </li>
-  <li>line 38: we no longer need the <b>[dao] </b>layer. We have all the elements needed to run the <b>[business] </b>layer of the JavaScript client;
+  <li>line 38: the <b>[dao]</b> layer is no longer needed. We have all the elements to run the <b>[métier]</b> layer of the Javascript client;
   </li>
-  <li>lines 41–46: we perform three tax calculations and store the results in an array <b>[simulations]</b>;
+  <li>lines 41–46: we perform three tax calculations and aggregate the results in a table <b>[simulations]</b>;
   </li>
-  <li>line 49: we display the simulations array;
+  <li>line 49: we display the simulation table;
   </li>
-  <li>line 52: we remove one of them;
+  <li>line 52: one of them is deleted;
   </li>
 </ul>
 
@@ -2696,42 +2698,42 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Done]</span><span style="color:#a31515"> exited with </span><span style="color:#800080">code=0</span><span style="color:#a31515"> in </span><span style="color:#09885a">0.583</span><span style="color:#a31515"> seconds</span></span></span>
 </code></pre></div>
 
-<p><a id="refheadingtoc225438640539168"></a></p>
-<h2 id="144-http-3-client">14.4. <span style="color: #4f81bd">HTTP 3 Client</span></h2>
+<p><span id="refheadingtoc225438640539168" name="refheadingtoc225438640539168" class="odt-bookmark-anchor"></span></p>
+<h2 id="144-client-http-3">14.4. <span style="color: #4f81bd">Client HTTP 3</span></h2>
 <p><img src="images/10000000000001060000016C27BF8E2F.png" width="105" height="145" style="width:2.769cm;height:3.849cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001060000016C27BF8E2F.png" /></p>
-<p>In this section, we port the <strong>[HTTP Client 2]</strong> application to a browser using the following architecture:</p>
+<p>In this section, we port the <strong>[Client HTTP 2]</strong> application to a browser using the following architecture:</p>
 <p><img src="images/10000000000005CD000001A3E68297B7.png" width="594" height="168" style="width:15.722cm;height:4.436cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005CD000001A3E68297B7.png" /></p>
-<p>The porting process is not straightforward. While <strong>[node.js]</strong> can execute ES6 JavaScript, this is generally not the case for browsers. We must therefore use tools that translate ES6 code into ES5 code understood by modern browsers. Fortunately, these tools are both powerful and fairly easy to use.</p>
+<p>Porting is not immediate. While <strong>[node.js]</strong> can execute Javascript and ES6, this is generally not the case for browsers. You must therefore use tools that translate the ES6 code into ES5 code understood by modern browsers. Fortunately, these tools are both powerful and fairly easy to use.</p>
 <p>Here, we followed the article <strong>[How to write ES6 code that’s safe to run in the browser - Web Developer&#x27;s Journal]</strong>.</p>
-<p>In the <strong>[client HTTP 3/src]</strong> folder, we placed the <strong>[main.js, Métier.js, Dao2.js]</strong> files from the <strong>[Client Http 2]</strong> application that we just developed.</p>
-<p><a id="refheadingtoc225440640539168"></a></p>
+<p>In the <strong>[client HTTP 3/src]</strong> folder, we placed the <strong>[main.js, Métier.js, Dao2.js]</strong> elements of the <strong>[Client Http 2]</strong> application that we just developed.</p>
+<p><span id="refheadingtoc225440640539168" name="refheadingtoc225440640539168" class="odt-bookmark-anchor"></span></p>
 <h3 id="1441-initializing-the-project">14.4.1. <span style="color: #4f81bd">Initializing the project</span></h3>
 <p>We will be working in the <strong>[client http 3]</strong> folder. We open a terminal in <strong>[VSCode]</strong> and navigate to this folder:</p>
 <p><img src="images/100000000000042E000000CBEF278D73.png" width="375" height="71" style="width:9.91cm;height:1.88cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000042E000000CBEF278D73.png" /></p>
-<p>We initialize this project with the <strong>[npm init]</strong> command and accept the default answers to the questions asked:</p>
+<p>We initialize this project with the command <strong>[npm init]</strong> and accept the default answers to the questions asked:</p>
 <p><img src="images/1000000000000619000001A8A2CEED91.png" width="624" height="170" style="width:16.521cm;height:4.487cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000619000001A8A2CEED91.png" /></p>
 <ul>
-  <li>in <b>[4-5]</b>, the project configuration file <b>[package.json] </b>generated from the various answers provided;
+  <li>In <b>[4-5]</b>, the project configuration file <b>[package.json] </b>is generated based on the various answers provided;
   </li>
 </ul>
-<p><a id="refheadingtoc225442640539168"></a>
-<a id="webpack"></a></p>
+<p><span id="refheadingtoc225442640539168" name="refheadingtoc225442640539168" class="odt-bookmark-anchor"></span>
+<span id="webpack" name="webpack" class="odt-bookmark-anchor"></span></p>
 <h3 id="1442-installing-project-dependencies">14.4.2. <span style="color: #4f81bd">Installing project dependencies</span></h3>
 <p>We will install the following dependencies:</p>
 <ul>
-  <li><b>[@babel/core]</b>: the core of the <b>[Babel] </b>tool <b>[https://babeljs.io], </b>which transforms ES 2015+ code into code executable on both modern and older browsers;
+  <li><b>[@babel/core]</b>: the core of the <b>[Babel] [https://babeljs.io] </b>tool that transforms 2015+ ES code into code executable on both modern and older browsers;
   </li>
   <li><b>[@babel/preset-env]</b>: part of the Babel toolkit. Runs before the ES6 → ES5 transpilation;
   </li>
-  <li><b>[babel-loader]</b>: this dependency allows the <b>[webpack] </b>tool to call upon the <b>[Babel] </b>tool;
+  <li><b>[babel-loader]</b>: this dependency allows the <b>[webpack]</b> tool to call the <b>[Babel]</b> tool;
   </li>
-  <li><b>[webpack]</b>: the orchestrator. It is <b>[webpack] </b>that calls upon Babel to transcompile ES6 code to ES5, and then assembles all the resulting files into a single file;
+  <li><b>[webpack]</b>: orchestrator. It is <b>[webpack] </b>that calls upon Babel to transpilate the codes ES6 → ES5, and then it assembles all the resulting files into a single file;
   </li>
   <li><b>[webpack-cli]</b>: required by <b>[webpack]</b>;
   </li>
   <li><b>[@webpack-cli/init]</b>: used to configure <b>[webpack]</b>;
   </li>
-  <li><b>[webpack-dev-server]</b>: provides a development web server running by default on port 8080. When source files are modified, it automatically reloads the web application;
+  <li><b>[webpack-dev-server]</b>: provides a development web server that runs by default on port 8080. When source files are modified, it automatically reloads the web application;
   </li>
 </ul>
 
@@ -2764,7 +2766,7 @@
 </code></pre></div>
 
 <ul>
-  <li>lines 12–19: the project’s dependencies are <b>[devDependencies]</b>: we need them during the development phase but not in the production phase. In production, the <b>[dist/main.js] </b>file is used. It is written in ES5 and no longer requires tools to transpile ES6 code to ES5;
+  <li>lines 12–19: the project dependencies are <b>[devDependencies]</b>: these are needed during the development phase but not in the production phase. In fact, in production, the file <b>[dist/main.js] </b>is used. It is written in ES5 and no longer requires the tools for transpilating code from ES6 to ES5;
   </li>
 </ul>
 
@@ -2776,7 +2778,7 @@
   </li>
 </ul>
 
-<p>Starting with Babel 7, these two dependencies replace the <strong>[@babel/polyfill]</strong> dependency, which previously served this purpose and is now (Sept. 2019) deprecated. They are installed as follows:</p>
+<p>Starting with Babel 7, these two dependencies replace the <strong>[@babel/polyfill]</strong> dependency, which previously served this purpose and is now (Sept 2019) deprecated. They are installed as follows:</p>
 <p><img src="images/1000000000000688000000E16129B75A.png" width="585" height="79" style="width:15.49cm;height:2.085cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000688000000E16129B75A.png" /></p>
 <p>The <strong>[package.json]</strong> file then changes as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
@@ -2810,38 +2812,38 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>Using the <strong>[core-js, regenerator-runtime]</strong> dependencies requires adding the following <strong>[imports]</strong> (lines 3–4) to the main script <strong>[src/main.js]</strong>:</p>
+<p>Using the <strong>[core-js, regenerator-runtime]</strong> dependencies requires adding the following <strong>[imports]</strong> lines (lines 3-4) to the main <strong>[src/main.js]</strong> script:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content">// imports</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> axios </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;axios&#x27;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">import axios from &#x27;axios&#x27;;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> </span><span style="color:#a31515">&quot;core-js/stable&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> </span><span style="color:#a31515">&quot;regenerator-runtime/runtime&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// imports</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Dao </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./Dao2&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Métier </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./Métier&#x27;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">import Dao from &#x27;./Dao2&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">import Métier from &#x27;trade&#x27;;</span></span>
 </code></pre></div>
 
-<p><a id="refheadingtoc225444640539168"></a></p>
-<h3 id="1443-webpack-configuration">14.4.3. <span style="color: #4f81bd">[webpack] <strong>configuration</strong></span></h3>
-<p><strong>[webpack]</strong> is the tool that will handle:</p>
+<p><span id="refheadingtoc225444640539168" name="refheadingtoc225444640539168" class="odt-bookmark-anchor"></span></p>
+<h3 id="1443-configuration-of-webpack">14.4.3. <span style="color: #4f81bd"><strong>Configuration of</strong> [webpack]</span></h3>
+<p><strong>[webpack]</strong> is the tool that will control:</p>
 <ul>
-  <li>the transpilation of all JavaScript files in the project from ES6 to ES5;
+  <li>the transpilation of all Javascript files in the project from ES6 to ES5;
   </li>
-  <li>the bundling of the generated files into a single file;
+  <li>the merging of the generated files into a single file;
   </li>
 </ul>
 
-<p>This tool is controlled by a configuration file <strong>[webpack.config.js],</strong> which can be generated using a dependency called <strong>[@webpack-cli/init]</strong> (Sept. 2019). This dependency was installed along with the others mentioned in the &quot;<a href="../../../../../../st-2020/cours/ecmascript6/masters/02/chap-14.docx#webpack"><u><span style="color: #0563c1">Link&quot;</span></u></a> section.</p>
-<p>We run the command <strong>[npx webpack-cli init]</strong> in a <strong>[VSCode]</strong> terminal:</p>
+<p>This tool is controlled by a configuration file named <strong>[webpack.config.js],</strong> which can be generated using a dependency named <strong>[@webpack-cli/init]</strong> (Sept. 2019). This dependency was installed along with the others in the <a href="../../../../../../st-2020/cours/ecmascript6/masters/02/chap-14.docx#webpack"><u><span style="color: #0563c1">&quot;Link&quot;</span></u></a> section.</p>
+<p>We run the command <strong>[npx webpack-cli init]</strong> in a terminal <strong>[VSCode]</strong>:</p>
 <p><img src="images/10000000000005800000013B31577607.png" width="563" height="126" style="width:14.9cm;height:3.334cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005800000013B31577607.png" /></p>
-<p>After answering the various questions (for which we can accept most of the default answers), a <strong>[webpack.config.js]</strong> file is generated at the root of the project <strong>[4]</strong>:</p>
+<p>After answering the various questions (for which we can accept most of the default answers), a file named <strong>[webpack.config.js]</strong> is generated at the root of the <strong>[4]</strong> project:</p>
 <p>The <strong>[webpack.config.js]</strong> file looks like this:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable */</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> path = require(</span><span style="color:#a31515">&#x27;path&#x27;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> webpack = require(</span><span style="color:#a31515">&#x27;webpack&#x27;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">const path = require(&#x27;path&#x27;);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">const webpack = require(&#x27;webpack&#x27;);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">/*</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> * SplitChunksPlugin is enabled by default and replaced</span></span>
@@ -2856,24 +2858,24 @@
 <span class="odt-code-line"><span class="odt-code-line-content"> *</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> */</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> HtmlWebpackPlugin = require(</span><span style="color:#a31515">&#x27;html-webpack-plugin&#x27;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">const HtmlWebpackPlugin = require(&#x27;html-webpack-plugin&#x27;);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">/*</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> * We&#x27;ve enabled HtmlWebpackPlugin for you! This generates a html</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> * page for you when you compile webpack, which will make you start</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> * developing and prototyping faster.</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> *</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> * https://github.com/jantimon/html-webpack-plugin</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">* https://github.com/jantimon/html-webpack-plugin</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> *</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> */</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">module.exports = {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    mode: </span><span style="color:#a31515">&#x27;development&#x27;</span><span style="color:#000000">,</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    entry: </span><span style="color:#a31515">&#x27;./src/index.js&#x27;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    mode: &#x27;development&#x27;,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    entry: &#x27;./src/index.js&#x27;,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    output: {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        filename: </span><span style="color:#a31515">&#x27;</span><span style="font-weight:bold;color:#a31515">[name]</span><span style="color:#a31515">.</span><span style="font-weight:bold;color:#a31515">[chunkhash]</span><span style="color:#a31515">.js&#x27;</span><span style="color:#000000">,</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        path: path.resolve(__dirname, </span><span style="color:#a31515">&#x27;dist&#x27;</span><span style="color:#000000">)</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        filename: &#x27;[name].[chunkhash].js&#x27;,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        path: path.resolve(__dirname, &#x27;dist&#x27;)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    plugins: </span><span style="font-weight:bold;color:#000000">[new webpack.ProgressPlugin(), new HtmlWebpackPlugin()]</span><span style="color:#000000">,</span></span></span>
@@ -2882,11 +2884,11 @@
 <span class="odt-code-line"><span class="odt-code-line-content">        rules: [</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">                test:</span><span style="color:#a31515"> /.(js|jsx)$/</span><span style="color:#000000">,</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">                include: </span><span style="font-weight:bold;color:#000000">[path.resolve(__dirname, &#x27;src&#x27;)]</span><span style="color:#000000">,</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">                loader: </span><span style="color:#a31515">&#x27;babel-loader&#x27;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">                include: [path.resolve(__dirname, &#x27;src&#x27;)],</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">                loader: &#x27;babel-loader&#x27;,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">                options: {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">                    plugins: </span><span style="font-weight:bold;color:#000000">[&#x27;syntax-dynamic-import&#x27;]</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">                    plugins: [&#x27;syntax-dynamic-import&#x27;],</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">                    presets: [</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">                        [</span></span>
@@ -2910,7 +2912,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">                }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">            chunks: </span><span style="color:#a31515">&#x27;async&#x27;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">            chunks: &#x27;async&#x27;,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            minChunks: 1,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            minSize: 30000,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">            name: </span><span style="color:#0000ff">true</span></span></span>
@@ -2923,23 +2925,23 @@
 <span class="odt-code-line"><span class="odt-code-line-content">};</span></span>
 </code></pre></div>
 
-<p>I don’t understand all the details of this file, but a few things stand out:</p>
+<p>I don&#x27;t understand all the details of this file, but a few points stand out:</p>
 <ul>
-  <li>line 1: the file does not contain ES6 code. <b>[Eslint] </b>then reports errors that propagate all the way to the root of the <b>[javascript] </b>project. This is annoying. To prevent Eslint from analyzing a file, simply comment out line 1;
+  <li>line 1: the file does not contain code ES6. <b>[Eslint] </b>then reports errors that trace back to the root of the project <b>[javascript]</b>. This is annoying. To prevent ESLint from analyzing a file, simply comment out line 1;
   </li>
-  <li>line 31: we are working in <b>[development] </b>mode;
+  <li>line 31: we are working in <b>[développement]</b> mode;
   </li>
-  <li>line 32: the entry script is here <b>[src/index.js]</b>. We’ll need to change this;
+  <li>line 32: the input script here is <b>[src/index.js]</b>. We will need to change this;
   </li>
-  <li>line 36: the folder where <b>[webpack]</b>’s output will be placed is the <b>[dist] </b>folder;
+  <li>line 36: the folder where the outputs of <b>[webpack]</b> will be stored is the <b>[dist]</b> folder;
   </li>
-  <li>line 46: we can see that <b>[webpack] </b>uses <b>[babel-loader]</b>, one of the dependencies we installed;
+  <li>line 46: we see that <b>[webpack] </b>uses <b>[babel-loader]</b>, one of the dependencies we installed;
   </li>
   <li>line 54: we see that <b>[webpack] </b>uses <b>[@babel-preset/env]</b>, one of the dependencies we installed;
   </li>
 </ul>
 
-<p>Initializing <strong>[webpack]</strong> has modified the <strong>[package.json]</strong> file (it asks for permission):</p>
+<p>The initialization of <strong>[webpack]</strong> has modified the file <strong>[package.json]</strong> (it is requesting permission):</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content">{</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#2e75b6">&quot;name&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;client-http-3&quot;</span><span style="color:#000000">,</span></span></span>
@@ -2976,26 +2978,26 @@
   </li>
   <li>lines 8–9, 18–19: these have been added;
   </li>
-  <li>line 8: the <b>[npm] </b>task that compiles the project;
+  <li>line 8: the <b>[npm]</b> task that compiles the project;
   </li>
-  <li>line 9: the <b>[npm] </b>task that runs it;
+  <li>line 9: the task <b>[npm], </b>which runs the project;
   </li>
   <li>line 18: ?
   </li>
-  <li>line 19: generates a <b>[dist/index.html] </b>file that automatically embeds the <b>[dist/main.js] </b>script generated by <b>[webpack], </b>and this is the one that is used when the project is run;
+  <li>line 19: generates a <b>[dist/index.html]</b> file that automatically embeds the <b>[dist/main.js]</b> script generated by <b>[webpack], </b>and it is this script that is used when the project is executed;
   </li>
 </ul>
 
-<p>Finally, the <strong>[webpack]</strong> configuration generated a file <strong>[src/index.js]</strong>:</p>
+<p>Finally, the configuration of <strong>[webpack]</strong> generated a file named <strong>[src/index.js]</strong>:</p>
 <p><img src="images/100000000000014900000213A422A6BF.png" width="115" height="186" style="width:3.052cm;height:4.925cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000014900000213A422A6BF.png" /></p>
-<p>The content of <strong>[index.js]</strong> is as follows (Sept. 2019):</p>
+<p>The contents of <strong>[index.js]</strong> are as follows (Sept. 2019):</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;Hello World from your main file!&quot;</span><span style="color:#000000">);</span></span></span>
 </code></pre></div>
 
-<p><a id="refheadingtoc225446640539168"></a></p>
+<p><span id="refheadingtoc225446640539168" name="refheadingtoc225446640539168" class="odt-bookmark-anchor"></span></p>
 <h3 id="1444-compiling-and-running-the-project">14.4.4. <span style="color: #4f81bd">Compiling and running the project</span></h3>
-<p>The <strong>[package.json]</strong> file has three <strong>[npm]</strong> tasks:</p>
+<p>The <strong>[package.json]</strong> file has three tasks named <strong>[npm]</strong>:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#2e75b6">&quot;scripts&quot;</span><span style="color:#000000">: {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#2e75b6">&quot;test&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span><span style="color:#000000">,</span></span></span>
@@ -3004,12 +3006,12 @@
 <span class="odt-code-line"><span class="odt-code-line-content">},</span></span>
 </code></pre></div>
 
-<p>These tasks are recognized by <strong>[VSCode],</strong> which offers them for execution:</p>
+<p>These tasks are included in <strong>[VSCode],</strong> which executes them:</p>
 <p><img src="images/10000000000006230000017F03E69FAC.png" width="629" height="153" style="width:16.632cm;height:4.055cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000006230000017F03E69FAC.png" /></p>
 <ul>
   <li>in <b>[1-3]</b>, the project is compiled;
   </li>
-  <li>in <b>[4]</b>: the project is compiled into <b>[dist/main.hash.js] </b>and a <b>[dist/index.html] </b>page is created;
+  <li>in <b>[4]</b>: the project is compiled in <b>[dist/main.hash.js] </b>and a page <b>[dist/index.html] </b>is created;
   </li>
 </ul>
 
@@ -3027,58 +3029,58 @@
 </code></pre></div>
 
 <p>This page simply encapsulates the <strong>[main.hash.js]</strong> file generated by <strong>[webpack]</strong>.</p>
-<p>The project is run by the <strong>[start]</strong> task:</p>
+<p>The project is executed by the <strong>[start]</strong> task:</p>
 <p><img src="images/10000000000004A4000001B9D91B37E6.png" width="475" height="176" style="width:12.569cm;height:4.665cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004A4000001B9D91B37E6.png" /></p>
 <p>The <strong>[dist/index.html]</strong> page is then loaded onto a server, part of the <strong>[webpack]</strong> suite, running on port 8080 of the local machine and displayed by the machine’s default browser:</p>
 <p><img src="images/1000000000000494000002B1B6C8309C.png" width="410" height="241" style="width:10.85cm;height:6.378cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000494000002B1B6C8309C.png" /></p>
 <ul>
-  <li>in <b>[2]</b>, the service port of the <b>[webpack] </b>web server;
+  <li>in <b>[2]</b>, the service port of the <b>[webpack]</b> web server;
   </li>
-  <li>in <b>[3]</b>, the body of the <b>[dist/index.html] </b>page is empty;
+  <li>in <b>[3]</b>, the body of the <b>[dist/index.html]</b> page is empty;
   </li>
-  <li>in <b>[4]</b>, the <b>[console] </b>tab of the browser’s developer tools, here Firefox (F12);
+  <li>in <b>[4]</b>, the <b>[console]</b> tab of the browser’s developer tools, here Firefox (F12);
   </li>
-  <li>in <b>[5]</b>, the result of executing the <b>[src/index.js] </b>file. Recall that its content was as follows:
+  <li>in <b>[5]</b>, the result of executing the file <b>[src/index.js]</b>. Recall that the content of this file was as follows:
   </li>
 </ul>
 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Hello World from your main file!&quot;</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p>Now, let’s change this content to the following line:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>console.log(&quot;Bonjour le monde&quot;);
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Bonjour le monde&quot;</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
-<p>Automatically (without recompiling), new files <strong>[main.js, index.html]</strong> are generated and the new <strong>[index.html]</strong> file is loaded into the browser:</p>
+<p>Automatically (without recompiling), new <strong>[main.js, index.html]</strong> files are generated and the new <strong>[index.html]</strong> file is loaded into the browser:</p>
 <p><img src="images/10000000000003C9000002EC78CFC868.png" width="339" height="262" style="width:8.982cm;height:6.934cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003C9000002EC78CFC868.png" /></p>
-<p>It is not necessary to run the <strong>[build]</strong> task before the <strong>[start]</strong> task: the latter first compiles the project. It does not store the output of this compilation in the <strong>[dist]</strong> folder. To verify this, simply delete this folder. We will then see that the <strong>[start]</strong> task compiles and runs the project without creating the <strong>[dist]</strong> folder. It appears to store its output <strong>[index.html, main.hash.js]</strong> in a folder specific to <strong>[webpackdev-server]</strong>. This behavior is sufficient for our tests.</p>
-<p>When the development server is running, any saved changes to a project file trigger a recompilation. For this reason, we disable <strong>[VSCode]</strong>’s <strong>[Auto Save]</strong> mode. We do not want the project to recompile every time we type characters into a project file. We only want recompilation to occur when changes are saved:</p>
+<p>It is not necessary to run the <strong>[build]</strong> task before the <strong>[start]</strong> task: the latter first compiles the project. It does not store the output of this compilation in the <strong>[dist]</strong> folder. To verify this, simply delete that folder. You will then see that the <strong>[start]</strong> task compiles and runs the project without creating the <strong>[dist]</strong> folder. It appears to store its <strong>[index.html, main.hash.js]</strong> outputs in a folder specific to <strong>[webpackdev-server]</strong>. This behavior is sufficient for our tests.</p>
+<p>When the development server is running, any saved changes to one of the project files trigger a recompilation. For this reason, we disable the <strong>[Auto Save]</strong> mode of <strong>[VSCode]</strong>. Indeed, we do not want a recompilation to occur every time characters are typed into one of the project files. We only want recompilation to occur when changes are saved:</p>
 <p><img src="images/100000000000022B000002F6F4291A79.png" width="166" height="227" style="width:4.399cm;height:6.01cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000022B000002F6F4291A79.png" /></p>
 <ul>
-  <li>in <b>[2]</b>, the <b>[Auto Save] </b>option must not be checked;
+  <li>in <b>[2]</b>, the option and <b>[Auto Save] options </b>must not be checked;
   </li>
 </ul>
-<p><a id="refheadingtoc225124172732026"></a></p>
-<h3 id="1445-testing-the-javascript-client-for-the-tax-calculation-server">14.4.5. <span style="color: #4f81bd">Testing the JavaScript client for the tax calculation server</span></h3>
-<p>To test the JavaScript client of the tax calculation server, you must designate <strong>[main.js] [1]</strong> as the project’s entry point in the <strong>[webpack.config.js]</strong> file <strong>[2-3]</strong>:</p>
+<p><span id="refheadingtoc225124172732026" name="refheadingtoc225124172732026" class="odt-bookmark-anchor"></span></p>
+<h3 id="1445-testing-the-javascript-client-for-the-tax-calculation-server">14.4.5. <span style="color: #4f81bd">Testing the Javascript client for the tax calculation server</span></h3>
+<p>To test the Javascript client of the tax calculation server, you must designate <strong>[main.js] [1]</strong> as the project entry point in the file <strong>[webpack.config.js] [2-3]</strong>:</p>
 <p><img src="images/10000000000003CD000001BDC8860154.png" width="389" height="178" style="width:10.299cm;height:4.711cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003CD000001BDC8860154.png" /></p>
-<p>Remember that the <strong>[main.js]</strong> script must include two additional imports compared to its version in <strong>[HTTP Client 2]</strong>:</p>
+<p>Let’s not forget that the <strong>[main.js]</strong> script must include two additional imports compared to its version counterpart in <strong>[Client http 2]</strong>:</p>
 <p><img src="images/100000000000053D0000019DC987F1CB.png" width="469" height="145" style="width:12.42cm;height:3.826cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000053D0000019DC987F1CB.png" /></p>
-<p>Additionally, we have slightly modified the code to handle errors that the server may send:</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<p>In addition, we have slightly modified the code to handle errors that the server may return:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content">// imports</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> axios </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;axios&#x27;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">import axios from &#x27;axios&#x27;;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> </span><span style="color:#a31515">&quot;core-js/stable&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> </span><span style="color:#a31515">&quot;regenerator-runtime/runtime&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// imports</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Dao </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./Dao2&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Métier </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./Métier&#x27;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">import Dao from &#x27;./Dao2&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">import Métier from &#x27;trade&#x27;;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// asynchronous function [main]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">async</span><span style="color:#000000"> </span><span style="color:#0000ff">function</span><span style="color:#000000"> main() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// axios configuration</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  axios.defaults.timeout = 2000;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  axios.defaults.baseURL = </span><span style="color:#a31515">&#x27;http://localhost/php7/scripts-web/impots/version-14&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// layer instantiation [dao]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  axios.defaults.baseURL = &#x27;http://localhost/php7/scripts-web/impots/version-14&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// instantiation layer [dao]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> dao = </span><span style="color:#0000ff">new</span><span style="color:#000000"> Dao(axios);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// requests HTTP</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">let</span><span style="color:#000000"> taxAdminData;</span></span></span>
@@ -3141,32 +3143,32 @@
 
 <p><strong>Comments</strong></p>
 <ul>
-  <li>In lines <b>[24-26]</b>, <b>[31-33]</b>, <b>[38-40]</b>, we check the code <b>[response.status] </b>sent in the server’s JSON response. If this code indicates an error, an exception is thrown with the JSON string from the server’s response <b>[response.response] </b>as the error message;
+  <li>On lines <b>[24-26]</b>, <b>[31-33]</b>, and <b>[38-40]</b>, we validate the code <b>[response.état] </b>sent in the server’s response jSON. If this code indicates an error, an exception is thrown with the error message string jSON from the server response <b>[response.réponse]</b>;
   </li>
 </ul>
 
 <p>Once this is done, we execute the project <strong>[5-6]</strong>.</p>
-<p>The <strong>[index.html]</strong> page is then generated and loaded in the browser:</p>
+<p>The page <strong>[index.html]</strong> is then generated and loaded into the browser:</p>
 <p><img src="images/100000000000043C00000331B95B20C9.png" width="380" height="286" style="width:10.042cm;height:7.569cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000043C00000331B95B20C9.png" /></p>
 <ul>
-  <li>In <b>[7]</b>, we see that the <b>[init-session] </b>action could not be completed due to a <b>[CORS] </b>(Cross-Origin Resource Sharing) issue;
+  <li>In <b>[7]</b>, we see that the <b>[init-session]</b> action could not be completed due to a <b>[CORS]</b> issue (Cross-Origin Resource Sharing);
   </li>
 </ul>
 
 <p>The CORS issue stems from the client/server relationship:</p>
 <ul>
-  <li>our JavaScript client was downloaded to the machine <b>[http://localhost:8080]</b>;
+  <li>our client Javascript was downloaded to the machine <b>[http://localhost:8080]</b>;
   </li>
-  <li>the tax calculation server runs on the machine <b>[http://localhost:80]</b>;
+  <li>the tax calculation server is running on the <b>[http://localhost:80]</b> machine;
   </li>
-  <li>the client and server are therefore not on the same domain (same machine but different ports);
+  <li>the client and server are therefore not in the same domain (same machine but different ports);
   </li>
-  <li>the browser running the JavaScript client loaded from the machine <b>[http://localhost:8080] </b>blocks any request that does not target <b>[http://localhost:80]</b>. This is a security measure. Therefore, it blocks the client’s request to the server operating on the machine <b>[http://localhost:80]</b>;
+  <li>The browser running the Javascript client, which was loaded from the <b>[http://localhost:8080]</b> machine, blocks any request that is not directed to <b>[http://localhost:80]</b>. This is a security measure. It therefore blocks the client’s request to the server running on the <b>[http://localhost:80]</b> machine;
   </li>
 </ul>
 
-<p>In fact, the browser does not completely block the request. It actually waits for the server to “tell” it that it accepts cross-domain requests. If it receives this authorization, the browser will then transmit the cross-domain request.</p>
-<p>The server grants its authorization by sending specific HTTP headers:</p>
+<p>In fact, the browser does not completely block the request. It actually waits for the server to “tell” it that it accepts cross-domain requests. If it receives this authorization, the browser will then send the cross-domain request.</p>
+<p>The server grants its authorization by sending specific headers:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span>
@@ -3176,39 +3178,39 @@
 <a id="__codelineno-2-4" name="__codelineno-2-4"></a>Access-Control-Allow-Credentials: true
 </code></pre></div></td></tr></table></div>
 <ul>
-  <li>Line 1: The JavaScript client operates on the domain <b>[http://localhost:8080]</b>. The server must explicitly respond that it accepts this domain;
+  <li>Line 1: The client Javascript operates on the domain <b>[http://localhost:8080]</b>. The server must explicitly respond that it accepts this domain;
   </li>
-  <li>Line 2: The JavaScript client will use the HTTP headers <b>[Accept, Content-Type] </b>in its requests:
+  <li>Line 2: The client Javascript will use the headers HTTP and <b>[Accept, Content-Type]</b> in its requests:
     <ul>
       <li><b>[Accept]</b>: this header is sent in every request;
       </li>
-      <li><b>[Content-Type]</b>: This header is used in POST operations to specify the type of the POST parameters;
+      <li><b>[Content-Type]</b>: this header is used in POST operations to indicate the type of parameters in POST;
       </li>
     </ul>
   </li>
 </ul>
 
-<p>The server must explicitly accept these two HTTP headers;</p>
+<p>The server must explicitly accept these two headers HTTP;</p>
 <ul>
-  <li>Line 3: The JavaScript client will use GET and POST requests. The server must explicitly accept these two types of requests;
+  <li>Line 3: The client Javascript will use requests GET and POST. The server must explicitly accept these two types of requests;
   </li>
-  <li>Line 4: The JavaScript client will send session cookies. The server accepts them with the header on line 4;
+  <li>line 4: the client Javascript will send session cookies. The server accepts them with the header from line 4;
   </li>
 </ul>
 
-<p>We therefore need to modify the server. We do this in <strong>[NetBeans]</strong>. The CORS issue is one encountered only in development mode. In production, the client and server will operate within the same domain <strong>[http://localhost:80]</strong> and there will be no CORS issues. We therefore need a way to enable or disable CORS requests via server configuration.</p>
+<p>We therefore need to modify the server. We do this in <strong>[Netbeans]</strong>. The issue with CORS is a problem encountered only in development mode. In production, the client and server will operate within the same domain <strong>[http://localhost:80]</strong>, and there will be no issue with CORS. We therefore need a way to enable or disable CORS requests via server configuration.</p>
 <p><img src="images/10000000000005C40000024FB2CC2F86.png" width="590" height="236" style="width:15.619cm;height:6.255cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005C40000024FB2CC2F86.png" /></p>
 <p>Server modifications are made in three places:</p>
 <ul>
   <li><b>[1, 4]</b>: in the configuration file <b>[config.json] </b>to set a boolean that controls whether or not cross-domain requests are accepted;
   </li>
-  <li><b>[2]</b>: in the <b>[ParentResponse] </b>class, which sends the response to the JavaScript client. This class will send the CORS headers expected by the client browser;
+  <li><b>[2]</b>: in the <b>[ParentResponse]</b> class that sends the response to the Javascript client. This class will send the CORS headers expected by the client browser;
   </li>
-  <li><b>[3]</b>: in the <b>[HtmlResponse, JsonResponse, XmlResponse] </b>classes that generate responses for the <b>[html, json, xml] </b>sessions, respectively. These classes must pass the <b>[corsAllowed] </b>boolean found in <b>[4] </b>to their parent class <b>[2]</b>. This is done in <b>[5]</b>, by passing the image array from the JSON file <b>[2]</b>;
+  <li><b>[3]</b>: within the <b>[HtmlResponse, JsonResponse, XmlResponse]</b> classes that generate responses for the <b>[html, json, xml]</b> sessions, respectively. These classes must pass the boolean <b>[corsAllowed] </b>found in <b>[4] </b>to their parent class <b>[2]</b>. This is done in <b>[5] </b>by passing the image array from the file jSON to <b>[2]</b>;
   </li>
 </ul>
 
-<p>The <strong>[ParentResponse]</strong> class <strong>[2]</strong> evolves as follows:</p>
+<p>The class <strong>[ParentResponse] [2]</strong> evolves as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -3221,7 +3223,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">ParentResponse</span><span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// int $statusCode: HTTP response status code</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// string $content: the body of the response to be sent</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// string $content: the body of the reply to be sent</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// depending on the case, this is a JSON, XML, HTML string</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// array $headers: HTTP headers to be added to the response</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -3268,74 +3270,74 @@
 </code></pre></div>
 
 <ul>
-  <li>line 29: we check if we need to handle cross-domain requests. If so, we generate the CORS HTTP headers (lines 33–37) even if the current request is not a cross-domain request. In the latter case, the CORS headers will be unnecessary and will not be used by the client;
+  <li>line 29: we check if we need to handle cross-domain requests. If so, we generate the headers HTTP and CORS (lines 33–37) even if the current request is not a cross-domain request. In the latter case, the CORS headers will be unnecessary and will remain unused by the client;
   </li>
-  <li>line 30: in a cross-domain request, the client browser querying the server sends an HTTP header <b>[Origin: http://localhost:8080] </b>(in the specific case of our JavaScript client). On line 30, we retrieve this HTTP header from the request <b>[$request]</b>;
+  <li>Line 30: In a cross-domain request, the client browser querying the server sends a HTTP <b>[Origin: http://localhost:8080]</b> header (in the specific case of our client, Javascript). Line 30: We retrieve this HTTP header from the <b>[$request]</b> request;
   </li>
-  <li>line 31: we will only accept cross-domain requests originating from the machine <b>[http://localhost]</b>. Note that these requests only occur in the project’s development mode;
+  <li>Line 31: We will only accept cross-domain requests originating from the machine <b>[http://localhost]</b>. Note that these requests only occur in the project’s development mode;
   </li>
-  <li>Lines 32–36: We add the CORS headers to the headers already present in the array <b>[$headers]</b>;
+  <li>lines 32–36: the headers CORS are added to the headers already present in the table <b>[$headers]</b>;
   </li>
-  <li>Lines 45–49: The way the client browser requests CORS permissions may vary depending on the browser being used. Sometimes the client browser requests these permissions using an HTTP <b>[OPTIONS] </b>request. This is a new scenario for our server, which was built to handle only <b>[GET] and [POST] </b>requests. In the case of an <b>[OPTIONS] </b>request, the server currently generates an error response. Lines 46–49: we correct this at the last moment: if, on line 46, we determine that the current request is an <b>[OPTIONS] </b>request, then we generate the following for the client:
+  <li>Lines 45–49: The way the client browser requests the CORS permissions may vary depending on the client being used. In some cases, the client browser may request these permissions using the HTTP or <b>[OPTIONS]</b> commands. This is a new feature for our server, which was built to handle only <b>[GET, POST]</b> commands. In the case of a <b>[OPTIONS]</b> command, the server currently generates an error response. Lines 46–49: we correct this at the last moment. If, on line 46, we determine that the current command is a <b>[OPTIONS]</b> command, then we generate the following for the client:
     <ul>
-      <li>lines 47, 51: an empty <b>[$content] </b>response;
+      <li>lines 47, 51: an empty <b>[$content]</b> response;
       </li>
-      <li>line 48: a 200 status code indicating that the request was successful. The only important thing for this request is sending the CORS headers in lines 33–36. This is what the client browser expects;
+      <li>line 48: a status code of 200 indicating that the request was successful. The only important thing for this request is sending the CORS headers from lines 33–36. This is what the client browser expects;
       </li>
     </ul>
   </li>
 </ul>
 
-<p>Once the server has been corrected in this way, the JavaScript client runs better but displays a new error:</p>
+<p>Once the server has been corrected in this way, the client Javascript runs better but displays a new error:</p>
 <p><img src="images/10000000000003FE0000047C70774234.png" width="307" height="345" style="width:8.119cm;height:9.121cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003FE0000047C70774234.png" /></p>
 <ul>
-  <li>in <b>[1]</b>, the JSON session is correctly initialized;
+  <li>In <b>[1]</b>, the jSON session is initialized correctly;
   </li>
-  <li>In <b>[2]</b>, the <b>[authenticate-user] </b>action fails: the server indicates that there is no active session. This means that the JavaScript client did not correctly send back the session cookie that it sent during the <b>[init-session] </b>action;
+  <li>In <b>[2]</b>, the <b>[authentifier-utilisateur]</b> action fails: the server indicates that there is no active session. This means that the client Javascript did not correctly return the session cookie it sent during the action <b>[init-session]</b>;
   </li>
 </ul>
 
-<p>Let’s examine the network exchanges that took place:</p>
+<p>Let’s examine the network traffic that took place:</p>
 <p><img src="images/1000000000000612000002355B56FFBF.png" width="622" height="226" style="width:16.452cm;height:5.981cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000612000002355B56FFBF.png" /></p>
 <ul>
-  <li>in <b>[4]</b>, the <b>[init-session] </b>request. It completed successfully with a 200 status code for the response;
+  <li>In <b>[4]</b>, the request <b>[init-session]</b>. It completed successfully with a 200 status code for the response;
   </li>
-  <li>in <b>[5]</b>, the <b>[authenticate-user] </b>request. This request fails with a 400 (Bad Request) status code <b>[6] </b>for the response;
+  <li>In <b>[5]</b>, the request <b>[authentifier-utilisateur]</b>. This one fails with a 400 (Bad Request) status code <b>[6] </b>for the response;
   </li>
 </ul>
 
-<p>If we examine the HTTP headers <strong>[7]</strong> of request <strong>[5]</strong>, we can see that the JavaScript client did not send the <strong>[Cookie]</strong> HTTP header, which would have allowed it to return the session cookie initially sent by the server. This is why the server reports that there is no session.</p>
-<p>To have the client send the session cookie, you need to add a configuration to the <strong>[axios]</strong> object:</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<p>If we examine the headers HTTP and <strong>[7]</strong> of the request <strong>[5]</strong>, we can see that the client Javascript did not send the headers HTTP and <strong>[Cookie],</strong> which would have allowed it to return the session cookie initially sent by the server. This is why the server reports that there is no session.</p>
+<p>To have the client send the session cookie, you must add a configuration to the <strong>[axios]</strong> object:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content">// imports</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> axios </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;axios&#x27;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">import axios from &#x27;axios&#x27;;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> </span><span style="color:#a31515">&quot;core-js/stable&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> </span><span style="color:#a31515">&quot;regenerator-runtime/runtime&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// imports</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Dao </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./Dao2&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Métier </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./Métier&#x27;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">import Dao from &#x27;./Dao2&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">import Métier from &#x27;trade&#x27;;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// asynchronous function [main]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">async</span><span style="color:#000000"> </span><span style="color:#0000ff">function</span><span style="color:#000000"> main() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// axios configuration</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  axios.defaults.timeout = 2000;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  axios.defaults.baseURL = </span><span style="color:#a31515">&#x27;http://localhost/php7/scripts-web/impots/version-14&#x27;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  axios.defaults.baseURL = &#x27;http://localhost/php7/scripts-web/impots/version-14&#x27;;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  axios.defaults.withCredentials = </span><span style="color:#0000ff">true</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// layer instantiation [dao]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// instantiation layer [dao]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> dao = </span><span style="color:#0000ff">new</span><span style="color:#000000"> Dao(axios);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// requests HTTP</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">let</span><span style="color:#000000"> taxAdminData;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
 </code></pre></div>
 
-<p>Line 15 requests that cookies be included in the HTTP headers of the <strong>[axios]</strong> request. Note that this was not necessary in the <strong>[node.js]</strong> environment. There are therefore code differences between the two environments.</p>
-<p>Once this error is fixed, the JavaScript client runs normally:</p>
+<p>Line 15 specifies that cookies should be included in the HTTP headers of the <strong>[axios]</strong> request. Note that this was not necessary in the <strong>[node.js]</strong> environment. There are therefore code differences between the two environments.</p>
+<p>Once this error is corrected, the Javascript client runs normally:</p>
 <p><img src="images/10000000000005A1000004A349F04AD8.png" width="576" height="475" style="width:15.251cm;height:12.562cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005A1000004A349F04AD8.png" /></p>
 <p><img src="images/1000000000000220000003A5B333BDD4.png" width="163" height="280" style="width:4.32cm;height:7.408cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000220000003A5B333BDD4.png" /></p>
-<p><a id="refheadingtoc1252801348058621"></a></p>
-<h2 id="145-improvement-to-the-http-client-3">14.5. <span style="color: #4f81bd">Improvement to the HTTP client 3</span></h2>
-<p>When the previous [Dao2] class runs within a browser, session cookie management is unnecessary. This is because the browser hosting the [dao] layer manages the session cookie: it automatically sends back any cookie the server sends to it. Consequently, the [Dao2] class can be rewritten as the following [Dao3] class:</p>
+<p><span id="refheadingtoc1252801348058621" name="refheadingtoc1252801348058621" class="odt-bookmark-anchor"></span></p>
+<h2 id="145-improvement-to-client-http-3">14.5. <span style="color: #4f81bd">Improvement to client HTTP 3</span></h2>
+<p>When the previous [Dao2] class runs within a browser, session cookie management is unnecessary. This is because the browser hosting the [dao] layer manages the session cookie: it automatically returns any cookie the server sends to it. Consequently, the [Dao2] class can be rewritten as the following [Dao3] class:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&quot;use strict&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -3406,7 +3408,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// asynchronous request</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      response = </span><span style="color:#0000ff">await</span><span style="color:#000000"> </span><span style="color:#0000ff">this</span><span style="color:#000000">.axios.request(</span><span style="color:#a31515">&quot;main.php&quot;</span><span style="color:#000000">, options);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    } </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// the [error] parameter is an exception instance - it can take various forms</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// parameter [error] is an exception instance - it can take various forms</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">if</span><span style="color:#000000"> (error.response) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// the server response is in [error.response]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        response = error.response;</span></span>
@@ -3425,19 +3427,19 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> Dao3;</span></span></span>
 </code></pre></div>
 
-<p>Everything related to managing the management cookie has disappeared.</p>
+<p>Everything related to managing the management cookie has been removed.</p>
 <p>We modify the previous project as follows:</p>
 <p><img src="images/1000000000000186000001F9A222DDB4.png" width="136" height="176" style="width:3.602cm;height:4.664cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000186000001F9A222DDB4.png" /></p>
 <p>In the [src] folder, we have added two files:</p>
 <ul>
   <li>the [Dao3] class we just introduced;
   </li>
-  <li>the [main3] file responsible for launching the new version;
+  <li>the file [main3], which is responsible for launching the new version;
   </li>
 </ul>
 
-<p>The [main3] file remains identical to the [main] file from the previous version but now uses the [Dao3] class:</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<p>The [main3] file remains identical to the [main] file from the previous version, but it now uses the [Dao3] class:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content">// imports</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> axios </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&quot;axios&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> </span><span style="color:#a31515">&quot;core-js/stable&quot;</span><span style="color:#000000">;</span></span></span>
@@ -3454,7 +3456,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">  axios.defaults.baseURL =</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#a31515">&quot;http://localhost/php7/scripts-web/impots/version-14&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  axios.defaults.withCredentials = </span><span style="color:#0000ff">true</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// layer instantiation [dao]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// instantiation layer [dao]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="background-color:#ffff00;color:#0000ff">const</span><span style="background-color:#ffff00;color:#000000"> dao = </span><span style="background-color:#ffff00;color:#0000ff">new</span><span style="background-color:#ffff00;color:#000000"> Dao(axios);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// requests HTTP</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  ...</span></span>
@@ -3469,7 +3471,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">main();</span></span>
 </code></pre></div>
 
-<p>The [webpack.config] file is modified to now run the [main3] script:</p>
+<p>The file [webpack.config] has been modified to now execute the script [main3]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable */</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -3496,7 +3498,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"> * page for you when you compile webpack, which will make you start</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> * developing and prototyping faster.</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> *</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> * https://github.com/jantimon/html-webpack-plugin</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">* https://github.com/jantimon/html-webpack-plugin</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> *</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> */</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -3517,15 +3519,15 @@
 <p>Once this is done, we run the project after starting the tax calculation server:</p>
 <p><img src="images/10000000000002FF00000115485FA6DB.png" width="268" height="97" style="width:7.1cm;height:2.565cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002FF00000115485FA6DB.png" /></p>
 <p>The results displayed in the browser console are identical to those of the previous version.</p>
-<p><a id="refheadingtoc225448640539168"></a></p>
+<p><span id="refheadingtoc225448640539168" name="refheadingtoc225448640539168" class="odt-bookmark-anchor"></span></p>
 <h2 id="146-conclusion">14.6. <span style="color: #4f81bd">Conclusion</span></h2>
-<p>We now have all the tools needed to develop JavaScript code for a web application. We can:</p>
+<p>We now have all the tools to develop the Javascript code for a web application. We can:</p>
 <ul>
   <li>use the latest ECMAScript code;
   </li>
-  <li>test isolated parts of this code in a <b>[node.js] </b>environment, which is simpler for debugging and testing;
+  <li>test isolated elements of this code in a simpler <b>[node.js]</b> environment for debugging and testing;
   </li>
-  <li>then port this code to a browser using <b>[babel] </b>and <b>[webpack]</b>;
+  <li>then port this code to a browser using the <b>[babel] </b>and <b>[webpack] </b>tools;
   </li>
 </ul>
 
@@ -3563,8 +3565,8 @@
     <div class="md-footer-meta__inner">
 
       <div>
-        <a href="https://stahe.github.io/" target="_blank">
-          https://stahe.github.io/
+        <a href="https://stahe.github.io" target="_blank">
+          https://stahe.github.io
         </a>
         <br>
         This tutorial written by <strong>Serge Tahé</strong> is made available to the public under the terms of the
